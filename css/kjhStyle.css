@@ -1,0 +1,7 @@
+ul {
+    overflow: hidden;
+}
+li {
+    padding: 10px;
+    float: left;
+}
