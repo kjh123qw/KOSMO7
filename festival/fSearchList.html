@@ -5,8 +5,364 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Air Matsuri</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 부트스트랩 -->
+
+    <script src = "./js/jquery-2.1.1.min.js"></script> <!--반드시필요함 -->
+    <script src = "./js/jquery-ui.min.js"></script>
+    <script src = "./js/jquery.easing.1.3.js"></script>
+    <script src = "./js/jquery.mousewheel.min.js"></script> <!--마우스휠js -->
+    <!-- jQuery -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- font-awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- datepicher -->
+
+    <link rel="stylesheet" href="./css/swiperCss/swiper.min.css">
+    <script src="./js/swiperJs/swiper.min.js"></script>
+    <!-- swiper -->
+
+    <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨--> <!--공통적인 css -->
+    <link rel="stylesheet" href="./css/fSearchList.css">
+    <script src = "./js/fSearchList.js"></script>
+
 </head>
+
+
 <body>
 
-</body>
+        <button id = "detailSearchBtn">접기</button>
+    
+    
+        <div class = "container" id = "mainContainer">
+            <div class = "row" id = "firstBox">
+                <div class = "col-sm-7 subBox">
+    
+                    <div class = "row mapBox">
+                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="test1" title = "1"></div>
+                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="test1" title = "2"></div>
+                    </div>
+                    <div class = "row mapBox">
+                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="test1" title = "3"></div>
+                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="test1" title = "4"></div>
+                        
+                    </div>
+                      
+                </div>
+    
+                <div class="col-sm-5 subBox">
+    
+    
+                    <div class="row toggleBox">
+                        
+                        <div class="custom-control custom-switch subToggleBox">
+                            <input type="checkbox" class="custom-control-input" checked = "checked" id="searchOption1" name="searchOption1">
+                            <label class="custom-control-label" for="searchOption1">Toggle</label>
+                        </div>
+                        <div class = "col" id = "toggleMsg">
+                            <span id = "toggleMsgSpan">현재조회축제</span>
+                        </div>
+                    </div>
+    
+    
+    
+    
+    
+                    <!-- 검색창Div -->
+                    <div class="row searchBox">
+                        <input type="text" class="form-control selectBox" id = "searchEnter" placeholder="Search">
+                        <div class="input-group-append selectBox">
+                            <button class="btn btn-success" id="selectBtn" type="submit"><i class="fa fa-search"></i></button>  
+                        </div>
+                    </div>
+                    <!-- //검색창Div -->
+                    <hr>
+                    <!-- 날짜Div -->
+                    <div class = "row dateBox">        
+                            <div class="input-group SubDateBox col">
+                                <input type="text" class="form-control dateInput" id = "startDate">
+                                <div class="input-group-prepend dateImage" id = "startDateImage">
+                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="input-group SubDateBox col">
+                                <input type="text" class="form-control dateInput" id = "endDate">
+                                <div class="input-group-prepend dateImage" id = "endDateImage">
+                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- //날짜Div -->
+                    <hr id = "dateBoxHr">
+                    <!-- 계절Div -->
+                    <div class = "row seasonBox">
+                        <div class = "col">
+                        <div class="custom-control custom-radio subSeasonBox">
+                            <input type="radio" class="custom-control-input seasonVal" id="season1" name="season" value="1" checked = "checked">
+                            <label class="custom-control-label" for="season1">봄봄</label>
+                        </div>
+                        </div>
+    
+                        <div class = "col">
+                        <div class="custom-control custom-radio subSeasonBox">
+                            <input type="radio" class="custom-control-input seasonVal" id="season2" name="season" value="2">
+                            <label class="custom-control-label" for="season2">여름</label>
+                        </div>
+                        </div>
+    
+                        <div class = "col">
+                        <div class="custom-control custom-radio subSeasonBox">
+                            <input type="radio" class="custom-control-input seasonVal" id="season3" name="season" value="3">
+                            <label class="custom-control-label" for="season3">가을</label>
+                        </div>
+                        </div>
+    
+                        <div class = "col">
+                        <div class="custom-control custom-radio subSeasonBox">
+                            <input type="radio" class="custom-control-input seasonVal" id="season4" name="season" value="4">
+                            <label class="custom-control-label" for="season4">겨울</label>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- //계절Div -->
+                    <hr>
+                    <!-- 종류Div -->
+                    <div class = "row sortBox">
+                        <div class = "col">
+                        <div class="custom-control custom-switch sortToggleBox">
+                            <input type="checkbox" class="custom-control-input" id="sortOption" name="sortOption">
+                            <label class="custom-control-label" for="sortOption"></label>
+                        </div>
+                        </div>
+                    </div>
+    
+                    <div class = "row sortBox">
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck1" name="sort" value = "1">
+                                    <label class="custom-control-label" for="sortCheck1">종류1</label>
+                                </div>
+                            </div>
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck2" name="sort" value = "2">
+                                    <label class="custom-control-label" for="sortCheck2">종류2</label>
+                                </div>
+                            </div>
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck3" name="sort" value = "3">
+                                    <label class="custom-control-label" for="sortCheck3">종류3</label>
+                                </div>
+                            </div>
+                            <!-- <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck4" name="sort" value = "4">
+                                    <label class="custom-control-label" for="sortCheck4">종류4</label>
+                                </div>
+                            </div> -->
+                    </div>
+                    <div class = "row sortBox">
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck5" name="sort" value = "5">
+                                    <label class="custom-control-label" for="sortCheck5">종류5</label>
+                                </div>
+                            </div>
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck6" name="sort" value = "6">
+                                    <label class="custom-control-label" for="sortCheck6">종류6</label>
+                                </div>
+                            </div>
+                            <div class = "col">
+                                    <div class="custom-control custom-checkbox subSortBox">
+                                        <input type="checkbox" class="custom-control-input" id="sortCheck7" name="sort" value = "7">
+                                        <label class="custom-control-label" for="sortCheck7">종류7</label>
+                                    </div>
+                                </div>
+                            <div class = "col">
+                                <div class="custom-control custom-checkbox subSortBox">
+                                    <input type="checkbox" class="custom-control-input" id="sortCheck8" name="sort" value = "8">
+                                    <label class="custom-control-label" for="sortCheck8">종류8</label>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- //종류Div -->
+                    <hr>
+                    <!-- 키워드 추가 -->
+                    <div class = "row keyWordTitleBox">
+                        <div class = "col">
+                            <p>키워드 추가</p>
+                        </div>
+                    </div>
+                    <div class = "row keywordBox">
+                        <input type="text" class="form-control keywordSelectBox" id = "keywordEnter" placeholder="keyword">
+                        <div class="input-group-append keywordSelectBox">
+                            <button class="btn btn-success" id="keywordBtn" type="submit"><i class="fas fa-plus"></i></button>  
+                        </div>
+                    </div>
+                    <div class = "row keywords">
+                        
+                            <span class = "keywordList">메인에서</span>
+                            <span class = "keywordList">넘어온</span>
+                            <span class = "keywordList">keyword</span>
+                            
+                    </div>
+                    <!-- //키워드추가 -->
+                    <hr>
+                </div>    
+    
+            </div>
+            <!-- //첫번쨰 Div -->
+            <hr>
+            <!-- 두번쨰 Div -->
+            <br>
+            <h1 style = "text-align: center;">이런 축제는 어떠세요?</h1>
+            <br>
+    
+    
+            <div class = "container" id = "secondDiv">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1"></div>
+                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1"></div>
+                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1"></div>
+                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1"></div>
+                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1"></div>   
+                    </div>
+                    <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                </div>    
+            </div>
+            <!-- //두번쨰 Div -->
+            <hr>
+            <!-- 세번쨰 Div -->
+            <br>
+            <h1 style = "text-align: center;">조회 결과 입니다</h1>
+            <br>
+    
+            <div class = "container" id = "thirdDiv">
+    
+                    <div class = "row photoSearch">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-4">
+                            <!-- <div class="input-group-append">
+                                <span class="input-group-text">검색</span>
+                            </div> -->
+                            <input type="text" class="form-control" placeholder="Search" id = "detailSearch">
+                        </div>
+                        <div class="col-md-2">
+                            <select name="festivals" class="custom-select">
+                                <option value="1">최신순</option>
+                                <option value="2">별점순</option>
+                                <option value="3">댓글순</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class = 'row photoRow'>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="./img/f1.jpg" alt="">
+                                    <div class="caption">
+                                        <p>2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능</p>
+                                    </div>
+                                </a>
+                                <span>조회수나 별점</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="./img/f1.jpg" alt="">
+                                    <div class="caption">
+                                        <p>2줄이상 넘어가면 생략가능</p>
+                                    </div>
+                                </a>
+                                <span>기타고려사항</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="./img/f1.jpg" alt="">
+                                    <div class="caption">
+                                        <p>2줄이상 넘어가면 생략가능</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class = 'row photoRow'>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="./img/f1.jpg" alt="">
+                                        <div class="caption">
+                                            <p>2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="./img/f1.jpg" alt="">
+                                        <div class="caption">
+                                            <p>2줄이상 넘어가면 생략가능</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="./img/f1.jpg" alt="">
+                                        <div class="caption">
+                                            <p>2줄이상 넘어가면 생략가능</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>                   -->
+                        </div>
+    
+                        <div class = "moreDiv">
+                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn">더보기 2 / 9</button>
+                        </div>
+                        <hr>
+            </div>
+    
+                
+                
+    
+    
+    
+    
+               
+        </div>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+    </body>
 </html>
