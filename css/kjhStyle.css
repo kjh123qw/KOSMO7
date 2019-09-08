@@ -1,7 +1,84 @@
-ul {
+header {
+    padding-top: 10px;
+    background-image: url('../img/Test_Main.jpg');
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    width: 100%; height: 900px;
     overflow: hidden;
+    position: relative;
 }
-li {
-    padding: 10px;
+#nav {
+    width: 100%; height: 50px;
+}
+#nav ul {
+    width: 100%; height: 50px;
+    overflow: hidden;
+    padding: 0 5px;
+}
+#nav .home_btn { float: left; }
+#nav li {
+    margin: 0 10px;
+    line-height: 50px;
+    float: right;
+}
+#nav a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+#search_window {
+    background-color: rgba(255,255,255,0.7);
+    width: 380px; height: 400px;
+    position: absolute;
+    left: 85px; bottom: 150px;
+    padding: 15px 0;
+}
+.keyword_main, .date, .region_sel, .festival_sel {
+    width: 100%; height: 90px;
+}
+.keyword_main .keyword_main_label, .date .date_label, .region_sel .region_sel_label, .festival_sel .festival_sel_label {
+    width: 88%; height: 35px;
+    margin: 0 6%;
+}
+.keyword_main .keyword_main_label span,  .date .date_label span, .region_sel .region_sel_label span, .festival_sel .festival_sel_label span {
+    width: 100%; height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #777;
+}
+.keyword_main .keyword_main_input, .date .date_input, .region_sel .region_sel_box, .festival_sel .festival_sel_box {
+    width: 92%; height: 45px;
+    margin: 0 4%;
+}
+.keyword_main .keyword_main_input input, .region_sel .region_sel_box select, .festival_sel .festival_sel_box select {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.date .date_input div {
+    width: 50%;
     float: left;
+}
+.date .date_input input {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+}
+.date .date_input #date {
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+}
+.date .date_input #date_end {
+    border-radius: 0 4px 4px 0;
 }

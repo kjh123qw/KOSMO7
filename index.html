@@ -10,6 +10,74 @@
     <link rel="stylesheet" href="./css/kjhStyle.css">
 </head>
 <body>
+    <header>
+        <div id="nav">
+            <ul>
+                <li class="home_btn"><a href="./index.html"><img src="img/logo_noText 51x44.png" alt="Logo"></a></li>
+                <li><a href="./smallTown/smallTownMain.html">소도시</a></li>
+                <li><a href="./member/mRegistration.html">회원가입</a></li>
+                <li><a href="./member/mLogin.html">로그인</a></li>
+            </ul>
+        </div>
+        <div id="search_window">
+            <div class="keyword_main">
+                <div class="keyword_main_label">
+                    <label for="keyword_main">
+                        <span>지역 또는 축제명</span>
+                    </label>
+                </div>
+                <div class="keyword_main_input">
+                    <input type="text" name="keyword_main" id="keyword_main">
+                </div>
+            </div>
+            <div class="date">
+                <div class="date_label">
+                    <label for="date">
+                        <span>기간</span>
+                    </label>
+                </div>
+                <div class="date_input">
+                    <div>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div>
+                        <input type="date" name="date_end" id="date_end">
+                    </div>
+                </div>
+            </div>
+            <div class="region_sel">
+                <div class="region_sel_label">
+                    <label for="region_sel">
+                        <span>지역 분류</span>
+                    </label>
+                </div>
+                <div class="region_sel_box">
+                    <select name="region_sel" id="region_sel">
+                        <option value="혼슈">혼슈 지방</option>
+                        <option value="큐슈">큐슈 지방</option>
+                        <option value="홋카이도">홋카이도 지방</option>
+                        <option value="시코쿠">시코쿠 지방</option>
+                        <option value="기타">기타 지방</option>
+                    </select>
+                </div>
+            </div>
+            <div class="festival_sel">
+                <div class="festival_sel_label">
+                    <label for="festival_cat">
+                        <span>축제 분류</span>
+                    </label>
+                </div>
+                <div class="festival_sel_box">
+                    <select name="festival_cat" id="festival_cat">
+                        <option value="불꽃">불꽃 축제</option>
+                        <option value="벚꽃">벚꽃 축제</option>
+                        <option value="신사">신사 축제</option>
+                        <option value="기타">기타 축제</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- 임시 해더 입니다. -->
     <ul>
         <li><a href="./festival/fWholeList.html">전체축제리스트</a></li>
