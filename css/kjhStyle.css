@@ -1,6 +1,7 @@
 header {
     padding-top: 10px;
     background-image: url('../img/Test_Main.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 2000px;
     width: 100%; height: 900px;
@@ -13,7 +14,7 @@ header {
 #nav ul {
     width: 100%; height: 50px;
     overflow: hidden;
-    padding: 0 5px;
+    padding: 0 15px;
 }
 #nav .home_btn { float: left; }
 #nav li {
@@ -26,53 +27,64 @@ header {
     font-weight: bold;
     color: #fff;
 }
+.Main_text {
+    width: 100%; height: 200px;
+}
+.Main_text {
+    line-height: 200px;
+    text-align: center;
+    font-size: 52px;
+    font-weight: bold;
+    color: #fff;
+}
 #search_window {
     background-color: rgba(255,255,255,0.7);
     width: 380px; height: 400px;
     position: absolute;
     left: 85px; bottom: 150px;
     padding: 15px 0;
+    border-radius: 4px;
 }
 .keyword_main, .date, .region_sel, .festival_sel {
-    width: 100%; height: 90px;
+    width: 100%; height: 75px;
 }
 .keyword_main .keyword_main_label, .date .date_label, .region_sel .region_sel_label, .festival_sel .festival_sel_label {
-    width: 88%; height: 35px;
+    width: 88%; height: 25px;
     margin: 0 6%;
 }
 .keyword_main .keyword_main_label span,  .date .date_label span, .region_sel .region_sel_label span, .festival_sel .festival_sel_label span {
-    width: 100%; height: 35px;
-    line-height: 35px;
-    font-size: 16px;
+    width: 100%; height: 25px;
+    line-height: 25px;
+    font-size: 12px;
     font-weight: bold;
-    color: #777;
+    color: #888;
 }
-.keyword_main .keyword_main_input, .date .date_input, .region_sel .region_sel_box, .festival_sel .festival_sel_box {
+.keyword_main .keyword_main_input, .date .date_input, .region_sel .region_sel_box, .festival_sel .festival_sel_box, .search_btn {
     width: 92%; height: 45px;
     margin: 0 4%;
 }
 .keyword_main .keyword_main_input input, .region_sel .region_sel_box select, .festival_sel .festival_sel_box select {
     width: 100%; height: 45px;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #555;
-    border: 1px solid #aaa;
+    color: #777;
+    border: 1px solid #eee;
     border-radius: 4px;
     overflow: hidden;
     padding: 0 10px;
 }
-.date .date_input div {
+.date .date_input div, .search_btn div {
     width: 50%;
     float: left;
 }
 .date .date_input input {
     width: 100%; height: 45px;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    color: #555;
-    border: 1px solid #aaa;
+    color: #777;
+    border: 1px solid #eee;
     padding: 0 10px;
 }
 .date .date_input #date {
@@ -81,4 +93,23 @@ header {
 }
 .date .date_input #date_end {
     border-radius: 0 4px 4px 0;
+}
+.search_btn button {
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search_btn div:first-child > button {
+    background-color: steelblue;
+    width: 120px; height: 35px;
+    margin-top: 30px;
+    color: #eee;
+}
+.search_btn div:last-child > button {
+    background-color: mediumturquoise;
+    width: 100%; height: 45px;
+    margin-top: 20px;
+    color: #fff;
 }
