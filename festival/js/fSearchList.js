@@ -12,6 +12,10 @@ $(function(){
         var $sort = "";
 
         var keyword = $('.keywordList').text(); //파싱필요함
+
+        var simaChecked = $('input[name="local"]:checked');
+        var simaLength = $('input[name="local"]:checked').length;
+        var $sima = "";
         
 
         for(i=0;i<sortLength;i++){
@@ -24,12 +28,21 @@ $(function(){
               
         }
 
+        for(i=0; i< simaLength; i++){
+            if(i + 1 == simaLength){
+                $sima +=simaChecked[i].value;
+              }else{
+                $sima +=simaChecked[i].value +", ";
+              }
+        }
+
 
 
         
         
         // alert(checked+","+search+","+startDate+","+endDate+","+seasonChecked+",{"+$sort+"}");
-        alert(keyword);
+        // alert(keyword);
+        alert($sima);
         
     })
 
@@ -61,6 +74,8 @@ $(function(){
         }else{
             $('.dateBox, #dateBoxHr').slideDown('fast');
         }
+
+        
 
     })
 
@@ -122,6 +137,7 @@ $(function(){
     var swiper = new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
         },
         navigation: {
             nextEl: '.swiper-button-next',
@@ -132,6 +148,9 @@ $(function(){
             disableOnInteraction: false, 
         },
         loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        
         
       });
 
@@ -155,27 +174,60 @@ $(function(){
       })
 
       $('.mapBtn img').click(function(){
-          var title = $(this).attr('title');
-          
 
-        
-        var $keywordLength = $('.keywordList').length;
+        var nowImage = $(this).attr('src');
+        var image;
 
-        if($keywordLength == 5){
-            return;
+        if(nowImage == './img/image1.jpg'){
+             image = './img/check.jpg'
+        $(this).attr('src',image);
+        }else{
+             image = './img/image1.jpg'
+            $(this).attr('src',image);
         }
 
-        var front = '<span class = "keywordList">';
-        var back = '</span>';
-        
-        $('.keywords').append(front +"#"+title + back);
-        $('.keywordSelectBox').val("");
-        $('.keywordSelectBox').focus();
 
-        keywordDelete();
+          var simaCheckName = $(this).next().text();         
+          var simaChecked = "";
+          if(simaCheckName == "훗카이도"){
+            simaChecked = $('#sima1').prop('checked');
+            if(simaChecked){
+                $("input[id='sima1']").prop("checked",false);
+            }else{
+                $("input[id='sima1']").prop("checked",true);
+            }      
+          }else if(simaCheckName == '혼슈'){
+            simaChecked = $('#sima2').prop('checked');
+            if(simaChecked){
+                $("input[id='sima2']").prop("checked",false);
+            }else{
+                $("input[id='sima2']").prop("checked",true);
+            }
+          }else if(simaCheckName == '시코쿠'){
+            simaChecked = $('#sima3').prop('checked');
+            if(simaChecked){
+                $("input[id='sima3']").prop("checked",false);
+            }else{
+                $("input[id='sima3']").prop("checked",true);
+            }
+          }else{
+            simaChecked = $('#sima4').prop('checked');
+            if(simaChecked){
+                $("input[id='sima4']").prop("checked",false);
+            }else{
+                $("input[id='sima4']").prop("checked",true);
+            }
+            
+          }
+
+
+
+
       })
        
 
+        //   $('#firstBox').css('display','none')
+         $('input[name="local"]').css('display','none');
 
 });
 
@@ -201,6 +253,19 @@ function startDate(){
 }
 
 function endDate(){
+
+    $('#endDate').datepicker({
+
+        format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
+        calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
+        todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
+        autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
+        startDate: '',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
+        endDate: '+10d',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
+        disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
+        immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
+        language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
+    });
     
 }
 
