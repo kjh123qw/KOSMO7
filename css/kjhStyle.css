@@ -8,6 +8,7 @@ header {
     overflow: hidden;
     position: relative;
 }
+/* -------Navigation------- */
 #nav {
     width: 100%; height: 50px;
 }
@@ -27,6 +28,7 @@ header {
     font-weight: bold;
     color: #fff;
 }
+/* -------Main Text(test)------- */
 .Main_text {
     width: 100%; height: 200px;
 }
@@ -37,6 +39,7 @@ header {
     font-weight: bold;
     color: #fff;
 }
+/* -------Search Main Page------- */
 #search_window {
     background-color: rgba(255,255,255,0.7);
     width: 380px; height: 400px;
@@ -45,7 +48,7 @@ header {
     padding: 15px 0;
     border-radius: 4px;
 }
-.keyword_main, .date, .region_sel, .festival_sel {
+.keyword_main, .date, .region_sel, .festival_sel, .loginLayer div:eq(1), .loginLayer div:eq(2) {
     width: 100%; height: 75px;
 }
 .keyword_main .keyword_main_label, .date .date_label, .region_sel .region_sel_label, .festival_sel .festival_sel_label {
@@ -94,7 +97,7 @@ header {
 .date .date_input #date_end {
     border-radius: 0 4px 4px 0;
 }
-.search_btn button {
+.search_btn button, .loginLayer button {
     border: 0;
     border-radius: 4px;
     font-size: 14px;
@@ -107,9 +110,67 @@ header {
     margin-top: 30px;
     color: #eee;
 }
-.search_btn div:last-child > button {
+.search_btn div:last-child > button, .loginLayer button {
     background-color: mediumturquoise;
     width: 100%; height: 45px;
     margin-top: 20px;
     color: #fff;
+}
+/* -------Login Layer Module ------- */
+#loginModule {
+    display: none;
+}
+.loginBackground {
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 7;
+}
+.loginLayer {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    z-index: 8;
+    width: 470px; height: 370px;
+    padding: 15px
+
+}
+.layerClose {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+}
+#loginId, #loginPwd {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+.loginLayer div:eq(3) {
+    width: 100%; height: 25px;
+}
+.loginLayer div:eq(3) span {
+    width: 100%; height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777;
+}
+#logRmbId {
+    background-color: #eee;
+    height: 25px;
+    width: 25px;
+}
+div.loginLayer hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }

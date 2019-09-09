@@ -1,25 +1,25 @@
 function layerPop(){
 
     // 화면의 높이와 너비를 구한다.
-    var backHeight = $(document).height();  
-    var backWidth = $(window).width();  
+    // var backHeight = $(document).height();  
+    // var backWidth = $(window).width();  
 
     // 팝업창 넓이,높이 구하고 중앙정렬을 위한
-    let width = $(".pop-layer").width() / 2
-    let height = $(".pop-layer").height() / 2;
+    // let width = $(".pop-layer").width() / 2
+    // let height = $(".pop-layer").height() / 2;
 
-    let left = backWidth / 2 - width;
-    let top = backHeight /2 - height;
+    // let left = backWidth / 2 - width;
+    // let top = backHeight /2 - height;
 
     //배경의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
     // $(".back").css({"width":backWidth,"height":backHeight}); 
-    $(".pop-layer").css({"top":top,"left":left});
+    // $(".pop-layer").css({"top":top,"left":left});
 
     //애니메이션 효과 -  60% 불투명도로 간다.
-    // $(".back").fadeIn(0);      
-    $(".back").fadeTo("slow",0.6);    
+    // $(".back").fadeIn(0);
 
     //팝업 띄운다.
+    $(".back").show();
     $(".pop-layer").show();
     $("#div1").show();
     $("#div2").hide(); // *일시적으로 아이디찾기 숨기기

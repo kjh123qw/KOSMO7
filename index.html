@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Air Matsuri</title>
+    <script src="./js/jquery.2.1.3.min.js"></script>
     <script src="./js/commonCustom.js"></script>
+    <script src="./js/kjhcustom.js"></script>
+    <link rel="stylesheet" href="./css/_footer.css">
     <link rel="stylesheet" href="./css/commonStyle.css">
     <link rel="stylesheet" href="./css/kjhStyle.css">
-    <link rel="stylesheet" href="./css/login01.css">
-    <script src="./js/jquery.2.1.3.min.js"></script>
-    <script src="./js/login01.js"></script>
 </head>
 <body>
     <header>
@@ -92,74 +92,35 @@
     </header>
     <!-- 임시 해더 입니다. -->
     <content>
-        <section id="mainSection">
-            <p><span class="id"></span>님 환영합니다.</p>
-            <div class="popup">
-                <div class="back"></div>
-                <div id="layer" class="pop-layer">
-                    <div class="pop-container">
-                        <!--div1, 로그인창 //-->
-                        <div class="pop-conts" id="div1">
-                            <div class="topX">
-                                    <a href="#" class="layerClose">&times;</a>
-                                </div>
-                            <br>
-                            <fieldset>
-                            <legend>LOGIN</legend>
-                            <form action="./login2.html" method="GET">     <!-- 추후 POST로 변경할것 -->
-                            <table>
-                                    <tr>
-                                        <td><input type="text" name="userId" placeholder="ID"></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="password" name="userPwd" placeholder="PASSWORD"></td>
-                                    </tr>
-                                </table>
-                                <input type="submit" value="로그인">
-                            </form>
-                            </fieldset>
-
-                            <div class="btn">
-                                <a href="#div2" class="btn-login">ID 찾기</a>
-                                <a href="#" class="btn-pwd">PW를 잊으셨나요?</a>
-                            </div>
-                        </div>
-                        <!-- //div1 로그인창 -->
-
-                        <!-- div2 ID 찾기 //  -->
-                        <div class="pop-conts" id="div2">
-                            <div class="topX">
-                                    <a href="#" class="layerClose">&times;</a>
-                                </div>
-                            <br>
-                            <fieldset>
-                            <legend>E-mail 입력하기</legend>
-                            <form action="./login2.html" method="GET">     <!-- 추후 POST로 변경할것 -->
-                            <table>
-                                    <tr>
-                                        <td><span>가입된 이메일을 입력하세요</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" name="email" placeholder="arimatsuri@airmaturi.com"></td>
-                                    </tr>
-                                </table>
-                                <input type="submit" value="ID찾기">
-                            </form>
-                            </fieldset>
-                            <div class="btn">
-                                <a href="#div1" class="btn-login">로그인으로 되돌아가기</a>
-                                <a href="#" class="btn-pwd">PW를 잊으셨나요?</a>
-                            </div>
-                            <!--// div2 ID 찾기-->
-                        </div>
-                    </div>
+        <div id="loginModule">
+            <div class="loginBackground"></div>
+            <div class="loginLayer">
+                <div>
+                    <span class="layerClose">&times;</span>
+                </div>
+                <div>
+                    <input type="text" name="loginId" id="loginId">
+                </div>
+                <div>
+                    <input type="password" name="loginPwd" id="loginPwd">
+                </div>
+                <div>
+                    <span>
+                        <input type="checkbox" name="logRmbId" id="logRmbId">
+                        <label for="logRmbId">아이디 기억</label>
+                    </span>
+                </div>
+                <div>
+                    <button>로그인</button>
+                </div>
+                <hr>
+                <div>
+                    <a href="#div2" class="btn-login">ID 찾기</a>
+                    <a href="#" class="btn-pwd">비밀번호가 생각나지 않나요?</a>
                 </div>
             </div>
-        </section>
+        </div>
     </content>
-    <footer>
-
-    </footer>
     <ul>
         <li><a href="./festival/fWholeList.html">전체 축제 리스트</a></li>
         <li><a href="./festival/fSearchList.html">축제 검색 리스트</a></li>
@@ -177,5 +138,43 @@
     <!-- 임시 바디 입니다. -->
     <h1>Hello KOSMO7-2</h1>
     <p>This is the main page.</p>
+    <footer id="footer">
+        <div class="footer_wrap">
+          <div class="footer_top">
+            <div class="footerbox about_us">
+              <h3>ABOUT US</h3>
+              <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
+            </div>
+            <div class="footerbox contact_us">
+                <h3>CONTACT US</h3>
+                <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+                <p>+82 1234-5678</p>
+                <p><a href="#">info&#64;airmatsuri.com</a></p>
+            </div>
+            <div class="footerbox follow_us">
+                <h3>FOLLOW US</h3>
+                <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
+                <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
+                <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
+                <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="footer_container">
+                <div class="footer_copyright">
+                  <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                </div>
+                <div class="footer_gnb">
+                  <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

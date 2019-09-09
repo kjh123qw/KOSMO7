@@ -5,9 +5,11 @@ a:hover {
 
 .pop-layer {
     display: none;
-    position: absolute; /*body기준 위치지정*/
-    /* 화면 크기  */
-    width:700px;
+    position: fixed; /*body기준 위치지정*/
+    left: 0;
+    top: 0;
+    /* transform: translate(-50%, -50%); */
+    width:700px; /* 화면 크기  */
     height:500px;
     background-color: #fff;
     z-index: 10; /*전체 화면 맨 앞으로.*/
@@ -17,7 +19,7 @@ a:hover {
 .back {
     position:fixed;  
     z-index:9; /*뒷 배경화면*/
-    background-color:#000;  
+    background-color:rgba(0, 0, 0, 0.5);  
     display:none;
     top:0;
     right: 0;
