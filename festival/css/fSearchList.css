@@ -1,0 +1,222 @@
+
+
+#mainContainer{
+    border:1px solid black;
+    height: auto;
+}
+
+.subBox{
+    border: 1px solid green;
+}
+
+.selectBox:first-child{
+   width: 80%;
+   height: 40px;
+}
+
+.selectBox:last-child{
+    margin-left: 2px;
+    width: 18%;
+ }
+
+#selectBtn{
+    width: 100%;
+}
+
+
+#selectBtn:hover{
+    cursor: pointer;
+}
+
+.searchBox{
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dateBox{
+    /* margin-top: 10px; */
+    
+}
+
+.SubDateBox{
+    width: 50%;
+    cursor: pointer;
+}
+
+.dateInput{
+    text-overflow: ellipsis;
+}
+
+.toggleBox{
+    margin-top: 10px;
+}
+
+.subToggleBox > label{
+    cursor: pointer;
+}
+
+.subToggleBox{
+    margin-left: 20px;
+}
+
+
+#toggleMsg > span{
+    float: right;
+}
+
+.seasonBox{
+    
+   
+}
+
+.subSeasonBox > label{
+    cursor: pointer;
+    width: 32px;
+    height: 24px;
+    
+    
+}
+
+.sortBox{
+    margin-bottom: 10px;
+}
+
+.subSortBox > label{
+    cursor: pointer;
+    width: 50px;
+    height: 24px;
+    
+}
+
+.sortToggleBox{
+    margin-bottom: 10px;
+}
+
+.sortToggleBox > label{
+    cursor: pointer;
+}
+
+
+
+/* .subBox:first-child{
+    display: inline-table;
+    
+} */
+
+.mapBox{
+    border: 1px solid black;
+    width: 90%;
+    height: 50%;
+    margin: auto;
+    
+}
+
+.mapBtn{
+    border: 1px solid red;
+   
+    
+}
+
+.mapBtn img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.keywordBox{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+
+}
+
+.keywordSelectBox:first-child{
+    width: 80%;
+    height: 40px;
+}
+.keywordSelectBox:last-child{
+    margin-left: 2px;
+    width: 18%;
+}
+
+#keywordBtn{
+    width: 100%;
+}
+
+.keywords{
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid red;
+    background-color: antiquewhite;
+}
+
+.keywordList{
+    background-color: gray;
+    border-radius: 25%;
+    padding:  0 15px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+
+/* //첫번쨰Div */
+
+#secondDiv{
+    border: 1px solid green;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+  }
+  /* //두번쨰Div */
+
+  #thirdDiv{
+      border: 1px solid green;
+  }
+
+  .thumbnail{
+      border: 1px solid blue;
+  }
+
+  .thumbnail a img{
+      width: 100%;
+  }
+
+  .caption p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap:break-word; 
+    line-height: 1.2em;
+    height: 2.4em;
+
+    /* margin-bottom: 0; */
+  }
+
+  .photoRow{
+      margin-bottom: 50px;
+  }
+
+  .moreDiv{
+      text-align: center;
+  }
+
+
+
+
+
+
+
+
+
