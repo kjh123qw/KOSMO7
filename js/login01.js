@@ -12,7 +12,7 @@ function layerPop(){
     let top = backHeight /2 - height;
 
     //배경의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
-    $(".back").css({"width":backWidth,"height":backHeight}); 
+    // $(".back").css({"width":backWidth,"height":backHeight}); 
     $(".pop-layer").css({"top":top,"left":left});
 
     //애니메이션 효과 -  60% 불투명도로 간다.
