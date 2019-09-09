@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+ 
+  div {
+    height: 300px;   
+  }
+  .pop-layer .pop-container {
+    padding: 20px 25px;
+    height: 250px;
+  }
+  
+  .pop-layer p.ctxt {
+    color: #666;
+    line-height: 25px;
+    margin-top: 30px; margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .pop-layer p.inputEmail {
+    color: #666;
+    line-height: 25px;
+    font-weight: bolder;
+    font-size: 13px;
+  }
+
+  #email4id {
+    font-size: 13px;
+    font-style: italic;
+    color: #666;
+    padding: 0.2em 0;
+    width: 100%;
+  }
+
+  input::placeholder {
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  .pop-layer .btn-r {
+    width: 100%;
+    margin: 10px 0 20px;
+    padding-top: 10px;
+  }
+  
+  .pop-layer {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 410px;
+    height: auto;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .pop-conts { width: 400px; height: auto;}
+
+.topX {
+    width: 30px; height: 30px;
+}
+
+  a.layerClose {
+    display: inline-block;
+    text-decoration: none;
+    height: 25px;
+    font-size: 25px;
+    color: #a1a1a1;
+    line-height: 25px;
+  }
+
+  #idTitle {
+      font-size: 20px;
+      color: #333333;
+      margin-top: 20px;
+  }
+  
+  .dim-layer {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
+  }
+  
+  .dim-layer .dimBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    filter: alpha(opacity=50);
+  }
+  
+  .dim-layer .pop-layer {
+    display: block;
+    height: 300px;
+  }
+
+  .btn-r {
+      float: left;
+      height: 50px;
+  }
+
+  a.backLogIn {
+      font-size: 13px;
+      font-weight: bold;
+      color: darkcyan;
+      text-decoration: none;
+  }
+
+  a.btn-layerClose {
+    display: inline-block;
+    height: 25px;
+    padding: 0 14px 0;
+    background-color: rgb(245, 94, 97);
+    font-size: 13px;
+    color: #fff;
+    line-height: 25px;
+    text-decoration: none;
+    float: right;
+  }
+  
+  a.btn-layerClose:hover {
+    background-color: rgb(205, 135, 137);
+    color: #fff;
+  }
