@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/login01.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/login01.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <ul>
+            <li><a href="./festival/fWholeList.html">전체 축제 리스트</a></li>
+            <li><a href="./festival/fSearchList.html">축제 검색 리스트</a></li>
+            <li><a href="#layer" class="btn-login">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="./member/myPage/mMain.html">마이페이지</a></li>
+            <li><a href="./etc/aboutus.html">어바웃어스</a></li>
+            <li><a href="./smallTown/smallTownMain.html">소도시</a></li>
+            <li><a href="./etc/support.html">고객센터</a></li>
+            <li><a href="./etc/PIM.html">개인정보 처리 방침</a></li>
+            <li><a href="./etc/termsAndConditions.html">이용약관</a></li>
+            <li><a href="./etc/cookiesPolicy.html">쿠키정책</a></li>
+            <li><a href="./admin/adminMain.html">관리자 페이지</a></li>
+        </ul>
+    </header>
+    <!-- //Header -->
+
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- content -->
+        <div id="content">
+            <h1>Welcome Air Matsuri</h1>
+
+            <!-- mainSection -->
+            <section id="mainSection">
+                <p><span class="id"></span>님 환영합니다.</p>
+                <div class="popup">
+                    <div class="back"></div>
+                    <div id="layer" class="pop-layer">
+                        <div class="pop-container">
+                            <!--div1, 로그인창 //-->
+                            <div class="pop-conts" id="div1">
+                                <div class="topX">
+                                        <a href="#" class="layerClose">&times;</a>
+                                    </div>
+                                <br>
+                                <fieldset>
+                                <legend>LOGIN</legend>
+                                <form action="./login2.html" method="GET">     <!-- 추후 POST로 변경할것 -->
+                                <table>
+                                        <tr>
+                                            <td><input type="text" name="userId" placeholder="ID"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="password" name="userPwd" placeholder="PASSWORD"></td>
+                                        </tr>
+                                    </table>
+                                    <input type="submit" value="로그인">
+                                </form>
+                                </fieldset>
+
+                                <div class="btn">
+                                    <a href="#div2" class="btn-login">ID 찾기</a>
+                                    <a href="#" class="btn-pwd">PW를 잊으셨나요?</a>
+                                </div>
+                            </div>
+                            <!-- //div1 로그인창 -->
+
+                            <!-- div2 ID 찾기 //  -->
+                            <div class="pop-conts" id="div2">
+                                <div class="topX">
+                                        <a href="#" class="layerClose">&times;</a>
+                                    </div>
+                                <br>
+                                <fieldset>
+                                <legend>E-mail 입력하기</legend>
+                                <form action="./login2.html" method="GET">     <!-- 추후 POST로 변경할것 -->
+                                <table>
+                                        <tr>
+                                            <td><span>가입된 이메일을 입력하세요</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" name="email" placeholder="arimatsuri@airmaturi.com"></td>
+                                        </tr>
+                                    </table>
+                                    <input type="submit" value="ID찾기">
+                                </form>
+                                </fieldset>
+                                <div class="btn">
+                                    <a href="#div1" class="btn-login">로그인으로 되돌아가기</a>
+                                    <a href="#" class="btn-pwd">PW를 잊으셨나요?</a>
+                                </div>
+                                <!--// div2 ID 찾기-->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //mainSection -->
+
+        </div>
+        <!-- //content -->
+
+    </div>
+    <!-- //wrap -->
+
+    <!-- footer -->
+    <footer></footer>
+    <!-- //footer -->
+</body>
+</html>
