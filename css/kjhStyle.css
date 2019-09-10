@@ -48,7 +48,7 @@ header {
     padding: 15px 0;
     border-radius: 4px;
 }
-.keyword_main, .date, .region_sel, .festival_sel, .loginLayer div:eq(1), .loginLayer div:eq(2) {
+.keyword_main, .date, .region_sel, .festival_sel {
     width: 100%; height: 75px;
 }
 .keyword_main .keyword_main_label, .date .date_label, .region_sel .region_sel_label, .festival_sel .festival_sel_label {
@@ -110,7 +110,7 @@ header {
     margin-top: 30px;
     color: #eee;
 }
-.search_btn div:last-child > button, .loginLayer button {
+.search_btn div:last-child > button {
     background-color: mediumturquoise;
     width: 100%; height: 45px;
     margin-top: 20px;
@@ -129,18 +129,33 @@ header {
 }
 .loginLayer {
     position: fixed;
-    top: 50%; left: 50%;
+    top: 45%; left: 50%;
     transform: translate(-50%, -50%);
     background-color: #eee;
     z-index: 8;
-    width: 470px; height: 370px;
-    padding: 15px
+    width: 470px; height: 320px;
+    padding: 25px 15px;
 
 }
-.layerClose {
+/* 주석 사유: 엄청 없어보임 */
+/* .layerClose {
+    position: fixed;
+    top: -18px; right: -18px;
+    border-radius: 20px;
+    background-color: #ddd; 
+    z-index: 10;
+    width: 40px; height: 40px;
+    text-align: center;
+}
+.layerClose > span {
     cursor: pointer;
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 34px;
+    line-height: 38px;
+    color: #999;
+} */
+.loginLayer > div:nth-of-type(1), .loginLayer > div:nth-of-type(2) {
+    width: 100%; height: 60px;
+    /* border: 1px solid black; */
 }
 #loginId, #loginPwd {
     width: 100%; height: 45px;
@@ -152,25 +167,45 @@ header {
     border-radius: 4px;
     overflow: hidden;
     padding: 0 10px;
-    margin: 10px 0;
 }
-.loginLayer div:eq(3) {
-    width: 100%; height: 25px;
+.loginLayer button {
+    background-color: mediumturquoise;
+    width: 100%; height: 45px;
+    margin-top: 10px;
+    color: #fff;
 }
-.loginLayer div:eq(3) span {
+.loginLayer > div:nth-of-type(3), .loginLayer > div:nth-of-type(5) {
     width: 100%; height: 25px;
-    line-height: 25px;
-    font-size: 12px;
+    overflow: hidden;
+}
+.loginLayer > div:nth-of-type(3) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
     font-weight: bold;
     color: #777;
+    float: left;
 }
+.loginLayer > div:nth-of-type(3) > div:nth-of-type(1) { width: 25px; }
+.loginLayer > div:nth-of-type(3) > div:nth-of-type(2) { width: 150px; margin-left: 10px; }
 #logRmbId {
     background-color: #eee;
-    height: 25px;
-    width: 25px;
+    width: 23px; height: 23px;
 }
-div.loginLayer hr {
+.loginLayer hr {
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 10px 0;
+    margin: 15px 0;
 }
+.loginLayer > div:nth-of-type(5) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    margin: 0 15px;
+}
+.loginLayer > div:nth-of-type(5) > div:nth-of-type(1) { float: left; }
+.loginLayer > div:nth-of-type(5) > div:nth-of-type(2), .loginLayer > div:nth-of-type(5) > div:nth-of-type(3) { float: right; }
+.loginLayer > div:nth-of-type(5) > div > span { cursor: pointer; }
+.loginLayer > div:nth-of-type(5) > div > span:hover { color: mediumturquoise; text-decoration: underline; }

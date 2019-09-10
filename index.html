@@ -94,12 +94,10 @@
     </header>
     <!-- 임시 해더 입니다. -->
     <content>
+        <!-- 로그인 폼 -->
         <div id="loginModule">
             <div class="loginBackground"></div>
             <div class="loginLayer">
-                <div>
-                    <span class="layerClose">&times;</span>
-                </div>
                 <div>
                     <input type="text" name="loginId" id="loginId">
                 </div>
@@ -107,21 +105,29 @@
                     <input type="password" name="loginPwd" id="loginPwd">
                 </div>
                 <div>
-                    <span>
+                    <div>
                         <input type="checkbox" name="logRmbId" id="logRmbId">
+                    </div>
+                    <div>
                         <label for="logRmbId">아이디 기억</label>
-                    </span>
+                    </div>
                 </div>
                 <div>
                     <button>로그인</button>
                 </div>
                 <hr>
                 <div>
-                    <a href="#div2" class="btn-login">ID 찾기</a>
-                    <a href="#" class="btn-pwd">비밀번호가 생각나지 않나요?</a>
+                    <div><span class="btn-join">회원가입</span></div>
+                    <div><span class="btn-pwd">비밀번호찾기</span></div>
+                    <div><span class="btn-login">아이디찾기</span></div>
                 </div>
+                <!-- 주석 사유: 엄청 없어보임 -->
+                <!-- <div class="layerClose">
+                    <span>X</span>
+                </div> -->
             </div>
         </div>
+        <!-- //로그인 폼 -->
     </content>
     <ul>
         <li><a href="./festival/fWholeList.html">전체 축제 리스트</a></li>
