@@ -18,18 +18,29 @@
 /* section like button */
 .likeBtn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 25px;
+    right: 25px;
     width: 90px;
     height: 40px;
+    background-color: white;
+    border: 1px solid #888;
+    cursor: pointer;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.likeBtn:active {
+    background-color: #eee;
 }
 
 .likeIcon {
     float: left;
+    margin-left: 20px;
 }
 
 .likeName {
     float: right;
+    margin-right: 20px;
 }
 /* section wrap */
 .section_wrap {
