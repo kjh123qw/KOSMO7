@@ -12,10 +12,10 @@ $(function(){
     });
     // 로그인 폼 선택 시 테두리
     $('#loginId').on("focus", function(event){
-        $(event.target).css('border','1px solid #222');
+        $(event.target).css('border','1px solid #777');
     });
     $('#loginPwd').on("focus", function(event){
-        $(event.target).css('border','1px solid #222');
+        $(event.target).css('border','1px solid #777');
     });
     // 로그인 폼 선택 아웃 시 테두리 제거
     $('#loginId').on("blur", function(event){

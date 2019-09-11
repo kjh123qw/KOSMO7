@@ -1,0 +1,51 @@
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+aside {
+    padding: 5px;
+    width: 15%;
+    float: left;
+}
+aside > div {
+    height: 45px;
+}
+aside > div > a {
+    font-size: 14px;
+    color: #444;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+}
+aside > div > a:hover {
+    color: #222;
+    font-weight: bold;
+    border-bottom: 3px solid #bbb;
+}
+section {
+    padding: 5px;
+    background-color: #aaa;
+    width: 85%;
+    float: left;
+}
+.clearfix { clear: both; }
+/* 1200 픽셀 이상일경우 */
+@media all and (min-width: 1200px) {
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 768px) {
+    #wrap {
+    width: 768px;
+    margin: 0 auto;
+    }
+    aside {
+        width: 220px;
+    }
+    section {
+        width: 548px;
+    }
+}
