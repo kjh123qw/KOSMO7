@@ -1,3 +1,28 @@
+*{font-family: 'Noto Sans KR', sans-serif; }
+
+
+#mainKeyword{
+    border: 1px solid blue;
+}
+
+
+
+.coldetailDiv{
+    height: 2.4em;
+    line-height: 2.4em;
+}
+
+.coldetailDiv span{
+    background-color: bisque;
+    padding: 5px;
+}
+
+#detailSearchBtn{
+    margin-left: 10px;
+    padding: 0;
+}
+
+
 
 
 #mainContainer{
