@@ -8,7 +8,9 @@ header {
     overflow: hidden;
     position: relative;
 }
+
 /* -------Navigation------- */
+
 #nav {
     width: 100%; height: 50px;
 }
@@ -28,7 +30,9 @@ header {
     font-weight: bold;
     color: #fff;
 }
+
 /* -------Main Text(test)------- */
+
 .Main_text {
     width: 100%; height: 200px;
 }
@@ -39,7 +43,9 @@ header {
     font-weight: bold;
     color: #fff;
 }
+
 /* -------Search Main Page------- */
+
 #search_window {
     background-color: rgba(255,255,255,0.7);
     width: 380px; height: 400px;
@@ -97,7 +103,7 @@ header {
 .date .date_input #date_end {
     border-radius: 0 4px 4px 0;
 }
-.search_btn button, .loginLayer button {
+.search_btn button, .loginLayer button, .joinLayer button {
     border: 0;
     border-radius: 4px;
     font-size: 14px;
@@ -116,11 +122,13 @@ header {
     margin-top: 20px;
     color: #fff;
 }
+
 /* -------Login Layer Module ------- */
+
 #loginModule {
     display: none;
 }
-.loginBackground {
+#loginModule > .loginBackground {
     position: fixed;
     top: 0; right: 0;
     bottom: 0; left: 0;
@@ -155,23 +163,34 @@ header {
 } */
 .loginLayer > div:nth-of-type(1), .loginLayer > div:nth-of-type(2) {
     width: 100%; height: 60px;
-    /* border: 1px solid black; */
+    position: relative;
 }
 #loginId, #loginPwd {
     width: 100%; height: 45px;
     line-height: 45px;
     font-size: 14px;
     font-weight: bold;
-    color: #777;
+    color: #666;
     outline: none;
     border: 1px solid #eee;
     border-radius: 4px;
     overflow: hidden;
     padding: 0 10px;
 }
-#loginId::placeholder, #loginPwd::placeholder {
-    color: #bbb;
-} 
+.loginLabel {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: -5px; top: -6px;
+    padding: 0 5px; height: 16px;
+    background-color: #fff;
+    border-radius: 3px;
+    line-height: 16px;
+    font-size: 9px;
+    color: #555;
+    text-align: center;
+    z-index: 11;
+}
 .loginLayer button {
     background-color: mediumturquoise;
     width: 100%; height: 45px;
@@ -180,6 +199,7 @@ header {
     outline: none;
 }
 .loginLayer > div:nth-of-type(3), .loginLayer > div:nth-of-type(5) {
+    margin: 0 0 7px 5px;
     width: 100%; height: 25px;
     overflow: hidden;
 }
@@ -194,10 +214,11 @@ header {
 .loginLayer > div:nth-of-type(3) > div:nth-of-type(1) { width: 25px; }
 .loginLayer > div:nth-of-type(3) > div:nth-of-type(2) { width: 150px; margin-left: 10px; }
 #logRmbId {
+    margin-top: 1px;
     background-color: #eee;
     width: 23px; height: 23px;
 }
-.loginLayer hr {
+.loginLayer hr, .joinLayer hr {
     border: 0;
     border-top: 1px solid #ccc;
     margin: 15px 0;
@@ -214,3 +235,84 @@ header {
 .loginLayer > div:nth-of-type(5) > div:nth-of-type(2), .loginLayer > div:nth-of-type(5) > div:nth-of-type(3) { float: right; }
 .loginLayer > div:nth-of-type(5) > div > span { cursor: pointer; }
 .loginLayer > div:nth-of-type(5) > div > span:hover { color: mediumturquoise; text-decoration: underline; }
+
+/* -------Join Layer Module------- */
+
+#joinModule {
+    display: none;
+}
+#joinModule > .joinBackground {
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 7;
+}
+.joinLayer {
+    position: fixed;
+    top: 45%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    z-index: 8;
+    width: 470px; height: 520px;
+    padding: 25px 15px;
+}
+.joinLayer > div:nth-of-type(1), .joinLayer > div:nth-of-type(2), .joinLayer > div:nth-of-type(3), .joinLayer > div:nth-of-type(4) {
+    width: 100%; height: 60px;
+    position: relative;
+}
+#joinId, #joinPwd, #joinPwdChk, #joinEmail {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.joinLabel {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: -5px; top: -6px;
+    padding: 0 5px; height: 16px;
+    background-color: #fff;
+    border-radius: 3px;
+    line-height: 16px;
+    font-size: 9px;
+    color: #555;
+    text-align: center;
+    z-index: 11;
+}
+.joinLayer button {
+    background-color: mediumturquoise;
+    width: 100%; height: 45px;
+    margin-top: 10px;
+    color: #fff;
+    outline: none;
+}
+.joinLayer > div:nth-of-type(5), .joinLayer > div:nth-of-type(6) {
+    margin: 0 0 7px 5px;
+    width: 100%; height: 25px;
+    overflow: hidden;
+}
+#agreePolicy, #agreeEmail {
+    margin-top: 1px;
+    background-color: #111;
+    width: 23px; height: 23px;
+}
+.joinLayer > div:nth-of-type(5) > div, .joinLayer > div:nth-of-type(6) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    float: left;
+}
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(1), .joinLayer > div:nth-of-type(6) > div:nth-of-type(1) { width: 25px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2), .joinLayer > div:nth-of-type(6) > div:nth-of-type(2) { width: 250px; margin-left: 10px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span { cursor: pointer; font-size: 12px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span:hover { color: mediumturquoise; text-decoration: underline; }

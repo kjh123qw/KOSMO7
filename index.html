@@ -20,7 +20,7 @@
             <ul>
                 <li class="home_btn"><a href="./index.html"><img src="img/logo_noText 51x44.png" alt="Logo"></a></li>
                 <li><a href="./smallTown/smallTownMain.html">소도시</a></li>
-                <li><a href="./member/mRegistration.html">회원가입</a></li>
+                <li><a href="#" class="btn-join">회원가입</a></li>
                 <li><a href="#" class="btn-login">로그인</a></li>
             </ul>
         </div>
@@ -99,10 +99,12 @@
             <div class="loginBackground"></div>
             <div class="loginLayer">
                 <div>
-                    <input type="text" name="loginId" id="loginId" placeholder="아이디">
+                    <div class="loginLabel"><span>아이디</span></div>
+                    <input type="text" name="loginId" id="loginId" class="focusFunc" placeholder="아이디">
                 </div>
                 <div>
-                    <input type="password" name="loginPwd" id="loginPwd" placeholder="비밀번호">
+                    <div class="loginLabel"><span>비밀번호</span></div>
+                    <input type="password" name="loginPwd" id="loginPwd" class="focusFunc" placeholder="비밀번호">
                 </div>
                 <div>
                     <div>
@@ -128,6 +130,50 @@
             </div>
         </div>
         <!-- //로그인 폼 -->
+        <!-- 회원가입 폼 -->
+        <div id="joinModule">
+            <div class="joinBackground"></div>
+            <div class="joinLayer">
+                <div>
+                    <div class="joinLabel"><span>아이디</span></div>
+                    <input type="text" name="joinId" id="joinId" class="focusFunc" placeholder="아이디">
+                </div>
+                <div>
+                    <div class="joinLabel"><span>비밀번호</span></div>
+                    <input type="password" name="joinPwd" id="joinPwd" class="focusFunc" placeholder="비밀번호">
+                </div>
+                <div>
+                    <div class="joinLabel"><span>비밀번호 확인</span></div>
+                    <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc" placeholder="비밀번호 확인">
+                </div>
+                <div>
+                    <div class="joinLabel"><span>이메일</span></div>
+                    <input type="email" name="joinEmail" id="joinEmail" class="focusFunc" placeholder="이메일">
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" name="agreePolicy" id="agreePolicy">
+                    </div>
+                    <div>
+                        <label for="agreePolicy">회원가입 약관에 동의합니다. </label><span href="#">(약관확인)</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" name="agreeEmail" id="agreeEmail">
+                    </div>
+                    <div>
+                        <label for="agreeEmail">이메일 수신에 동의합니다.</label>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <button>회원가입</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- //회원가입 폼 -->
     </content>
     <ul>
         <li><a href="./festival/fWholeList.html">전체 축제 리스트</a></li>
