@@ -50,23 +50,26 @@ $(function(){
     endDate();
 
 
+
     $('#startDateImage').click(function(){
         $('#startDate').focus();
-        startDate();
     })
 
     $('#endDateImage').click(function(){
         $('#endDate').focus();
-        // endDate();
     })
 
     $('#searchOption1').click(function(){
         var checked = $(this).prop('checked');
         
         if(checked == false){
-            $('#toggleMsgSpan').text("전체축제조회");
+            $('#toggleMsgSpan').text("날짜상관없는 전체축제조회입니다");
+            $('#toggleMsgSpan').css('backgroundColor','darksalmon')
+            $('#toggleMsgSpan').css('border','2px solid antiquewhite')
         }else{
-            $('#toggleMsgSpan').text("현재축제조회");
+            $('#toggleMsgSpan').text("현재진행중인 축제조회입니다");
+            $('#toggleMsgSpan').css('backgroundColor','antiquewhite')
+            $('#toggleMsgSpan').css('border','2px solid darksalmon')
         }
 
         if(checked == false){
@@ -113,9 +116,13 @@ $(function(){
         var insertKeyword = $('.keywordSelectBox').val();
         var $keywordLength = $('.keywordList').length;
 
-        if(insertKeyword == ""){
+        if(insertKeyword == ""){ //빈칸 제한
             return;
-        }else if($keywordLength == 5){
+        }else if($keywordLength == 5){ //키워드갯수 제한
+            $('.keywordSelectBox').val('');
+            return;
+        }else if(insertKeyword.length > 6){ //글자수제한
+            $('.keywordSelectBox').val('');
             return;
         }
 
@@ -144,7 +151,7 @@ $(function(){
             prevEl: '.swiper-button-prev',
           },
         autoplay: {
-            delay: 5000,
+            delay: 3000,
             disableOnInteraction: false, 
         },
         loop: true,
@@ -153,6 +160,7 @@ $(function(){
         
         
       });
+
 
 
       $('.custom-select').change(function(){
@@ -168,24 +176,22 @@ $(function(){
       })
 
       $('#detailSearchBtn').click(function(){
-          $('#firstBox').slideToggle(1000,function(){
-
-          })
+          $('#firstBox').slideToggle(1000,function(){})
+          $('#firstHr').slideToggle(1000,function(){})
       })
 
       $('.mapBtn img').click(function(){
 
+        var alt = $(this).attr('alt');
         var nowImage = $(this).attr('src');
-        var image;
+        var chackImage = './img/check.jpg';
 
-        if(nowImage == './img/image1.jpg'){
-             image = './img/check.jpg'
-        $(this).attr('src',image);
+        if(nowImage != './img/check.jpg'){
+            $(this).attr('src',chackImage);
         }else{
-             image = './img/image1.jpg'
-            $(this).attr('src',image);
+            $(this).attr('src','./img/yujisang/'+alt+'.png');
+            // $(this).attr('src','./img/image1.jpg');
         }
-
 
           var simaCheckName = $(this).next().text();         
           var simaChecked = "";
@@ -227,6 +233,7 @@ $(function(){
        
 
         //   $('#firstBox').css('display','none')
+        //   $('#firstHr').css('display','none')
          $('input[name="local"]').css('display','none');
 
 });
@@ -240,16 +247,61 @@ function keywordDelete(){
 function startDate(){
     $('#startDate').datepicker({
 
+
         format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
         calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
         todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
         autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
-        startDate: '',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
-        endDate: '+10d',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
+        startDate: 'sysdate',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
+        endDate: '',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
         disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
         immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
-        language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
+        language : "ko",	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
+        
     });
+
+}
+
+function startDateSelect(){
+    var startDate = $('#startDate').val();
+    $('#endDate').val(startDate);
+
+    if($('#startDate').val() == ""){
+        $('#endDate').prop('disabled', true);
+    }else{
+        $('#endDate').prop('disabled', false);
+    }
+}
+
+function endDateSelect(){
+    var startDate = $('#startDate').val();
+    var endDate = $('#endDate').val();
+
+    var day = new Date(startDate);
+    var sYear = day.getFullYear();
+    var sMonth = day.getMonth()+1;
+    var sDay = day.getDate();
+
+    var day = new Date(endDate);
+    var eYear = day.getFullYear();
+    var eMonth = day.getMonth()+1;
+    var eDay = day.getDate();
+
+    // console.log(sYear)
+    // console.log(sMonth)
+    // console.log(sDay)
+    // console.log(eYear)
+    // console.log(eMonth)
+    // console.log(eDay)
+
+    if(sMonth == eMonth && sDay > eDay){
+        console.log("xxxx")
+        $('#endDate').val(startDate);
+    }
+    
+ 
+
+
 }
 
 function endDate(){
@@ -260,8 +312,8 @@ function endDate(){
         calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
         todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
         autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
-        startDate: '',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
-        endDate: '+10d',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
+        startDate: 'sysdate',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
+        endDate: '',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
         disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
         immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
         language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음

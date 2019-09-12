@@ -22,6 +22,9 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- font-awesome -->
 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- googleFont -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
     <!-- datepicher -->
@@ -32,6 +35,7 @@
 
     <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨--> <!--공통적인 css -->
     <link rel="stylesheet" href="./css/fSearchList.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src = "./js/fSearchList.js"></script>
 
 </head>
@@ -46,7 +50,9 @@
                     <button type="button" class="btn btn-warning btn-sm" id = "detailSearchBtn">상세조회</button>
                 </div>        
             </div>
+            <hr>
         </div>
+
     
     
         <div class = "container" id = "mainContainer">
@@ -54,19 +60,17 @@
                 <div class = "col-sm-7 subBox">
     
                     <div class = "row mapBox">
-                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="sima1" title = "훗카이도"><div class = "col mapSub">훗카이도</div></div>
-                        <input type="checkbox" id="sima1" name="local" value = "훗카이도">
-                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="sima2" title = "혼슈"><div class = "col mapSub">혼슈</div></div>
-                        <input type="checkbox" id="sima2" name="local" value = "혼슈">
+                        <div class = "col mapBtn"><img src="./img/yujisang/sima1.png" alt="sima1" title = "훗카이도"><div class = "col mapSub">훗카이도</div></div>
+                        <div class = "col mapBtn"><img src="./img/yujisang/sima2.png" alt="sima2" title = "혼슈"><div class = "col mapSub">혼슈</div></div>
                     </div>
                     <div class = "row mapBox">
-                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="sima3" title = "시코쿠"><div class = "col mapSub">시코쿠</div></div>
-                        <input type="checkbox" id="sima3" name="local" value = "시코쿠">
-                        <div class = "col mapBtn"><img src="./img/image1.jpg" alt="sima4" title = "큐슈"><div class = "col mapSub">큐슈</div></div>
-                        <input type="checkbox" id="sima4" name="local" value = "큐슈">
-                        
+                        <div class = "col mapBtn"><img src="./img/yujisang/sima3.png" alt="sima3" title = "시코쿠"><div class = "col mapSub">시코쿠</div></div>
+                        <div class = "col mapBtn"><img src="./img/yujisang/sima4.png" alt="sima4" title = "큐슈"><div class = "col mapSub">큐슈</div></div>
                     </div>
-                      
+                        <input type="checkbox" id="sima1" name="local" value = "훗카이도">
+                        <input type="checkbox" id="sima2" name="local" value = "혼슈">
+                        <input type="checkbox" id="sima3" name="local" value = "시코쿠">
+                        <input type="checkbox" id="sima4" name="local" value = "큐슈"> 
                 </div>
     
                 <div class="col-sm-5 subBox">
@@ -79,7 +83,7 @@
                             <label class="custom-control-label" for="searchOption1">Toggle</label>
                         </div>
                         <div class = "col" id = "toggleMsg">
-                            <span id = "toggleMsgSpan">현재조회축제</span>
+                            <span id = "toggleMsgSpan">현재진행중인 축제 조회입니다</span>
                         </div>
                     </div>
     
@@ -99,14 +103,14 @@
                     <!-- 날짜Div -->
                     <div class = "row dateBox">        
                             <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "startDate">
+                                <input type="text" class="form-control dateInput" id = "startDate" onchange = "startDateSelect()">
                                 <div class="input-group-prepend dateImage" id = "startDateImage">
                                     <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                                 </div>
                             </div>
                             
                             <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "endDate">
+                                <input type="text" class="form-control dateInput" id = "endDate" onchange = "endDateSelect()">
                                 <div class="input-group-prepend dateImage" id = "endDateImage">
                                     <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                                 </div>
@@ -118,8 +122,8 @@
                     <div class = "row seasonBox">
                         <div class = "col">
                         <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season1" name="season" value="1">
-                            <label class="custom-control-label" for="season1">봄봄</label>
+                            <input type="radio" class="custom-control-input seasonVal" id="season1" name="season" value="1" checked>
+                            <label class="custom-control-label" for="season1">봄</label>
                         </div>
                         </div>
     
@@ -175,14 +179,14 @@
                                     <label class="custom-control-label" for="sortCheck3">종류3</label>
                                 </div>
                             </div>
-                            <!-- <div class = "col">
+                            <div class = "col">
                                 <div class="custom-control custom-checkbox subSortBox">
                                     <input type="checkbox" class="custom-control-input" id="sortCheck4" name="sort" value = "4">
                                     <label class="custom-control-label" for="sortCheck4">종류4</label>
                                 </div>
-                            </div> -->
+                            </div>
                     </div>
-                    <div class = "row sortBox">
+                    <!-- <div class = "row sortBox">
                             <div class = "col">
                                 <div class="custom-control custom-checkbox subSortBox">
                                     <input type="checkbox" class="custom-control-input" id="sortCheck5" name="sort" value = "5">
@@ -207,7 +211,7 @@
                                     <label class="custom-control-label" for="sortCheck8">종류8</label>
                                 </div>
                             </div>
-                    </div>
+                    </div> -->
                     <!-- //종류Div -->
                     <hr>
                     <!-- 키워드 추가 -->
@@ -224,9 +228,9 @@
                     </div>
                     <div class = "row keywords">
                         
-                            <span class = "keywordList">메인에서</span>
-                            <span class = "keywordList">넘어온</span>
-                            <span class = "keywordList">keyword</span>
+                            <span class = "keywordList">#새로추가</span>
+                            <span class = "keywordList">#할수있는</span>
+                            <span class = "keywordList">#keyword</span>
                             
                     </div>
                     <!-- //키워드추가 -->
@@ -235,7 +239,7 @@
     
             </div>
             <!-- //첫번쨰 Div -->
-            <hr>
+            <hr id = "firstHr">
             
             <!-- 세번쨰 Div -->
             <br>
@@ -261,72 +265,93 @@
                         </div>
                     </div>
                     <hr>
+
+
                     <div class = 'row photoRow'>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#">
-                                    <img src="./img/f1.jpg" alt="">
+                                <a href="#" class = "goDetail">
+                                    <img src="./img/yujisang/f1.jpg" alt="festival1">
                                     <div class="caption">
-                                        <p>2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능</p>
+                                        <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
                                     </div>
                                 </a>
-                                <span>조회수나 별점</span>
+                                <span><i class="fas fa-star likeStar"></i>&ensp;4.5 (193)</span>
+                                
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#">
-                                    <img src="./img/f1.jpg" alt="">
+                                <a href="#" class = "goDetail">
+                                        <img src="./img/yujisang/f2.jpg" alt="festival2">
                                     <div class="caption">
-                                        <p>2줄이상 넘어가면 생략가능</p>
+                                            <p>도쿄 카시나와 신사에서 열리는 벚꽃축제에 놀러오세요</p>
                                     </div>
                                 </a>
-                                <span>기타고려사항</span>
+                                <span><i class="fas fa-star likeStar"></i>&ensp;3.7 (54)</span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#">
-                                    <img src="./img/f1.jpg" alt="">
+                                <a href="#" class = "goDetail">
+                                        <img src="./img/yujisang/f3.jpg" alt="festival3">
                                     <div class="caption">
-                                        <p>2줄이상 넘어가면 생략가능</p>
+                                            <p>매년 나고야에서 열리는 가장큰 축제~! 오나키 신사에서 열리는 불꽃축제에 놀러오세요</p>
                                     </div>
                                 </a>
+                                <span><i class="fas fa-star likeStar"></i>&ensp;3.5 (2)</span>
                             </div>
                         </div>                  
                     </div>
+
                     <div class = 'row photoRow'>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#">
-                                        <img src="./img/f1.jpg" alt="">
+                                    <a href="#" class = "goDetail">
+                                        <img src="./img/yujisang/f4.jpg" alt="festival4">
                                         <div class="caption">
-                                            <p>2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능2줄이상 넘어가면 생략가능</p>
+                                            <p>후쿠오카 캐널시티에서 쇼핑을 즐기세요!!!</p>
                                         </div>
                                     </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;3.9 (93)</span>
+                                    
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#">
-                                        <img src="./img/f1.jpg" alt="">
+                                    <a href="#" class = "goDetail">
+                                            <img src="./img/yujisang/f5.jpg" alt="festival5">
                                         <div class="caption">
-                                            <p>2줄이상 넘어가면 생략가능</p>
+                                                <p>아키타에서 즐기는 눈의축제!! 유키나라축제에 초대합니다</p>
                                         </div>
                                     </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;5.0 (13)</span>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-4">
+                            <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#">
-                                        <img src="./img/f1.jpg" alt="">
+                                    <a href="#" class = "goDetail">
+                                            <img src="./img/yujisang/f6.jpg" alt="festival6">
                                         <div class="caption">
-                                            <p>2줄이상 넘어가면 생략가능</p>
+                                                <p>매년 오키나와에서 열리는 가장큰 축제~! 자야오키 신사축제!!!</p>
                                         </div>
                                     </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.2 (82)</span>
                                 </div>
-                            </div>                   -->
+                            </div>                  
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
     
                         <div class = "moreDiv">
                             <button type="button" class="btn btn-info btn-xs" id = "moreBtn">더보기 2 / 9</button>
@@ -346,11 +371,14 @@
             <div class = "container" id = "secondDiv">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img1" title = "image1"></div>
-                        <div class="swiper-slide"><img src="./img/image2.png" alt="img2" title = "image2"></div>
-                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img3" title = "image3"></div>
-                        <div class="swiper-slide"><img src="./img/image2.png" alt="img4" title = "image4"></div>
-                        <div class="swiper-slide"><img src="./img/banner.jpg" alt="img5" title = "image5"></div>   
+                        <div class="swiper-slide"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1" title = "festivalBanner1"></div>
+                        <div class="swiper-slide"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2" title = "festivalBanner2"></div>
+                        <div class="swiper-slide"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3" title = "festivalBanner3"></div>
+                        <div class="swiper-slide"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4" title = "festivalBanner4"></div>
+                        <div class="swiper-slide"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5" title = "festivalBanner5"></div>   
+                        <div class="swiper-slide"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6" title = "festivalBanner6"></div>   
+                        <div class="swiper-slide"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7" title = "festivalBanner7"></div>   
+                        <div class="swiper-slide"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8" title = "festivalBanner8"></div>   
                     </div>
                     <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -360,25 +388,55 @@
             </div>
             <!-- //두번쨰 Div -->
             <hr>
-    
-                
-                
-    
-    
-    
-    
-               
+
+            
         </div>
-    
+
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+                <div class="footer_wrap">
+                  <div class="footer_top">
+                    <div class="footerbox about_us">
+                      <h3>ABOUT US</h3>
+                      <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
+                    </div>
+                    <div class="footerbox contact_us">
+                        <h3>CONTACT US</h3>
+                        <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+                        <p>+82 1234-5678</p>
+                        <p><a href="#">info&#64;airmatsuri.com</a></p>
+                    </div>
+                    <div class="footerbox follow_us">
+                        <h3>FOLLOW US</h3>
+                        <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
+                        <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
+                        <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
+                        <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
+                    </div>
+                  </div>
+                  <div class="footer_bottom">
+                    <div class="footer_container">
+                        <div class="footer_copyright">
+                          <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                        </div>
+                        <div class="footer_gnb">
+                          <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            <!-- //Footer -->
     
     </body>
 </html>
