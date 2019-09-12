@@ -47,7 +47,7 @@ $(function(){
     })
 
     startDate();
-    endDate();
+    // endDate();
 
 
 
@@ -176,8 +176,8 @@ $(function(){
       })
 
       $('#detailSearchBtn').click(function(){
-          $('#firstBox').slideToggle(1000,function(){})
-          $('#firstHr').slideToggle(1000,function(){})
+          $('#firstBox').stop().slideToggle(1000,function(){})
+          $('#firstHr').stop().slideToggle(1000,function(){})
       })
 
       $('.mapBtn img').click(function(){
@@ -235,6 +235,10 @@ $(function(){
         //   $('#firstBox').css('display','none')
         //   $('#firstHr').css('display','none')
          $('input[name="local"]').css('display','none');
+         $('#startDate').val("시작날짜");
+         $('#endDate').val("종료날짜");
+
+         
 
 });
 
@@ -267,9 +271,12 @@ function startDateSelect(){
     $('#endDate').val(startDate);
 
     if($('#startDate').val() == ""){
-        $('#endDate').prop('disabled', true);
+        $('#endDate').prop('disabled', true);    
     }else{
         $('#endDate').prop('disabled', false);
+        // $('#endDate').focus();
+        endDateClick();
+        
     }
 }
 
@@ -294,9 +301,13 @@ function endDateSelect(){
     // console.log(eMonth)
     // console.log(eDay)
 
-    if(sMonth == eMonth && sDay > eDay){
-        console.log("xxxx")
-        $('#endDate').val(startDate);
+    if(sMonth == eMonth && sDay > eDay){ //날짜 수정 필요
+        alert('종료날짜를 재설정해주세요')
+        $('#endDate').focus();
+        // $('#endDate').val(" ");
+        // $('#endDate').focusout();
+        // $('#startDate').focus();
+        // $('#startDate').val(" ");
     }
     
  
@@ -304,7 +315,16 @@ function endDateSelect(){
 
 }
 
-function endDate(){
+
+function endDateClick(){
+    
+    var endDay = $('#endDate').val();
+    // var endDay2 = $('#startDate').val();
+    
+    if(endDay == ""){
+        return;
+    }
+
 
     $('#endDate').datepicker({
 
@@ -312,13 +332,13 @@ function endDate(){
         calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
         todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
         autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
-        startDate: 'sysdate',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
+        startDate: endDay,	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
         endDate: '',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
         disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
         immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
         language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
     });
-    
+
 }
 
 

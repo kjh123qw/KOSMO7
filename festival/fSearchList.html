@@ -103,16 +103,16 @@
                     <!-- 날짜Div -->
                     <div class = "row dateBox">        
                             <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "startDate" onchange = "startDateSelect()">
+                                <input type="text" class="form-control dateInput" id = "startDate" onchange = "startDateSelect()" readonly = "readonly">
                                 <div class="input-group-prepend dateImage" id = "startDateImage">
                                     <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                                 </div>
                             </div>
                             
                             <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "endDate" onchange = "endDateSelect()">
+                                <input type="text" class="form-control dateInput" id = "endDate" onchange = "endDateSelect()" onclick = "endDateClick()"  readonly = "readonly">
                                 <div class="input-group-prepend dateImage" id = "endDateImage">
-                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
+                                    <span class="input-group-text" onclick = "endDateClick()"><i class='far fa-calendar-alt'></i></span>
                                 </div>
                             </div>
                     </div>
