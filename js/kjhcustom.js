@@ -1,7 +1,7 @@
 $(function(){
-    var tempPlaceHolderTxt;
     // 로그인 화면
     $('.btn-login').click(function(){
+        $('#joinModule').hide();
         $('#loginModule').show();
     });
     $('.loginBackground').click(function(){

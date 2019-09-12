@@ -177,17 +177,18 @@ header {
     overflow: hidden;
     padding: 0 10px;
 }
-.loginLabel {
+.inputLabel {
     display: none;
     overflow: hidden;
     position: absolute;
-    left: -5px; top: -6px;
-    padding: 0 5px; height: 16px;
+    top: -7px; left: -7px;
+    padding: 0 5px; height: 18px;
     background-color: #fff;
     border-radius: 3px;
     line-height: 16px;
-    font-size: 9px;
-    color: #555;
+    font-size: 12px;
+    color: #888;
+    border: 1px solid #ccc;
     text-align: center;
     z-index: 11;
 }
@@ -254,7 +255,7 @@ header {
     transform: translate(-50%, -50%);
     background-color: #eee;
     z-index: 8;
-    width: 470px; height: 440px;
+    width: 470px; height: 460px;
     padding: 25px 15px;
 }
 .joinLayer > div:nth-of-type(1), .joinLayer > div:nth-of-type(2), .joinLayer > div:nth-of-type(3), .joinLayer > div:nth-of-type(4) {
@@ -273,20 +274,9 @@ header {
     overflow: hidden;
     padding: 0 10px;
 }
-.joinLabel {
-    display: none;
-    overflow: hidden;
-    position: absolute;
-    left: -5px; top: -6px;
-    padding: 0 5px; height: 16px;
-    background-color: #fff;
-    border-radius: 3px;
-    line-height: 16px;
-    font-size: 9px;
-    color: #555;
-    text-align: center;
-    z-index: 11;
-}
+::-webkit-input-placeholder { color: #aaa; } /* Edge */
+:-ms-input-placeholder { color: #aaa; } /* Internet Explorer 10-11 */
+::placeholder { color: #aaa; }
 .joinLayer button {
     background-color: mediumturquoise;
     width: 100%; height: 45px;
@@ -315,4 +305,6 @@ header {
 .joinLayer > div:nth-of-type(5) > div:nth-of-type(1), .joinLayer > div:nth-of-type(6) > div:nth-of-type(1) { width: 25px; }
 .joinLayer > div:nth-of-type(5) > div:nth-of-type(2), .joinLayer > div:nth-of-type(6) > div:nth-of-type(2) { width: 250px; margin-left: 10px; }
 .joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span { cursor: pointer; font-size: 12px; }
-.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span:hover { color: mediumturquoise; text-decoration: underline; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span:hover, .joinLoginBtn:hover { color: mediumturquoise; text-decoration: underline; }
+.joinLoginBtn { cursor: pointer; font-size: 16px; color: #777; }
+.joinLoginBtn { font-size: 16px; color: #777; }
