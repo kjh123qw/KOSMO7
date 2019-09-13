@@ -30,7 +30,7 @@ $(function(){
     // input 선택 function
     function lableOn($obj){
         tempPlaceHolderTxt = $obj.attr('placeholder');
-        $obj.css('border','1px solid #ccc').attr('placeholder','');
+        $obj.css('border','1px solid mediumturquoise').attr('placeholder','');
         $obj.prev().stop().show();
     }
     function lableOff($obj){

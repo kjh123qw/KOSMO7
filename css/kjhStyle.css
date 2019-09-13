@@ -181,14 +181,14 @@ header {
     display: none;
     overflow: hidden;
     position: absolute;
-    top: -7px; left: -7px;
-    padding: 0 5px; height: 18px;
-    background-color: #fff;
+    top: -8px; left: -7px;
+    padding: 0 5px; height: 19px;
+    background-color: mediumturquoise;
     border-radius: 3px;
-    line-height: 16px;
+    line-height: 17px;
     font-size: 12px;
-    color: #888;
-    border: 1px solid #ccc;
+    color: #fff;
+    /* border: 1px solid #ccc; */
     text-align: center;
     z-index: 11;
 }

@@ -1,0 +1,100 @@
+#wrap {
+    width: 100%;
+}
+#wrap hr { margin: 10px 0;}
+.islandMenu ul {
+    overflow: hidden;
+}
+.islandMenu li {
+    width: 21%; height: 40px;
+    margin: 10px 2% 0 2%;
+    background-color: mediumturquoise;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+}
+.islandMenu li span {
+    display: block;
+    width: 100%; height: 100%;
+    line-height: 40px;
+    color: azure;
+    cursor: pointer;
+}
+.sTownList {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+}
+.sTownBox {
+    width: 31%;
+    float: left;
+    /* border: 1px solid black; */
+}
+.sTownBox img {
+    display: block;
+    width: 80%;
+    margin: 0 10% -10px 10%;
+    border-radius: 5px;
+}
+.sTownList > div:nth-child(3n+1){ margin-left:3.5%; }
+.sTownList > div:nth-child(3n){ margin-right:3.5%; }
+.sTownBox div{
+    width: 100%;
+    text-align: center;
+}
+.sTownBox span {
+    display: block;
+    position: relative;
+    top: -25px;
+    width: 80%; height: 35px;
+    line-height: 33px;
+    margin: 0 10%;
+    border-radius: 0 0 5px 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+#moreBox {
+    background-color: dodgerblue;
+    width: 130px; height: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 43px;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nowTownHeader {
+    height: 60px;
+    line-height: 58px;
+    padding: 0 10px;
+}
+.swiper-container {
+    width:100%; height: 400px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff; 
+}
+.swiper-slide img{
+    width: 100%; height: 100%;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1200px) {
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    /* .sTownBox {
+        width: 320px; height: 300px;
+    } */
+}
+@media screen and (max-width: 768px) {
+    #wrap {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
