@@ -202,6 +202,14 @@
     background-color: white;
 }
 
+.custom-range{
+    background-color: white;
+}
+
+.rengeDiv p{
+    text-align: center;
+}
+
 /* //첫번쨰Div */
 
 #secondDiv{
@@ -242,6 +250,7 @@
 
   .thumbnail a img{
       width: 100%;
+      height: 250px;
   }
 
   .caption p{

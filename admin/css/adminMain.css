@@ -1,0 +1,352 @@
+#mainContainer{
+    border: 1px solid black;
+    /* overflow: hidden; */
+    /* height: 100%; */
+
+}
+
+#mainContainer header{
+    background-color: red;
+    line-height: 40px; 
+    text-align: center;
+}
+
+#mainContainer header h1{
+    margin:0;
+}
+
+#mainContainer footer{
+    background-color: green;
+    line-height: 40px; 
+    text-align: center;
+}
+
+#mainContainer footer h1{
+    margin:0;
+}
+
+nav{
+    background-color: beige;
+    /* line-height: 80px;  */
+    height: 40px;
+    overflow: hidden;
+}
+
+.barIcon{
+    /* margin-top: 5px; */
+    top: 10px;
+    left: 30px;
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.barIcon + span{
+    position: absolute;
+    height: 20px;
+    top: 8px;
+    left: 60px;  
+}
+
+.barIcon + span +i+i+ div{
+    width: 20%;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+
+.barIcon + span +i+i+ div input{
+    height: 40px;
+    padding: 0;
+}
+
+.barIcon + span + i{
+    top: 10px;
+    right: 280px;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.barIcon + span + i+i{
+    top: 10px;
+    right: 310px;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.barIcon + span + span{
+    cursor: pointer;
+}
+
+
+
+.contentsBox{
+    padding: 0 15px;
+    /* height: 500px; */
+    
+}
+
+.aside{
+    background-color: yellow;
+    text-align: center;
+    height: 500px;
+}
+
+.aside h1{
+    margin:0;
+    /* line-height: 500px;  */
+}
+
+#section{
+    background-color: palegreen;
+    text-align: center;
+    height: 500px;
+    margin: auto;
+
+    
+    
+
+}
+
+#section h1{
+    /* line-height: 500px;  */
+    margin:0;
+}
+
+.article:first-child{
+    margin-top: 25px;
+}
+
+.article{
+    border: 1px solid black;
+    width: 100%;
+    height: 45%;
+
+    margin: auto;
+
+}
+
+
+ /* ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+} */
+/*
+li{
+    border: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    width: 80%;
+    display: inline-block;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+li:hover{
+    background-color: red;
+    cursor: pointer;
+} */
+
+#bellSpan i{
+    font-size: 30px;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#testDiv{
+    display: inline;
+    font-size: 30px;
+}
+
+#testDiv+ div {
+    display: inline-block;
+    width: 50%;
+    /* height: 46px; */
+    
+}
+
+#testDiv+ div input{
+    width: 100%;
+    height: 46px;
+}
+
+/* ========================== */
+
+#mainContainer1{
+    border: 1px solid black;
+
+}
+
+nav img{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-brand{
+    padding: 0;
+    margin-left: 10px;
+
+}
+
+.mainNav{
+    padding: 0;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+}
+
+ #titleSpan{
+    /* position: absolute; */
+    color: red;
+    /* left: 80px; */
+    margin-right: 10px;
+}
+
+
+
+.mainNav form{
+    margin-right: 10px;
+}
+
+.input-group-prepend span{
+    cursor: pointer;
+}
+
+.aside1{
+    height: 500px;
+    /* margin-left: 15px; */
+    /* border: 1px solid black; */
+    /* margin-right: 15px; */
+    
+}
+
+.section1{
+    height: 500px;
+    border: 1px solid black;
+    background-color: yellow;
+    /* margin-right: 15px; */
+}
+
+.aside1 > div:first-child{
+    height: 20%;
+    background-color: gray;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+}
+.aside1 > div:last-child{
+    height: 80%;
+    background-color: royalblue;
+}
+
+.contentsBox1{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.photoDiv > div{
+    text-align: center;
+}
+
+.photoSubDiv{
+    text-align: center;
+}
+
+.photoSubDiv > p{
+    margin: 0;
+}
+
+.photoDiv > div > img{
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+#ulDiv ul{
+    margin-top: 20px;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#ulDiv i{
+    /* border: 1px solid black;
+    font-size: 40px; */
+    
+}
+
+#ulDiv div{
+    /* display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    padding-top: 5px; */
+}
+
+#ulDiv li{
+    border: 1px solid black;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    width: 95%;
+    display: inline-block;
+    /* font-size: 30px; */
+}
+
+#ulDiv li:last-child{
+    margin-bottom: 0;
+}
+
+#ulDiv li:hover{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+
+.section1 > div{ /* article1, article2 */
+
+    height: 100%;
+    padding: 5px;
+}
+
+
+
+.article1{
+    /* padding: 0; */
+}
+
+.section1 > div > div >div{ /*박스각각을 의미 */
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    
+}
+
+.detail1{
+    border: 1px solid red;
+    height: 100%;
+}
+
+.detail2{
+    border: 1px solid red;
+    height: 100%; 
+}
+
+.detail3{
+    border: 1px solid red;
+}
+
+.article2{
+    padding: 0;
+}
+
+.article2 div{
+    border: 1px solid black;
+}
+

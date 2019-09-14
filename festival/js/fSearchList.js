@@ -226,10 +226,10 @@ $(function(){
             
           }
 
-
-
-
       })
+
+
+
        
 
         //   $('#firstBox').css('display','none')
@@ -241,6 +241,21 @@ $(function(){
          
 
 });
+
+function rangeVal(obj){
+    var size = $('#sizeRange').val();
+    var result;
+
+    if(size == 1){
+        result = "소형";
+    }else if(size == 2){
+        result = "중형";
+    }else{
+        result = "대형";
+    }
+
+    $('.rengeDiv p:last').text(result);
+}
 
 function keywordDelete(){
     $('span[class="keywordList"]').click(function(){
@@ -303,8 +318,8 @@ function endDateSelect(){
 
     if(sMonth == eMonth && sDay > eDay){ //날짜 수정 필요
         alert('종료날짜를 재설정해주세요')
+        $('#endDate').val(null);
         $('#endDate').focus();
-        // $('#endDate').val(" ");
         // $('#endDate').focusout();
         // $('#startDate').focus();
         // $('#startDate').val(" ");
@@ -325,6 +340,7 @@ function endDateClick(){
         return;
     }
 
+    console.log(endDay)
 
     $('#endDate').datepicker({
 

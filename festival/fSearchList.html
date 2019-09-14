@@ -23,6 +23,7 @@
     <!-- font-awesome -->
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <!-- googleFont -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
@@ -80,7 +81,7 @@
                         
                         <div class="custom-control custom-switch subToggleBox">
                             <input type="checkbox" class="custom-control-input" checked = "checked" id="searchOption1" name="searchOption1">
-                            <label class="custom-control-label" for="searchOption1">Toggle</label>
+                            <label class="custom-control-label" for="searchOption1"></label>
                         </div>
                         <div class = "col" id = "toggleMsg">
                             <span id = "toggleMsgSpan">현재진행중인 축제 조회입니다</span>
@@ -228,6 +229,22 @@
                     </div>
                     <!-- //종류Div -->
                     <hr>
+
+                    <div class = "row rengeDiv" >
+                        <div class = col-sm-3>
+                            <p>규모</p>
+                        </div>
+                        <div class = col-sm-3>
+                            <p></p>
+                        </div>
+                        <div class = col-sm-6>
+                            <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value = "2" min = "1" max = "3" stop = "1" onchange = "rangeVal(this);">
+                        </div>
+                    </div>
+
+
+
+
                     <!-- 키워드 추가 -->
                     <div class = "row keyWordTitleBox">
                         <div class = "col">
@@ -257,7 +274,7 @@
             
             <!-- 세번쨰 Div -->
             <br>
-            <h1 style = "text-align: center;">조회 결과 입니다</h1>
+            <h1 style = "text-align: center; font-family: 'Black Han Sans', sans-serif;">조회 결과 입니다</h1>
             <br>
     
             <div class = "container" id = "thirdDiv">
@@ -355,6 +372,43 @@
                             </div>                  
                         </div>
 
+                        <div class = 'row photoRow'>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class = "goDetail">
+                                        <img src="./img/yujisang/f7.jpg" alt="festival7">
+                                        <div class="caption">
+                                            <p>시즈오카에서 열리는 맥주&오뎅 축제!! 즐겨주세요!!</p>
+                                        </div>
+                                    </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class = "goDetail">
+                                            <img src="./img/yujisang/f8.jpg" alt="festival8">
+                                        <div class="caption">
+                                                <p>요코하마 해변에서 열리는 바다축제!! 재밌게 놀고 가세요!!</p>
+                                        </div>
+                                    </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="thumbnail">
+                                    <a href="#" class = "goDetail">
+                                            <img src="./img/yujisang/f9.jpg" alt="festival9">
+                                        <div class="caption">
+                                                <p>히로시마에서 먹는 오코노미야키!! 맥주축제를 즐겨주세요!!!</p>
+                                        </div>
+                                    </a>
+                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                                </div>
+                            </div>                  
+                        </div>
+
 
 
 
@@ -368,7 +422,7 @@
 
     
                         <div class = "moreDiv">
-                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn">더보기 2 / 9</button>
+                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn">더보기 1 / 4</button>
                         </div>
                         <hr>
             </div>
@@ -378,21 +432,21 @@
 
             <!-- 두번쨰 Div -->
             <br>
-            <h1 style = "text-align: center;">이런 축제는 어떠세요?</h1>
+            <h1 style = "text-align: center;font-family: 'Black Han Sans', sans-serif;">이런 축제는 어떠세요?</h1>
             <br>
     
     
             <div class = "container" id = "secondDiv">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1" title = "festivalBanner1"></div>
-                        <div class="swiper-slide"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2" title = "festivalBanner2"></div>
-                        <div class="swiper-slide"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3" title = "festivalBanner3"></div>
-                        <div class="swiper-slide"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4" title = "festivalBanner4"></div>
-                        <div class="swiper-slide"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5" title = "festivalBanner5"></div>   
-                        <div class="swiper-slide"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6" title = "festivalBanner6"></div>   
-                        <div class="swiper-slide"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7" title = "festivalBanner7"></div>   
-                        <div class="swiper-slide"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8" title = "festivalBanner8"></div>   
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1" title = "festivalBanner1"></a></div>
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2" title = "festivalBanner2"></a></div>
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3" title = "festivalBanner3"></a></div>
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4" title = "festivalBanner4"></a></div>
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5" title = "festivalBanner5"></a></div>  
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6" title = "festivalBanner6"></a></div>  
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7" title = "festivalBanner7"></a></div>  
+                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8" title = "festivalBanner8"></a></div> 
                     </div>
                     <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
