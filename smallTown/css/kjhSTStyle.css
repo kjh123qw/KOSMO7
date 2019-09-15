@@ -1,58 +1,99 @@
-#wrap {
-    width: 100%;
-}
-#wrap hr { margin: 10px 0;}
-.islandMenu ul {
-    overflow: hidden;
-}
+#wrap { width: 100%; }
+#wrap hr { margin: 2px 0;}
+.islandMenu ul { overflow: hidden; margin-top: 2px;}
 .islandMenu li {
-    width: 21%; height: 40px;
-    margin: 10px 2% 0 2%;
+    width: 20%; height: 30px;
     background-color: mediumturquoise;
-    border-radius: 5px;
+    border-radius: 0;
     float: left;
     text-align: center;
+    border: 2px solid white;
 }
 .islandMenu li span {
     display: block;
     width: 100%; height: 100%;
-    line-height: 40px;
+    line-height: 25px;
+    font-size: 14px;
     color: azure;
     cursor: pointer;
 }
+.islandMenu li span:hover {
+    background-color: rgb(53, 189, 184);
+}
 .sTownList {
-    width: 100%;
-    overflow: hidden;
-    margin: 20px auto 0 auto;
+    width: 96%;
+    margin: 0 2%;
+    margin: 3px auto 0 auto;
 }
 .sTownBox {
-    width: 31%;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.sTownBox > div {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.sTownBox a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+}
+.sTownBox a:hover {
+    /* top: -15px; */
+    border-left: 10px solid rgba(255, 255, 255, 0.7);
+    background-color: rgba(175, 175, 175, 0.1);
+}
+.sTownBox > div > div:nth-of-type(1) {
+    overflow: hidden;
+    position: relative;
+    width: 40%;
+    height: 200px;
     float: left;
-    /* border: 1px solid black; */
+}
+.sTownBox > div > div:nth-of-type(2) {
+    overflow: hidden;
+    width: 60%;
+    height: 200px;
+    padding-left: 5px;
+    float: left;
 }
 .sTownBox img {
     display: block;
-    width: 80%;
-    margin: 0 10% -10px 10%;
-    border-radius: 5px;
+    position: absolute;
+    left: -200%; right: -200%;
+    height: 100%;
+    margin: 0 auto;
 }
-.sTownList > div:nth-child(3n+1){ margin-left:3.5%; }
-.sTownList > div:nth-child(3n){ margin-right:3.5%; }
-.sTownBox div{
-    width: 100%;
-    text-align: center;
-}
-.sTownBox span {
+.sTownBox span:nth-of-type(1) {
+    overflow: hidden;
     display: block;
-    position: relative;
-    top: -25px;
-    width: 80%; height: 35px;
-    line-height: 33px;
-    margin: 0 10%;
-    border-radius: 0 0 5px 5px;
-    background-color: rgba(0, 0, 0, 0.3);
-    text-align: center;
-    color: #fff;
+    width: 100%; height: 34px;
+    margin-top: 4px;
+    line-height: 32px;
+    padding-left: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #888;
+}
+.sTownBox span:nth-of-type(2) {
+    overflow: hidden;
+    display: block;
+    width: 100%; height: 156px;
+    padding: 4px;
+    line-height: 18px;
+    font-size: 12px;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: #111;
 }
 #moreBox {
     background-color: dodgerblue;
@@ -82,19 +123,91 @@
     cursor: pointer;
 }
 
+/* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
+  기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
+  가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 576px) {
+    .islandMenu li {
+        height: 30px;
+        border: 3px solid white;
+    }
+    .islandMenu li span {
+        line-height: 22px;
+        font-size: 16px;
+    }
+    .sTownBox span:nth-of-type(1) {
+        font-size: 16px;
+    }
+    .sTownBox span:nth-of-type(2) {
+        line-height: 26px;
+        font-size: 14px;
+    }
+}
+
+/* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
+@media (min-width: 768px) {
+    .islandMenu li {
+        height: 40px;
+        border: 4px solid white;
+    }
+    .islandMenu li span {
+        line-height: 30px;
+        font-size: 20px;
+    }
+    .sTownBox span:nth-of-type(1) {
+        font-size: 18px;
+    }
+    .sTownBox span:nth-of-type(2) {
+        line-height: 26px;
+        font-size: 16px;
+    }
+}
+
+/* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
+@media (min-width: 992px) {
+    #wrap hr { margin: 10px 0;}
+    .islandMenu li {
+        height: 45px;
+        border: 5px solid white;
+    }
+    .islandMenu li span {
+        line-height: 34px;
+        font-size: 24px;
+    }
+    .sTownList {
+        margin: 20px auto 0 auto;
+    }
+    .sTownBox {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .sTownBox > div {
+        width: 96%;
+        margin: 0 2%;
+    }
+    .sTownBox > div > div:nth-of-type(1) {
+        height: 250px;
+    }
+    .sTownBox > div > div:nth-of-type(2) {
+        height: 250px;
+    }
+    .sTownBox span:nth-of-type(1) {
+        height: 46px;
+        font-size: 24px;
+    }
+    .sTownBox span:nth-of-type(2) {
+        height: 200px;
+        line-height: 34px;
+        font-size: 20px;
+    }
+
+}
+
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
+@media (min-width: 1200px) {
     #wrap {
         width: 1200px;
-        margin: 0 auto;
-    }
-    /* .sTownBox {
-        width: 320px; height: 300px;
-    } */
-}
-@media screen and (max-width: 768px) {
-    #wrap {
-        width: 768px;
         margin: 0 auto;
     }
 }
