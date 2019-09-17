@@ -1,5 +1,5 @@
 /* section */
-#section {
+#main {
     margin: 0 auto;
     width: 100%;
     min-height: 1500px;
@@ -42,10 +42,31 @@
     float: right;
     margin-right: 20px;
 }
-/* section wrap */
-.section_wrap {
+
+/* content-wrap */
+#content_wrap {
     width: 1200px;
-    height: 1000px;
+    min-height: 1000px;
     margin: 0 auto;
     background-color: orange;
+}
+
+/* article */
+#article {
+    width: 850px;
+    height: 500px;
+    background-color: salmon;
+    float: left;
+}
+
+/* aside */
+#aside {
+    width: 260px;
+    min-height: 1000px;
+    background-color: orangered;
+    float: right;
+}
+
+.category {
+    
 }
