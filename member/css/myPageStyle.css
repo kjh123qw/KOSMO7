@@ -24,10 +24,20 @@ aside > div > a:hover {
 }
 section {
     padding: 5px;
-    background-color: #aaa;
+    background-color: white;
     width: 85%;
     float: left;
 }
+
+table {
+    border: 1px solid #555;
+}
+table tr { height: 30px;}
+table td { width: 80px; text-align: center; border: 1px solid #555;}
+table td:nth-of-type(2) {width: 400px;}
+
+
+
 .clearfix { clear: both; }
 /* 1200 픽셀 이상일경우 */
 @media all and (min-width: 1200px) {
