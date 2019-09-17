@@ -72,6 +72,8 @@
     margin-bottom: 20px;
 }
 
+/* festival info */
+
 .festival > p {
     margin-bottom: 20px;
 } 
@@ -115,7 +117,6 @@
 .sns {
     overflow: hidden;
     border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
     margin: 0 -30px;
 
 }
