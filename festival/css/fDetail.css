@@ -279,6 +279,48 @@
     
 }
 
+/* section local map */
+
+.local > .address {
+    margin-bottom: 30px;
+}
+
+/* section related */
+
+.related_container {
+    display: flex;
+}
+
+.rbox {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+}
+
+.rfestival {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-bottom: 1px solid #555;
+}
+
+/* section nearby */
+
+.nearby_container {
+    display: flex;
+}
+
+.nbox {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+}
+
+.nfestival {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-bottom: 1px solid #555;
+}
+
 /* aside */
 #aside {
     width: 250px;
