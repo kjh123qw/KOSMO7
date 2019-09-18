@@ -51,6 +51,8 @@ $(function(){
         }
     })
 
+
+
     
     
 
@@ -66,3 +68,16 @@ $(function(){
 
     
 })
+
+function test(){
+    // var docV = document.documentElement;
+
+    // if(docV.requestFullscreen){
+    //     docV.requestFullscreen();
+    // }
+    console.log(screen.availWidth)
+    console.log(screen.availHeight)
+
+    window.moveTo(0, 0); 
+    window.resizeTo(screen.availWidth, screen.availHeight);
+}

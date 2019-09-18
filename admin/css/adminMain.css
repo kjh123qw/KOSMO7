@@ -109,6 +109,19 @@ nav img{
     margin: 0;
 }
 
+.iconBorder{
+    position: relative;
+}
+
+#dddd{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: aqua;
+    top: -5px;
+    right: 8px;
+}
+
 .photoDiv > div > img{
     /* margin-top: 5px; */
     width: 80px;
