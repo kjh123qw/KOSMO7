@@ -1,22 +1,6 @@
 $(function(){
   bindMouse();  // bind 초기화
-  var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false, 
-    },
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 30,
-  });
+  
   $('.sTownBox').each(function(i, e){
     var txt = $(e).find('span').eq(1).text().slice(0, 140);  // 영어: 230, 한글: 140
     var txtEndIndex = txt.lastIndexOf(' ', 230);
