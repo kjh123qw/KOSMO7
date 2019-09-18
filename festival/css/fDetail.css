@@ -71,6 +71,16 @@
     margin-bottom: 20px;
 }
 
+.section:nth-child(5) {
+    border: 0;
+    background-color: #F3F3F3;
+}
+
+.section:last-child {
+    border: 0;
+    background-color: #F3F3F3;
+}
+
 /* section festival info */
 .festival {
     padding-bottom: 0;
@@ -303,6 +313,15 @@
     margin-bottom: 1px solid #555;
 }
 
+.rbox img {
+    width: 259px;
+    height: 200px;
+}
+
+.rbox img:hover {
+    opacity: 0.8;
+}
+
 /* section nearby */
 
 .nearby_container {
@@ -319,6 +338,15 @@
     font-weight: bold;
     padding: 15px 0;
     margin-bottom: 1px solid #555;
+}
+
+.nbox img {
+    width: 259px;
+    height: 200px;
+}
+
+.nbox img:hover {
+    opacity: 0.8;
 }
 
 /* aside */
