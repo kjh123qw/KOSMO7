@@ -24,6 +24,7 @@
     <!-- font-awesome -->
 
     <link rel="stylesheet" href="./css/adminMain.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <script src = "./js/adminMain.js"></script>
 
 
@@ -33,100 +34,12 @@
 </head>
 <body>
 
-        
-    <span id = "bellSpan"><i class="fas fa-bell"></i></span>
-    <div id = "testDiv">dd</div>
-    <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="test">
-    </div>
+    <div id = "testNone">지원하지않음</div>
+
+<div id = "wrap">
 
 
-
-    <div class = "container" id = "mainContainer">
-
-        <header>
-            <div class = "row">
-                <div class = "col">
-                    <h1>HEADER</h1>
-                </div>
-            </div>
-        </header>
-
-        <nav>
-            <div class = "row">
-                <div class = "col">
-                    <i class="fas fa-bars barIcon"></i>
-                    <span>AIR MATSURI</span>
-
-                    <i class="fas fa-bell"></i>
-                    <i class="fas fa-envelope"></i>
-
-
-                    
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="SEARCH">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </nav>
-
-        <div class = "row contentsBox">
-
-
-                <!-- <aside> -->
-                    <div class = "col-sm-3 aside">
-                        <h1>ASIDE</h1>
-                        <div>
-                                <ul>
-                                    <li>test1</li>
-                                    <li>test2</li>
-                                    <li>test3</li>
-                                    <li>test3</li>
-                                </ul>
-                            </div>
-                    </div>
-                <!-- </aside> -->
-                <!-- <section> -->
-                    <div class = "col-sm-9" id = "section">
-
-                        <!-- <h1>SECTION</h1> -->
-                        <div class = "row article">
-                            테스트임~~~~~~~
-                        </div>
-                        <div class = "row article">
-                            밑에껄로~~~~~~~
-                        </div>
-
-                    </div>
-                <!-- </section> -->
-           
-
-        </div>
-
-        <footer>
-            <div class = "row">
-                <div class = "col">
-                    <h1>FOOTER</h1>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-
-
-    <!-- ============================== -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class = "container-fuild" id = "mainContainer1"> <!-- id확인 -->
+    <div class = "container-fuild" id = "mainContainer"> <!-- id확인 -->
 
         <header></header>
 
@@ -134,21 +47,27 @@
             <a class="navbar-brand" href="#">
                 <img src="../img/logo_noText 51x44.png" alt="logo">
             </a>
-            <span id = "titleSpan">AIRMATSURI ADMIN</span>
-            <form class="form-inline">
+            <div>
+            <span class = "iconBorder"><i class="far fa-envelope"></i></span>
+            <span class = "iconBorder"><i class="fas fa-user-friends"></i></span>
+            <span class = "iconBorder"><i class="far fa-bell"></i></span>
+            </div>
+            <!-- <form class="form-inline">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="SEARCH" aria-label="SEARCH" aria-describedby="basic-addon1">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
                   </div>
                 </div>
-            </form>
+            </form> -->
+            <span id = "titleSpan">AIRMATSURI ADMIN</span>
+
         </nav>
 
-        <div class = "row contentsBox1"><!-- id확인 -->
+        <div class = "row contentsBox"><!-- id확인 -->
 
             <!-- aside -->
-            <div class = "col-sm-2 aside1"><!-- id확인 -->
+            <div class = "col-sm-2 aside"><!-- id확인 -->
                 <div class = "row">
                     <div class = "col-sm-12 photoDiv">
                         <div><img src="../festival/img/image2.png" alt="adminImage"class="img-thumbnail"></div>
@@ -156,38 +75,52 @@
                     <div class = "col-sm-12 photoSubDiv">
                         <p>유지상</p>
                     </div>
+                    <div class = "col-sm-12 btnDiv">
+                        <button type="button" class="btn btn-outline-danger btn-sm">메인으로</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm">로그아웃</button>
+                    </div>
                 </div>
+
                 <div class = "row">
                     <div class = "col-sm-12" id = "ulDiv">
                         <ul>
-                            <li>test1</li>
-                            <li>test2</li>
-                            <li>test3</li>
-                            <li>test4</li>
-                            <li>test5</li>
+                            <a href = "#"><li class="animated" name = "main"><i class="far fa-thumbs-up"></i>MAIN</li></a>
+                            <a href = "#"><li>MEMBER</li></a>
+                            <a href = "#"><li>FESTIVAL</li></a>
+                            <a href = "#"><li class="animated">HOST</li></a> <!--클래스확인좀 -->
+                            <a href = "#"><li>NOTICE</li></a>
+                            <a href = "#"><li>SMALLTOWN</li></a>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- //aside -->
             <!-- section -->
-            <div class = "col-sm-10 section1"><!-- id확인 -->
+            <div class = "col-sm-10 section"><!-- id확인 -->
                 <div class = "row">
                     <div class = "col-sm-9 article1">
-                        <div class = "row article1Sub">
+                        <div class = "row">
                             <div class = "col detail1">1번</div>
                             <div class = "col detail2">2번</div>
                         </div>
-                        <div class = "row article2Sub">
+                        <div class = "row">
                             <div class = "col detail3">3번</div>
                         </div>
+                        <div class = "row">
+                            <div class = "col detail4">3번</div>
+                            
+                        </div>
                     </div>
+
                     <div class = "col-sm-3 article2">
                         <div class = "row">
                             <div class = "col">4번</div>
                         </div>
                         <div class = "row">
                             <div class = "col">5번</div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col">6번dddddddddd</div>
                         </div>
                     </div>
                 </div>
@@ -199,14 +132,6 @@
     </div>
 
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-    
+</div> 
 </body>
 </html>

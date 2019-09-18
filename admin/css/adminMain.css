@@ -1,187 +1,14 @@
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+    
+    }
+
+
+html,body{ margin:0; padding:0; height:100%; width:100%; }
 #mainContainer{
-    border: 1px solid black;
-    /* overflow: hidden; */
-    /* height: 100%; */
-
-}
-
-#mainContainer header{
-    background-color: red;
-    line-height: 40px; 
-    text-align: center;
-}
-
-#mainContainer header h1{
-    margin:0;
-}
-
-#mainContainer footer{
-    background-color: green;
-    line-height: 40px; 
-    text-align: center;
-}
-
-#mainContainer footer h1{
-    margin:0;
-}
-
-nav{
-    background-color: beige;
-    /* line-height: 80px;  */
-    height: 40px;
-    overflow: hidden;
-}
-
-.barIcon{
-    /* margin-top: 5px; */
-    top: 10px;
-    left: 30px;
-    position: absolute;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.barIcon + span{
-    position: absolute;
-    height: 20px;
-    top: 8px;
-    left: 60px;  
-}
-
-.barIcon + span +i+i+ div{
-    width: 20%;
-    position: absolute;
-    right: 30px;
-    cursor: pointer;
-}
-
-.barIcon + span +i+i+ div input{
-    height: 40px;
-    padding: 0;
-}
-
-.barIcon + span + i{
-    top: 10px;
-    right: 280px;
-    font-size: 20px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.barIcon + span + i+i{
-    top: 10px;
-    right: 310px;
-    font-size: 20px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.barIcon + span + span{
-    cursor: pointer;
-}
-
-
-
-.contentsBox{
-    padding: 0 15px;
-    /* height: 500px; */
-    
-}
-
-.aside{
-    background-color: yellow;
-    text-align: center;
-    height: 500px;
-}
-
-.aside h1{
-    margin:0;
-    /* line-height: 500px;  */
-}
-
-#section{
-    background-color: palegreen;
-    text-align: center;
-    height: 500px;
-    margin: auto;
-
-    
-    
-
-}
-
-#section h1{
-    /* line-height: 500px;  */
-    margin:0;
-}
-
-.article:first-child{
-    margin-top: 25px;
-}
-
-.article{
-    border: 1px solid black;
-    width: 100%;
-    height: 45%;
-
-    margin: auto;
-
-}
-
-
- /* ul{
-    list-style: none;
-    margin-bottom: 0;
-    padding: 0;
-    text-align: center;
-} */
-/*
-li{
-    border: 1px solid black;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 10px;
-    width: 80%;
-    display: inline-block;
-}
-
-li:last-child{
-    margin-bottom: 0;
-}
-
-li:hover{
-    background-color: red;
-    cursor: pointer;
-} */
-
-#bellSpan i{
-    font-size: 30px;
-    padding: 5px;
-    border: 3px solid black;
-    border-radius: 10px;
-}
-
-#testDiv{
-    display: inline;
-    font-size: 30px;
-}
-
-#testDiv+ div {
-    display: inline-block;
-    width: 50%;
-    /* height: 46px; */
-    
-}
-
-#testDiv+ div input{
-    width: 100%;
-    height: 46px;
-}
-
-/* ========================== */
-
-#mainContainer1{
-    border: 1px solid black;
+    /* border: 3px solid rebeccapurple; */
+    height: 100%;
 
 }
 
@@ -200,6 +27,18 @@ nav img{
     padding: 0;
     /* border: 2px solid red; */
     box-sizing: border-box;
+    height: 5%;
+}
+
+
+
+.mainNav i{
+    color: red;
+    font-size: 25px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid red;
+    
 }
 
  #titleSpan{
@@ -219,39 +58,47 @@ nav img{
     cursor: pointer;
 }
 
-.aside1{
-    height: 500px;
+.aside{
+    /* height: 90%; */
     /* margin-left: 15px; */
     /* border: 1px solid black; */
     /* margin-right: 15px; */
     
 }
 
-.section1{
-    height: 500px;
-    border: 1px solid black;
+#wrap{
+    overflow: hidden;
+    height: 100%;
+}
+
+.section{
+    /* height: 500px; */
+    border: 1px solid green;
     background-color: yellow;
     /* margin-right: 15px; */
 }
 
-.aside1 > div:first-child{
-    height: 20%;
-    background-color: gray;
+.aside > div:first-child{
+    /* height: 20%; */
+    background-color: darkslategrey;
     /* border: 2px solid red; */
     box-sizing: border-box;
 }
-.aside1 > div:last-child{
-    height: 80%;
-    background-color: royalblue;
+.aside > div:last-child{
+    height: 100%;
+    background-color: darkslategrey;
 }
 
-.contentsBox1{
+.contentsBox{
     padding-left: 15px;
     padding-right: 15px;
+    height: 95%;
 }
 
 .photoDiv > div{
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .photoSubDiv{
@@ -263,9 +110,18 @@ nav img{
 }
 
 .photoDiv > div > img{
-    margin-top: 5px;
-    width: 60px;
-    height: 60px;
+    /* margin-top: 5px; */
+    width: 80px;
+    height: 80px;
+}
+
+.btnDiv{
+    text-align: center;
+    /* padding: 10px; */
+}
+
+.btnDiv button{
+    margin: 10px;
 }
 
 #ulDiv ul{
@@ -294,7 +150,7 @@ nav img{
     border: 1px solid black;
     height: 40px;
     line-height: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     width: 100%;
     display: inline-block;
     /* font-size: 30px; */
@@ -309,22 +165,82 @@ nav img{
     cursor: pointer;
 }
 
-.section1 > div{ /* article1, article2 */
+#ulDiv a:nth-child(1) li{
+    background-color: lightpink;
+}
+
+#ulDiv a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+ .section > div{   /* row */
 
     height: 100%;
     padding: 5px;
-}
-
-
+    /* border: 3px solid peru; */
+    margin-left: 15px;
+    margin-right: 15px; 
+    
+} 
 
 .article1{
-    /* padding: 0; */
+    border: 1px solid red;
+    height: 100%;
 }
 
-.section1 > div > div >div{ /*박스각각을 의미 */
+.article1 > div{/* row */
+    height: 30%;
+    border: 1px solid peru;
+    margin-top: 22px;
+}
+
+.article2{
+    /* border: 3px solid peru; */
+    height: 100%;
+    border: 1px solid black;
+}
+
+.article2 > div{/* row */
+    height: 30%;
+    border: 1px solid peru;
+    margin-top: 22px;
+   
+}
+
+.detail3{
+    border: 1px solid rebeccapurple;
+    margin: 5px;
+}
+
+
+
+
+
+ /* .article1{
+    height: 100%;
+    padding: 5px;
+    border: 1px solid red;
+     margin-left: 15px;
+    margin-right: 15px; */
+  
+}  */
+
+
+
+ /* .article2{
+    border: 1px solid blue;
+    height: 100%;
+    padding: 5px;
+    
+}  */
+
+/* .section > div > div >div{ /*박스각각을 의미 
     width: 100%;
-    height: 50%;
-    margin: auto;
+    height: 30%;
+    margin-top:25px ;
     
 }
 
@@ -341,12 +257,16 @@ nav img{
 .detail3{
     border: 1px solid red;
 }
+.detail4{
+    border: 1px solid red;
+}
 
 .article2{
     padding: 0;
+    /* margin-left: 5px; 
 }
 
 .article2 div{
     border: 1px solid black;
-}
+} */
 
