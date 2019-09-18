@@ -50,11 +50,15 @@
 }
 
 .footer_container {
+  height: 80px;
   margin-top: 15px;
   font-size: 14px;
 }
 
 .footer_copyright {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
   text-align: center;
   color: #888;
 }
@@ -65,24 +69,22 @@
   margin-right: 4px;
 }
 .footer_gnb {
-  overflow: hidden;
-  margin: 10px 0;
+  height: 24px;
 }
 .footer_gnb > ul {
-  overflow: hidden;
-  float: right;
-  padding: 5px 0;
+  height: 24px;
+  text-align: center;
 }
 
 .footer_gnb > ul > li {
-  float: left;
-  margin: 0 5px;
+  display: inline;
+  margin: 0 3px;
 }
 
 .footer_gnb > ul > li > a {
-  font-size: 10px;
-  height: 20px;
-  line-height: 20px;
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
   color: #888;
 }
 
@@ -111,11 +113,16 @@
     float: right;
     margin: 0;
   }
-  /* footer_bottom */
-  .footer_bottom { height: 70px; }
-  .footer_gnb > ul > li { margin: 0 20px; }
+  .footer_copyright {
+    width: 270px;
+    margin-left: 10px;
+    float: left;
+    text-align: left;
+  }
+  .footer_gnb { width: 470px; float: right; }
+  .footer_gnb > ul { text-align: right; }
+  .footer_gnb > ul > li { margin: 0 10px; }
   .footer_gnb > ul > li > a { font-size: 12px; }
-  
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */

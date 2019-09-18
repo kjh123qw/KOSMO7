@@ -34,6 +34,7 @@
 }
 /* mobile navigation */
 #navigation_m {
+  overflow: hidden;
   display: none;
   height: 250px;
   background-color: lightseagreen;
@@ -139,7 +140,7 @@
   .header_wrap > #menuBtn {
     display: none;
   }
-  #navigation_m { display: none; }
+  #navigation_m { display: none; height: 0; }
   #navigation { display: block; }
 }
 

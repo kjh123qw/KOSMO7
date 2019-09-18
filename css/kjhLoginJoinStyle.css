@@ -1,0 +1,186 @@
+
+/* -------Login Layer Module ------- */
+
+#loginModule {
+    display: none;
+}
+#loginModule > .loginBackground {
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 7;
+}
+.loginLayer {
+    position: fixed;
+    top: 45%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    z-index: 8;
+    width: 470px; height: 320px;
+    padding: 25px 15px;
+
+}
+/* 주석 사유: 엄청 없어보임 */
+/* .layerClose {
+    position: fixed;
+    top: -18px; right: -18px;
+    border-radius: 20px;
+    background-color: #ddd; 
+    z-index: 10;
+    width: 40px; height: 40px;
+    text-align: center;
+}
+.layerClose > span {
+    cursor: pointer;
+    font-size: 34px;
+    line-height: 38px;
+    color: #999;
+} */
+.loginLayer > div:nth-of-type(1), .loginLayer > div:nth-of-type(2) {
+    width: 100%; height: 60px;
+    position: relative;
+}
+#loginId, #loginPwd {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.inputLabel {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: -8px; left: -7px;
+    padding: 0 5px; height: 19px;
+    background-color: mediumturquoise;
+    border-radius: 3px;
+    line-height: 17px;
+    font-size: 12px;
+    color: #fff;
+    /* border: 1px solid #ccc; */
+    text-align: center;
+    z-index: 11;
+}
+.loginLayer button {
+    background-color: mediumturquoise;
+    width: 100%; height: 45px;
+    margin-top: 10px;
+    color: #fff;
+    outline: none;
+}
+.loginLayer > div:nth-of-type(3), .loginLayer > div:nth-of-type(5) {
+    margin: 0 0 7px 5px;
+    width: 100%; height: 25px;
+    overflow: hidden;
+}
+.loginLayer > div:nth-of-type(3) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    float: left;
+}
+.loginLayer > div:nth-of-type(3) > div:nth-of-type(1) { width: 25px; }
+.loginLayer > div:nth-of-type(3) > div:nth-of-type(2) { width: 150px; margin-left: 10px; }
+#logRmbId {
+    margin-top: 1px;
+    background-color: #eee;
+    width: 23px; height: 23px;
+}
+.loginLayer hr, .joinLayer hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+.loginLayer > div:nth-of-type(5) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    margin: 0 15px;
+}
+.loginLayer > div:nth-of-type(5) > div:nth-of-type(1) { float: left; }
+.loginLayer > div:nth-of-type(5) > div:nth-of-type(2), .loginLayer > div:nth-of-type(5) > div:nth-of-type(3) { float: right; }
+.loginLayer > div:nth-of-type(5) > div > span { cursor: pointer; }
+.loginLayer > div:nth-of-type(5) > div > span:hover { color: mediumturquoise; text-decoration: underline; }
+
+/* -------Join Layer Module------- */
+
+#joinModule {
+    display: none;
+}
+#joinModule > .joinBackground {
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 7;
+}
+.joinLayer {
+    position: fixed;
+    top: 45%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    z-index: 8;
+    width: 470px; height: 460px;
+    padding: 25px 15px;
+}
+.joinLayer > div:nth-of-type(1), .joinLayer > div:nth-of-type(2), .joinLayer > div:nth-of-type(3), .joinLayer > div:nth-of-type(4) {
+    width: 100%; height: 60px;
+    position: relative;
+}
+#joinId, #joinPwd, #joinPwdChk, #joinEmail {
+    width: 100%; height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+::-webkit-input-placeholder { color: #aaa; } /* Edge */
+:-ms-input-placeholder { color: #aaa; } /* Internet Explorer 10-11 */
+::placeholder { color: #aaa; }
+.joinLayer button {
+    background-color: mediumturquoise;
+    width: 100%; height: 45px;
+    margin-top: 10px;
+    color: #fff;
+    outline: none;
+}
+.joinLayer > div:nth-of-type(5), .joinLayer > div:nth-of-type(6) {
+    margin: 0 0 7px 5px;
+    width: 100%; height: 25px;
+    overflow: hidden;
+}
+#agreePolicy, #agreeEmail {
+    margin-top: 1px;
+    background-color: #111;
+    width: 23px; height: 23px;
+}
+.joinLayer > div:nth-of-type(5) > div, .joinLayer > div:nth-of-type(6) > div {
+    height: 25px;
+    line-height: 23px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    float: left;
+}
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(1), .joinLayer > div:nth-of-type(6) > div:nth-of-type(1) { width: 25px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2), .joinLayer > div:nth-of-type(6) > div:nth-of-type(2) { width: 250px; margin-left: 10px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span { cursor: pointer; font-size: 12px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span:hover, .joinLoginBtn:hover { color: mediumturquoise; text-decoration: underline; }
+.joinLoginBtn { cursor: pointer; font-size: 16px; color: #777; }
+.joinLoginBtn { font-size: 16px; color: #777; }

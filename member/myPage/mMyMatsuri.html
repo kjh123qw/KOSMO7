@@ -4,9 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/commonStyle.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../css/myPageStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="../../js/jquery.2.1.3.min.js"></script>
+    <script src="./js/myPage.js"></script>
     <title>Air Matsuri</title>
 </head>
 <body>
-    
+    <header id="header">
+            <div class="header_wrap">
+                <div class="logo">
+                <a href="#"><img src="../../img/logo.svg" alt="logo"></a>
+                </div>
+                <div class="search">
+                <input type="text" placeholder="검색">
+                <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
+                </div>
+                <nav id="navigation">
+                <ul class="header_gnb">
+                    <li><a href="#">전체축제리스트</a></li>
+                    <li><a href="#">소도시</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+                </nav>
+            </div>
+        </header>
+        <content>
+            <div id="wrap">
+                <aside>
+                    <div><a href="./mMyMatsuri.html">마이마쯔리</a></div>
+                    <div><a href="./mMyReview.html">작성한후기</a></div>
+                    <div><a href="./mMyInfo.html">개인정보수정</a></div>
+                    <div><a href="./mBeHost.html">호스트신청</a></div>
+                    <div><a href="./mHosting.html">축제등록</a></div>
+                    <div><a href="#">등록한마쯔리</a></div>
+                    <div><a href="#">회원탈퇴</a></div>
+                </aside>
+                <!-- 마이페이지 메인, 페이지 화면 가변적으로 표시 -->
+                <section class="mViewInfo">
+                    <article>
+                        <!--받아온 회원아이디 및 회원등급 표시 -->
+                        <p><span class="memId"></span>님 환영합니다. <span class="memId"></span>님은 현재 <span class="condi"></span>입니다.</p><br><br>
+                    </article>
+                    <div id="myMatsuri">
+                        <table>
+                            <!--임박한 날짜순 최신 3개 축제목록 표시, 날짜에 이동에 따라 받아오는 정보업데이트를 위한 ID 부여-->
+                            <tr style="border: 0;">
+                                <td colspan="5" style="border: 0;">
+                                    <span class="myPa_Festi" style="float: left;"><a class="myPageMain" href="#">마이 마쯔리</a></span>
+                                    <select name="sortMatsuri" style="float: right;">
+                                        <option value="future">다가올 마쯔리</option>
+                                        <option value="past">지나간 마쯔리</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>번호</td>
+                                <td>축제명</td>
+                                <td>상세내용</td>
+                                <td>일자</td>
+                                <td>작성자</td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="clearfix"></div>
+        </content>
+        <footer id="footer">
+            <div class="footer_wrap">
+                <div class="footer_top">
+                    <div class="footerbox about_us">
+                    <h3>ABOUT US</h3>
+                    <p>Festival and Event Organization Consulting for know-how to call tourists on tde tdeme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
+                    </div>
+                    <div class="footerbox contact_us">
+                        <h3>CONTACT US</h3>
+                        <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+                        <p>+82 1234-5678</p>
+                        <p><a href="#">info&#64;airmatsuri.com</a></p>
+                    </div>
+                    <div class="footerbox follow_us">
+                        <h3>FOLLOW US</h3>
+                        <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
+                        <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
+                        <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
+                        <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="footer_container">
+                        <div class="footer_copyright">
+                        <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                        </div>
+                        <div class="footer_gnb">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

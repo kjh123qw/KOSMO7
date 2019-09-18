@@ -191,6 +191,6 @@
 @media (min-width: 1200px) {
     #wrap {
         width: 1200px;
-        margin: 0 auto;
+        margin: 5px auto 15px auto;
     }
 }

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script src="../../js/jquery.2.1.3.min.js"></script>
+    <script src="./js/MyPage.js"></script>
 </head>
 <body>
     <header id="header">
@@ -39,18 +40,109 @@
     <content>
         <div id="wrap">
             <aside>
-                <div><a href="#">마이마쯔리</a></div>
-                <div><a href="#">작성한후기</a></div>
-                <div><a href="#">개인정보수정</a></div>
-                <div><a href="#">호스트신청</a></div>
-                <div><a href="#">축제등록</a></div>
+                <div><a class="Matsuri-btn" href="#myMatsuri">마이마쯔리</a></div>
+                <div><a href="./mMyReview.html">작성한후기</a></div>
+                <div><a href="./mMyInfo.html">개인정보수정</a></div>
+                <div><a href="./mBeHost.html">호스트신청</a></div>
+                <div><a href="./mHosting.html">축제등록</a></div>
                 <div><a href="#">등록한마쯔리</a></div>
                 <div><a href="#">회원탈퇴</a></div>
             </aside>
-            <section>
+            <!-- 마이페이지 메인, 페이지 화면 가변적으로 표시 -->
+            <section class="mViewInfo">
                 <article>
-                    <p>명우는 이 줄을 지우고 여기에 내용을 삽입 할 것.</p>
+                    <!--받아온 회원아이디 및 회원등급 표시 -->
+                    <p><span class="memId"></span>님 환영합니다. <span class="memId"></span>님은 현재 <span class="condi"></span>입니다.</p><br><br>
                 </article>
+                <!-- #MyPage -->
+                <div id="myPage">
+                    <!-- 기대중인 축제 목록 표시, 클릭 시 mMyMatsuri로 이동 -->
+                    <span class="myPa_Festi"><a class="myMatsuri" href="#">기대중인 축제</a></span>
+                    <table>
+                    <!--임박한 날짜순 최신 3개 축제목록 표시, 날짜에 이동에 따라 받아오는 정보업데이트를 위한 ID 부여-->
+                        <tr>
+                            <td>번호</td>
+                            <td>축제이름</td>
+                            <td>일자</td>
+                            <td>작성자</td>
+                        </tr>
+                        <tr>
+                            <td><span id="feNum1"></span></td>
+                            <td><span id="feName1"></span></td>
+                            <td><span id="feDate1"></span></td>
+                            <td><span id="feWriter1"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="feNum2"></span></td>
+                            <td><span id="feName2"></span></td>
+                            <td><span id="feDate2"></span></td>
+                            <td><span id="feWriter2"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="feNum3"></span></td>
+                            <td><span id="feName3"></span></td>
+                            <td><span id="feDate3"></span></td>
+                            <td><span id="feWriter3"></span></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <span class="myPaFe"><a class="myPageMain" href="./mMyReview.html">작성한 후기</a></span>
+                    <table>
+                        <tr>
+                            <td>번호</td>
+                            <td>축제이름</td>
+                            <td>일자</td>
+                            <td>평점</td>
+                        </tr>
+                        <tr>
+                            <td><span id="comenNum1"></span></td>
+                            <td><span id="comenFe1"></span></td>
+                            <td><span id="coDate1"></span></td>
+                            <td><span id="coGrade1"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="comenNum2"></span></td>
+                            <td><span id="comenFe2"></span></td>
+                            <td><span id="coDate2"></span></td>
+                            <td><span id="coGrade2"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="comenNum3"></span></td>
+                            <td><span id="comenFe3"></span></td>
+                            <td><span id="coDate3"></span></td>
+                            <td><span id="coGrade3"></span></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <span class="hostFe"><a class="myPageMain" href="./">등록한 축제</a></span>
+                    <table>
+                        <tr>
+                            <td>번호</td>
+                            <td>축제이름</td>
+                            <td>일자</td>
+                            <td>종류</td>
+                        </tr>
+                        <tr>
+                            <td><span id="hoFeNum1"></span></td>
+                            <td><span id="hoFeName1"></span></td>
+                            <td><span id="hoFeDate1"></span></td>
+                            <td><span id="sort1"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="hoFeNum2"></span></td>
+                            <td><span id="hoFeName2"></span></td>
+                            <td><span id="hoFeDate2"></span></td>
+                            <td><span id="sort2"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span id="hoFeNum3"></span></td>
+                            <td><span id="hoFeName3"></span></td>
+                            <td><span id="hoFeDate3"></span></td>
+                            <td><span id="sort3"></span></td>
+                        </tr>
+                    </table>
+                    <br><br>
+                </div>
             </section>
         </div>
         <div class="clearfix"></div>
@@ -60,7 +152,7 @@
             <div class="footer_top">
                 <div class="footerbox about_us">
                 <h3>ABOUT US</h3>
-                <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
+                <p>Festival and Event Organization Consulting for know-how to call tourists on tde tdeme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
                 </div>
                 <div class="footerbox contact_us">
                     <h3>CONTACT US</h3>

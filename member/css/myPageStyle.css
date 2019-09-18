@@ -24,10 +24,31 @@ aside > div > a:hover {
 }
 section {
     padding: 5px;
-    background-color: #aaa;
+    background-color: white;
     width: 85%;
     float: left;
 }
+
+/* 마이페이지 테이블 */
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid #555; /*마이마쯔리 표 테두리 위에 뚜껑 날리기.*/
+}
+table tr { height: 30px;}
+table td { 
+    width: 80px; 
+    text-align: center; 
+    border: 1px solid #555;
+    padding: 10px;
+}
+table td:nth-of-type(2) {width: 400px;}
+
+/* 회원정보 페이지*/
+
+
+
 .clearfix { clear: both; }
 /* 1200 픽셀 이상일경우 */
 @media all and (min-width: 1200px) {
