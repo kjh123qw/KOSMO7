@@ -18,21 +18,35 @@
 </head>
 <body>
     <header>
-
-        
-        <!-- <div id="nav">
-            <div>
-                <a href="./index.html"><img src="img/logo_noText 51x44.png" alt="Logo"></a>
+        <div class="header_wrap">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
             </div>
-            <ul>
-                <li><a href="#" class="btn-login">로그인</a></li>
-                <li><a href="#" class="btn-join">회원가입</a></li>
-                <li><a href="./smallTown/smallTownMain.html">소도시</a></li>
-                <li><a href="./etc/aboutus.html">ABOUT US</a></li>
-                <li><a href="./etc/support.html">고객센터</a></li>
-
-            </ul>
-        </div> -->
+            <!-- <div class="search">
+                <input type="text" placeholder="검색">
+                <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
+            </div> -->
+            <div id="menuBtn">M</div>
+            <div class="clearFix"></div>
+            <nav id="navigation_m">
+                <ul class="header_gnb_m">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">소도시</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+            <nav id="navigation">
+                <ul class="header_gnb">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">소도시</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
         <!-- <div class="Main_text"><span>나만의 추억이 만들어질 축제를 찾아보세요.</span></div> -->
         <!-- <div id="search_window">
             <div class="keyword_main">
@@ -103,88 +117,92 @@
     </header>
     <!-- 임시 해더 입니다. -->
     <content>
-        <!-- 로그인 폼 -->
-        <div id="loginModule">
-            <div class="loginBackground"></div>
-            <div class="loginLayer">
-                <div>
-                    <div class="inputLabel"><span>아이디</span></div>
-                    <input type="text" name="loginId" id="loginId" class="focusFunc" placeholder="아이디">
+        <div id="search_window_m">
+            <div class="region_sel_m">
+                <div class="region_label_m">
+                    <span>지역 분류</span>
                 </div>
-                <div>
-                    <div class="inputLabel"><span>비밀번호</span></div>
-                    <input type="password" name="loginPwd" id="loginPwd" class="focusFunc" placeholder="비밀번호">
+                <div class="region_box_m box_click">
+                    혼슈, 큐슈, 홋카이도, 시코쿠
+                    <div>▼</div>
                 </div>
-                <div>
-                    <div>
-                        <input type="checkbox" name="logRmbId" id="logRmbId">
+                <div class="region_list_box_m box_target">
+                    <div><div></div><div>전체 선택</div></div>
+                    <div><div></div><div>혼슈 지방</div></div>
+                    <div><div></div><div>큐슈 지방</div></div>
+                    <div><div></div><div>홋카이도 지방</div></div>
+                    <div><div></div><div>시코쿠 지방</div></div>
+                    <div>▲</div>
+                </div>
+                <div class="chkBoxs">
+                    <input type="checkbox" name="혼슈" value="혼슈">
+                    <input type="checkbox" name="큐슈" value="큐슈">
+                    <input type="checkbox" name="홋카이도" value="홋카이도">
+                    <input type="checkbox" name="시코쿠" value="시코쿠">
+                </div>
+            </div>
+            <div class="festival_sel_m">
+                <div class="festival_label_m">
+                    <span>축제 주제</span>
+                </div>
+                <div class="festival_box_m">
+                    불꽃, 벚꽃, 신사, 기타
+                    <div>▼</div>
+                </div>
+                <div class="festival_list_box_m">
+                    <div><div></div><div>불꽃 축제</div></div>
+                    <div><div></div><div>벚꽃 축제</div></div>
+                    <div><div></div><div>신사 축제</div></div>
+                    <div><div></div><div>기타 축제</div></div>
+                    <div>▲</div>
+                </div>
+                <div class="chkBoxs">
+                    <input type="checkbox" name="불꽃" value="불꽃">
+                    <input type="checkbox" name="벚꽃" value="벚꽃">
+                    <input type="checkbox" name="신사" value="신사">
+                    <input type="checkbox" name="기타" value="기타">
+                </div>
+            </div>
+            <div class="date_m">
+                <div class="date_label_m">
+                    <span>기간</span>
+                </div>
+                <div class="date_boxs_m">
+                    <div class="date_box_m">
+                        2019.02.05
+                        <div>▼</div>
                     </div>
-                    <div>
-                        <label for="logRmbId">아이디 기억</label>
+                    <div class="date_box_end_m">
+                        2019.02.15
+                        <div>▼</div>
                     </div>
                 </div>
-                <div>
-                    <button>로그인</button>
+                <div class="date_calendar_m">
+                    <div id="calendar">달력</div>
+                    <div>▲</div>
                 </div>
-                <hr>
-                <div>
-                    <div><span class="btn-join">회원가입</span></div>
-                    <div><span class="btn-pwd">비밀번호찾기</span></div>
-                    <div><span class="btn-login">아이디찾기</span></div>
+                <div class="chkBoxs">
+                    <input type="date" name="date_m" id="date_m">
+                    <input type="date" name="date_end_m" id="date_end_m">
                 </div>
-                <!-- 주석 사유: 엄청 없어보임 -->
-                <!-- <div class="layerClose">
-                    <span>X</span>
-                </div> -->
+            </div>
+            <div class="keyword_m">
+                <div class="keyword_label_m">
+                    <span>검색어</span>
+                </div>
+                <div class="keyword_box_m">
+                    <input type="text" name="keyword_m" id="keyword_m" value="전체 검색">
+                </div>
+            </div>
+            <div class="search_box_m">
+                <button id="serch_btn_m">검색</button>
             </div>
         </div>
-        <!-- //로그인 폼 -->
-        <!-- 회원가입 폼 -->
-        <div id="joinModule">
-            <div class="joinBackground"></div>
-            <div class="joinLayer">
-                <div>
-                    <div class="inputLabel"><span>아이디</span></div>
-                    <input type="text" name="joinId" id="joinId" class="focusFunc" placeholder="아이디">
-                </div>
-                <div>
-                    <div class="inputLabel"><span>비밀번호</span></div>
-                    <input type="password" name="joinPwd" id="joinPwd" class="focusFunc" placeholder="비밀번호">
-                </div>
-                <div>
-                    <div class="inputLabel"><span>비밀번호 확인</span></div>
-                    <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc" placeholder="비밀번호 확인">
-                </div>
-                <div>
-                    <div class="inputLabel"><span>이메일</span></div>
-                    <input type="email" name="joinEmail" id="joinEmail" class="focusFunc" placeholder="이메일">
-                </div>
-                <div>
-                    <div>
-                        <input type="checkbox" name="agreePolicy" id="agreePolicy">
-                    </div>
-                    <div>
-                        <label for="agreePolicy">회원가입 약관에 동의합니다. </label><span href="#">(약관확인)</span>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <input type="checkbox" name="agreeEmail" id="agreeEmail">
-                    </div>
-                    <div>
-                        <label for="agreeEmail">이메일 수신에 동의합니다.</label>
-                    </div>
-                </div>
-                <div>
-                    <button>회원가입</button>
-                </div>
-                <hr>
-                <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
-
-            </div>
-        </div>
-        <!-- //회원가입 폼 -->
     </content>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <ul>
         <li><a href="./festival/fWholeList.html">전체 축제 리스트</a></li>
         <li><a href="./festival/fSearchList.html">축제 검색 리스트</a></li>
@@ -203,41 +221,122 @@
     <p>This is the main page.</p>
     <footer id="footer">
         <div class="footer_wrap">
-          <div class="footer_top">
-            <div class="footerbox about_us">
-              <h3>ABOUT US</h3>
-              <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
-            </div>
-            <div class="footerbox contact_us">
-                <h3>CONTACT US</h3>
-                <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
-                <p>+82 1234-5678</p>
-                <p><a href="#">info&#64;airmatsuri.com</a></p>
-            </div>
-            <div class="footerbox follow_us">
-                <h3>FOLLOW US</h3>
-                <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
-                <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
-                <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
-                <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
-            </div>
-          </div>
-          <div class="footer_bottom">
-            <div class="footer_container">
-                <div class="footer_copyright">
-                  <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+            <div class="footer_top">
+                <div class="footerbox about_us">
+                    <h3>ABOUT US</h3>
+                    <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
                 </div>
-                <div class="footer_gnb">
-                  <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
+                <div class="footerbox contact_us">
+                    <h3>CONTACT US</h3>
+                    <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+                    <p>+82 1234-5678</p>
+                    <p><a href="#">info&#64;airmatsuri.com</a></p>
+                </div>
+                <div class="footerbox follow_us">
+                    <h3>FOLLOW US</h3>
+                    <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
+                    <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
+                    <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
+                    <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
                 </div>
             </div>
-          </div>
+            <div class="footer_bottom">
+                <div class="footer_container">
+                    <div class="footer_copyright">
+                    <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                    </div>
+                    <div class="footer_gnb">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </footer>
+    </footer>
+    <!-- 로그인 폼 -->
+    <div id="loginModule">
+        <div class="loginBackground"></div>
+        <div class="loginLayer">
+            <div>
+                <div class="inputLabel"><span>아이디</span></div>
+                <input type="text" name="loginId" id="loginId" class="focusFunc" placeholder="아이디">
+            </div>
+            <div>
+                <div class="inputLabel"><span>비밀번호</span></div>
+                <input type="password" name="loginPwd" id="loginPwd" class="focusFunc" placeholder="비밀번호">
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="logRmbId" id="logRmbId">
+                </div>
+                <div>
+                    <label for="logRmbId">아이디 기억</label>
+                </div>
+            </div>
+            <div>
+                <button>로그인</button>
+            </div>
+            <hr>
+            <div>
+                <div><span class="btn-join">회원가입</span></div>
+                <div><span class="btn-pwd">비밀번호찾기</span></div>
+                <div><span class="btn-login">아이디찾기</span></div>
+            </div>
+            <!-- 주석 사유: 엄청 없어보임 -->
+            <!-- <div class="layerClose">
+                <span>X</span>
+            </div> -->
+        </div>
+    </div>
+    <!-- //로그인 폼 -->
+    <!-- 회원가입 폼 -->
+    <div id="joinModule">
+        <div class="joinBackground"></div>
+        <div class="joinLayer">
+            <div>
+                <div class="inputLabel"><span>아이디</span></div>
+                <input type="text" name="joinId" id="joinId" class="focusFunc" placeholder="아이디">
+            </div>
+            <div>
+                <div class="inputLabel"><span>비밀번호</span></div>
+                <input type="password" name="joinPwd" id="joinPwd" class="focusFunc" placeholder="비밀번호">
+            </div>
+            <div>
+                <div class="inputLabel"><span>비밀번호 확인</span></div>
+                <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc" placeholder="비밀번호 확인">
+            </div>
+            <div>
+                <div class="inputLabel"><span>이메일</span></div>
+                <input type="email" name="joinEmail" id="joinEmail" class="focusFunc" placeholder="이메일">
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="agreePolicy" id="agreePolicy">
+                </div>
+                <div>
+                    <label for="agreePolicy">회원가입 약관에 동의합니다. </label><span href="#">(약관확인)</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" name="agreeEmail" id="agreeEmail">
+                </div>
+                <div>
+                    <label for="agreeEmail">이메일 수신에 동의합니다.</label>
+                </div>
+            </div>
+            <div>
+                <button>회원가입</button>
+            </div>
+            <hr>
+            <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
+
+        </div>
+    </div>
+    <!-- //회원가입 폼 -->
 </body>
 </html>
