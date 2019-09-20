@@ -1,4 +1,137 @@
 $(function(){
+
+
+    var time = new Date();
+    var hr = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+
+    if(hr < 10){
+        hr = "0"+hr;
+    }
+    if(min < 10){
+        min = "0"+min;
+    }
+    if(sec < 10){
+        sec = "0"+sec;
+    }
+
+    $('.infoDiv span').eq(0).text(hr);
+    $('.infoDiv span').eq(1).text(min);
+    $('.infoDiv span').eq(2).text(sec);
+    // 초기시간설정
+
+    var month = time.getMonth()+1;
+    var year = time.getFullYear();
+    var basicText = "<table border = '1'><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>";
+    var day='';
+    var days = [];
+
+    switch(month.toString()){
+        case '1':case '3':case '5':case '7':case '8':case '10':case '12':
+            day = 31;
+            break;
+        case '4':case '6':case '9':case '12':
+            day = 30;
+            break;
+        case '2':
+        if((year%4 == 0 && year%100 != 0)||year%400 ==0){
+            day = 29;
+        }else{
+            day = 28;
+        }
+    }
+
+    for(i=0; i<day;i++){
+        days[i] = i+1;
+    }
+
+        var m = new Date(year,month-1,1); 
+        var theDay = m.getDay(); 
+
+        if(theDay == 1){
+            days.splice(0,0,'&nbsp')
+        }else if(theDay == 2){
+            days.splice(0,0,'&nbsp','&nbsp')
+        }else if(theDay == 3){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp')
+        }else if(theDay == 4){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp')
+        }else if(theDay == 5){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp','&nbsp')
+        }else if( theDay == 6){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp')
+        }
+
+        var week = Math.ceil(days.length/7);
+        var blank = week*7-days.length;
+
+
+    $('.calendarDiv > div').eq(0).text(year+"년 "+month+"월");
+    // $('.calendarDiv > div').eq(1).html(basicText);
+    
+    for(i=0; i<days.length; i++){
+
+        if(i%7 == 0){
+            // $('.calendarDiv > div').eq(1).html("<tr>");
+            basicText += "<tr>";
+        }
+
+        // $('.calendarDiv > div').eq(1).html("<td>"+days[i]+"</td>")
+        basicText += "<td>"+days[i]+"</td>";
+
+    if(i == days.length-1 && blank > 0){
+        for(k =1; k<=blank; k++){
+            // $('.calendarDiv > div').eq(1).html("<td>&nbsp</td>");
+            basicText += "<td>&nbsp</td>";
+        }
+    }
+    
+    if(i%7 == 6){
+        $('.calendarDiv > div').eq(1).html("</tr>");
+        basicText += "</tr>";
+        }
+    }
+        // $('.calendarDiv > div').eq(1).html("</table>");
+        basicText += "</table>";
+
+        $('.calendarDiv > div').eq(1).html(basicText);
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    var jpTime = setInterval(function(){
+
+        var intervalTime = new Date();
+        var hr = intervalTime.getHours();
+        var min = intervalTime.getMinutes();
+        var sec = intervalTime.getSeconds();
+        
+        if(hr < 10){
+            hr = "0"+hr;
+        }
+        if(min < 10){
+            min = "0"+min;
+        }
+        if(sec < 10){
+            sec = "0"+sec;
+        }
+
+        $('.infoDiv span').eq(0).text(hr);
+        $('.infoDiv span').eq(1).text(min);
+        $('.infoDiv span').eq(2).text(sec);
+
+    },1000)
     
     
 
@@ -81,3 +214,6 @@ function test(){
     window.moveTo(0, 0); 
     window.resizeTo(screen.availWidth, screen.availHeight);
 }
+
+
+
