@@ -32,7 +32,7 @@
   
 
 </head>
-<body>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
 
     <div id = "testNone">지원하지않음<button onclick = "test();">전체화면</button></div>
 
@@ -100,27 +100,92 @@
                 <div class = "row">
                     <div class = "col-sm-9 article1">
                         <div class = "row">
-                            <div class = "col detail1">1번</div>
-                            <div class = "col detail2">2번</div>
+                            <div class = "col countBox">
+                                <div><i class="fas fa-users"></i></div> <!-- 회원수 -->
+                                <hr>
+                                <div>98</div>
+                            </div>
+                            <div class = "col countBox">
+                                <div><i class="fas fa-torii-gate"></i></div> <!-- 축제수 -->
+                                <hr>
+                                <div>42</div>
+                            </div>
+                            <div class = "col countBox">
+                                <div><i class="far fa-address-card"></i></div> <!-- 호스트수 -->
+                                <hr>
+                                <div>27</div>
+                            </div>
+                            <div class = "col countBox">
+                                <div><i class="fas fa-chalkboard-teacher"></i></div> <!-- 공지사항게시글수 -->
+                                <hr>
+                                <div>7</div>
+                            </div>
+                            <div class = "col countBox">
+                                <div><i class="fas fa-vihara"></i></div> <!-- 소도시게시글수 -->
+                                <hr>
+                                <div>13</div>
+                            </div>
                         </div>
                         <div class = "row">
-                            <div class = "col detail3">3번</div>
+                            <div class = "col graphDiv">
+                                <div>회원 / 호스트</div>
+                                <hr>
+                                <div></div>
+                            </div>  <!-- 회원/호스트비율 -->
+                            <div class = "col graphDiv">3번</div>  <!-- 전달대비 회원증가율 -->
+                            <div class = "col graphDiv">3번</div>  <!-- 전달대비 축제증가율 -->
                         </div>
                         <div class = "row">
-                            <div class = "col detail4">3번</div>
+                            <div class = "col graphBox">그래프</div>
                             
                         </div>
                     </div>
 
                     <div class = "col-sm-3 article2">
                         <div class = "row">
-                            <div class = "col">4번</div>
+                            <div class = "col infoDiv">
+                              
+                                        <div>
+                                                <P>TOKYO</P>
+                                        </div>
+                               
+
+                                <div>
+                                    <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
+                                </div>
+
+
+
+
+                                <!-- <div id = "prev">2</div>
+                                <div id = "next">1</div> -->
+
+
+                            </div>
                         </div>
                         <div class = "row">
-                            <div class = "col">5번</div>
+                            <div class = "col snsDiv">
+
+                                <div class = 'row'>
+                                        <div>페이스북</div>
+                                        <div>인스타</div>
+                                </div>
+                                <div class = 'row'>
+                                    <div>트위터</div>
+                                    <div>유튜브</div>
+                                </div>
+
+
+                            </div>
                         </div>
                         <div class = "row">
-                            <div class = "col">6번dddddddddd</div>
+                            <div class = "col calendarDiv">
+                                <div class = "row">
+                                    
+                                </div>
+                                <div class = "row"></div>
+
+                            </div>
                         </div>
                     </div>
                 </div>

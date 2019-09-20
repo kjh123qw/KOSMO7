@@ -5,7 +5,7 @@
     }
 
 
-html,body{ margin:0; padding:0; height:100%; width:100%; }
+html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default;}
 #mainContainer{
     /* border: 3px solid rebeccapurple; */
     height: 100%;
@@ -223,10 +223,116 @@ nav img{
    
 }
 
-.detail3{
+.graphDiv{
     border: 1px solid rebeccapurple;
     margin: 5px;
 }
+
+.graphDiv div{
+    border: 1px solid black;
+}
+
+.graphDiv div:last-child{
+    height: 70%;
+}
+
+.countBox{
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.countBox div{
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+}
+
+/* .subCountBox{
+    border: 1px solid black;
+} */
+
+.graphBox{
+    border: 1px solid black;
+    margin: 5px ;
+}
+
+.infoDiv{
+    position: relative;
+    border: 1px solid blue;
+    margin: 5px;
+    overflow: hidden;
+    
+    /* padding-right: 0;
+    padding-left: 0; */
+   
+}
+
+.infoDiv div{
+    text-align: center;
+}
+
+.snsDiv{
+    margin: 5px;
+    border: 1px solid green;
+    /* padding-left: 0;
+    padding-right: 0; */
+    
+}
+
+.snsDiv div{
+    height: 50%;
+    /* margin-top: 6px; */
+}
+
+.snsDiv div div{
+    border: 1px solid hotpink;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 120px;
+    margin: auto;
+    
+}
+
+.calendarDiv{
+    margin: 5px;
+    border: 1px solid hotpink;
+    
+}
+
+.calendarDiv table{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+/* .snsDiv div{
+    display: inline-block;
+    border: 1px solid hotpink;
+    width: 45%;
+    height: 45%;
+    margin-top: 8px;
+    margin-left: 4px;
+} */
+
+/* #next, #prev{
+    border: 1px solid red;
+    position: absolute;
+    height: 100%;
+}
+
+#prev{
+    left: 0;
+}
+
+#next{
+    right: 0;
+} */
+
+
+
+
 
 
 
@@ -237,7 +343,7 @@ nav img{
     padding: 5px;
     border: 1px solid red;
      margin-left: 15px;
-    margin-right: 15px; */
+    margin-right: 15px; 
   
 }  */
 
