@@ -5,7 +5,7 @@
     }
 
 
-html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default;}
+html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default; font-family: 'Do Hyeon', sans-serif;}
 #mainContainer{
     /* border: 3px solid rebeccapurple; */
     height: 100%;
@@ -37,9 +37,10 @@ nav img{
     font-size: 25px;
     margin: 5px;
     padding: 5px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
 }
+
 
  #titleSpan{
     /* position: absolute; */
@@ -113,13 +114,14 @@ nav img{
     position: relative;
 }
 
-#dddd{
+#alarm{
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: aqua;
-    top: -5px;
-    right: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: yellow;
+    top: -10px;
+    right: 5px;
 }
 
 .photoDiv > div > img{
@@ -160,7 +162,7 @@ nav img{
 }
 
 #ulDiv li{
-    border: 1px solid black;
+    /* border-bottom: 1px solid black; */
     height: 40px;
     line-height: 40px;
     margin-bottom: 3px;
@@ -174,12 +176,12 @@ nav img{
 }
 
 #ulDiv li:hover{
-    background-color: rebeccapurple;
+
     cursor: pointer;
 }
 
 #ulDiv a:nth-child(1) li{
-    background-color: lightpink;
+    color: red;
 }
 
 #ulDiv a{
@@ -238,7 +240,7 @@ nav img{
 
 .countBox{
     margin: 5px;
-    border: 1px solid black;
+    /* border: 1px solid #333; */
 }
 
 .countBox div{
@@ -252,9 +254,44 @@ nav img{
     border: 1px solid black;
 } */
 
+#datatable{
+    display: none;
+}
+
 .graphBox{
     border: 1px solid black;
     margin: 5px ;
+}
+
+.graphDiv div:first-child{
+    text-align: center;
+
+}
+
+.highcharts-button, .highcharts-credits{
+    display: none;
+}
+
+.highcharts-data-labels {
+    display: none;
+}
+
+/* .highcharts-label{
+    visibility: hidden;
+}
+
+.highcharts-label > span{
+    border: 3px solid red;
+    visibility: show;
+} */
+
+/* .highcharts-data-labels > div>span{
+    display: block;
+} */
+
+#chart1, #chart2{
+    padding-left: 4px;
+   /* border: none; */
 }
 
 .infoDiv{
