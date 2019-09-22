@@ -4,17 +4,17 @@ $(function(){
             $('#navigation_m').toggle();
             if ($('#menuBtn').text() == 'M'){
                 $('#menuBtn').text('X');
-                $('header').css({
-                    "height": "320px",
-                    "background-image": "none",
+                $('.header_top').css({
                     "background-color": "#444"
+                });
+                $('.header_wrap').css({
+                    "height": "300px"
                 });
             }
             else if ($('#menuBtn').text() == 'X'){
                 $('#menuBtn').text('M');
-                $('header').css({
-                    "height": "180px"
-                }).removeAttr('style');
+                $('.header_top').removeAttr('style');
+                $('.header_wrap').removeAttr('style');
             }
         }
     );

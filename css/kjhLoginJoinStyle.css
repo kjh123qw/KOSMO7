@@ -9,34 +9,18 @@
     top: 0; right: 0;
     bottom: 0; left: 0;
     background-color: rgba(0,0,0,0.65);
-    z-index: 7;
+    z-index: 50;
 }
 .loginLayer {
     position: fixed;
-    top: 45%; left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #eee;
-    z-index: 8;
-    width: 470px; height: 320px;
+    top: 0;
+    /* transform: translate(-50%, -50%); */
+    background-color: #fff;
+    z-index: 51;
+    width: 100%; height: 320px;
     padding: 25px 15px;
 
 }
-/* 주석 사유: 엄청 없어보임 */
-/* .layerClose {
-    position: fixed;
-    top: -18px; right: -18px;
-    border-radius: 20px;
-    background-color: #ddd; 
-    z-index: 10;
-    width: 40px; height: 40px;
-    text-align: center;
-}
-.layerClose > span {
-    cursor: pointer;
-    font-size: 34px;
-    line-height: 38px;
-    color: #999;
-} */
 .loginLayer > div:nth-of-type(1), .loginLayer > div:nth-of-type(2) {
     width: 100%; height: 60px;
     position: relative;
@@ -48,65 +32,57 @@
     font-weight: bold;
     color: #666;
     outline: none;
-    border: 1px solid #eee;
-    border-radius: 4px;
+    border: 1px solid #666;
     overflow: hidden;
     padding: 0 10px;
 }
 .inputLabel {
-    display: none;
-    overflow: hidden;
     position: absolute;
-    top: -8px; left: -7px;
-    padding: 0 5px; height: 19px;
-    background-color: mediumturquoise;
-    border-radius: 3px;
-    line-height: 17px;
-    font-size: 12px;
-    color: #fff;
-    /* border: 1px solid #ccc; */
+    top: -9px; left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px; height: 18px;
+    background-color: #fff;
+    line-height: 18px;
+    font-size: 14px;
+    color: #000;
     text-align: center;
-    z-index: 11;
-}
-.loginLayer button {
-    background-color: mediumturquoise;
-    width: 100%; height: 45px;
-    margin-top: 10px;
-    color: #fff;
-    outline: none;
+    z-index: 60;
 }
 .loginLayer > div:nth-of-type(3), .loginLayer > div:nth-of-type(5) {
-    margin: 0 0 7px 5px;
+    margin: 0 0 7px 0;
     width: 100%; height: 25px;
     overflow: hidden;
 }
 .loginLayer > div:nth-of-type(3) > div {
     height: 25px;
     line-height: 23px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
+    font-size: 12px;
+    color: black;
     float: left;
 }
-.loginLayer > div:nth-of-type(3) > div:nth-of-type(1) { width: 25px; }
-.loginLayer > div:nth-of-type(3) > div:nth-of-type(2) { width: 150px; margin-left: 10px; }
-#logRmbId {
-    margin-top: 1px;
-    background-color: #eee;
-    width: 23px; height: 23px;
+.displayNone { display: none; }
+.rmbIdChkBox, .chkPlcBox { clear: both; }
+.rmbIdChkBox > div:first-of-type {
+    width: 25px; height: 25px;
+    border: 1px solid #444;
+    background-color: white;
+    cursor: pointer;
+}
+.rmbIdChkBox > div:last-of-type {
+    width: 90px; height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .loginLayer hr, .joinLayer hr {
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #444;
     margin: 15px 0;
 }
 .loginLayer > div:nth-of-type(5) > div {
     height: 25px;
     line-height: 23px;
     font-size: 14px;
-    font-weight: bold;
-    color: #777;
-    margin: 0 15px;
+    margin: 0 5px;
 }
 .loginLayer > div:nth-of-type(5) > div:nth-of-type(1) { float: left; }
 .loginLayer > div:nth-of-type(5) > div:nth-of-type(2), .loginLayer > div:nth-of-type(5) > div:nth-of-type(3) { float: right; }
@@ -123,15 +99,15 @@
     top: 0; right: 0;
     bottom: 0; left: 0;
     background-color: rgba(0,0,0,0.65);
-    z-index: 7;
+    z-index: 50;
 }
 .joinLayer {
     position: fixed;
-    top: 45%; left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #eee;
-    z-index: 8;
-    width: 470px; height: 460px;
+    top: 0;
+    /* transform: translate(-50%, -50%); */
+    background-color: #fff;
+    z-index: 51;
+    width: 100%; height: 460px;
     padding: 25px 15px;
 }
 .joinLayer > div:nth-of-type(1), .joinLayer > div:nth-of-type(2), .joinLayer > div:nth-of-type(3), .joinLayer > div:nth-of-type(4) {
@@ -145,23 +121,25 @@
     font-weight: bold;
     color: #777;
     outline: none;
-    border: 1px solid #eee;
-    border-radius: 4px;
+    border: 1px solid #666;
     overflow: hidden;
     padding: 0 10px;
 }
-::-webkit-input-placeholder { color: #aaa; } /* Edge */
-:-ms-input-placeholder { color: #aaa; } /* Internet Explorer 10-11 */
-::placeholder { color: #aaa; }
-.joinLayer button {
-    background-color: mediumturquoise;
+::-webkit-input-placeholder { color: #aaa; font-size: 16px; } /* Edge */
+:-ms-input-placeholder { color: #aaa; font-size: 16px; } /* Internet Explorer 10-11 */
+::placeholder { color: #aaa; font-size: 16px; }
+.loginLayer button, .joinLayer button {
+    background-color: black;
     width: 100%; height: 45px;
     margin-top: 10px;
     color: #fff;
+    font-weight: bold;
+    border: 0;
     outline: none;
+    cursor: pointer;
 }
 .joinLayer > div:nth-of-type(5), .joinLayer > div:nth-of-type(6) {
-    margin: 0 0 7px 5px;
+    margin: 0 0 7px 0;
     width: 100%; height: 25px;
     overflow: hidden;
 }
@@ -173,14 +151,56 @@
 .joinLayer > div:nth-of-type(5) > div, .joinLayer > div:nth-of-type(6) > div {
     height: 25px;
     line-height: 23px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
+    font-size: 12px;
+    color: black;
     float: left;
 }
-.joinLayer > div:nth-of-type(5) > div:nth-of-type(1), .joinLayer > div:nth-of-type(6) > div:nth-of-type(1) { width: 25px; }
-.joinLayer > div:nth-of-type(5) > div:nth-of-type(2), .joinLayer > div:nth-of-type(6) > div:nth-of-type(2) { width: 250px; margin-left: 10px; }
-.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span { cursor: pointer; font-size: 12px; }
-.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > span:hover, .joinLoginBtn:hover { color: mediumturquoise; text-decoration: underline; }
-.joinLoginBtn { cursor: pointer; font-size: 16px; color: #777; }
-.joinLoginBtn { font-size: 16px; color: #777; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(1), .joinLayer > div:nth-of-type(6) > div:nth-of-type(1) {
+    width: 25px;
+    border: 1px solid #444;
+    background-color: white;
+    cursor: pointer;
+}
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2), .joinLayer > div:nth-of-type(6) > div:nth-of-type(2) {
+    width: 220px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > a { cursor: pointer; font-size: 12px; }
+.joinLayer > div:nth-of-type(5) > div:nth-of-type(2) > a:hover, .joinLoginBtn:hover { color: mediumturquoise; text-decoration: underline; }
+.joinLayer > div:nth-of-type(8) > span { font-size: 14px; color: #444; }
+.joinLoginBtn { cursor: pointer; font-size: 14px; color: #444; }
+
+/* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
+  기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
+  가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
+
+@media (min-width: 576px) {
+    .loginLayer, .joinLayer {
+        top: 70px;
+        width: 80%;
+        margin: 0 50%;
+        transform: translate(-50%, 0);
+    }
+    
+}
+
+/* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
+@media (min-width: 768px) {
+    .loginLayer, .joinLayer {
+        top: 150px;
+        width: 60%;
+        margin: 0 50%;
+        transform: translate(-50%, 0);
+    }
+}
+/* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
+@media (min-width: 992px) {
+  
+
+}
+
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
+@media (min-width: 1200px) {
+    
+}

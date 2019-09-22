@@ -1,10 +1,9 @@
 header {
-    padding-top: 10px;
     background-image: url('../img/Test_Main.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 600px;
-    width: 100%; height: 180px;
+    width: 100%;
     overflow: hidden;
     position: relative;
     border-bottom: 1px solid black;
@@ -12,17 +11,27 @@ header {
 
 /* -------Navigation------- */
 .header_wrap {
-    width: 100%;
+    width: 100%; height: 180px;
     position: relative;
 }
-
+.header_top {
+    overflow: hidden;
+    width: 100%; height: 50px;
+}
 .header_wrap > .logo {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+}
+.header_wrap > .header_top > .logo_m {
     width: 40px;
     height: 40px;
     margin: 5px;
     float: left;
 }
-.header_wrap > #menuBtn {
+.header_wrap > .header_top > #menuBtn {
     width: 40px; height: 40px;
     margin: 5px;
     line-height: 34px;
@@ -30,9 +39,8 @@ header {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color: chocolate;
-    border: 3px solid chocolate;
-    border-radius: 5px;
+    color: black;
+    border: 3px solid black;
     background-color: white;
     cursor: pointer;
 }
@@ -44,7 +52,7 @@ header {
     overflow: hidden;
     display: none;
     height: 250px;
-    margin-top: 10px;
+    background-color: #444;
 }
 .header_gnb_m > li {
     width: 100%;
@@ -78,15 +86,15 @@ header {
 }
 .header_gnb > li > a {
     width: 100%; height: 60px;
-    padding: 0 15px;
+    padding: 0 10px;
     display: block;
-    font-size: 16px;
-    color: #fff;
+    font-size: 18px;
+    color: #000;
     line-height: 60px;
 }
 
 .header_gnb > li > a:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #000;
 }
   
 /* -------Main Text(test)------- */
@@ -107,11 +115,11 @@ header {
 .region_sel_m, .festival_sel_m, .date_m, .keyword_m { width: 100%; position: relative; }
 .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
     position: absolute;
-    top: -13px; left: 50%;
+    top: -9px; left: 50%;
     transform: translate(-50%, 0);
     width: 80px; height: 18px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 18px;
     text-align: center;
     background-color: white;
     z-index: 10;
@@ -122,7 +130,7 @@ header {
     width: 100%; height: 44px;
     margin-top: 17px;
     padding: 0 10px;
-    border: 1px solid #444;
+    border: 1px solid #666;
     line-height: 42px;
     cursor: pointer;
 }
@@ -131,15 +139,24 @@ header {
     width: 50%; height: 44px;
     padding-left: 10px;
     line-height: 42px;
+    border-bottom: 1px solid #666;
     float: left;
     cursor: pointer;
 }
-.date_box_end_m { border-left: 1px dotted #ddd; }
+.date_box_end_m {
+    color: #aaa;
+    border-left: 1px dotted #ddd;
+    cursor: auto;
+}
+.date_box_m > span {
+    color: #aaa;
+}
 .date_boxs_m {
     overflow: hidden;
     width: 100%;
     margin-top: 17px;
-    border: 1px solid #444;
+    border: 1px solid #666;
+    border-bottom: 0;
 }
 .region_box_m { margin-top: 10px; }
 .region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
@@ -149,6 +166,7 @@ header {
     font-size: 14px;
     line-height: 20px;
 }
+.region_box_m > div > span:first-of-type, .festival_box_m > div > span:first-of-type, .date_box_m > div > span:first-of-type, .date_box_end_m > div > span:first-of-type, .keyword_box_m > div > span:first-of-type { display: none; }
 .region_list_box_m, .festival_list_box_m, .date_calendar_m {
     display: none;
     width: 98%;
@@ -164,7 +182,7 @@ header {
 }
 .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
     width: 100%; height: 40px;
-    background-color: #444;
+    background-color: #666;
     color: #fff;
     text-align: center;
     line-height: 40px;
@@ -175,7 +193,7 @@ header {
     position: absolute;
     top: 10px; left: 15px;
     width: 20px; height: 20px;
-    border: 1px solid #444;
+    border: 1px solid #666;
     background-color: white;
     
 }
@@ -209,15 +227,23 @@ header {
     cursor: pointer;
 }
 .chkBoxs { display: none; }
+.ui-datepicker{ 
+    width: 100%;
+    margin: 5px 0;
+    font-size: 16px;
+}
+.ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 14px; }
+.ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 14px; }
+.ui-datepicket td { text-align: center; }
 
 /* -------Search Main Page------- */
 #search_window {
-    background-color: rgba(255,255,255,0.7);
-    width: 380px; height: 400px;
+    display: none;
     position: absolute;
-    left: 85px; bottom: 150px;
-    padding: 15px 0;
-    border-radius: 4px;
+    background-color: #fff;
+    width: 380px; height: 350px;
+    bottom: 100px; left: 85px;
+    padding: 10px;
 }
 .keyword_main, .date, .region_sel, .festival_sel {
     width: 100%; height: 75px;
@@ -268,9 +294,8 @@ header {
 .date .date_input #date_end {
     border-radius: 0 4px 4px 0;
 }
-.search_btn button, .loginLayer button, .joinLayer button {
+.search_btn button {
     border: 0;
-    border-radius: 4px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -293,22 +318,23 @@ header {
   가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 
 @media (min-width: 576px) {
-  
+    header { background-size: 800px; }
+    .header_wrap { height: 220px; }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
 @media (min-width: 768px) {
-  .header_wrap > .logo {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-  }
-  .header_wrap > #menuBtn {
-    display: none;
-  }
-  #navigation_m { display: none; height: 0; }
-  #navigation { display: block; }
+    header { background-size: 1400px; }
+    .header_wrap { height: 650px; }
+    .header_top { display: none; }
+    .header_wrap > .logo { display: block; }
+    .header_wrap > #menuBtn {
+        display: none;
+    }
+    #navigation_m { display: none; height: 0; }
+    #navigation { display: block; }
+    /* #search_window { display: block; }
+    #search_window_m { display: none; } */
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
@@ -319,8 +345,8 @@ header {
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
 @media (min-width: 1200px) {
-  .header_wrap {
-    margin: 0 auto;
-    width: 1200px;
-  }
+    .header_wrap {
+        margin: 0 auto;
+        width: 1200px;
+    }
 }
