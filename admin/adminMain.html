@@ -23,6 +23,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- font-awesome -->
 
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- googleFont -->
+
+    <script src = "./js/charts/highcharts.js"></script>
+    <script src = "./js/charts/export-data.js"></script>
+    <script src = "./js/charts/exporting.js"></script>
+    <script src = "./js/charts/highcharts-more.js"></script>
+    <script src = "./js/charts/solid-gauge.js"></script>
+    <script src = "./js/charts/data.js"></script>
+    <!-- chart -->
+
     <link rel="stylesheet" href="./css/adminMain.css">
     <link rel="stylesheet" href="./css/animate.css">
     <script src = "./js/adminMain.js"></script>
@@ -39,18 +50,18 @@
 <div id = "wrap">
 
 
-    <div class = "container-fuild" id = "mainContainer"> <!-- id확인 -->
+    <div class = "container-fuild" id = "mainContainer">
 
         <header></header>
 
         <nav class="navbar navbar-dark bg-dark bg-light mainNav">
             <a class="navbar-brand" href="#">
-                <img src="../img/logo_noText 51x44.png" alt="logo">
+                <img src="../img/logo_noText 51x44.png" alt="logo"> <!-- src빈칸확인 -->
             </a>
             <div>
-            <span class = "iconBorder"><div id = "dddd"></div><i class="far fa-envelope"></i></span>
-            <span class = "iconBorder"><i class="fas fa-user-friends"></i></span>
-            <span class = "iconBorder"><i class="far fa-bell"></i></span>
+            <span class = "iconBorder"><a href="#"><div id = "alarm"></div><i class="far fa-envelope"></i></a></span> <!-- div확인 -->
+            <span class = "iconBorder"><a href="#"><i class="fas fa-user-friends"></i></a></span>
+            <span class = "iconBorder"><a href="#"><i class="far fa-bell"></i></a></span>
             </div>
             <!-- <form class="form-inline">
                 <div class="input-group">
@@ -70,7 +81,7 @@
             <div class = "col-sm-2 aside"><!-- id확인 -->
                 <div class = "row">
                     <div class = "col-sm-12 photoDiv">
-                        <div><img src="../festival/img/image2.png" alt="adminImage"class="img-thumbnail"></div>
+                        <div><img src="../festival/img/image2.png" alt="adminImage" class="img-thumbnail"></div>
                     </div>
                     <div class = "col-sm-12 photoSubDiv">
                         <p>유지상</p>
@@ -80,16 +91,15 @@
                         <button type="button" class="btn btn-outline-danger btn-sm">로그아웃</button>
                     </div>
                 </div>
-
                 <div class = "row">
                     <div class = "col-sm-12" id = "ulDiv">
                         <ul>
-                            <a href = "#"><li class="animated" name = "main"><i class="far fa-thumbs-up"></i>MAIN</li></a>
-                            <a href = "#"><li>MEMBER</li></a>
-                            <a href = "#"><li>FESTIVAL</li></a>
-                            <a href = "#"><li class="animated">HOST</li></a> <!--클래스확인좀 -->
-                            <a href = "#"><li>NOTICE</li></a>
-                            <a href = "#"><li>SMALLTOWN</li></a>
+                            <a href = "#"><li class="animated" name = "main"><i class="fas fa-home"></i> <span>MAIN</span></li></a><!-- a확인 -->
+                            <a href = "#"><li class="animated" name = "member"><i class="fas fa-users"></i> <span>MEMBER</span></li></a><!-- a확인 -->
+                            <a href = "#"><li class="animated" name = "festival"><i class="fas fa-torii-gate"></i> <span>FESTIVAL</span></li></a><!-- a확인 -->
+                            <a href = "#"><li class="animated" name = "host"><i class="far fa-address-card"></i> <span>HOST</span></li></a> <!-- a확인 -->
+                            <a href = "#"><li class="animated" name = "notice"><i class="fas fa-chalkboard-teacher"></i> <span>NOTICE</span></li></a><!-- a확인 -->
+                            <a href = "#"><li class="animated" name = "smalltown"><i class="fas fa-vihara"></i> <span>SMALLTOWN</span></li></a> <!-- a확인 -->
                         </ul>
                     </div>
                 </div>
@@ -128,18 +138,69 @@
                         </div>
                         <div class = "row">
                             <div class = "col graphDiv">
-                                <div>회원 / 호스트</div>
+                                <div>회원 / 호스트 비율</div>
                                 <hr>
-                                <div></div>
+                                <div id = "chart1"></div>
                             </div>  <!-- 회원/호스트비율 -->
-                            <div class = "col graphDiv">3번</div>  <!-- 전달대비 회원증가율 -->
-                            <div class = "col graphDiv">3번</div>  <!-- 전달대비 축제증가율 -->
+                            <div class = "col graphDiv">
+                                <div>전달대비 회원가입률</div>
+                                <hr>
+                                <div id = "chart2"></div>
+                            </div>  <!-- 전달대비 회원증가율 -->
+                            <div class = "col graphDiv">
+                                <div>전달대비 축제등록율</div>
+                                <hr>
+                                <div id = "chart3"></div>
+                            </div>  <!-- 전달대비 축제증가율 -->
                         </div>
                         <div class = "row">
-                            <div class = "col graphBox">그래프</div>
-                            
+                            <div class = "col graphBox" id = "chart4"></div>
                         </div>
                     </div>
+
+                    <table id="datatable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>회원</th>
+                                <th>축제</th>
+                                <th>소도시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>6월</th>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th>7월</th>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>8월</th>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>9월</th>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>10월</th>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
 
                     <div class = "col-sm-3 article2">
                         <div class = "row">

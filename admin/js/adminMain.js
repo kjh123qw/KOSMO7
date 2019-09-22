@@ -19,7 +19,7 @@ $(function(){
     $('.infoDiv span').eq(0).text(hr);
     $('.infoDiv span').eq(1).text(min);
     $('.infoDiv span').eq(2).text(sec);
-    // 초기시간설정
+    // 처음시간설정
 
     var month = time.getMonth()+1;
     var year = time.getFullYear();
@@ -97,7 +97,169 @@ $(function(){
 
         $('.calendarDiv > div').eq(1).html(basicText);
 
+        var chartBoxWidth = $('#chart1').width();
 
+
+
+        Highcharts.chart('chart1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                width:chartBoxWidth,
+                
+                
+            },
+            title: {
+                text: ' ',
+                align: 'center',
+                verticalAlign: 'middle',
+                // y: 80
+            },
+            tooltip: {
+                enabled:true,
+                // pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: false,
+                        distance: -50,
+                        style: {
+                            fontWeight: 'bold',
+                            color: 'white'
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '100%'],
+                    size: '200%'
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                innerSize: '70%',
+                data: [
+                    ['회원', 71],
+                    ['호스트', 29]
+
+                ]
+            }]
+        });
+        //1번 그래프
+
+        var gaugeOptions = {
+
+            chart: {
+                type: 'solidgauge',
+                width:chartBoxWidth,
+            },
+        
+            title: null,
+        
+            pane: {
+                center: ['50%', '85%'],
+                size: '170%',
+                startAngle: -90,
+                endAngle: 90,
+                background: {
+                    backgroundColor:
+                        Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+                    innerRadius: '60%',
+                    outerRadius: '100%',
+                    shape: 'arc'
+                }
+            },
+        
+            tooltip: {
+                enabled: true
+            },
+        
+            // the value axis
+            yAxis: {
+                stops: [
+                    [0.1, '#55BF3B'], // green
+                    [0.5, '#DDDF0D'], // yellow
+                    [0.9, '#DF5353'] // red
+                ],
+                lineWidth: 0,
+                minorTickInterval: null,
+                // tickAmount: 2,
+                title: {
+                    y: -70
+                },
+                labels: {
+                    y: 16
+                }
+            },
+        
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        y: 5,
+                        borderWidth: 0,
+                        useHTML: true
+                    }
+                }
+            },
+            
+        };
+
+        var chartSpeed = Highcharts.chart('chart2', Highcharts.merge(gaugeOptions, {
+            yAxis: {
+                min: 0,
+                max: 200, //전달 가입 회원수
+                title: {
+                    text: ' '
+                }
+            },
+        
+            credits: {
+                enabled: false
+            },
+        
+            series: [{
+                name: ' ',
+                data: [10], //현재 데이터값
+                dataLabels: {
+                    format:
+                        '{y}'
+                        // '<span style="font-size:25px">{y}</span><br/>' +
+                        // '<span style="font-size:12px;opacity:0.4">km/h</span>' +
+                        
+                },
+                tooltip: {
+                    valueSuffix: '명'
+                }
+            }]
+        
+        }));
+        // 2번 그래프
+
+        Highcharts.chart('chart4', {
+            data: {
+                table: 'datatable'
+            },
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ' '
+            },
+            yAxis: {
+                allowDecimals: false,
+                title: {
+                    text: ' '
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        this.point.y + ' ' + this.point.name.toLowerCase();
+                }
+            }
+        });
 
 
 
@@ -164,13 +326,11 @@ $(function(){
             return false;
         }
 
-        $(this).addClass('shake');
-        
+        $(this).addClass('pulse');
     })
 
     $('#ulDiv li').mouseleave(function(){
-        $(this).removeClass('shake');
-        
+        $(this).removeClass('pulse');
     })
 
     $('#testNone').css("display" ,"none");
