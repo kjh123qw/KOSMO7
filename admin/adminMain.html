@@ -12,11 +12,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- 부트스트랩 -->
 
+    
     <script src = "./js/jquery-2.1.1.min.js"></script> <!--반드시필요함 -->
     <script src = "./js/jquery-ui.min.js"></script>
     <script src = "./js/jquery.easing.1.3.js"></script>
     <script src = "./js/jquery.mousewheel.min.js"></script> <!--마우스휠js -->
     <!-- jQuery -->
+    
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <!-- bxslider -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -178,7 +183,7 @@
                                 <th>7월</th>
                                 <td>2</td>
                                 <td>4</td>
-                                <td>0</td>
+                                <td>30</td>
                             </tr>
                             <tr>
                                 <th>8월</th>
@@ -222,6 +227,32 @@
                                 <div id = "next">1</div> -->
 
 
+
+                                    <!-- <div id = "testDiv22">
+                                        <div>
+
+                                            <div val = "1" class = "none">1</div>
+                                            <div val = "2" class = "none">2</div>
+                                            <div val = "3" class = "move show">3</div>
+                                            <div val = "4" class = "none">4</div>
+                                            <div val = "5" class = "none">5</div>
+                                         </div> 
+
+                                    </div>
+
+                                    <button onclick = "next();">next</button>
+                                    <button onclick = "prev();">prev</button> -->
+
+                                    <div class = "weatherBox">
+
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+
+                                    </div>
+
+
+
                             </div>
                         </div>
                         <div class = "row">
@@ -242,7 +273,9 @@
                         <div class = "row">
                             <div class = "col calendarDiv">
                                 <div class = "row">
-                                    
+                                    <span value = "1">prev</span>
+                                    <span>2019년 9월</span>
+                                    <span value = "2">next</span>
                                 </div>
                                 <div class = "row"></div>
 

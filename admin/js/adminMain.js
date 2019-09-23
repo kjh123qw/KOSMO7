@@ -67,7 +67,8 @@ $(function(){
         var blank = week*7-days.length;
 
 
-    $('.calendarDiv > div').eq(0).text(year+"년 "+month+"월");
+    // $('.calendarDiv > div').eq(0).text(year+"년 "+month+"월");
+    
     // $('.calendarDiv > div').eq(1).html(basicText);
     
     for(i=0; i<days.length; i++){
@@ -346,18 +347,27 @@ $(function(){
 
 
 
-    
-    
+    $('.calendarDiv > div > span').click(function(){
 
-    
+        var dd = $(this).text();
+        
+        alert(dd);
 
-    
-
-    
-
+    })
 
 
     
+
+    $(function(){
+        $('.weatherBox').bxSlider({
+            auto:true,
+            pause:2000,
+            autoHover:true,
+            // slideWidth: 1000,
+            autoControls: true,
+        stopAutoOnClick: true
+        });
+      })
 
     
 })
@@ -377,3 +387,86 @@ function test(){
 
 
 
+function next(){
+    
+
+//    var display =  $('#testDiv22 div[css="display:block"]').attr('val');
+
+
+   var display =  $('#testDiv22 div[class=show]').attr('val');
+
+
+$('#testDiv22 div[class~="show"]').next().addClass('move')
+$('#testDiv22 div[class~="show"]').removeClass('move')
+
+$('#testDiv22 div[class~=show]').animate({
+    marginLeft:-200
+})
+
+$('#testDiv22 div[class~="move"]').addClass('show')
+$('#testDiv22 div[class~="move"]').removeClass('none')
+
+
+$('#testDiv22 div[class~="move"]').prev().removeClass('show')
+// $('#testDiv22 div[class=""]').addClass('none') 클래스가 없어짐
+
+
+
+// $('#testDiv22 div[class~="show"]').next().addClass('show');
+// $('#testDiv22 div[class~="show"]:first-child').removeClass('show');
+
+//    $('#testDiv22 div[class="show"]').prev().addClass('none')
+//    $('#testDiv22 div[class~="show"]').removeClass('none');
+//    $('#testDiv22 div[class~="show"]').css('display','block')
+//    $('#testDiv22 div[class~="none"]').css('display','none')
+
+
+//     if(display == 'block'){
+//         var value = $('#testDiv22 div:last-child').attr('val');
+// console.log(value);
+//         $('#testDiv22 > div[val='+value+']').animate({
+//             marginLeft:-200
+//         })
+//         // value++;
+//         $('#testDiv22 > div[val='+value+']').css('display','block');
+//         // value--;
+//         // $('#testDiv22 > div[val='+value+']').css('display','none');
+//     }
+
+    
+}
+
+function prev(){
+    
+
+
+
+// $('#testDiv22 div[class="move show"]').prev().addClass('move');
+// $('#testDiv22 div[class~="show"]').removeClass('move');
+// $('#testDiv22 div[class~="show"]').addClass('none');
+// $('#testDiv22 div[class~="move"]').addClass('show');
+
+
+// // $('#testDiv22 div[class~=show]').animate({
+// //     // marginLeft:0
+// //     marginRight:-200
+// //    })
+
+
+// $('#testDiv22 div[class="show none"]').removeClass('show');
+
+
+
+
+
+$('#testDiv22 div[class="move show"]').prev().addClass('move');
+// $('#testDiv22 div[class="move"]').animate({
+//     marginRight:-200
+// })
+// $('#testDiv22 div[class="move show"]').addClass('none');
+// $('#testDiv22 div[class="move show none"]').removeClass('move')
+// $('#testDiv22 div[class="show none"]').removeClass('show')
+
+// $('#testDiv22 div[class="move"]').addClass('show');
+
+}
