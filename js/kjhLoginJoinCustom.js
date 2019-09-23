@@ -58,7 +58,7 @@ $(function(){
         $obj.css('border', '1px solid #222');
         $obj.prev().css('color', '#222');
         $obj.prev().stop().animate({
-            'width': '160px'
+            'width': '100px'
         }, 300);
     }
     function lableOff($obj){
@@ -66,7 +66,7 @@ $(function(){
             $obj.css('border', '1px solid #aaa');
             $obj.prev().css('color', '#aaa');
             $obj.prev().stop().animate({
-                'width': '100px'
+                'width': '130px'
             }, 300);
         }
     }

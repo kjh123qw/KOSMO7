@@ -123,32 +123,30 @@ header {
     position: absolute;
     top: -9px; left: 50%;
     transform: translate(-50%, 0);
-    width: 80px; height: 18px;
+    width: 130px; height: 18px;
     font-size: 14px;
     line-height: 18px;
     text-align: center;
     background-color: white;
+    color: #aaa;
     z-index: 10;
 }
-.region_box_m, .festival_box_m, .keyword_box_m {
+.region_box_m, .festival_box_m, .keyword_box_m, .date_box_m, .date_box_end_m {
     position: relative;
     overflow: hidden;
     width: 100%; height: 44px;
     margin-top: 17px;
     padding: 0 10px;
-    border: 1px solid #666;
+    border: 1px solid #aaa;
     line-height: 42px;
     cursor: pointer;
 }
 .date_box_m, .date_box_end_m {
-    position: relative;
-    width: 50%; height: 44px;
-    padding-left: 10px;
-    line-height: 42px;
-    border-bottom: 1px solid #666;
+    margin-top: 0;
+    width: 50%;
     float: left;
-    cursor: pointer;
 }
+.date_box_m { border-right: 0; }
 .date_box_end_m {
     color: #aaa;
     border-left: 1px dotted #ddd;
@@ -161,36 +159,35 @@ header {
     overflow: hidden;
     width: 100%;
     margin-top: 17px;
-    border: 1px solid #666;
-    border-bottom: 0;
 }
 .region_box_m { margin-top: 10px; }
 .region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
     position: absolute;
     top: 11px; right: 10px;
     width: 20px; height: 20px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
 }
-.region_box_m > div > span:first-of-type, .festival_box_m > div > span:first-of-type, .date_box_m > div > span:first-of-type, .date_box_end_m > div > span:first-of-type, .keyword_box_m > div > span:first-of-type { display: none; }
+.arrowUpDwon { display: block; }
+.arrowLeftRight { display: none; }
 .region_list_box_m, .festival_list_box_m, .date_calendar_m {
     display: none;
     position: relative;
     width: 100%;
     margin: 0;
-    background-color: #ddd;
+    background-color: #eee;
     z-index: 12;
 }
 .region_list_box_m > div, .festival_list_box_m > div {
     overflow: hidden;
     position: relative;
     width: 100%; height: 40px;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #fff;
     cursor: pointer;
 }
 .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
     width: 100%; height: 40px;
-    background-color: #666;
+    background-color: #333;
     color: #fff;
     text-align: center;
     line-height: 40px;
@@ -199,8 +196,8 @@ header {
 }
 .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type {
     position: absolute;
-    top: 6px; left: 15px;
-    width: 22px; height: 25px;
+    top: 10px; left: 15px;
+    width: 20px; height: 20px;
     border: 1px solid #222;
     background-color: white;
     
@@ -237,7 +234,7 @@ header {
 .chkBoxs { display: none; }
 .ui-datepicker{ 
     width: 100%;
-    margin: 5px 0;
+    margin: 0;
     font-size: 16px;
 }
 .ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 14px; }
@@ -253,81 +250,19 @@ header {
     bottom: 100px; left: 85px;
     padding: 10px;
 }
-/*
-.keyword_main, .date, .region_sel, .festival_sel {
-    width: 100%; height: 75px;
-}
-.keyword_main .keyword_main_label, .date .date_label, .region_sel .region_sel_label, .festival_sel .festival_sel_label {
-    width: 88%; height: 25px;
-    margin: 0 6%;
-}
-.keyword_main .keyword_main_label span,  .date .date_label span, .region_sel .region_sel_label span, .festival_sel .festival_sel_label span {
-    width: 100%; height: 25px;
-    line-height: 25px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #888;
-}
-.keyword_main .keyword_main_input, .date .date_input, .region_sel .region_sel_box, .festival_sel .festival_sel_box, .search_btn {
-    width: 92%; height: 45px;
-    margin: 0 4%;
-}
-.keyword_main .keyword_main_input input, .region_sel .region_sel_box select, .festival_sel .festival_sel_box select {
-    width: 100%; height: 45px;
-    line-height: 45px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    overflow: hidden;
-    padding: 0 10px;
-}
-.date .date_input div, .search_btn div {
-    width: 50%;
-    float: left;
-}
-.date .date_input input {
-    width: 100%; height: 45px;
-    line-height: 45px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #777;
-    border: 1px solid #eee;
-    padding: 0 10px;
-}
-.date .date_input #date {
-    border-radius: 4px 0 0 4px;
-    border-right: 0;
-}
-.date .date_input #date_end {
-    border-radius: 0 4px 4px 0;
-}
-.search_btn button {
-    border: 0;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.search_btn div:first-child > button {
-    background-color: steelblue;
-    width: 120px; height: 35px;
-    margin-top: 30px;
-    color: #eee;
-}
-.search_btn div:last-child > button {
-    background-color: mediumturquoise;
-    width: 100%; height: 45px;
-    margin-top: 20px;
-    color: #fff;
-} */
 /* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
   기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
   가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 
 @media (min-width: 576px) {
     header { background-size: 800px; }
-    .header_wrap_m { height: 220px; }
+    .header_wrap_m { height: 300px; }
+    #search_window_m {
+        top: -80px;
+        width: 70%;
+        margin: 0 auto;
+        border: 1px solid black;
+    }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
@@ -341,15 +276,19 @@ header {
         top: -400px;
         width: 350px;
         margin-left: 2%;
-        border: 1px solid black;
+        border: 1px solid #000;
     }
     .region_list_box_m, .festival_list_box_m, .date_calendar_m {
         position: absolute;
-        top: 0; right: -255px;
+        top: 0; right: -256px;
         width: 250px;
         margin: 0;
         border: 1px solid #000;
     }
+    .festival_list_box_m { top: -61px; }
+    .date_calendar_m { top: -122px; }
+    .arrowUpDwon { display: none; }
+    .arrowLeftRight { display: block; }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */

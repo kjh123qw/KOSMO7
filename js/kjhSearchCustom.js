@@ -1,6 +1,7 @@
 $(function(){
     // 옵션리스트 디스플레이 구현_START
         // 클릭 이벤트
+    CheckArrows();
     $('.region_box_m').click(function(){
         OptionView($('.region_list_box_m'));
         CheckArrows();
@@ -20,25 +21,24 @@ $(function(){
         }
     });
     $('#keyword_m').focus(function(){
-        OptionView();
-        CheckArrows();
-    })
+        ToggleLabel(true, $('.keyword_label_m'));
+        $('.keyword_box_m').css('border','1px solid #222');
+    });
+    $('#keyword_m').blur(function(){
+        ToggleLabel(false, $('.keyword_label_m'));
+        $('.keyword_box_m').css('border','1px solid #aaa');
+    });
     $('.box_target > div:last-of-type').click(function(){
         $('.box_target').hide();
         CheckArrows();
     });
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
-    function OptionView($trg = ' '){
+    function OptionView($trg){
         $('.box_target').each(function(index, item){
-            if ($trg != ' '){
-                if ($(item).attr('class').substr(0, 4) != $trg.attr('class').substr(0, 4))
-                    $(item).hide();
-            }else{
+            if ($(item).attr('class').substr(0, 4) != $trg.attr('class').substr(0, 4))
                 $(item).hide();
-            }
         })
-        if ($trg != ' ')
-            $trg.toggle();
+        $trg.toggle();
     }
         // 전체 화살표 체크 메서드
     function CheckArrows(){
@@ -46,17 +46,33 @@ $(function(){
         ToggleArrow($('.festival_list_box_m'), $('.festival_box_m'));
         ToggleArrow($('.start_calendar'), $('.date_box_m'));
         ToggleArrow($('.end_calendar'), $('.date_box_end_m'));
+        ToggleLabel($('.region_list_box_m').css('display')!='none'?true:false, $('.region_label_m'))
+        ToggleLabel($('.festival_list_box_m').css('display')!='none'?true:false, $('.festival_label_m'))
+        ToggleLabel(($('.start_calendar').css('display')!='none')||($('.end_calendar').css('display')!='none')?true:false, $('.date_label_m'))
     }
         // 디스플레이 조건에 따른 상/하 화살표 디스플레이
     function ToggleArrow($chk, $trg){
         if ($chk.css('display') != 'none'){
-            $trg.css('border-bottom','7px solid #000');
-            $trg.children('div').children('span:first-of-type').show();
-            $trg.children('div').children('span:last-of-type').hide();
+            $trg.css('border','1px solid #222');
+            $trg.children('div').children('.arrowUpDwon').html('<i class="fas fa-angle-double-down"></i>');
+            $trg.children('div').children('.arrowLeftRight').html('<i class="fas fa-angle-double-right"></i>');
         }else{
-            $trg.css('border-bottom','1px solid #444');
-            $trg.children('div').children('span:first-of-type').hide();
-            $trg.children('div').children('span:last-of-type').show();
+            $trg.css('border','1px solid #aaa');
+            $trg.children('div').children('.arrowUpDwon').html('<i class="fas fa-angle-down"></i>');
+            $trg.children('div').children('.arrowLeftRight').html('<i class="fas fa-angle-right"></i>');
+        }
+    }
+    function ToggleLabel(bool, $lbl){
+        if (bool){
+            $lbl.css('color','#222');
+            $lbl.stop().animate({
+                'width': '100px'
+            }, 300);
+        }else{
+            $lbl.css('color','#aaa');
+            $lbl.stop().animate({
+                'width': '130px'
+            }, 300);
         }
     }
     // 옵션리스트 디스플레이 구현_END
@@ -98,9 +114,9 @@ $(function(){
             $wholeDiv.children('div').eq(0).css({
                 'background-color': 'black',
                 'color': 'white',
-                'font-size': '20px',
+                'font-size': '16px',
                 'text-align': 'center',
-                'line-height': '20px'
+                'line-height': '16px'
             }).html('<i class="fas fa-check"></i>');
         else
             $wholeDiv.children('div').eq(0).css('background-color', 'white').html('');
@@ -114,9 +130,9 @@ $(function(){
                 $(item).prev().css({
                     'background-color': 'black',
                     'color': 'white',
-                    'font-size': '20px',
+                    'font-size': '16px',
                     'text-align': 'center',
-                    'line-height': '20px'
+                    'line-height': '16px'
                 }).html('<i class="fas fa-check"></i>');
                 if (regText == '')
                     regText = _name
