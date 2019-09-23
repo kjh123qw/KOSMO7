@@ -11,6 +11,16 @@ header {
 
 /* -------Navigation------- */
 .header_wrap {
+    display: none;
+    height: 650px;
+}
+.header_wrap > .logo {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+}
+.header_wrap_m {
     width: 100%; height: 180px;
     position: relative;
 }
@@ -18,30 +28,20 @@ header {
     overflow: hidden;
     width: 100%; height: 50px;
 }
-.header_wrap > .logo {
-    display: none;
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    float: left;
-}
-.header_wrap > .header_top > .logo_m {
+.header_wrap_m > .header_top > .logo_m {
     width: 40px;
     height: 40px;
     margin: 5px;
     float: left;
 }
-.header_wrap > .header_top > #menuBtn {
+.header_wrap_m > .header_top > #menuBtn {
     width: 40px; height: 40px;
     margin: 5px;
-    line-height: 34px;
+    line-height: 40px;
     float: right;
     text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    border: 3px solid black;
-    background-color: white;
+    font-size: 34px;
+    color: #333;
     cursor: pointer;
 }
 .clearFix {
@@ -71,7 +71,6 @@ header {
 .header_gnb_m > li:last-of-type > a { border-bottom: 0; }
 /* navigation */
 #navigation {
-    display: none;
     position: absolute;
     height: 60px;
     top: 5px; right: 5px;
@@ -111,7 +110,14 @@ header {
 }
 
 /* -------Search Main Mobile Page------- */
-#search_window_m { width: 100%; padding: 10px 5px; border-bottom: 1px solid black; }
+#search_window_m {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
 .region_sel_m, .festival_sel_m, .date_m, .keyword_m { width: 100%; position: relative; }
 .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
     position: absolute;
@@ -169,9 +175,11 @@ header {
 .region_box_m > div > span:first-of-type, .festival_box_m > div > span:first-of-type, .date_box_m > div > span:first-of-type, .date_box_end_m > div > span:first-of-type, .keyword_box_m > div > span:first-of-type { display: none; }
 .region_list_box_m, .festival_list_box_m, .date_calendar_m {
     display: none;
-    width: 98%;
-    margin: 0 1%;
+    position: relative;
+    width: 100%;
+    margin: 0;
     background-color: #ddd;
+    z-index: 12;
 }
 .region_list_box_m > div, .festival_list_box_m > div {
     overflow: hidden;
@@ -191,9 +199,9 @@ header {
 }
 .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type {
     position: absolute;
-    top: 10px; left: 15px;
-    width: 20px; height: 20px;
-    border: 1px solid #666;
+    top: 6px; left: 15px;
+    width: 22px; height: 25px;
+    border: 1px solid #222;
     background-color: white;
     
 }
@@ -245,6 +253,7 @@ header {
     bottom: 100px; left: 85px;
     padding: 10px;
 }
+/*
 .keyword_main, .date, .region_sel, .festival_sel {
     width: 100%; height: 75px;
 }
@@ -311,29 +320,36 @@ header {
     width: 100%; height: 45px;
     margin-top: 20px;
     color: #fff;
-}
+} */
 /* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
   기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
   가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 
 @media (min-width: 576px) {
     header { background-size: 800px; }
-    .header_wrap { height: 220px; }
+    .header_wrap_m { height: 220px; }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
 @media (min-width: 768px) {
     header { background-size: 1400px; }
-    .header_wrap { height: 650px; }
-    .header_top { display: none; }
-    .header_wrap > .logo { display: block; }
-    .header_wrap > #menuBtn {
-        display: none;
+    .header_wrap_m { display: none; }
+    .header_wrap {
+        display: block;
     }
-    #navigation_m { display: none; height: 0; }
-    #navigation { display: block; }
-    /* #search_window { display: block; }
-    #search_window_m { display: none; } */
+    #search_window_m {
+        top: -400px;
+        width: 350px;
+        margin-left: 2%;
+        border: 1px solid black;
+    }
+    .region_list_box_m, .festival_list_box_m, .date_calendar_m {
+        position: absolute;
+        top: 0; right: -255px;
+        width: 250px;
+        margin: 0;
+        border: 1px solid #000;
+    }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
@@ -344,7 +360,7 @@ header {
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
 @media (min-width: 1200px) {
-    .header_wrap {
+    .header_wrap_m {
         margin: 0 auto;
         width: 1200px;
     }

@@ -19,17 +19,26 @@ $(function(){
             CheckArrows();
         }
     });
+    $('#keyword_m').focus(function(){
+        OptionView();
+        CheckArrows();
+    })
     $('.box_target > div:last-of-type').click(function(){
         $('.box_target').hide();
         CheckArrows();
     });
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
-    function OptionView($trg){
+    function OptionView($trg = ' '){
         $('.box_target').each(function(index, item){
-            if ($(item).attr('class').substr(0, 4) != $trg.attr('class').substr(0, 4))
+            if ($trg != ' '){
+                if ($(item).attr('class').substr(0, 4) != $trg.attr('class').substr(0, 4))
+                    $(item).hide();
+            }else{
                 $(item).hide();
+            }
         })
-        $trg.toggle();
+        if ($trg != ' ')
+            $trg.toggle();
     }
         // 전체 화살표 체크 메서드
     function CheckArrows(){
@@ -86,9 +95,15 @@ $(function(){
         // 전체 선택 비주얼 체크박스 체크함
     function MarkWhole($wholeDiv){
         if (CheckWhole($wholeDiv))
-            $wholeDiv.children('div').eq(0).css('background-color', 'black');
+            $wholeDiv.children('div').eq(0).css({
+                'background-color': 'black',
+                'color': 'white',
+                'font-size': '20px',
+                'text-align': 'center',
+                'line-height': '20px'
+            }).html('<i class="fas fa-check"></i>');
         else
-            $wholeDiv.children('div').eq(0).css('background-color', 'white');
+            $wholeDiv.children('div').eq(0).css('background-color', 'white').html('');
     }
         // 비주얼 텍스트 박스에 체크된 항목 텍스트 작성
     function OptionWrite($trg){
@@ -96,13 +111,19 @@ $(function(){
         $trg.children('[class=optionItem]').children('div:last-of-type').each(function(i, item){
             var _name = $(item).html().split(' ')[0];
             if ($('input:checkbox[name=' + _name + ']').is(':checked')){
-                $(item).prev().css('background-color', 'black');
+                $(item).prev().css({
+                    'background-color': 'black',
+                    'color': 'white',
+                    'font-size': '20px',
+                    'text-align': 'center',
+                    'line-height': '20px'
+                }).html('<i class="fas fa-check"></i>');
                 if (regText == '')
                     regText = _name
                 else
                     regText += ', ' + _name;
             }else{
-                $(item).prev().css('background-color', 'white');
+                $(item).prev().css('background-color', 'white').html('');
             }
         })
         if (regText == '')

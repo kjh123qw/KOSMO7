@@ -3,7 +3,6 @@ $(function(){
     $('.btn-login').click(function(){
         $('#joinModule').hide();
         $('#loginModule').show();
-        return false;
     });
     $('.loginBackground').click(function(){
         $('#loginModule').hide();
@@ -13,11 +12,9 @@ $(function(){
     $('.btn-join').click(function(){
         $('#loginModule').hide();
         $('#joinModule').show();
-        return false;
     });
     $('.joinBackground').click(function(){
         $('#joinModule').hide();
-        return false;
     });
     $('.rmbIdChkBox > div').click(function(){
         CheckingRmbID($('.rmbIdChkBox > div:first-of-type'), $('#logRmbId'));
@@ -35,31 +32,42 @@ $(function(){
         if ($input.is(':checked')){
             $trg.css({
                 'background-color': 'white'
-            })
+            }).html('');
             $input.prop('checked', false);
         }else{
             $trg.css({
-                'background-color': 'black'
-            })
+                'background-color': 'black',
+                'color': 'white',
+                'font-size': '20px',
+                'text-align': 'center',
+                'line-height': '20px'
+            }).html('<i class="fas fa-check"></i>');
             $input.prop('checked', true);
         }
     }
 
     // input 선택 시 처리
-    // $('.focusFunc').on("focus", function(event){
-    //     lableOn($(event.target));
-    // });
-    // $('.focusFunc').on("blur", function(event){
-    //     lableOff($(event.target));
-    // });
-    // // input 선택 function
-    // function lableOn($obj){
-    //     tempPlaceHolderTxt = $obj.attr('placeholder');
-    //     $obj.css('border','1px solid mediumturquoise').attr('placeholder','');
-    //     $obj.prev().stop().show();
-    // }
-    // function lableOff($obj){
-    //     $obj.css('border','1px solid #eee').attr('placeholder',$obj.prev().text());
-    //     $obj.prev().stop().hide();
-    // }
+    $('.focusFunc').on("focus", function(event){
+        lableOn($(event.target));
+    });
+    $('.focusFunc').on("blur", function(event){
+        lableOff($(event.target));
+    });
+    // input 선택 function
+    function lableOn($obj){
+        $obj.css('border', '1px solid #222');
+        $obj.prev().css('color', '#222');
+        $obj.prev().stop().animate({
+            'width': '160px'
+        }, 300);
+    }
+    function lableOff($obj){
+        if ($obj.val() == ''){
+            $obj.css('border', '1px solid #aaa');
+            $obj.prev().css('color', '#aaa');
+            $obj.prev().stop().animate({
+                'width': '100px'
+            }, 300);
+        }
+    }
 });

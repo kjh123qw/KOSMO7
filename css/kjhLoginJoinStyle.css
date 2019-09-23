@@ -30,9 +30,9 @@
     line-height: 45px;
     font-size: 14px;
     font-weight: bold;
-    color: #666;
+    color: #444;
     outline: none;
-    border: 1px solid #666;
+    border: 1px solid #aaa;
     overflow: hidden;
     padding: 0 10px;
 }
@@ -43,8 +43,8 @@
     width: 100px; height: 18px;
     background-color: #fff;
     line-height: 18px;
-    font-size: 14px;
-    color: #000;
+    font-size: 16px;
+    color: #aaa;
     text-align: center;
     z-index: 60;
 }
@@ -64,7 +64,7 @@
 .rmbIdChkBox, .chkPlcBox { clear: both; }
 .rmbIdChkBox > div:first-of-type {
     width: 25px; height: 25px;
-    border: 1px solid #444;
+    border: 1px solid #888;
     background-color: white;
     cursor: pointer;
 }
@@ -119,9 +119,9 @@
     line-height: 45px;
     font-size: 14px;
     font-weight: bold;
-    color: #777;
+    color: #444;
     outline: none;
-    border: 1px solid #666;
+    border: 1px solid #aaa;
     overflow: hidden;
     padding: 0 10px;
 }
