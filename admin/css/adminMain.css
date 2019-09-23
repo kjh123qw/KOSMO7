@@ -335,13 +335,76 @@ nav img{
 .calendarDiv{
     margin: 5px;
     border: 1px solid hotpink;
-    
+}
+
+.calendarDiv > div:first-child > span{
+    border: 1px solid red;
+    margin: 0 auto;
+    height: 2.4em;
+    line-height: 2.4em;
+}
+
+.calendarDiv > div:first-child{
+    margin-top: 10px;
+}
+
+.calendarDiv > div:last-child{
+    height: 80%;
 }
 
 .calendarDiv table{
     width: 90%;
     text-align: center;
     margin: auto;
+}
+
+.weatherBox{
+    border: 1px solid red;
+    width: 200px;
+    height: 100px;
+}
+
+.weatherBox div{
+    height: 100px;
+}
+
+/* #weatherBox div{
+    border: 1px solid blue;
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-left: -100px;
+    
+} */
+
+
+
+#testDiv22{
+    border: 1px solid red;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+#testDiv22 div{
+    position: absolute;
+    border: 1px solid blue;
+    width:100%;
+    height: 100%;
+    float: left;
+}
+
+#testDiv22 .show{
+    display:block;
+}
+
+#testDiv22 .move{
+    display:block;
+}
+
+#testDiv22 .none{
+    display:none;
 }
 
 /* .snsDiv div{
