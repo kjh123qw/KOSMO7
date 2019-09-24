@@ -18,7 +18,7 @@ $(function(){
     });
     $('#keyword_m').focus(function(){
         ToggleLabel(true, $('.keyword_label_m'));
-        $('.keyword_box_m').css('border','1px solid #222');
+        $('.keyword_box_m').css({'border':'1px solid #222','border-bottom':'4px solid #222'});
     });
     $('#keyword_m').blur(function(){
         ToggleLabel(false, $('.keyword_label_m'));
@@ -147,7 +147,7 @@ $(function(){
                 'text-align': 'center',
                 'line-height': '16px'
             }).html('<i class="fas fa-check"></i>');
-            $wholeDiv.css('background-color','#cce');
+            $wholeDiv.css('background-color','#dee');
         }
         else {
             $wholeDiv.children('div').eq(0).css('background-color', 'white').html('');
@@ -171,7 +171,7 @@ $(function(){
                     regText = _name
                 else
                     regText += ', ' + _name;
-                $(item).css('background-color','#cce');
+                $(item).css('background-color','#dee');
             }else{
                 $(item).prev().css('background-color', 'white').html('');
                 $(item).css('background-color','white');
@@ -203,17 +203,20 @@ $(function(){
                 cursor: 'pointer'
             });
             $('#calendar_end').datepicker( 'option', 'minDate', date );
-            if($('#date_end_m').val() != '') {
-                if ((parseInt($('#date_end_m').val().replace('.', '').replace('.', '')) <= parseInt(date.replace('.', '').replace('.', '')))){
-                    $('#calendar_end').datepicker('setDate', date);
-                    $('.date_box_end_m > span').html(date);
-                    $('#date_end_m').val(date);
-                }
-            }else{
-                $('#calendar_end').datepicker('setDate', date);
-                $('.date_box_end_m > span').html(date);
-                $('#date_end_m').val(date);
-            }
+            // if($('#date_end_m').val() != '') {
+            //     if ((parseInt($('#date_end_m').val().replace('.', '').replace('.', '')) <= parseInt(date.replace('.', '').replace('.', '')))){
+            //         $('#calendar_end').datepicker('setDate', date);
+            //         $('.date_box_end_m > span').html(date);
+            //         $('#date_end_m').val(date);
+            //     }
+            // }else{
+            //     $('#calendar_end').datepicker('setDate', date);
+            //     $('.date_box_end_m > span').html(date);
+            //     $('#date_end_m').val(date);
+            // }
+            $('#calendar_end').datepicker('setDate', date);
+            $('.date_box_end_m > span').html(date);
+            $('#date_end_m').val(date);
             $('.start_calendar').hide();
             $('.end_calendar').show();
             CheckArrows();
