@@ -4,20 +4,16 @@ $(function(){
     CheckArrows();
     $('.region_box_m').click(function(){
         OptionView($('.region_list_box_m'));
-        CheckArrows();
     });
     $('.festival_box_m').click(function(){
         OptionView($('.festival_list_box_m'));
-        CheckArrows();
     });
     $('.date_box_m').click(function(){
         OptionView($('.start_calendar'));
-        CheckArrows();
     });
     $('.date_box_end_m').click(function(){
         if ($('#date_start_m').val() != ''){
             OptionView($('.end_calendar'));
-            CheckArrows();
         }
     });
     $('#keyword_m').focus(function(){
@@ -32,6 +28,11 @@ $(function(){
         $('.box_target').hide();
         CheckArrows();
     });
+    $('.closeBox').click(function(){
+        $('.box_target').hide();
+        $('.closeBox').hide();
+        CheckArrows();
+    });
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
     function OptionView($trg){
         $('.box_target').each(function(index, item){
@@ -39,21 +40,29 @@ $(function(){
                 $(item).hide();
         })
         $trg.toggle();
+        CheckArrows();
     }
         // 전체 화살표 체크 메서드
+    var isDisplay = false; 
     function CheckArrows(){
+        isDisplay = false;
         ToggleArrow($('.region_list_box_m'), $('.region_box_m'));
         ToggleArrow($('.festival_list_box_m'), $('.festival_box_m'));
         ToggleArrow($('.start_calendar'), $('.date_box_m'));
         ToggleArrow($('.end_calendar'), $('.date_box_end_m'));
-        ToggleLabel($('.region_list_box_m').css('display')!='none'?true:false, $('.region_label_m'))
-        ToggleLabel($('.festival_list_box_m').css('display')!='none'?true:false, $('.festival_label_m'))
-        ToggleLabel(($('.start_calendar').css('display')!='none')||($('.end_calendar').css('display')!='none')?true:false, $('.date_label_m'))
+        if (isDisplay)
+            $('.closeBox').show();
+        else
+            $('.closeBox').hide();
+        ToggleLabel($('.region_list_box_m').css('display')!='none'?true:false, $('.region_label_m'));
+        ToggleLabel($('.festival_list_box_m').css('display')!='none'?true:false, $('.festival_label_m'));
+        DateLabel();
     }
         // 디스플레이 조건에 따른 상/하 화살표 디스플레이
     function ToggleArrow($chk, $trg){
         if ($chk.css('display') != 'none'){
-            $trg.css('border','1px solid #222');
+            isDisplay = true;
+            $trg.css({'border':'1px solid #222', 'border-bottom':'4px solid #222'});
             $trg.children('div').children('.arrowUpDwon').html('<i class="fas fa-angle-double-down"></i>');
             $trg.children('div').children('.arrowLeftRight').html('<i class="fas fa-angle-double-right"></i>');
         }else{
@@ -72,6 +81,26 @@ $(function(){
             $lbl.css('color','#aaa');
             $lbl.stop().animate({
                 'width': '130px'
+            }, 300);
+        }
+    }
+    function DateLabel() {
+        if ($('.start_calendar').css('display')!='none') {
+            $('.date_label_m').children('span:nth-of-type(1)').animate({
+                'width': '0'
+            }, 300);
+        } else {
+            $('.date_label_m').children('span:nth-of-type(1)').animate({
+                'width': '15px'
+            }, 300);
+        }
+        if ($('.end_calendar').css('display')!='none') {
+            $('.date_label_m').children('span:nth-of-type(3)').animate({
+                'width': '0'
+            }, 300);
+        } else {
+            $('.date_label_m').children('span:nth-of-type(3)').animate({
+                'width': '15px'
             }, 300);
         }
     }
@@ -110,7 +139,7 @@ $(function(){
     }
         // 전체 선택 비주얼 체크박스 체크함
     function MarkWhole($wholeDiv){
-        if (CheckWhole($wholeDiv))
+        if (CheckWhole($wholeDiv)) {
             $wholeDiv.children('div').eq(0).css({
                 'background-color': 'black',
                 'color': 'white',
@@ -118,8 +147,12 @@ $(function(){
                 'text-align': 'center',
                 'line-height': '16px'
             }).html('<i class="fas fa-check"></i>');
-        else
+            $wholeDiv.css('background-color','#cce');
+        }
+        else {
             $wholeDiv.children('div').eq(0).css('background-color', 'white').html('');
+            $wholeDiv.css('background-color','white');
+        }
     }
         // 비주얼 텍스트 박스에 체크된 항목 텍스트 작성
     function OptionWrite($trg){
@@ -138,8 +171,10 @@ $(function(){
                     regText = _name
                 else
                     regText += ', ' + _name;
+                $(item).css('background-color','#cce');
             }else{
                 $(item).prev().css('background-color', 'white').html('');
+                $(item).css('background-color','white');
             }
         })
         if (regText == '')
@@ -179,6 +214,9 @@ $(function(){
                 $('.date_box_end_m > span').html(date);
                 $('#date_end_m').val(date);
             }
+            $('.start_calendar').hide();
+            $('.end_calendar').show();
+            CheckArrows();
         }
     });
     // 
@@ -186,6 +224,8 @@ $(function(){
         onSelect: function(date) {
             $('.date_box_end_m > span').html(date);
             $('#date_end_m').val(date);
+            $('.end_calendar').hide();
+            CheckArrows();
         }
     });
     // 기간 기능 구현_END

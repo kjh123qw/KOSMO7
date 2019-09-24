@@ -117,6 +117,7 @@ header {
     padding: 10px 5px;
     background-color: white;
     border-bottom: 1px solid black;
+    z-index: 15;
 }
 .region_sel_m, .festival_sel_m, .date_m, .keyword_m { width: 100%; position: relative; }
 .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
@@ -131,6 +132,15 @@ header {
     color: #aaa;
     z-index: 10;
 }
+.date_label_m { background-color: rgba(0, 0, 0, 0); }
+.date_label_m > span {
+    display: block;
+    position: absolute;
+    height: 100%;
+    background-color: white;
+}
+.date_label_m > span:nth-of-type(1) { width: 15px; top: 0; right: 115px; }
+.date_label_m > span:nth-of-type(2) { width: 100px; top: 0; left: 15px; } .date_label_m > span:nth-of-type(3) { width: 15px; top: 0; left: 115px; }
 .region_box_m, .festival_box_m, .keyword_box_m, .date_box_m, .date_box_end_m {
     position: relative;
     overflow: hidden;
@@ -175,22 +185,32 @@ header {
     position: relative;
     width: 100%;
     margin: 0;
-    background-color: #eee;
+    /* padding: 5px; */
+    background-color: #fff;
     z-index: 12;
 }
 .region_list_box_m > div, .festival_list_box_m > div {
     overflow: hidden;
     position: relative;
     width: 100%; height: 40px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
+.list_Title {
+    width: 100%; height: 20px !important;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    /* border: 1px solid black; */
+    background-color: #000;
+    cursor: auto !important; 
+}
 .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
-    width: 100%; height: 40px;
-    background-color: #333;
+    width: 100%; height: 35px;
+    background-color: #666;
     color: #fff;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     border: 0;
     cursor: pointer;
 }
@@ -240,7 +260,14 @@ header {
 .ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 14px; }
 .ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 14px; }
 .ui-datepicket td { text-align: center; }
-
+.closeBox {
+    display: none;
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 100%; left: 100%;
+    background-color: rgba(0,0,0,0.65);
+    z-index: 15;
+}
 /* -------Search Main Page------- */
 #search_window {
     display: none;
@@ -280,15 +307,18 @@ header {
     }
     .region_list_box_m, .festival_list_box_m, .date_calendar_m {
         position: absolute;
-        top: 0; right: -256px;
+        top: -18px; right: -259px;
         width: 250px;
         margin: 0;
         border: 1px solid #000;
     }
-    .festival_list_box_m { top: -61px; }
-    .date_calendar_m { top: -122px; }
+    .festival_list_box_m { top: -79px; }
+    .date_calendar_m { top: -140px; }
     .arrowUpDwon { display: none; }
     .arrowLeftRight { display: block; }
+    .closeBox {
+        bottom: 0; left: 0;
+    }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */

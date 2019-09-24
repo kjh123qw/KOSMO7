@@ -57,6 +57,7 @@
             </nav>
         </div>
     </header>
+    <div class="closeBox"></div>
     <!-- 임시 해더 입니다. -->
     <content>
         <div id="search_window_m">
@@ -72,6 +73,7 @@
                     </div>
                 </div>
                 <div class="region_list_box_m box_target">
+                    <!-- <div class="list_Title"><i class="fas fa-angle-double-left"></i></div> -->
                     <div class="wholeItem"><div></div><div>전체 선택</div></div>
                     <div class="optionItem"><div></div><div>혼슈 지방</div></div>
                     <div class="optionItem"><div></div><div>큐슈 지방</div></div>
@@ -114,7 +116,7 @@
             </div>
             <div class="date_m" id="keywordTarget">
                 <div class="date_label_m">
-                    <span>기간</span>
+                    <span></span><span>기간</span><span></span>
                 </div>
                 <div class="date_boxs_m">
                     <div class="date_box_m">
@@ -222,11 +224,15 @@
         <div class="loginLayer">
             <div>
                 <div class="inputLabel"><span>아이디</span></div>
-                <input type="text" name="loginId" id="loginId" class="focusFunc">
+                <div class="loginIdBox">
+                    <input type="text" name="loginId" id="loginId" class="focusFunc">
+                </div>
             </div>
             <div>
                 <div class="inputLabel"><span>비밀번호</span></div>
-                <input type="password" name="loginPwd" id="loginPwd" class="focusFunc">
+                <div class="loginPwdBox">
+                    <input type="password" name="loginPwd" id="loginPwd" class="focusFunc">
+                </div>
             </div>
             <div class="rmbIdChkBox">
                 <div></div>
@@ -255,19 +261,27 @@
         <div class="joinLayer">
             <div>
                 <div class="inputLabel"><span>아이디</span></div>
-                <input type="text" name="joinId" id="joinId" class="focusFunc">
+                <div class="joinIdBox">
+                    <input type="text" name="joinId" id="joinId" class="focusFunc">
+                </div>
             </div>
             <div>
                 <div class="inputLabel"><span>비밀번호</span></div>
-                <input type="password" name="joinPwd" id="joinPwd" class="focusFunc">
+                <div class="joinPwdBox">
+                    <input type="password" name="joinPwd" id="joinPwd" class="focusFunc">
+                </div>
             </div>
             <div>
                 <div class="inputLabel"><span>비밀번호 확인</span></div>
-                <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc">
+                <div class="joinPwdChkBox">
+                    <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc">
+                </div>
             </div>
             <div>
                 <div class="inputLabel"><span>이메일</span></div>
-                <input type="email" name="joinEmail" id="joinEmail" class="focusFunc">
+                <div class="joinEmailBox">
+                    <input type="email" name="joinEmail" id="joinEmail" class="focusFunc">
+                </div>
             </div>
             <div class="agrPlc">
                 <div></div>

@@ -48,10 +48,10 @@ $(function(){
 
     // input 선택 시 처리
     $('.focusFunc').on("focus", function(event){
-        lableOn($(event.target));
+        lableOn($(event.target).parent());
     });
     $('.focusFunc').on("blur", function(event){
-        lableOff($(event.target));
+        lableOff($(event.target).parent());
     });
     // input 선택 function
     function lableOn($obj){
