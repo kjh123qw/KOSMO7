@@ -212,15 +212,9 @@
                             <div class = "col infoDiv">
                               
                                         <div>
-                                                <P>TOKYO</P>
+                                                <P id = "textJapan">JAPAN</P>
                                         </div>
                                
-
-                                <div>
-                                    <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
-                                </div>
-
-
 
 
                                 <!-- <div id = "prev">2</div>
@@ -251,7 +245,9 @@
 
                                     </div>
 
-
+                                    <div id = "timeText">
+                                        <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
+                                    </div>
 
                             </div>
                         </div>
@@ -273,9 +269,9 @@
                         <div class = "row">
                             <div class = "col calendarDiv">
                                 <div class = "row">
-                                    <span value = "1">prev</span>
-                                    <span>2019년 9월</span>
-                                    <span value = "2">next</span>
+                                    <span onclick = "dateChange('prev');">prev</span>
+                                    <span id = "yearMonthSpan">2019년 9월</span>
+                                    <span onclick = "dateChange('next');">next</span>
                                 </div>
                                 <div class = "row"></div>
 

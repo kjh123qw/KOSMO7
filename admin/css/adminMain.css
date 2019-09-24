@@ -294,11 +294,15 @@ nav img{
    /* border: none; */
 }
 
+#chart4{
+    padding-left: 25px;
+}
+
 .infoDiv{
-    position: relative;
+    /* position: relative; */
     border: 1px solid blue;
     margin: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
     
     /* padding-right: 0;
     padding-left: 0; */
@@ -359,13 +363,30 @@ nav img{
 }
 
 .weatherBox{
-    border: 1px solid red;
-    width: 200px;
-    height: 100px;
+    
+    /* width: 150px; */
+    /* height: 150px; */
+    /* overflow: hidden; */
+
+}
+
+.bx-wrapper{
+    margin-bottom: 0;
 }
 
 .weatherBox div{
-    height: 100px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#textJapan{
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+#timeText{
+    margin-top: 10px;
+    font-size: 50px;
 }
 
 /* #weatherBox div{

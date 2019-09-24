@@ -31,7 +31,7 @@ $(function(){
         case '1':case '3':case '5':case '7':case '8':case '10':case '12':
             day = 31;
             break;
-        case '4':case '6':case '9':case '12':
+        case '4':case '6':case '9':case '11':
             day = 30;
             break;
         case '2':
@@ -98,9 +98,9 @@ $(function(){
 
         $('.calendarDiv > div').eq(1).html(basicText);
 
+
+
         var chartBoxWidth = $('#chart1').width();
-
-
 
         Highcharts.chart('chart1', {
             chart: {
@@ -347,13 +347,19 @@ $(function(){
 
 
 
-    $('.calendarDiv > div > span').click(function(){
+    // $('.calendarDiv > div > span').click(function(){
 
-        var dd = $(this).text();
         
-        alert(dd);
 
-    })
+
+        
+
+
+
+
+    //     // dateUpdate(year, month);
+
+    // })
 
 
     
@@ -364,13 +370,124 @@ $(function(){
             pause:2000,
             autoHover:true,
             // slideWidth: 1000,
-            autoControls: true,
-        stopAutoOnClick: true
+            autoControls: false,
+        stopAutoOnClick: true,
+        pager:false,
+        controls:false
         });
       })
 
     
 })
+
+function dateChange(text){
+        var yearMonth = $('#yearMonthSpan').text();
+        var year;
+        var month;
+
+        var dateArr = yearMonth.split(' ');
+
+
+        year = dateArr[0].substr(0,4);
+
+        if(dateArr[1].length == 2){
+            month = dateArr[1].substr(0,1);
+        }else{
+            month = dateArr[1].substr(0,2);
+        }
+
+
+        if(text == 'next'){
+            ++month;
+            if(month == 13){
+                ++year;
+                month =1;
+            }
+        }else{
+            --month;
+            if(month == 0){
+                --year;
+                month=12;
+            }
+        }
+
+        
+        
+        $('#yearMonthSpan').text(year+"년 "+month+"월");
+        dateUpdate(year, month)
+
+}
+
+function dateUpdate(year, month){
+
+    var basicText = "<table border = '1'><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>";
+    var day='';
+    var days = [];
+
+    switch(month.toString()){
+        case '1':case '3':case '5':case '7':case '8':case '10':case '12':
+            day = 31;
+            break;
+        case '4':case '6':case '9':case '11':
+            day = 30;
+            break;
+        case '2':
+        if((year%4 == 0 && year%100 != 0)||year%400 ==0){
+            day = 29;
+        }else{
+            day = 28;
+        }
+    }
+
+    for(i=0; i<day;i++){
+        days[i] = i+1;
+    }
+
+        var m = new Date(year,month-1,1); 
+        var theDay = m.getDay(); 
+
+        if(theDay == 1){
+            days.splice(0,0,'&nbsp')
+        }else if(theDay == 2){
+            days.splice(0,0,'&nbsp','&nbsp')
+        }else if(theDay == 3){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp')
+        }else if(theDay == 4){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp')
+        }else if(theDay == 5){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp','&nbsp')
+        }else if( theDay == 6){
+            days.splice(0,0,'&nbsp','&nbsp','&nbsp','&nbsp','&nbsp','&nbsp')
+        }
+
+        var week = Math.ceil(days.length/7);
+        var blank = week*7-days.length;
+
+    
+    for(i=0; i<days.length; i++){
+
+        if(i%7 == 0){
+            basicText += "<tr>";
+        }
+
+        basicText += "<td>"+days[i]+"</td>";
+
+    if(i == days.length-1 && blank > 0){
+        for(k =1; k<=blank; k++){
+            basicText += "<td>&nbsp</td>";
+        }
+    }
+    
+    if(i%7 == 6){
+        $('.calendarDiv > div').eq(1).html("</tr>");
+        basicText += "</tr>";
+        }
+    }
+        basicText += "</table>";
+
+        $('.calendarDiv > div').eq(1).text("");
+        $('.calendarDiv > div').eq(1).html(basicText);
+}
 
 function test(){
     // var docV = document.documentElement;
