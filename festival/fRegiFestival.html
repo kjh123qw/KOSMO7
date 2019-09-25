@@ -5,8 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Air Matsuri</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 부트스트랩 -->
+
+    <script src = "./js/jquery-2.1.1.min.js"></script> <!--반드시필요함 -->
+    <script src = "./js/jquery-ui.min.js"></script>
+    <script src = "./js/jquery.easing.1.3.js"></script>
+    <script src = "./js/jquery.mousewheel.min.js"></script> <!--마우스휠js -->
+    <!-- jQuery -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- datepicher -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- font-awesome -->
+
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <!-- bxslider -->
+
+    <link href="./css/lightbox.css" rel="stylesheet" />
+    <script src="./js/lightbox.js"></script>
+    <!-- lightbox -->
+
+    <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/fileinput.css" media="all" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./js/fileinput.js" type="text/javascript"></script> -->
+
+    
+
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/commonStyle.css">
+    <link rel="stylesheet" href="./css/fRegiFestival.css">
+    <script src = "./js/fRegiFestival.js"></script>
+
 </head>
 <body>
+
+    <div class = container id = "mainContainer">
+        <div class = "row">
+            <div id = "sliderDiv">
+                <div class="slider">
+                            <div>크기확인</div>
+                            <div>크기확인</div>
+                            <div>크기확인</div>
+                            <div>크기확인</div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "row">
+            
+            <div class = "col-sm-12">
+                <div id = "uploadDiv">
+                          <!-- <form enctype="multipart/form-data"> 나중에 사용할것
+                            <div class="form-group">
+                              <input id="file-upload" type="file" class="file" data-upload-url="ajax.php" multiple="multiple" name="files">
+                            </div>
+                            <div class="form-group">
+                              <button class="btn btn-default" type="reset">Reset</button>
+                            </div>
+                          </form> -->
+
+
+
+
+                        <div class="input-group">
+                            <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="fileInput" multiple >
+                                </div>
+                                <div class="input-group-append">
+                                    <!-- <button class="btn btn-outline-secondary" type="button" for="inputGroupFile04">Button</button> -->
+                                    <label class="custom-file-label" for="fileInput" id = "fileLabel">eeee</label>
+                                </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id = "image"></div>
+    </div>
     
 </body>
 </html>
