@@ -133,8 +133,8 @@
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
 @media (min-width: 1200px) {
 
-  .footer_wrap {
-    width: 1200px;
-    margin: 0 auto;
-  }
+  /* .footer_wrap {
+    /* width: 1200px; */
+    /* margin: 0 auto; */
+  } */
 }
