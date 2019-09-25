@@ -23,9 +23,9 @@
     <header>
         <div class="header_wrap_m">
             <div class="header_top">
-                <div class="logo_m">
+                <!-- <div class="logo_m">
                     <a href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
-                </div>
+                </div> -->
                 <!-- <div class="search">
                     <input type="text" placeholder="검색">
                     <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
@@ -36,25 +36,125 @@
                 <ul class="header_gnb_m">
                     <li><a class="btn-login">로그인</a></li>
                     <li><a class="btn-join">회원가입</a></li>
-                    <li><a>소도시</a></li>
+                    <!-- <li><a>소도시</a></li> -->
                     <li><a>고객센터</a></li>
                     <li><a>ABOUT US</a></li>
                 </ul>
             </nav>
         </div>
         <div class="header_wrap">
-            <div class="logo">
+            <!-- <div class="logo">
                 <a href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
-            </div>
+            </div> -->
             <nav id="navigation">
                 <ul class="header_gnb">
                     <li><a class="btn-login">로그인</a></li>
                     <li><a class="btn-join">회원가입</a></li>
-                    <li><a>소도시</a></li>
+                    <!-- <li><a>소도시</a></li> -->
                     <li><a>고객센터</a></li>
                     <li><a>ABOUT US</a></li>
                 </ul>
             </nav>
+            <!-- <div id="search_window">
+                <div class="region_sel">
+                    <div class="region_label">
+                        <span>지역 분류</span>
+                    </div>
+                    <div class="region_box">
+                        <span>혼슈, 큐슈, 홋카이도, 시코쿠 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-angle-double-right"></i></span>
+                        <div>
+                            <span class="firstArrow arrowUpDwon"></span>
+                            <span class="lastArrow arrowLeftRight"></span>
+                        </div>
+                    </div>
+                    <div class="region_list_box box_target">
+                        <div class="list_Title"><i class="fas fa-angle-double-left"></i></div>
+                        <div class="wholeItem"><div></div><div>전체 선택</div></div>
+                        <div class="optionItem"><div></div><div>혼슈 지방</div></div>
+                        <div class="optionItem"><div></div><div>큐슈 지방</div></div>
+                        <div class="optionItem"><div></div><div>홋카이도 지방</div></div>
+                        <div class="optionItem"><div></div><div>시코쿠 지방</div></div>
+                        <div>닫기</div>
+                    </div>
+                    <div class="chkBoxs">
+                        <input type="checkbox" name="혼슈" value="혼슈">
+                        <input type="checkbox" name="큐슈" value="큐슈">
+                        <input type="checkbox" name="홋카이도" value="홋카이도">
+                        <input type="checkbox" name="시코쿠" value="시코쿠">
+                    </div>
+                </div>
+                <div class="festival_sel">
+                    <div class="festival_label">
+                        <span>축제 주제</span>
+                    </div>
+                    <div class="festival_box">
+                        <span></span>
+                        <div>
+                            <span class="firstArrow arrowUpDwon"></span>
+                            <span class="lastArrow arrowLeftRight"></span>
+                        </div>
+                    </div>
+                    <div class="festival_list_box box_target">
+                        <div class="wholeItem"><div></div><div>전체 선택</div></div>
+                        <div class="optionItem"><div></div><div>불꽃 축제</div></div>
+                        <div class="optionItem"><div></div><div>벚꽃 축제</div></div>
+                        <div class="optionItem"><div></div><div>신사 축제</div></div>
+                        <div class="optionItem"><div></div><div>기타 축제</div></div>
+                        <div>닫기</div>
+                    </div>
+                    <div class="chkBoxs">
+                        <input type="checkbox" name="불꽃" value="불꽃">
+                        <input type="checkbox" name="벚꽃" value="벚꽃">
+                        <input type="checkbox" name="신사" value="신사">
+                        <input type="checkbox" name="기타" value="기타">
+                    </div>
+                </div>
+                <div class="clearFix"></div>
+                <div class="date" id="keywordTarget">
+                    <div class="date_label">
+                        <span></span><span>기간</span><span></span>
+                    </div>
+                    <div class="date_boxs">
+                        <div class="date_box">
+                            <span>날짜선택</span>
+                            <div>
+                                <span class="firstArrow arrowUpDwon"></span>
+                                <span class="lastArrow arrowLeftRight"></span>
+                            </div>
+                        </div>
+                        <div class="date_box_end">
+                            <span>-</span>
+                            <div>
+                                <span class="firstArrow arrowUpDwon"></span>
+                                <span class="lastArrow arrowLeftRight"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="start_calendar date_calendar box_target">
+                        <div id="calendar_start"></div>
+                        <div>닫기</div>
+                    </div>
+                    <div class="end_calendar date_calendar box_target">
+                        <div id="calendar_end"></div>
+                        <div>닫기</div>
+                    </div>
+                    <div class="chkBoxs">
+                        <input type="text" name="date" id="date_start">
+                        <input type="text" name="date_end" id="date_end">
+                    </div>
+                </div>
+                <div class="keyword">
+                    <div class="keyword_label">
+                        <span>검색어</span>
+                    </div>
+                    <div class="keyword_box">
+                        <input type="text" name="keyword" id="keyword" value="" placeholder="검색어를 입력해주세요.">
+                    </div>
+                </div>
+                <div class="search_box">
+                    <button id="serch_btn">검색</button>
+                </div>
+            </div> -->
         </div>
     </header>
     <div class="closeBox"></div>
