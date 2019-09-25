@@ -19,6 +19,10 @@ $(function(){
     $('#keyword_m').focus(function(){
         ToggleLabel(true, $('.keyword_label_m'));
         $('.keyword_box_m').css({'border':'1px solid #222','border-bottom':'4px solid #222'});
+        if ($('.header_wrap').css('display') != 'none') {
+            $('.box_target').hide();
+            CheckArrows();
+        }
     });
     $('#keyword_m').blur(function(){
         ToggleLabel(false, $('.keyword_label_m'));
