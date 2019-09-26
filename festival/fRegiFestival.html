@@ -53,18 +53,14 @@
 
     <div class = container id = "mainContainer">
         <div class = "row">
-            <div id = "sliderDiv">
-                <div class="slider">
-                            <div>크기확인</div>
-                            <div>크기확인</div>
-                            <div>크기확인</div>
-                            <div>크기확인</div>
+            <div class = "col-sm-12 photoDiv">
+                <div id = "photoList">
+                    <span>사진을 등록해주세요!!</span>
                 </div>
             </div>
         </div>
 
-        <div class = "row">
-            
+        <div class = "row"> 
             <div class = "col-sm-12">
                 <div id = "uploadDiv">
                           <!-- <form enctype="multipart/form-data"> 나중에 사용할것
@@ -77,25 +73,206 @@
                           </form> -->
 
 
-
+                          <!--  / 규모 /   -->
+                          
 
                         <div class="input-group">
                             <div class="custom-file">
-                                  <input type="file" class="custom-file-input" id="fileInput" multiple >
-                                </div>
-                                <div class="input-group-append">
+                                <input type="file" class="custom-file-input" id="fileInput" multiple >
+                            </div>
+                            <div class="input-group-append">
                                     <!-- <button class="btn btn-outline-secondary" type="button" for="inputGroupFile04">Button</button> -->
-                                    <label class="custom-file-label" for="fileInput" id = "fileLabel">eeee</label>
-                                </div>
+                                <label class="custom-file-label" for="fileInput" id = "fileLabel">File Upload</label>
+                            </div>
                         </div>
+
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">TITLE</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="titleHelp" placeholder="Enter title">
+                            <small id="titleHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                    <label>DATE</label>
+                                <input type="text" class="form-control" placeholder="START DATE">
+                                <SMAll>We'll never share your email with anyone else.</SMAll>
+                            </div>
+                            <div class="col">
+                                    <label>DATE</label>
+                                <input type="text" class="form-control" placeholder="LAST DATE">
+                                <SMAll>We'll never share your email with anyone else.</SMAll>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputInfo">INFO</label>
+                            <textarea class="form-control" rows="5" id="exampleInputInfo" placeholder="INFO"></textarea>
+                            <small id="infoHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputaddress">ADDRESS</label>
+                            <input type="text" class="form-control" id="exampleInputaddress" aria-describedby="addressHelp" placeholder="Enter address">
+                            <small id="addressHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>LOCATION</label> 
+                                    <select class="form-control">
+                                        <option>Default select</option>
+                                        <option>Default select</option>
+                                        <option>Default select</option>
+                                        <option>Default select</option>
+                                    </select>
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>SIZE</label> 
+                                        <select class="form-control">
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                            <option>Default select</option>
+                                        </select>
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>SEASON</label>
+                            <div class = "row" id = "seasonDiv">
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                            </div>    
+                            <SMAll>We'll never share your email with anyone else.</SMAll>
+                        </div>
+
+                        <div class="form-group">
+                            <label>KINDS</label>
+                            <div class = "row" id = "kindsDiv">
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
+                                <label class="form-check-label" for="inlinecheckbox1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox2" value="option2">
+                                <label class="form-check-label" for="inlinecheckbox2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox3" value="option3">
+                                <label class="form-check-label" for="inlinecheckbox3">3</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox4" value="option4">
+                                <label class="form-check-label" for="inlinecheckbox4">4</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox5" value="option5">
+                                <label class="form-check-label" for="inlinecheckbox5">5</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox6" value="option6">
+                                <label class="form-check-label" for="inlinecheckbox6">6</label>
+                            </div>
+                            </div>
+                            <SMAll>We'll never share your email with anyone else.</SMAll>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>WEBSITE</label>
+                                    <input type="text" class="form-control" placeholder="WEBSITE">
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>PHONE</label>
+                                    <input type="text" class="form-control" placeholder="PHONE">
+                                    <SMAll>We'll never </SMAll>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>TWITTER</label>
+                                    <input type="text" class="form-control" placeholder="TWITTER">
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>INSTAGRAM</label>
+                                    <input type="text" class="form-control" placeholder="INSTAGRAM">
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class = "row">
+                                <div class = "col-sm-4">
+                                    <label>KEYWORD</label> 
+                                    <div class="input-group mb-3" id = "keywordDiv">
+                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                                        </div>
+                                    </div>
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+
+                                <div class = "col">
+                                    <label>KEYWORDS</label>
+                                    <div id = "keywordsDiv">추가되는 키워드 들어감</div>
+                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                            
+                        <div class="row">
+                            <div class = "col" id = "btnDiv">
+                                <button type="button" class="btn btn-secondary">Secondary</button>
+                                <button type="button" class="btn btn-warning">Warning</button>
+                            </div>
+                        </div>
+                      
 
 
                 </div>
             </div>
-        </div>
-
-        <div id = "image"></div>
+        </div> 
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
 </body>
 </html>

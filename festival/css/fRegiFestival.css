@@ -2,18 +2,31 @@
     border: 1px solid black;
 }
 
-.bx-wrapper{
-    margin-bottom: 0;
+#photoList{
+    width: 100%;
+    /* height: 300px; */
+    border: 1px solid red;
 }
 
-#sliderDiv{
-    /* border: 1px solid black; */
-    margin: 0 auto;
-    width: 50%;
+#photoList div{
+    /* width: 300px; */
+    width: 25%;
+    height: 200px;
+    /* margin: 20px; */
+    padding: 10px;
+    border: 1px solid blue;
+    display: inline-block;
 }
 
-.slider div{
-    height: 300px;
+#photoList span{
+    display:table; 
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+#photoList div img{
+    width: 100%;
+    height: 100%;
 }
 
 #image div{
@@ -25,5 +38,34 @@
     width: 100%;
     height: 100%;
 }
+
+#keywordDiv{
+    margin-bottom: 0!important;
+}
+
+#seasonDiv{
+    padding: 0 15px;
+}
+
+#kindsDiv{
+    padding: 0 15px;
+}
+
+#exampleInputInfo{
+    resize: none;
+}
+
+#keywordsDiv{
+    border-bottom: 1px solid grey;
+    height: 38px;
+    line-height: 38px;
+    font-size: 20px;
+}
+
+#btnDiv{
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
 
 

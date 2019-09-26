@@ -17,29 +17,34 @@ $(function(){
 
         var file = document.getElementById("fileInput").files;
         var length = file.length;
-        var fileList = new Array();
-        var urlList = new Array();
+        // var fileList = new Array();
+        // var urlList = new Array();
         var htmlText = "";
+        var fileName = "";
+
+        if(length == 0){ // 취소했을때
+          $('#fileLabel').text("File Upload");
+          $('#photoList').html("<span>사진을 등록해주세요!!</span>");
+          return false;
+        }
 
         for(var i=0; i<length;i++){
             var url = $('#fileInput').prop("files")[i];
             blobURL = window.URL.createObjectURL(url);
             
             htmlText += "<div><img src="+blobURL+" /></div>";
+            
+
+          if(i==0 || i==length){
+            fileName += file[i].name; 
+          }else{
+            fileName += ", "+file[i].name; 
+          }
+
         }
 
-        $('#image').html(htmlText);
-        // var ee = $('#fileInput').prop("files")[0];
-        // blobURL = window.URL.createObjectURL(ee);
-        
-        // $('#image img').attr('src', blobURL);
-
-        // for(var i=0; i<length;i++){
-        //     fileList[i] = file[i].name; //이름담기
-        //     console.log(fileList[i])
-        // }
-
-        $('#fileLabel').text("ddddd");
+        $('#photoList').html(htmlText);
+        $('#fileLabel').text(fileName);
 
 
 
