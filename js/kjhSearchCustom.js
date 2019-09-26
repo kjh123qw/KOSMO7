@@ -60,17 +60,17 @@ $(function(){
             $('.closeBox').hide();
         ToggleLabel($('.region_list_box_m').css('display')!='none'?true:false, $('.region_label_m'));
         ToggleLabel($('.festival_list_box_m').css('display')!='none'?true:false, $('.festival_label_m'));
-        DateLabel();
+        // DateLabel();
     }
         // 디스플레이 조건에 따른 상/하 화살표 디스플레이
     function ToggleArrow($chk, $trg){
         if ($chk.css('display') != 'none'){
             isDisplay = true;
-            $trg.css({'border':'1px solid #222', 'border-bottom':'4px solid #222'});
+            // $trg.css({'border':'1px solid #222', 'border-bottom':'4px solid #222'});
             $trg.children('div').children('.arrowUpDwon').html('<i class="fas fa-angle-double-down"></i>');
             $trg.children('div').children('.arrowLeftRight').html('<i class="fas fa-angle-double-right"></i>');
         }else{
-            $trg.css('border','1px solid #aaa');
+            // $trg.css('border','1px solid #aaa');
             $trg.children('div').children('.arrowUpDwon').html('<i class="fas fa-angle-down"></i>');
             $trg.children('div').children('.arrowLeftRight').html('<i class="fas fa-angle-right"></i>');
         }
@@ -78,14 +78,14 @@ $(function(){
     function ToggleLabel(bool, $lbl){
         if (bool){
             $lbl.css('color','#222');
-            $lbl.stop().animate({
-                'width': '100px'
-            }, 300);
+            // $lbl.stop().animate({
+            //     'width': '100px'
+            // }, 300);
         }else{
             $lbl.css('color','#aaa');
-            $lbl.stop().animate({
-                'width': '130px'
-            }, 300);
+            // $lbl.stop().animate({
+            //     'width': '130px'
+            // }, 300);
         }
     }
     function DateLabel() {
@@ -182,7 +182,7 @@ $(function(){
             }
         })
         if (regText == '')
-            $trg.prev('div').children('span').text('지역을 선택해주세요.').css('color','#aaa');
+            $trg.prev('div').children('span').text('지역을 선택해주세요.').css('color','#eee');
         else
             $trg.prev('div').children('span').text(regText).css('color','#000');
     }
