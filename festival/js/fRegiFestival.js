@@ -1,17 +1,4 @@
 $(function(){
-    $(function(){
-        $('.slider').bxSlider({
-            auto:true,
-            pause:2000,
-            autoHover:true,
-            // slideWidth: 1000,
-            autoControls: false,
-        stopAutoOnClick: true,
-        pager:false,
-        controls:true
-        });
-      })
-
 
       $('#fileInput').change(function(){
 
@@ -24,7 +11,7 @@ $(function(){
 
         if(length == 0){ // 취소했을때
           $('#fileLabel').text("File Upload");
-          $('#photoList').html("<span>사진을 등록해주세요!!</span>");
+          $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
           return false;
         }
 
@@ -32,7 +19,7 @@ $(function(){
             var url = $('#fileInput').prop("files")[i];
             blobURL = window.URL.createObjectURL(url);
             
-            htmlText += "<div><img src="+blobURL+" /></div>";
+            htmlText += "<div onclick = 'deleteImg("+i+");'><img src="+blobURL+" title = "+i+"/></div>";
             
 
           if(i==0 || i==length){
@@ -46,10 +33,18 @@ $(function(){
         $('#photoList').html(htmlText);
         $('#fileLabel').text(fileName);
 
-
-
-
       })
 
 
+
+
+
 })
+
+
+function deleteImg(num){
+  alert("해당이미지를 삭제합니다");
+
+  $('#photoList div img[title*='+num+']').parent().css('display',"none");
+  //이름. 갯수바꾸기
+}
