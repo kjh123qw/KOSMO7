@@ -182,9 +182,9 @@ $(function(){
             }
         })
         if (regText == '')
-            $trg.prev('div').children('span').text('지역을 선택해주세요.').css('color','#eee');
+            $trg.prev('div').children('span').text('지역을 선택해주세요.').css('color','#aaa');
         else
-            $trg.prev('div').children('span').text(regText).css('color','#000');
+            $trg.prev('div').children('span').text(regText).css('color','#fff');
     }
     // 옵션리스트 체크 구현_END
     // 기간 기능 구현_START
