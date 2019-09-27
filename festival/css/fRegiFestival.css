@@ -5,7 +5,10 @@
 #photoList{
     width: 100%;
     /* height: 300px; */
-    border: 1px solid red;
+    height: 414px;
+    border: 7px dashed gray;
+    /* box-sizing: content-box; */
+    margin: 20px 0;
 }
 
 #photoList div{
@@ -14,19 +17,25 @@
     height: 200px;
     /* margin: 20px; */
     padding: 10px;
-    border: 1px solid blue;
+    /* border: 1px dotted red; */
     display: inline-block;
+    
 }
 
 #photoList span{
     display:table; 
     margin-left:auto; 
     margin-right:auto;
+
+    font-size: 80px;
+    margin-top: 30px;
+
 }
 
 #photoList div img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 #image div{
