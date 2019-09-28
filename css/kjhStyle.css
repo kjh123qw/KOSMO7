@@ -1,6 +1,6 @@
 header {
     background-image: url('../img/MainImage2.jpg');
-    background-position: right;
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: 650px;
     width: 100%;
@@ -47,11 +47,12 @@ header {
 .header_wrap_m > .header_top > #menuBtn {
     width: 40px; height: 40px;
     margin: 5px;
-    line-height: 40px;
+    line-height: 38px;
     float: right;
     text-align: center;
     font-size: 34px;
-    color: #333;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
     cursor: pointer;
 }
 .clearFix {
@@ -129,29 +130,23 @@ header {
     position: relative;
     top: 0;
     width: 100%;
-    padding: 25px 10px;
-    background-color: white;
+    padding: 5px 5px;
+    background-color: rgba(80,0,10,1);
     border: 0;
-    z-index: 15;
 }
-.region_sel_m, .festival_sel_m, .date_m, .keyword_m { width: 100%; position: relative; margin-top: 10px; }
-.search_box_m { width: 100%; margin-top: 20px; border:1px solid #aaa; }
+.region_sel_m, .festival_sel_m, .date_m, .keyword_m { position: relative; width: 100%; height: 52px; }
+.search_box_m { width: 100%; margin-top: 15px; border:1px solid #fff; }
 .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
-    /* position: absolute;
-    top: -9px; left: 50%;
-    transform: translate(-50%, 0); */
-    overflow: hidden;
-    width: 100%; height: 18px;
-    font-size: 14px;
-    line-height: 18px;
+    width: 100%; height: 16px;
+    font-size: 12px;
+    line-height: 16px;
     text-align: center;
-    /* background-color: white; */
     color: #aaa;
     z-index: 10;
 }
 .region_label_m > span, .festival_label_m > span, .date_label_m > span, .keyword_label_m > span {
     display: block;
-    width: 37%; height: 18px;
+    width: 37%; height: 100%;
     float: left;
     border-bottom: 1px solid #aaa;
 }
@@ -167,47 +162,30 @@ header {
     font-size: 12px;
     color: #aaa;
 }
-/* .date_label_m { background-color: rgba(0, 0, 0, 0); }
-.date_label_m > span {
-    display: block;
-    position: absolute;
-    height: 100%;
-    background-color: white;
-}
-.date_label_m > span:nth-of-type(1) { width: 15px; top: 0; right: 115px; }
-.date_label_m > span:nth-of-type(2) { width: 100px; top: 0; left: 15px; } .date_label_m > span:nth-of-type(3) { width: 15px; top: 0; left: 115px; } */
-.region_box_m, .festival_box_m, .keyword_box_m, .date_box_m, .date_box_end_m {
+.region_box_m, .festival_box_m, .date_boxs_m, .keyword_box_m{
     position: relative;
     overflow: hidden;
-    width: 100%; height: 44px;
+    width: 100%; height: 40px;
     padding: 0 10px;
-    /* border: 1px solid #aaa; */
+    color: #aaa;
     border-bottom: 1px solid #aaa;
-    line-height: 42px;
+    line-height: 38px;
     cursor: pointer;
 }
-.region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_box_m:hover, .date_box_end_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.07); }
 .date_box_m, .date_box_end_m {
-    margin-top: 0;
-    width: 50%;
-    float: left;
+    position: initial;
+    width: 100%; height: 40px;
+    border-bottom: 0;
+    padding: 0;
 }
-.date_box_m { border-right: 0; }
 .date_box_end_m {
+    display: none;
     color: #aaa;
-    /* border-left: 1px dotted #ddd; */
     cursor: auto;
-}
-.date_box_m > span {
-    color: #aaa;
-}
-.date_boxs_m {
-    overflow: hidden;
-    width: 100%;
 }
 .region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
     position: absolute;
-    top: 11px; right: 0px;
+    top: 8px; right: 0px;
     width: 20px; height: 20px;
     font-size: 18px;
     line-height: 20px;
@@ -217,57 +195,53 @@ header {
 .arrowLeftRight { display: none; }
 .region_list_box_m, .festival_list_box_m, .date_calendar_m {
     display: none;
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 50px; left: 0;
+    width: 100%; height: 331px;
     margin: 0;
-    /* padding: 5px; */
-    background-color: #fff;
-    z-index: 12;
+    background-color: #666;
+    z-index: 100;
 }
+.date_calendar_m { height: 302px; }
 .region_list_box_m > div, .festival_list_box_m > div {
+    display: block;
     overflow: hidden;
     position: relative;
-    width: 100%; height: 40px;
-    border-bottom: 1px solid #ccc;
+    width: 100%; height: 55px;
+    line-height: 53px;
+    border-bottom: 1px solid #bbb;
+    color: #fff;
     cursor: pointer;
 }
-.list_Title {
-    width: 100%; height: 20px !important;
-    text-align: center;
-    line-height: 20px;
-    color: #fff;
-    /* border: 1px solid black; */
-    background-color: #000;
-    cursor: auto !important; 
-}
 .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
-    width: 100%; height: 35px;
-    background-color: #666;
+    width: 100%; height: 55px;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    line-height: 35px;
+    line-height: 55px;
     border: 0;
     cursor: pointer;
 }
 .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type {
     position: absolute;
-    top: 10px; left: 15px;
+    top: 18px; left: 15px;
     width: 20px; height: 20px;
     border: 1px solid #222;
-    background-color: white;
+    background-color: #ccc;
 }
 .region_list_box_m > div > div:last-of-type, .festival_list_box_m > div > div:last-of-type {
-    width: 100%; height: 39px;
+    width: 100%; height: 54px;
     padding-left: 45px;
-    font-size: 14px;
-    line-height: 37px;
+    font-size: 16px;
+    line-height: 53px;
 }
+#calendar_start, #calendar_end { display: none; }
 #keyword_m {
     width: 98%; height: 40px;
     margin: 0 1%;
     color: white;
     background-color: rgba(0,0,0,0);
-    line-height: 38px;
+    line-height: 36px;
     font-size: 18px;
     border: 0;
     outline: 0;
@@ -284,22 +258,25 @@ header {
     cursor: pointer;
 }
 .chkBoxs { display: none; }
+.closeBox {
+    display: block;
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    z-index: 14;
+    background-color: rgba(0,0,0,0.4);
+}
 .ui-datepicker{ 
-    width: 100%;
+    width: 100%; height: 245px;
     margin: 0;
     font-size: 16px;
 }
-.ui-datepicker select.ui-datepicker-month{ width:30%; font-size: 14px; }
-.ui-datepicker select.ui-datepicker-year{ width:40%; font-size: 14px; }
-.ui-datepicket td { text-align: center; }
-.closeBox {
-    display: none;
-    position: fixed;
-    top: 0; right: 0;
-    bottom: 100%; left: 100%;
-    background-color: rgba(0,0,0,0.3);
-    z-index: 15;
-}
+.ui-datepicker select.ui-datepicker-month { width:30%; font-size: 14px; }
+.ui-datepicker select.ui-datepicker-year { width:40%; font-size: 14px; }
+.ui-datepicker .ui-datepicker-calendar * { text-align: center; background-color: rgba(0,0,0,0); }
+.ui-widget-content { background-color: rgba(0,0,0,0); color: #fff; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { color: #aaa; }
+.ui-state-hover { background-color: rgba(255,255,255,0.25) !important; }
 /* -------Middle------- */
 #middleBox {
     width: 100%; height: 200px;
@@ -313,14 +290,7 @@ header {
   @media screen and (min-width: 576px) {
     header { background-size: 800px; }
     .header_wrap_m { height: 200px; }
-    .header_gnb_m { width: 39%; float: right; margin-right: 2%; }
-    #search_window_m {
-        width: 100%;
-        border: 0;
-    }
-    .closeBox {
-        bottom: 0; left: 0;
-    }
+    .header_gnb_m { width: 100%; float: right; margin-right: 2%; }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
@@ -332,29 +302,81 @@ header {
     }
     #search_window_m {
         position: absolute;
-        top: -450px; left: 0;
+        top: -480px; left: 0;
         width: 280px;
+        padding: 25px 10px;
         border: 0;
         background-color: rgba(0,0,0,0);
+        z-index: 15;
+    }
+    .region_sel_m, .festival_sel_m, .date_m, .keyword_m { height: 67px; }
+    .search_box_m { margin-top: 20px; }
+    .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
+        height: 18px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .region_label_m > span:nth-of-type(4), .festival_label_m > span:nth-of-type(4), .date_label_m > span:nth-of-type(4), .keyword_label_m > span:nth-of-type(4) { font-size: 12px; }
+    .region_box_m, .festival_box_m, .date_boxs_m, .keyword_box_m{
+        width: 100%; height: 40px;
+        padding: 0 10px;
+        line-height: 38px;
+    }
+    .date_box_m, .date_box_end_m {
+        width: 100%; height: 40px;
+    }
+    .region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
+        top: 10px;
     }
     .region_list_box_m, .festival_list_box_m, .date_calendar_m {
         position: absolute;
-        top: -15px; right: -229px;
+        top: 35px; left: 259px;
         width: 220px;
-        margin: 0;
-        border: 1px solid #000;
+        color: #fff;
+        background-color: rgba(0,0,0,0.7);
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
     }
-    .festival_list_box_m { top: -76px; }
-    .date_calendar_m { top: -137px; }
+    .region_list_box_m > div, .festival_list_box_m > div {
+        width: 100%; height: 40px;
+        color: #ccc;
+        border-bottom: 1px solid #bbb;
+        display: none;
+    }
+    .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type { top: 10px; }
+    .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
+        height: 45px;
+        color: #fff;
+        line-height: 45px;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .region_list_box_m > div > div:last-of-type, .festival_list_box_m > div > div:last-of-type {
+        width: 100%; height: 39px;
+        padding-left: 45px;
+        font-size: 14px;
+        line-height: 38px;
+    }
     .arrowUpDwon { display: none; color: #aaa; }
     .arrowLeftRight { display: block; color: #aaa; }
-    /* #search_window { display: block; } */
+    #keyword_m {
+        height: 34px;
+        line-height: 32px;
+        font-size: 18px;
+    }
+    #serch_btn_m {
+        height: 44px;
+        line-height: 42px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .closeBox { background-color: rgba(0,0,0,0); }
+    .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_boxs_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.03); }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
 @media screen and (min-width: 992px) {
     #search_window_m { left: 0; }
-    .header_wrap { height: 600px; }
+    .header_wrap { height: 650px; }
 }
 
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
@@ -364,7 +386,6 @@ header {
     .header_wrap {
         margin: 0 auto;
         width: 1200px;
-        height: 650px
     }
     #search_window_m { left: 0; }
 }
