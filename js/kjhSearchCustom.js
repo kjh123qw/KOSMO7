@@ -4,33 +4,41 @@ $(function(){
     CheckArrows();
     //resize event
     $(window).resize(function(event){
-        if ($('.header_wrap_m').css('display') != 'none'){  // mobile
-            $('.box_target').each(function(index, item){
-                if ($(item).css('display') != 'none') {
-                    OptionClose($(item).prev(), $(item));
-                }
-            });
-        } else {  // pc
-            $('.box_target').each(function(index, item){
-                if ($(item).css('display') != 'none') {
-                    OptionClose($(item).prev(), $(item));
-                }
-            });
-        }
+        $('.box_target').each(function(index, item){
+            if ($(item).css('display') != 'none') {
+                OptionClose($(item).prev(), $(item));
+            }
+        });
+        CloseMenu();
     })
+    $('#menuBtn').click(function(){
+        if ($('#menuBtn').children('svg').attr('data-icon') == 'bars')
+            OpenMenu();
+        else if ($('#menuBtn').children('svg').attr('data-icon') == 'times')
+            CloseMenu();
+    });
     $('.region_box_m').click(function(){
-        OptionView($(this), $('.region_list_box_m'), '247px');
+        OptionView($(this), $('.region_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'13px':'13px');  // mobile : pc
     });
     $('.festival_box_m').click(function(){
-        OptionView($(this), $('.festival_list_box_m'), '247px');
+        OptionView($(this), $('.festival_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'13px':'-40px');
     });
-    $('.date_boxs_m').click(function(){
-        OptionView($('.date_boxs_m'), $('.start_calendar'), '292px');
+    $('.date_box_m').click(function(){
+        OptionView($('.date_box_m'), $('.date_calendar_m'), '287px', ($('.header_wrap').css('display') != 'none')?'13px':'-97px');
     });
-    $('.date_box_end_m').click(function(){
-        if ($('#date_start_m').val() != ''){
-            OptionView($(this), $('.end_calendar'), '292px');
-        }
+    $('.allDateCheck').click(function(){
+        $('.date_mobile_date > span').html('-');
+        $('.date_box_m > span:first-of-type').html('전체 기간');
+        $('#date_start_m').val('전체 기간');
+        $('#calendar_start').datepicker('setDate', '');
+        $('#calendar_end').datepicker('option', 'minDate', '');
+        $('#calendar_end').datepicker('setDate', '');
+        if ($('.date_box_m > span:last-of-type').css('display') != 'none')
+            $('.date_box_m > span:last-of-type').css('display', 'none');
+        $('#date_end_m').val('');
+        $('#calendar_start').hide();
+        OptionClose($('.date_box_m'), $('.date_calendar_m'));
+        CheckArrows();
     });
     $('#keyword_m').focus(function(){
         $('.box_target').each(function(index, item){
@@ -43,7 +51,7 @@ $(function(){
     $('#keyword_m').blur(function(){
         OptionClose($(this).parent(), $(this).parent());
     });
-    $('.box_target > div:last-of-type').click(function(){
+    $('.closeOptionBox').click(function(){
         $('.box_target').each(function(index, item){
             if ($(item).css('display') != 'none') {
                 OptionClose($(item).prev(), $(item));
@@ -57,8 +65,26 @@ $(function(){
             }
         });
     });
+        //Menu Toggle
+    function OpenMenu(){
+        $('#navigation_m').show();
+        $('#menuBtn').children('svg').attr('data-icon', 'times');
+        $('.header_top').css({'background-color': '#444'});
+        if ($('.arrowUpDwon').css('display') != 'none'){
+            $('.header_wrap_m').css({'height': '250px'});
+        }
+        $('#menuBtn').css('color','#eee');
+    }
+
+    function CloseMenu(){
+        $('#navigation_m').hide();
+        $('#menuBtn').children('svg').attr('data-icon', 'bars');
+        $('#menuBtn').css('color','#fff');
+        $('.header_top').removeAttr('style');
+        $('.header_wrap_m').removeAttr('style');
+    }
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
-    function OptionView($clTrg, $trg, heightPx){
+    function OptionView($clTrg, $trg, heightPx, topPx){
         $('.box_target').each(function(index, item){
             if ($(item).attr('class').substr(0, 4) != $trg.attr('class').substr(0, 4)) {
                 if ($(item).css('display') != 'none') {
@@ -69,29 +95,26 @@ $(function(){
         if ($trg.css('display') != 'none')
             OptionClose($clTrg, $trg);
         else
-            OptionOpen($clTrg, $trg, heightPx);
+            OptionOpen($clTrg, $trg, heightPx, topPx);
     }
-    function IsThisDateObj($clTrg, $trg){
-        if ($trg.attr('class') == 'start_calendar date_calendar_m box_target')
-            return $('.date_box_m');
-        else if ($trg.attr('class') == 'end_calendar date_calendar_m box_target')
-            return $('.date_box_end_m');
-        else
-            return $clTrg;
-    }
-    function OptionOpen($clTrg, $trg, heightPx){
-        var $clTrg2 = IsThisDateObj($clTrg, $trg);
-        if ($('.header_wrap_m').css('display') != 'none'){
+    function OptionOpen($clTrg, $trg, heightPx, topPx){
+        CloseMenu();
+        var childrenDiv = 'div';
+        if ($clTrg.attr('class') == 'date_box_m')
+            childrenDiv = '#calendar_start';
+        if ($('.arrowUpDwon').css('display') != 'none'){
             $trg.show();
-            $trg.children('div').show();
+            $trg.children(childrenDiv).show();
+            if ($clTrg.attr('class') == 'date_box_m')
+                $trg.children('div:last-of-type').show();
             CheckArrows();
         } else {
             $clTrg.prev().children('span:nth-of-type(1)').css('border-bottom','1px solid #fff');
             $clTrg.prev().children('span:nth-of-type(3)').css('border-bottom','1px solid #fff');
             $clTrg.prev().children('span:nth-of-type(4)').css('color','#fff');
             $clTrg.css('border-bottom', '1px solid #fff');
-            $clTrg2.children('span').css('color','#fff');
-            $clTrg2.children('div').animate({'top': '12px'}, 100);
+            $clTrg.children('span').css('color','#fff');
+            $clTrg.children('div').animate({'top': '14px'}, 100);
             $clTrg.prev().animate({'height': '14px'}, 100);
             $clTrg.stop().animate({
                 'height': '49px',
@@ -108,9 +131,11 @@ $(function(){
                     }, 200, function(){
                         $trg.stop().animate({
                             'height': heightPx,
-                            'top' : '13px'
+                            'top' : topPx
                         }, 200, function(){
-                            $trg.children('div').fadeIn(100);
+                            $trg.children(childrenDiv).fadeIn(100);
+                            if ($clTrg.attr('class') == 'date_box_m')
+                                $trg.children('div:last-of-type').fadeIn(100);
                         });
                     });
                     CheckArrows();
@@ -121,33 +146,43 @@ $(function(){
         }
     }
     function OptionClose($clTrg, $trg){
-        var $clTrg2 = IsThisDateObj($clTrg, $trg);
-        if ($('.header_wrap_m').css('display') != 'none'){
-            if (BasicTextCheck($clTrg2.children('span').text()))
-                $clTrg2.children('span').css('color','#fff');
+        var childrenDiv = 'div';
+        if ($clTrg.attr('class') == 'date_box_m')
+            childrenDiv = '#calendar_end';
+        if ($('.arrowUpDwon').css('display') != 'none'){
+            if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
+                $clTrg.children('span').css('color','#fff');
             else
-                $clTrg2.children('span').css('color','#aaa');
-            if ($trg.attr('class') != 'keyword_box_m')
+                $clTrg.children('span').css('color','#aaa');
+            if ($trg.attr('class') != 'keyword_box_m'){
+                $trg.children(childrenDiv).hide();
+                if ($clTrg.attr('class') == 'date_box_m')
+                    $trg.children('div:last-of-type').hide();
                 $trg.hide();
+            }
             CheckArrows();
         } else {
             $clTrg.prev().children('span:nth-of-type(1)').removeAttr('style');
             $clTrg.prev().children('span:nth-of-type(3)').removeAttr('style');
             $clTrg.prev().children('span:nth-of-type(4)').removeAttr('style');
-            $clTrg.children('span').removeAttr('style');
+            $clTrg.children('span:first-of-type').removeAttr('style');
             $clTrg.css('border-bottom', '1px solid #aaa');
-            if (BasicTextCheck($clTrg2.children('span').text()))
-                $clTrg2.children('span').css('color','#fff');
+            if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
+                $clTrg.children('span').css('color','#fff');
             else
-                $clTrg2.children('span').css('color','#aaa');
-            $clTrg2.children('div').css({'top': '10px'}, 100);
+                $clTrg.children('span').css('color','#aaa');
+            $clTrg.children('div').css({'top': '10px'}, 100);
             $clTrg.prev().css('height', '18px');
             $clTrg.css({
                 'height': '40px',
                 'padding': '0 10px'
             });
             if ($trg.attr('class') != 'keyword_box_m') {
-                $trg.children('div').fadeOut(100);
+                // if ($clTrg.attr('class') == 'date_box_m')
+                //     $('#calendar_start').fadeOut();
+                $trg.children(childrenDiv).fadeOut(100);
+                if ($clTrg.attr('class') == 'date_box_m')
+                    $trg.children('div:last-of-type').fadeOut(100);
                 $trg.stop().animate({
                     'height': '0',
                     'top' : '36px'
@@ -171,15 +206,11 @@ $(function(){
         isDisplay = false;
         ToggleArrow($('.region_list_box_m'), $('.region_box_m'));
         ToggleArrow($('.festival_list_box_m'), $('.festival_box_m'));
-        ToggleArrow($('.start_calendar'), $('.date_box_m'));
-        ToggleArrow($('.end_calendar'), $('.date_box_end_m'));
+        ToggleArrow($('.date_calendar_m'), $('.date_box_m'));
         if (isDisplay)
             $('.closeBox').show();
         else
             $('.closeBox').hide();
-        // ToggleLabel($('.region_list_box_m').css('display')!='none'?true:false, $('.region_label_m'));
-        // ToggleLabel($('.festival_list_box_m').css('display')!='none'?true:false, $('.festival_label_m'));
-        // DateLabel();
     }
         // 디스플레이 조건에 따른 상/하 화살표 디스플레이
     function ToggleArrow($chk, $trg){
@@ -192,45 +223,12 @@ $(function(){
             $trg.children('div').children('.arrowLeftRight').css('color','#aaa').html('<i class="fas fa-angle-right"></i>');
         }
     }
-    function ToggleLabel(bool, $lbl){
-        if (bool){
-            // $lbl.css('color','#222');
-            // $lbl.stop().animate({
-            //     'width': '100px'
-            // }, 300);
-        } else {
-            // $lbl.css('color','#aaa');
-            // $lbl.stop().animate({
-            //     'width': '130px'
-            // }, 300);
-        }
-    }
-    function DateLabel() {
-        if ($('.start_calendar').css('display')!='none') {
-            $('.date_label_m').children('span:nth-of-type(1)').animate({
-                'width': '0'
-            }, 300);
-        } else {
-            $('.date_label_m').children('span:nth-of-type(1)').animate({
-                'width': '15px'
-            }, 300);
-        }
-        if ($('.end_calendar').css('display')!='none') {
-            $('.date_label_m').children('span:nth-of-type(3)').animate({
-                'width': '0'
-            }, 300);
-        } else {
-            $('.date_label_m').children('span:nth-of-type(3)').animate({
-                'width': '15px'
-            }, 300);
-        }
-    }
+    
     // 옵션리스트 디스플레이 구현_END
     // 옵션리스트 체크 구현_START
     OptionWrite($('.region_list_box_m'));  // 최초 실행 '지역을 선택해주세요.' 입력됨
     OptionWrite($('.festival_list_box_m'));  // 최초 실행 '주제를 선택해주세요.' 입력됨
-    OptionWrite($('.start_calendar'));  // 최초 실행 '날짜 선택' 입력됨
-    OptionWrite($('.end_calendar'));  // 최초 실행 '-' 입력됨
+    OptionWrite($('.date_calendar_m'));  // 최초 실행 '날짜 선택' 입력됨
     $('.optionItem').click(function(){
         var _name = $(this).children('div').eq(1).html().split(' ')[0]
         if ($('input:checkbox[name=' + _name + ']').is(':checked'))
@@ -271,13 +269,13 @@ $(function(){
                 'line-height': '16px'
             }).html('<i class="fas fa-check"></i>');
             $wholeDiv.css({
-                'background-color': 'rgba(10, 60, 70, 0.9)'
+                'background-color': 'rgba(30, 110, 110, 0.9)'
             });
             // $wholeDiv.css('background-color','#dee');
         } else {
             $wholeDiv.children('div').eq(0).css('background-color', '#ccc').html('');
             $wholeDiv.css({
-                'background-color': 'rgba(10, 60, 70, 0)'
+                'background-color': 'rgba(30, 110, 110, 0)'
             });
             // $wholeDiv.css('background-color','white');
         }
@@ -296,7 +294,7 @@ $(function(){
                     'line-height': '16px'
                 }).html('<i class="fas fa-check"></i>');
                 $(item).css({
-                    'background-color': 'rgba(10, 60, 70, 0.9)'
+                    'background-color': 'rgba(30, 110, 110, 0.9)'
                 });
                 if (regText == '')
                     regText = _name
@@ -321,10 +319,8 @@ $(function(){
             $('.region_box_m').children('span').text('지역을 선택해 주세요.')
         else if ($obj.attr('class') == 'festival_list_box_m box_target')
             $('.festival_box_m').children('span').text('주제를 선택해 주세요.')
-        else if ($obj.attr('class') == 'start_calendar date_calendar_m box_target')
+        else if ($obj.attr('class') == 'date_calendar_m box_target')
             $('.date_box_m').children('span').text('날짜 선택')
-        else if ($obj.attr('class') == 'end_calendar date_calendar_m box_target')
-            $('.date_box_end_m').children('span').text('-')
     }
     function BasicTextCheck(txt){
         var _returnValu = true;
@@ -343,41 +339,24 @@ $(function(){
     });
     $('#calendar_start').datepicker({
         onSelect: function(date) {
-            $('.date_box_m > span').html(date);
+            $('.date_mobile_date > span').html(date);
+            $('.date_box_m > span:first-of-type').html(date);
             $('#date_start_m').val(date);
-            $('.date_box_m > span').css({
-                color: 'black'
-            });
-            $('.date_box_end_m').css({
-                color: 'black',
-                cursor: 'pointer'
-            });
             $('#calendar_end').datepicker( 'option', 'minDate', date );
-            // if($('#date_end_m').val() != '') {
-            //     if ((parseInt($('#date_end_m').val().replace('.', '').replace('.', '')) <= parseInt(date.replace('.', '').replace('.', '')))){
-            //         $('#calendar_end').datepicker('setDate', date);
-            //         $('.date_box_end_m > span').html(date);
-            //         $('#date_end_m').val(date);
-            //     }
-            // }else{
-            //     $('#calendar_end').datepicker('setDate', date);
-            //     $('.date_box_end_m > span').html(date);
-            //     $('#date_end_m').val(date);
-            // }
             $('#calendar_end').datepicker('setDate', date);
-            $('.date_box_end_m > span').html(date);
+            if ($('.date_box_m > span:last-of-type').css('display') != 'none')
+                $('.date_box_m > span:last-of-type').html(date);
             $('#date_end_m').val(date);
-            $('.start_calendar').hide();
-            $('.end_calendar').show();
-            CheckArrows();
+            $('#calendar_start').hide();
+            $('#calendar_end').show();
         }
     });
-    // 
     $('#calendar_end').datepicker({
         onSelect: function(date) {
-            $('.date_box_end_m > span').html(date);
+            $('.date_mobile_date > span:last-of-type').html(date);
+            $('.date_box_m > span:last-of-type').css('display', 'block').html(date);
             $('#date_end_m').val(date);
-            $('.end_calendar').hide();
+            OptionClose($('.date_box_m'), $('.date_calendar_m'));
             CheckArrows();
         }
     });

@@ -1,6 +1,6 @@
 header {
     background-image: url('../img/MainImage2.jpg');
-    background-position: top right;
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: 650px;
     width: 100%;
@@ -14,7 +14,7 @@ header {
 }
 .searchBackground{
     width: 280px; height: 100%;
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0,0,0,0.8);
 }
 /* -------Navigation------- */
 .header_wrap {
@@ -30,7 +30,7 @@ header {
     float: left;
 }
 .header_wrap_m {
-    width: 100%; height: 130px;
+    width: 100%; height: 150px;
     position: relative;
 }
 .header_top {
@@ -45,14 +45,16 @@ header {
     float: left;
 }
 .header_wrap_m > .header_top > #menuBtn {
-    width: 40px; height: 40px;
-    margin: 5px;
-    line-height: 38px;
+    width: 48px; height: 48px;
+    margin: 1px;
+    line-height: 44px;
     float: right;
     text-align: center;
-    font-size: 34px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 44px;
+    color: #eee;
+    /* border: 1px solid #000; */
+    /* border-radius: 5px; */
+    background-color: rgba(0,0,0,0.7);
     cursor: pointer;
 }
 .clearFix {
@@ -62,7 +64,7 @@ header {
 #navigation_m {
     overflow: hidden;
     display: none;
-    height: 250px;
+    height: 100%;
     background-color: #444;
 }
 .header_gnb_m { width: 100%; }
@@ -131,7 +133,7 @@ header {
     top: 0;
     width: 100%;
     padding: 5px 5px;
-    background-color: rgba(80,0,10,1);
+    background-color: rgba(80,10,10,1);
     border: 0;
 }
 .region_sel_m, .festival_sel_m, .date_m, .keyword_m { position: relative; width: 100%; height: 52px; }
@@ -162,7 +164,7 @@ header {
     font-size: 12px;
     color: #aaa;
 }
-.region_box_m, .festival_box_m, .date_boxs_m, .keyword_box_m{
+.region_box_m, .festival_box_m, .date_box_m, .keyword_box_m{
     position: relative;
     overflow: hidden;
     width: 100%; height: 40px;
@@ -172,20 +174,20 @@ header {
     line-height: 38px;
     cursor: pointer;
 }
-.date_box_m, .date_box_end_m {
-    position: initial;
-    width: 100%; height: 40px;
-    border-bottom: 0;
-    padding: 0;
+.date_box_m > span {
+    display: block;
+    width: 50%; height: 40px;
+    line-height: 38px;
+    float: left;
 }
-.date_box_end_m {
+.date_box_m > span:last-of-type {
     display: none;
-    color: #aaa;
-    cursor: auto;
+    border-left: 1px dashed #555;
+    padding-left: 10px;
 }
-.region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
+.region_box_m > div, .festival_box_m > div, .date_box_m > div, .keyword_box_m > div {
     position: absolute;
-    top: 8px; right: 0px;
+    top: 10px; right: 0px;
     width: 20px; height: 20px;
     font-size: 18px;
     line-height: 20px;
@@ -193,16 +195,33 @@ header {
 }
 .arrowUpDwon { display: block; }
 .arrowLeftRight { display: none; }
-.region_list_box_m, .festival_list_box_m, .date_calendar_m {
+.box_target {
     display: none;
     position: fixed;
     top: 50px; left: 0;
     width: 100%; height: 331px;
     margin: 0;
-    background-color: #666;
+    background-color: #555;
     z-index: 100;
 }
 .date_calendar_m { height: 302px; }
+.date_calendar_m > div:last-of-type { padding-left: 5px !important; }
+.date_calendar_m > div:last-of-type > span { width: 65%; height: 100%; float: left; }
+.date_mobile_date {
+    position: absolute;
+    top: -50px;
+    width: 100%; height: 50px;
+    background-color: #666;
+    color: #eee;
+    line-height: 50px; 
+}
+.date_mobile_date > span {
+    display: block;
+    width: 50%; height: 100%;
+    float: left;
+    padding: 0 10px;
+}
+.date_mobile_date > span:last-of-type { border-left: 1px dashed #888; }
 .region_list_box_m > div, .festival_list_box_m > div {
     display: block;
     overflow: hidden;
@@ -213,15 +232,37 @@ header {
     color: #fff;
     cursor: pointer;
 }
-.region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
-    width: 100%; height: 55px;
+.mobileItemTitle {
+    position: absolute !important;
+    display: block;
+    top: -50px;
+    width: 100%; height: 50px;
+    background-color: #444;
+    color: #eee;
+    line-height: 50px;
+    font-size: 22px;
+    text-align: center;
+}
+.box_target > div:last-of-type {
+    width: 100%; height: 45px;
     background-color: #333;
     color: #fff;
     text-align: center;
-    line-height: 55px;
-    border: 0;
+    line-height: 45px;
+    border-bottom: 1px solid #fff;
     cursor: pointer;
 }
+.allDateCheck {
+    display: block;
+    width: 35% !important; height: 35px !important;
+    background-color: #222;
+    margin: 5px 0;
+    line-height: 35px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    color: #ddd;
+}
+.allDateCheck:hover { background-color: #444; }
 .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type {
     position: absolute;
     top: 18px; left: 15px;
@@ -236,12 +277,12 @@ header {
     line-height: 53px;
 }
 #calendar_start, #calendar_end { display: none; }
+#calnedar_end { height: 0; }
 #keyword_m {
-    width: 98%; height: 40px;
-    margin: 0 1%;
+    width: 100%; height: 36px;
     color: white;
     background-color: rgba(0,0,0,0);
-    line-height: 36px;
+    line-height: 34px;
     font-size: 18px;
     border: 0;
     outline: 0;
@@ -264,19 +305,26 @@ header {
     top: 0; right: 0;
     bottom: 0; left: 0;
     z-index: 14;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
 }
-.ui-datepicker{ 
-    width: 100%; height: 245px;
+.ui-datepicker { 
+    width: 100%; height: auto;
     margin: 0;
     font-size: 16px;
 }
-.ui-datepicker select.ui-datepicker-month { width:30%; font-size: 14px; }
+.ui-datepicker-header { background-color: rgba(0,0,0,0) !important; color: #bbb; border: 0; border-bottom: 1px solid #bbb; border-radius: 0; }
+.ui-datepicker-inline { border: 0 !important; }
+.ui-widget-header .ui-icon { background-image: url(images/ui-icons_ffffff_256x240.png) !important; }
+.ui-datepicker select.ui-datepicker-month { width:30%; font-size: 14px; background-color: rgba(0,0,0,0); }
 .ui-datepicker select.ui-datepicker-year { width:40%; font-size: 14px; }
-.ui-datepicker .ui-datepicker-calendar * { text-align: center; background-color: rgba(0,0,0,0); }
-.ui-widget-content { background-color: rgba(0,0,0,0); color: #fff; }
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { color: #aaa; }
-.ui-state-hover { background-color: rgba(255,255,255,0.25) !important; }
+.ui-datepicker .ui-datepicker-calendar { width: 100%; height: auto; }
+.ui-datepicker .ui-datepicker-calendar * { text-align: center; background-color: rgba(0,0,0,0); color: #aaa !important; }
+.ui-widget-content { background-color: rgba(0,0,0,0); color: #bbb; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active { color: #bbb; }
+.ui-datepicker .ui-datepicker-title { margin: 0 4em; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { width: 4em; }
+.ui-state-hover { background-color: rgba(255,255,255,0.2) !important; }
+.ui-state-active { background-color: rgba(100, 100, 255, 0.5) !important; }
 /* -------Middle------- */
 #middleBox {
     width: 100%; height: 200px;
@@ -289,13 +337,72 @@ header {
 
   @media screen and (min-width: 576px) {
     header { background-size: 800px; }
-    .header_wrap_m { height: 200px; }
-    .header_gnb_m { width: 100%; float: right; margin-right: 2%; }
+    .header_wrap_m { height: 374px; }
+    .header_gnb_m { width: 40%; float: right; margin-right: 5%; }
+    #search_window_m {
+        position: absolute;
+        top: -374px; left: 0;
+        width: 280px;
+        padding: 50px 10px 30px 10px;
+        border: 0;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 15;
+    }
+    .region_sel_m, .festival_sel_m, .date_m, .keyword_m { height: 57px; }
+    .search_box_m { margin-top: 20px; }
+    .date_mobile_date { display: none; }
+    .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
+        height: 18px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .region_label_m > span:nth-of-type(4), .festival_label_m > span:nth-of-type(4), .date_label_m > span:nth-of-type(4), .keyword_label_m > span:nth-of-type(4) { font-size: 12px; }
+    .box_target {
+        position: absolute;
+        top: 37px; left: 259px;
+        width: 220px;
+        color: #fff;
+        background-color: rgba(0,0,0,0.8);
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    .mobileItemTitle { display: none; }
+    .region_list_box_m > div, .festival_list_box_m > div {
+        display: none;
+        width: 100%; height: 40px;
+        color: #ccc;
+        border-bottom: 1px solid #bbb;
+    }
+    .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type { top: 10px; }
+    .box_target > div:last-of-type {
+        display: none;
+        height: 45px;
+        color: #fff;
+        line-height: 45px;
+        background-color: #000;
+    }
+    .region_list_box_m > div > div:last-of-type, .festival_list_box_m > div > div:last-of-type {
+        width: 100%; height: 39px;
+        padding-left: 45px;
+        font-size: 14px;
+        line-height: 38px;
+    }
+    #keyword_m {
+        margin-top: 1px;
+        height: 34px;
+        line-height: 32px;
+        font-size: 18px;
+    }
+    .closeBox { background-color: rgba(0,0,0,0); }
+    .arrowUpDwon { display: none; color: #aaa; }
+    .arrowLeftRight { display: block; color: #aaa; }
+    .ui-datepicker .ui-datepicker-title { margin: 0 2.5em; }
+    .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { width: 2.5em; }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
 @media screen and (min-width: 768px) {
-    header { background-size: 1300px; }
+    header { background-size: 1300px; background-position: top right; }
     .header_wrap_m { display: none; }
     .header_wrap {
         display: block;
@@ -311,57 +418,16 @@ header {
     }
     .region_sel_m, .festival_sel_m, .date_m, .keyword_m { height: 67px; }
     .search_box_m { margin-top: 20px; }
-    .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
-        height: 18px;
-        font-size: 14px;
-        line-height: 18px;
-    }
-    .region_label_m > span:nth-of-type(4), .festival_label_m > span:nth-of-type(4), .date_label_m > span:nth-of-type(4), .keyword_label_m > span:nth-of-type(4) { font-size: 12px; }
-    .region_box_m, .festival_box_m, .date_boxs_m, .keyword_box_m{
+    .region_box_m, .festival_box_m, .date_box_m, .keyword_box_m{
         width: 100%; height: 40px;
         padding: 0 10px;
         line-height: 38px;
     }
-    .date_box_m, .date_box_end_m {
+    .date_box_m {
         width: 100%; height: 40px;
     }
-    .region_box_m > div, .festival_box_m > div, .date_box_m > div, .date_box_end_m > div, .keyword_box_m > div {
-        top: 10px;
-    }
-    .region_list_box_m, .festival_list_box_m, .date_calendar_m {
-        position: absolute;
-        top: 35px; left: 259px;
-        width: 220px;
-        color: #fff;
-        background-color: rgba(0,0,0,0.7);
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid #fff;
-    }
-    .region_list_box_m > div, .festival_list_box_m > div {
-        width: 100%; height: 40px;
-        color: #ccc;
-        border-bottom: 1px solid #bbb;
-        display: none;
-    }
-    .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type { top: 10px; }
-    .region_list_box_m > div:last-of-type, .festival_list_box_m > div:last-of-type, .date_calendar_m > div:last-of-type {
-        height: 45px;
-        color: #fff;
-        line-height: 45px;
-        background-color: rgba(0,0,0,0.7);
-    }
-    .region_list_box_m > div > div:last-of-type, .festival_list_box_m > div > div:last-of-type {
-        width: 100%; height: 39px;
-        padding-left: 45px;
-        font-size: 14px;
-        line-height: 38px;
-    }
-    .arrowUpDwon { display: none; color: #aaa; }
-    .arrowLeftRight { display: block; color: #aaa; }
-    #keyword_m {
-        height: 34px;
-        line-height: 32px;
-        font-size: 18px;
+    .region_box_m > div, .festival_box_m > div, .date_box_m > div, .keyword_box_m > div {
+        top: 12px;
     }
     #serch_btn_m {
         height: 44px;
@@ -369,8 +435,7 @@ header {
         font-size: 18px;
         cursor: pointer;
     }
-    .closeBox { background-color: rgba(0,0,0,0); }
-    .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_boxs_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.03); }
+    .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_box_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.03); }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */

@@ -7,7 +7,6 @@
     <title>Air Matsuri</title>
     <script src="./js/jquery.2.1.3.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
-    <script src="./js/commonCustom.js"></script>
     <script src="./js/kjhcustom.js"></script>
     <script src="./js/kjhSearchCustom.js"></script>
     <script src="./js/kjhLoginJoinCustom.js"></script>
@@ -74,15 +73,15 @@
                         </div>
                     </div>
                     <div class="region_list_box_m box_target">
-                        <!-- <div class="list_Title"><i class="fas fa-angle-double-left"></i></div> -->
+                        <span class="mobileItemTitle">지역 분류</span>
                         <div class="wholeItem"><div></div><div>전체 선택</div></div>
                         <div class="optionItem"><div></div><div>혼슈 지방</div></div>
                         <div class="optionItem"><div></div><div>큐슈 지방</div></div>
                         <div class="optionItem"><div></div><div>홋카이도 지방</div></div>
                         <div class="optionItem"><div></div><div>시코쿠 지방</div></div>
                         <div>
-                            <span class="firstArrow arrowUpDwon">확인</span>
-                            <span class="lastArrow arrowLeftRight"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
+                            <span class="firstArrow arrowUpDwon closeOptionBox">확인</span>
+                            <span class="lastArrow arrowLeftRight closeOptionBox"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
                         </div>
                     </div>
                     <div class="chkBoxs">
@@ -104,14 +103,15 @@
                         </div>
                     </div>
                     <div class="festival_list_box_m box_target">
+                        <span class="mobileItemTitle">축제 주제</span>
                         <div class="wholeItem"><div></div><div>전체 선택</div></div>
                         <div class="optionItem"><div></div><div>불꽃 축제</div></div>
                         <div class="optionItem"><div></div><div>벚꽃 축제</div></div>
                         <div class="optionItem"><div></div><div>신사 축제</div></div>
                         <div class="optionItem"><div></div><div>기타 축제</div></div>
                         <div>
-                            <span class="firstArrow arrowUpDwon">확인</span>
-                            <span class="lastArrow arrowLeftRight"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
+                            <span class="firstArrow arrowUpDwon closeOptionBox">확인</span>
+                            <span class="lastArrow arrowLeftRight closeOptionBox"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
                         </div>
                     </div>
                     <div class="chkBoxs">
@@ -125,34 +125,21 @@
                     <div class="date_label_m">
                         <span></span><span></span><span></span><span>기간</span>
                     </div>
-                    <div class="date_boxs_m">
-                        <div class="date_box_m">
-                            <span></span>
-                            <div>
-                                <span class="firstArrow arrowUpDwon"></span>
-                                <span class="lastArrow arrowLeftRight"></span>
-                            </div>
-                        </div>
-                        <div class="date_box_end_m">
-                            <span></span>
-                            <div>
-                                <span class="firstArrow arrowUpDwon"></span>
-                                <span class="lastArrow arrowLeftRight"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="start_calendar date_calendar_m box_target">
-                        <div id="calendar_start"></div>
+                    <div class="date_box_m">
+                        <span></span><span></span>
                         <div>
-                            <span class="firstArrow arrowUpDwon">확인</span>
-                            <span class="lastArrow arrowLeftRight"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
+                            <span class="firstArrow arrowUpDwon"></span>
+                            <span class="lastArrow arrowLeftRight"></span>
                         </div>
                     </div>
-                    <div class="end_calendar date_calendar_m box_target">
+                    <div class="date_calendar_m box_target">
+                        <div class="date_mobile_date"><span>-</span><span>-</span></div>
+                        <div id="calendar_start"></div>
                         <div id="calendar_end"></div>
                         <div>
-                            <span class="firstArrow arrowUpDwon">확인</span>
-                            <span class="lastArrow arrowLeftRight"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
+                            <span class="firstArrow arrowUpDwon closeOptionBox">확인</span>
+                            <span class="lastArrow arrowLeftRight closeOptionBox"><i class="fas fa-angle-double-left"></i>&nbsp;&nbsp;닫기</span>
+                            <span class="allDateCheck">전체 기간</span>
                         </div>
                     </div>
                     <div class="chkBoxs">

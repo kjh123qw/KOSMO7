@@ -13,7 +13,7 @@
 }
 .loginLayer {
     position: fixed;
-    top: 50px;
+    top: 0;
     /* transform: translate(-50%, -50%); */
     background-color: #fff;
     z-index: 51;
@@ -108,7 +108,7 @@
 }
 .joinLayer {
     position: fixed;
-    top: 50px;
+    top: 0;
     /* transform: translate(-50%, -50%); */
     background-color: #fff;
     z-index: 51;
