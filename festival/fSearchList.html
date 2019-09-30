@@ -35,20 +35,62 @@
     <!-- swiper -->
 
     <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨--> <!--공통적인 css -->
-    <link rel="stylesheet" href="./css/fSearchList.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/commonStyle.css">
+    <!-- <script src = "../js/commonCustom.js"></script> -->
+
     <script src = "./js/fSearchList.js"></script>
+    <link rel="stylesheet" href="./css/fSearchList.css">
 
 </head>
 
+    <!-- 달력기능수정, 더보기버튼수정, 지역이미지수정, 검색창셀렉바확인 -->
+    <!-- 반응형 - 이런축제 삭제, 글꼴확인, 체크박스라디오박스확인 -->
+    <!-- 코드정리 -->
 
 <body>
+
+        <header id="header">
+                <div class="header_wrap">
+                    <div class="logo">
+                        <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
+                    </div>
+                    <!-- <div class="search">
+                        <input type="text" placeholder="검색">
+                        <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
+                    </div> -->
+                    <div id="menuBtn">M</div>
+                    <div class="clearFix"></div>
+                    <nav id="navigation_m">
+                        <ul class="header_gnb_m">
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">소도시</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="navigation">
+                        <ul class="header_gnb">
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">소도시</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
 
         <div class = "container" id = "mainKeyword">
             <div class = "row mainKeywordRow">
                 <div class = "col coldetailDiv">
-                    <span>#메인에서</span><span>#넘어옴</span>
+                    <!-- <span>#메인에서</span>
+                    <span>#넘어옴</span> -->
+                    <div>#메인에서</div>
+                    <div>#넘어옴</div>
                     <button type="button" class="btn btn-warning btn-sm" id = "detailSearchBtn">상세조회</button>
                 </div>        
             </div>
@@ -85,7 +127,7 @@
                             <label class="custom-control-label" for="searchOption1"></label>
                         </div>
                         <div class = "col" id = "toggleMsg">
-                            <span id = "toggleMsgSpan">현재진행중인 축제 조회입니다</span>
+                            <span id = "toggleMsgSpan">현재진행축제</span>
                         </div>
                     </div>
     
@@ -97,7 +139,7 @@
                     <div class="row searchBox">
                         <input type="text" class="form-control selectBox" id = "searchEnter" placeholder="Search">
                         <div class="input-group-append selectBox">
-                            <button class="btn btn-success" id="selectBtn" type="submit"><i class="fa fa-search"></i></button>  
+                            <button class="btn btn-warning" id="selectBtn" type="submit"><i class="fa fa-search"></i></button>  
                         </div>
                     </div>
                     <!-- //검색창Div -->
@@ -255,7 +297,7 @@
                     <div class = "row keywordBox">
                         <input type="text" class="form-control keywordSelectBox" id = "keywordEnter" placeholder="keyword">
                         <div class="input-group-append keywordSelectBox">
-                            <button class="btn btn-success" id="keywordBtn" type="submit"><i class="fas fa-plus"></i></button>  
+                            <button class="btn btn-warning" id="keywordBtn" type="submit"><i class="fas fa-plus"></i></button>  
                         </div>
                     </div>
                     <div class = "row keywords">
@@ -302,7 +344,7 @@
                     <div class = 'row photoRow'>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#" class = "goDetail">
+                                <a href="./fDetail.html?test123=test" class = "goDetail">
                                     <img src="./img/yujisang/f1.jpg" alt="festival1">
                                     <div class="caption">
                                         <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>

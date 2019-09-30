@@ -63,13 +63,13 @@ $(function(){
         var checked = $(this).prop('checked');
         
         if(checked == false){
-            $('#toggleMsgSpan').text("날짜상관없는 전체축제조회입니다");
-            $('#toggleMsgSpan').css('backgroundColor','darksalmon')
-            $('#toggleMsgSpan').css('border','2px solid antiquewhite')
+            $('#toggleMsgSpan').text("전체축제조회");
+            $('#toggleMsgSpan').css('backgroundColor','salmon')
+            $('#toggleMsgSpan').css('color','black')
         }else{
-            $('#toggleMsgSpan').text("현재진행중인 축제조회입니다");
-            $('#toggleMsgSpan').css('backgroundColor','antiquewhite')
-            $('#toggleMsgSpan').css('border','2px solid darksalmon')
+            $('#toggleMsgSpan').text("현재진행축제");
+            $('#toggleMsgSpan').css('backgroundColor','salmon')
+            $('#toggleMsgSpan').css('color','white')
         }
 
         if(checked == false){
