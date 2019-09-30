@@ -1,6 +1,6 @@
 header {
-    background-image: url('../img/MainImage2.jpg');
-    background-position: center right;
+    background-image: url('../img/MainImage2bg.jpg');
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: 650px;
     width: 100%;
@@ -12,15 +12,47 @@ header {
     width: 100%;
     margin: 0 auto;
 }
-.searchBackground{
+.searchBackground {
     width: 280px; height: 100%;
     background-color: rgba(0,0,0,0.8);
+}
+.mainTextBox {
+    overflow: hidden;
+    position: absolute;
+    width: 100%; height: 140px;
+    top: 70px;
+    color: #fff;
+    text-align: center;
+}
+.mainTextBox > span:nth-of-type(1) {
+    display: block;
+    width: 100%; height: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.mainTextBox > span:nth-of-type(2) {
+    display: none;
+}
+.imageBox {
+    overflow: hidden;
+    position: absolute;
+    width: 700px; height: 450px;
+    top: 60px; right: 0;
+    background-image: url('../img/MainImage2.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 850px;   
+}
+.imageBox > div {
+    width: 100%; height: 100%;
+    border: 10px solid rgba(0,0,0,0.2);
+    border-bottom: 100px solid rgba(0,0,0,0.2);
 }
 /* -------Navigation------- */
 .header_wrap {
     position: relative;
     display: none;
-    height: 600px;
+    height: 500px;
 }
 .header_wrap > .logo {
     width: 50px;
@@ -54,7 +86,7 @@ header {
     color: #eee;
     /* border: 1px solid #000; */
     /* border-radius: 5px; */
-    background-color: rgba(0,0,0,0.7);
+    /* background-color: rgba(0,0,0,0.7); */
     cursor: pointer;
 }
 .clearFix {
@@ -339,6 +371,21 @@ header {
     header { background-size: 800px; }
     .header_wrap_m { height: 374px; }
     .header_gnb_m { width: 40%; float: right; margin-right: 5%; }
+    .mainTextBox {
+        width: 250px; height: 240px;
+        top: 70px; right: 10px;
+        text-align: right;
+    }
+    .mainTextBox > span:nth-of-type(1) {
+        width: 100%; height: 40px;
+        font-size: 20px;
+    }
+    .mainTextBox > span:nth-of-type(2) {
+        display: block;
+        width: 100%; height: 200px;
+        padding-top: 10px;
+        font-size: 12px;
+    }
     #search_window_m {
         position: absolute;
         top: -374px; left: 0;
@@ -362,7 +409,7 @@ header {
         top: 37px; left: 259px;
         width: 220px;
         color: #fff;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0,0,0,0.9);
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
     }
@@ -404,12 +451,23 @@ header {
 @media screen and (min-width: 768px) {
     header { background-size: 1300px; background-position: top right; }
     .header_wrap_m { display: none; }
-    .header_wrap {
-        display: block;
+    .header_wrap { display: block; }
+    .mainTextBox {
+        width: 400px; height: 350px;
+        top: 150px; right: 15px;
+    }
+    .mainTextBox > span:nth-of-type(1) {
+        width: 100%; height: 40px;
+        font-size: 28px;
+    }
+    .mainTextBox > span:nth-of-type(2) {
+        width: 100%; height: 300px;
+        padding-top: 10px;
+        font-size: 16px;
     }
     #search_window_m {
         position: absolute;
-        top: -480px; left: 0;
+        top: -400px; left: 0;
         width: 280px;
         padding: 25px 10px;
         border: 0;
@@ -435,15 +493,28 @@ header {
         font-size: 18px;
         cursor: pointer;
     }
+    .box_target { background-color: rgba(0,0,0,0.8); }
     .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_box_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.03); }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
 @media screen and (min-width: 992px) {
     #search_window_m { left: 0; }
-    .header_wrap { height: 650px; }
+    .header_wrap { height: 560px; }
+    .mainTextBox {
+        width: 500px; height: 350px;
+        top: 180px; right: 30px;
+    }
+    .mainTextBox > span:nth-of-type(1) {
+        width: 100%; height: 50px;
+        font-size: 36px;
+    }
+    .mainTextBox > span:nth-of-type(2) {
+        width: 100%; height: 335px;
+        padding-top: 15px;
+        font-size: 18px;
+    }
 }
-
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
 @media screen and (min-width: 1225px) {
     #contentBox { width: 1200px; }
@@ -453,4 +524,17 @@ header {
         width: 1200px;
     }
     #search_window_m { left: 0; }
+    .mainTextBox {
+        width: 600px; height: 400px;
+        top: 180px; right: 20px;
+    }
+    .mainTextBox > span:nth-of-type(1) {
+        width: 100%; height: 50px;
+        font-size: 46px;
+    }
+    .mainTextBox > span:nth-of-type(2) {
+        width: 100%; height: 320px;
+        padding-top: 30px;
+        font-size: 18px;
+    }
 }

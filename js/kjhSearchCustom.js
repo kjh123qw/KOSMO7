@@ -10,21 +10,26 @@ $(function(){
             }
         });
         CloseMenu();
+        $('.mainTextBox').show();
     })
     $('#menuBtn').click(function(){
-        if ($('#menuBtn').children('svg').attr('data-icon') == 'bars')
+        if ($('#menuBtn').children('svg').attr('data-icon') == 'bars') {
             OpenMenu();
-        else if ($('#menuBtn').children('svg').attr('data-icon') == 'times')
+            $('.mainTextBox').hide();
+        }
+        else if ($('#menuBtn').children('svg').attr('data-icon') == 'times') {
             CloseMenu();
+            $('.mainTextBox').show();
+        }
     });
     $('.region_box_m').click(function(){
         OptionView($(this), $('.region_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'13px':'13px');  // mobile : pc
     });
     $('.festival_box_m').click(function(){
-        OptionView($(this), $('.festival_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'13px':'-40px');
+        OptionView($(this), $('.festival_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'-50px':'-40px');
     });
     $('.date_box_m').click(function(){
-        OptionView($('.date_box_m'), $('.date_calendar_m'), '287px', ($('.header_wrap').css('display') != 'none')?'13px':'-97px');
+        OptionView($('.date_box_m'), $('.date_calendar_m'), '287px', ($('.header_wrap').css('display') != 'none')?'-117px':'-97px');
     });
     $('.allDateCheck').click(function(){
         $('.date_mobile_date > span').html('-');
