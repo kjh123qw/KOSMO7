@@ -1,43 +1,46 @@
 *{font-family: 'Noto Sans KR', sans-serif;}
 
-.coldetailDiv{
-    height: 2.4em;
-    line-height: 2.4em;
-    margin: 5px 0;   
-}
+/* mainKeyword 메인에서 넘어오는 데이터보여주기 and 상세조회 */
 
 .mainKeywordRow{
-    background-color: cornsilk;
-    border-radius: 10px;
-    border: 2px solid darksalmon;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 2.0em;
 }
 
-.coldetailDiv{
-    left: 30px;
+.coldetailDiv div{
+    float: left;
+    background-color: salmon;
+    color: white;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 2.0em;
+    line-height: 2.0em;
+    padding: 0 5px;
 }
 
 .coldetailDiv span{
     background-color: darksalmon;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
+    height: 100%;
 }
 
 #detailSearchBtn{
-    margin-left: 5px;
-    padding: 3px;
+     margin-left: 10px;
 }
 
+/* //mainKeyword 메인에서 넘어오는 데이터보여주기 and 상세조회 */
 
 
+
+/* 첫번쨰 div 상세조회 */
 
 #mainContainer{
-    /* border:1px solid black; */
     height: auto;
 }
 
 #firstBox{
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    border: 2px solid black;
     border-radius: 10px;
 }
 
@@ -137,8 +140,9 @@
 }
 
 .mapSub{
-    background-color: cornsilk;
-    border: 3px solid darksalmon; 
+    background-color: salmon;
+    /* border: 3px solid darksalmon;  */
+    color: white;
     text-align: center;
     line-height: 2.4em;
     height: 2.4em;
@@ -149,7 +153,7 @@
     width: 100%;
     height: 80%;
     cursor: pointer;
-    border: 3px solid darksalmon; 
+    border: 2px solid black; 
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 15px;
@@ -182,8 +186,9 @@
 }
 
 .keywordList{
-    background-color: cornsilk;
-    border: 2px solid darksalmon;
+    background-color: salmon;
+    /* border: 2px solid darksalmon; */
+    color: white;
     border-radius: 5px;
     padding:  0 15px;
     margin: 5px 5px;
@@ -192,10 +197,12 @@
 
 #toggleMsgSpan{
     box-sizing: border-box;
-    border: 2px solid darksalmon;
-    background-color: antiquewhite;
-    padding: 0 5px;
+    /* border: 2px solid darksalmon; */
+    background-color: salmon;
+    color: white;
+    padding: 0 10px;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 .dateImage span{
@@ -210,7 +217,11 @@
     text-align: center;
 }
 
-/* //첫번쨰Div */
+/* //첫번쨰Div  상세조회 */
+
+
+
+
 
 #secondDiv{
     /* border: 1px solid green; */
@@ -246,6 +257,7 @@
   .thumbnail{
       /* border: 1px solid blue; */
       border-bottom: 1px solid black;
+      padding-bottom: 10px;
   }
 
   .thumbnail a img{
