@@ -10,7 +10,6 @@ $(function(){
             }
         });
         CloseMenu();
-        $('.mainTextBox').show();
     })
     $('#menuBtn').click(function(){
         if ($('#menuBtn').children('svg').attr('data-icon') == 'bars') {
@@ -19,7 +18,6 @@ $(function(){
         }
         else if ($('#menuBtn').children('svg').attr('data-icon') == 'times') {
             CloseMenu();
-            $('.mainTextBox').show();
         }
     });
     $('.region_box_m').click(function(){
@@ -87,6 +85,7 @@ $(function(){
         $('#menuBtn').css('color','#fff');
         $('.header_top').removeAttr('style');
         $('.header_wrap_m').removeAttr('style');
+        $('.mainTextBox').show();
     }
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
     function OptionView($clTrg, $trg, heightPx, topPx){
