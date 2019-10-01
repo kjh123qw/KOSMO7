@@ -173,6 +173,7 @@ $(function(){
       $('#detailSearch').keyup(function(){
         var searchText = $(this).val();
         console.log(searchText);
+        console.log("keyup사용")
       })
 
       $('#detailSearchBtn').click(function(){
@@ -295,6 +296,7 @@ function startDateSelect(){
     }
 }
 
+
 function endDateSelect(){
     var startDate = $('#startDate').val();
     var endDate = $('#endDate').val();
@@ -324,10 +326,6 @@ function endDateSelect(){
         // $('#startDate').focus();
         // $('#startDate').val(" ");
     }
-    
- 
-
-
 }
 
 
