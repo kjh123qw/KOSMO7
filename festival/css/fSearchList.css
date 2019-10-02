@@ -4,6 +4,8 @@
 @media screen and (min-width: 768px) {}
 @media screen and (min-width: 992px) {}
 @media screen and (min-width: 1225px) {}
+
+
 /* mainKeyword 메인에서 넘어오는 데이터보여주기 and 상세조회 */
 
 .mainKeywordRow{
