@@ -45,8 +45,8 @@
 
 </head>
 
-    <!-- 달력기능수정, 더보기버튼수정, 지역이미지수정, 검색창셀렉바확인, 정규표현식 -->
-    <!-- 반응형 - 이런축제 삭제, 글꼴확인, 체크박스라디오박스확인 -->
+    <!-- 달력기능수정(보류), 더보기버튼수정(완료)), 지역이미지수정(보류), 검색창셀렉바확인(keyup, 셀렉바확인)), 정규표현식(완료) -->
+    <!-- 반응형 - 이런축제 삭제(확인), 글꼴확인(확인), 체크박스라디오박스확인(보류) -->
     <!-- 코드정리 -->
 
 <body>
@@ -154,9 +154,9 @@
                             </div>
                             
                             <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "endDate" onchange = "endDateSelect()" onclick = "endDateClick()"  readonly = "readonly">
+                                <input type="text" class="form-control dateInput" id = "endDate" onclick = "endDateClick()"  readonly = "readonly">
                                 <div class="input-group-prepend dateImage" id = "endDateImage">
-                                    <span class="input-group-text" onclick = "endDateClick()"><i class='far fa-calendar-alt'></i></span>
+                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                                 </div>
                             </div>
                     </div>
@@ -281,7 +281,7 @@
                             <p>중형</p>
                         </div>
                         <div class = col-sm-6>
-                            <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value = "2" min = "1" max = "3" stop = "1" onchange = "rangeVal(this);">
+                            <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value = "2" min = "1" max = "3" onchange = "rangeVal(this);">
                         </div>
                     </div>
 
@@ -344,7 +344,7 @@
                     <div class = 'row photoRow'>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="./fDetail.html?test123=test" class = "goDetail">
+                                <a href="./fDetail.html" class = "goDetail">
                                     <img src="./img/yujisang/f1.jpg" alt="festival1">
                                     <div class="caption">
                                         <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
@@ -356,7 +356,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#" class = "goDetail">
+                                <a href="./fDetail.html" class = "goDetail">
                                         <img src="./img/yujisang/f2.jpg" alt="festival2">
                                     <div class="caption">
                                             <p>도쿄 카시나와 신사에서 열리는 벚꽃축제에 놀러오세요</p>
@@ -367,7 +367,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="thumbnail">
-                                <a href="#" class = "goDetail">
+                                <a href="./fDetail.html" class = "goDetail">
                                         <img src="./img/yujisang/f3.jpg" alt="festival3">
                                     <div class="caption">
                                             <p>매년 나고야에서 열리는 가장큰 축제~! 오나키 신사에서 열리는 불꽃축제에 놀러오세요</p>
@@ -381,7 +381,7 @@
                     <div class = 'row photoRow'>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                         <img src="./img/yujisang/f4.jpg" alt="festival4">
                                         <div class="caption">
                                             <p>후쿠오카 캐널시티에서 쇼핑을 즐기세요!!!</p>
@@ -393,7 +393,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                             <img src="./img/yujisang/f5.jpg" alt="festival5">
                                         <div class="caption">
                                                 <p>아키타에서 즐기는 눈의축제!! 유키나라축제에 초대합니다</p>
@@ -404,7 +404,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                             <img src="./img/yujisang/f6.jpg" alt="festival6">
                                         <div class="caption">
                                                 <p>매년 오키나와에서 열리는 가장큰 축제~! 자야오키 신사축제!!!</p>
@@ -418,7 +418,7 @@
                         <div class = 'row photoRow'>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                         <img src="./img/yujisang/f7.jpg" alt="festival7">
                                         <div class="caption">
                                             <p>시즈오카에서 열리는 맥주&오뎅 축제!! 즐겨주세요!!</p>
@@ -430,7 +430,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                             <img src="./img/yujisang/f8.jpg" alt="festival8">
                                         <div class="caption">
                                                 <p>요코하마 해변에서 열리는 바다축제!! 재밌게 놀고 가세요!!</p>
@@ -441,7 +441,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="thumbnail">
-                                    <a href="#" class = "goDetail">
+                                    <a href="./fDetail.html" class = "goDetail">
                                             <img src="./img/yujisang/f9.jpg" alt="festival9">
                                         <div class="caption">
                                                 <p>히로시마에서 먹는 오코노미야키!! 맥주축제를 즐겨주세요!!!</p>
@@ -452,6 +452,70 @@
                             </div>                  
                         </div>
 
+                        <!-- 숨기기 -->
+                        <div id = "hideDiv">
+                            <div class = 'row photoRow'>
+                                    <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <a href="./fDetail.html" class = "goDetail">
+                                                    <img src="./img/yujisang/f10.jpg" alt="festival10">
+                                                    <div class="caption">
+                                                        <p>지금 규베는 맥주축제중@@ 규베로 놀러오세요!~!</p>
+                                                    </div>
+                                                </a>
+                                                <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <a href="./fDetail.html" class = "goDetail">
+                                                        <img src="./img/yujisang/f11.jpg" alt="festival11">
+                                                    <div class="caption">
+                                                            <p>쿠마몽과 즐기는 바다 축제 쿠마모토에 오세요</p>
+                                                    </div>
+                                                </a>
+                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <a href="./fDetail.html" class = "goDetail">
+                                                        <img src="./img/yujisang/f12.jpg" alt="festival12">
+                                                    <div class="caption">
+                                                            <p>욧카이치를 아시나요??? 벛꽃으로 이쁜데... 놀러오실레용???</p>
+                                                    </div>
+                                                </a>
+                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                            <div class = 'row photoRow'>
+                                    <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <a href="./fDetail.html" class = "goDetail">
+                                                    <img src="./img/yujisang/f13.jpg" alt="festival13">
+                                                    <div class="caption">
+                                                        <p>미에켄 전체에서열리는 불꽃대회!! 지금 신청하세요!!!</p>
+                                                    </div>
+                                                </a>
+                                                <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="thumbnail">
+                                                <a href="./fDetail.html" class = "goDetail">
+                                                        <img src="./img/yujisang/f14.jpg" alt="festival14">
+                                                    <div class="caption">
+                                                            <p>도쿄에서 가장 조용한 신사입니다 구경하고 가세요!!!</p>
+                                                    </div>
+                                                </a>
+                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
 
 
 
@@ -465,7 +529,7 @@
 
     
                         <div class = "moreDiv">
-                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn">더보기 1 / 4</button>
+                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn" onclick = "moreDiv()">더보기 1 / 2</button>
                         </div>
                         <hr>
             </div>
@@ -475,7 +539,7 @@
 
             <!-- 두번쨰 Div -->
             <br>
-            <h1 style = "text-align: center;font-family: 'Black Han Sans', sans-serif;">이런 축제는 어떠세요?</h1>
+            <h1 style = "text-align: center;font-family: 'Black Han Sans', sans-serif;" id = "secondDivTitle">이런 축제는 어떠세요?</h1>
             <br>
     
     

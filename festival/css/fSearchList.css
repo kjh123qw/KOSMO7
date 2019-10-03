@@ -1,5 +1,23 @@
 *{font-family: 'Noto Sans KR', sans-serif;}
 
+@media screen and (max-width: 767px) {
+    #secondDiv,#secondDivTitle{
+        display: none;
+     } /*추천축제 삭제 */
+
+    .col-md-4{
+        margin-bottom: 10px;
+    }
+
+    .photoRow{
+        margin-bottom: 10px!important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
 @media screen and (min-width: 576px) {}
 @media screen and (min-width: 768px) {}
 @media screen and (min-width: 992px) {}
