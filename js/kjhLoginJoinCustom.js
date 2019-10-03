@@ -1,34 +1,49 @@
 $(function(){
     // 로그인 화면
     $('.btn-login').click(function(){
-        $('#joinModule').hide();
+        HideAll();
         $('#loginModule').show();
     });
-    $('.loginBackground').click(function(){
-        $('#loginModule').hide();
+    $('.closeBackground').click(function(){
+        HideAll();
     });
 
     // 회원가입 화면
     $('.btn-join').click(function(){
-        $('#loginModule').hide();
+        HideAll();
         $('#joinModule').show();
     });
-    $('.joinBackground').click(function(){
-        $('#joinModule').hide();
+    $('.btn-idFind').click(function(){
+        HideAll();
+        $('#idFindModule').show()
     });
-    $('.rmbIdChkBox > div').click(function(){
-        CheckingRmbID($('.rmbIdChkBox > div:first-of-type'), $('#logRmbId'));
+    $('.btn-pwFind').click(function(){
+        HideAll();
+        $('#pwFindModule').show()
+    });
+    $('.closeLayer').click(function(){
+        HideAll();
+    });
+    $('.chkRmbId').click(function(){
+        CheckingBox($('.rmbIdChkBox > div:first-of-type'), $('#logRmbId'));
     });
     $('.agrPlc > div:first-of-type').click(function(){
-        CheckingRmbID($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
+        CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
     });
     $('.agrPlc > div > span').click(function(){
-        CheckingRmbID($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
+        CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
     });
     $('.agrEml > div').click(function(){
-        CheckingRmbID($('.agrEml > div:first-of-type'), $('#agreeEmail'));
+        CheckingBox($('.agrEml > div:first-of-type'), $('#agreeEmail'));
     });
-    function CheckingRmbID($trg, $input){
+
+    function HideAll(){
+        $('#loginModule').hide();
+        $('#joinModule').hide();
+        $('#idFindModule').hide()
+        $('#pwFindModule').hide()
+    }
+    function CheckingBox($trg, $input){
         if ($input.is(':checked')){
             $trg.css({
                 'background-color': 'white'
@@ -47,11 +62,12 @@ $(function(){
     }
 
     // input 선택 시 처리
-    $('.focusFunc').on("focus", function(event){
-        lableOn($(event.target).parent());
+    $('.focusFunc').on("focus", function(){
+        lableOn($(this).parent());
     });
-    $('.focusFunc').on("blur", function(event){
-        lableOff($(event.target).parent());
+    $('.focusFunc').on("blur", function(){
+        if ($(this).val() == '')
+            lableOff($(this).parent());
     });
     // input 선택 function
     function lableOn($obj){

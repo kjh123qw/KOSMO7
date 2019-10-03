@@ -42,7 +42,7 @@
             </nav>
             <div class="mainTextBox">
                 <span>Please Enjoy Your Festival</span>
-                <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+                <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
             </div>
         </div>
         <div class="header_wrap">
@@ -61,7 +61,7 @@
             </nav>
             <div class="mainTextBox">
                 <span>Please Enjoy Your Festival</span>
-                <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+                <span>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
             </div>
             <!-- <div class="imageBox">
                 <div></div>
@@ -233,7 +233,7 @@
     </footer>
     <!-- 로그인 폼 -->
     <div id="loginModule">
-        <div class="loginBackground"></div>
+        <div class="closeBackground"></div>
         <div class="loginLayer">
             <div>
                 <div class="inputLabel"><span>아이디</span></div>
@@ -248,8 +248,10 @@
                 </div>
             </div>
             <div class="rmbIdChkBox">
-                <div></div>
-                <div>아이디 기억</div>
+                <div class="chkRmbId"></div>
+                <div class="chkRmbId">아이디 기억</div>
+                <div><span class="btn-pwFind">비밀번호찾기</span></div>
+                <div><span class="btn-idFind">아이디찾기</span></div>
                 <input type="checkbox" name="logRmbId" id="logRmbId" class="displayNone">
             </div>
             <div>
@@ -258,19 +260,58 @@
             <hr>
             <div>
                 <div><span class="btn-join">회원가입</span></div>
-                <div><span class="btn-pwd">비밀번호찾기</span></div>
-                <div><span class="btn-login">아이디찾기</span></div>
+                <div><span class="closeLayer">닫기</span></div>
             </div>
-            <!-- 주석 사유: 엄청 없어보임 -->
-            <!-- <div class="layerClose">
-                <span>X</span>
-            </div> -->
+        </div>
+    </div>
+    <div id="pwFindModule">
+        <div class="closeBackground"></div>
+        <div class="pwFindLayer">
+            <div>
+                <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+            </div>
+            <div>
+                <div class="inputLabel"><span>이메일</span></div>
+                <div class="pwFindEmailBox">
+                    <input type="text" name="pwFindEmail" id="pwFindEmail" class="focusFunc">
+                </div>
+            </div>
+            <div>
+                <button>비밀번호 찾기</button>
+            </div>
+            <hr>
+            <div>
+                <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                <div><span class="btn-idFind">아이디찾기</span></div>
+            </div>
+        </div>
+    </div>
+    <div id="idFindModule">
+        <div class="closeBackground"></div>
+        <div class="idFindLayer">
+            <div>
+                <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+            </div>
+            <div>
+                <div class="inputLabel"><span>이메일</span></div>
+                <div class="idFindEmailBox">
+                    <input type="text" name="idFindEmail" id="idFindEmail" class="focusFunc">
+                </div>
+            </div>
+            <div>
+                <button>아이디 찾기</button>
+            </div>
+            <hr>
+            <div>
+                <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                <div><span class="btn-pwFind">비밀번호찾기</span></div>
+            </div>
         </div>
     </div>
     <!-- //로그인 폼 -->
     <!-- 회원가입 폼 -->
     <div id="joinModule">
-        <div class="joinBackground"></div>
+        <div class="closeBackground"></div>
         <div class="joinLayer">
             <div>
                 <div class="inputLabel"><span>아이디</span></div>
@@ -310,7 +351,10 @@
                 <button>회원가입</button>
             </div>
             <hr>
-            <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
+            <div>
+                <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
+                <div><span class="closeLayer">닫기</span></div>
+            </div>
 
         </div>
     </div>

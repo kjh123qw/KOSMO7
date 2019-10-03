@@ -1,5 +1,5 @@
 header {
-    background-image: url('../img/MainImage2bg.jpg');
+    background-image: url('../img/MainImage2bgTest.jpg');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 650px;
@@ -14,7 +14,7 @@ header {
 }
 .searchBackground {
     width: 280px; height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.7);
 }
 .mainTextBox {
     overflow: hidden;
@@ -33,26 +33,12 @@ header {
 .mainTextBox > span:nth-of-type(2) {
     display: none;
 }
-.imageBox {
-    overflow: hidden;
-    position: absolute;
-    width: 700px; height: 450px;
-    top: 60px; right: 0;
-    background-image: url('../img/MainImage2.jpg');
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: 850px;   
-}
-.imageBox > div {
-    width: 100%; height: 100%;
-    border: 10px solid rgba(0,0,0,0.2);
-    border-bottom: 100px solid rgba(0,0,0,0.2);
-}
 /* -------Navigation------- */
 .header_wrap {
     position: relative;
     display: none;
     height: 500px;
+    background-color: rgba(0,0,0,0.35);
 }
 .header_wrap > .logo {
     width: 50px;
@@ -64,6 +50,7 @@ header {
 .header_wrap_m {
     width: 100%; height: 150px;
     position: relative;
+    background-color: rgba(0,0,0,0.35);
 }
 .header_top {
     overflow: hidden;
@@ -420,6 +407,9 @@ header {
         color: #ccc;
         border-bottom: 1px solid #bbb;
     }
+    .region_list_box_m > div:hover, .festival_list_box_m > div:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
     .region_list_box_m > div > div:first-of-type, .festival_list_box_m > div > div:first-of-type { top: 10px; }
     .box_target > div:last-of-type {
         display: none;
@@ -463,7 +453,7 @@ header {
     .mainTextBox > span:nth-of-type(2) {
         width: 100%; height: 300px;
         padding-top: 10px;
-        font-size: 16px;
+        font-size: 14px;
     }
     #search_window_m {
         position: absolute;
@@ -530,11 +520,11 @@ header {
     }
     .mainTextBox > span:nth-of-type(1) {
         width: 100%; height: 50px;
-        font-size: 46px;
+        font-size: 40px;
     }
     .mainTextBox > span:nth-of-type(2) {
         width: 100%; height: 320px;
         padding-top: 30px;
-        font-size: 18px;
+        font-size: 20px;
     }
 }
