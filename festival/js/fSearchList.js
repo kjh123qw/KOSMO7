@@ -1,5 +1,33 @@
 $(function(){
 
+    $( window ).resize(function() {
+        //창크기 변화 감지
+        var windowWidth = $( window ).width();
+        console.log(windowWidth)
+
+        if(windowWidth < 576){
+            $('.sortBox > #sorts').attr('class','col');
+            // $('.seasonBox > #seasons').attr('class','col');
+        }else if(577 < windowWidth && windowWidth < 991){
+            $('.sortBox > #sorts').attr('class','col-sm-4');
+            // $('.seasonBox > #seasons').attr('class','col-sm-3'); 
+        }
+
+        if(577 < windowWidth && windowWidth < 991){
+            $('.seasonBox > #seasons').attr('class','col-sm-6');
+        }else if(330 < windowWidth && windowWidth < 576){
+            $('.seasonBox > #seasons').attr('class','col');
+        }else if(windowWidth > 992){
+            $('.seasonBox > #seasons').attr('class','col');
+        }else if(329 > windowWidth){
+            $('.seasonBox > #seasons').attr('class','col-sm-1');
+        }
+
+     });
+
+
+
+
     $('#selectBtn').click(function(){
 
             var searchText = /^[가-힣|a-z|A-Z|0-9|\*]+$/
@@ -387,6 +415,9 @@ function endDateClick(){
     });
 
 }
+
+
+
 
 
 
