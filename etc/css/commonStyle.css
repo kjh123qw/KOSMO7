@@ -1,1 +1,176 @@
 /* This is Common CSS file. */
+/* This is Common CSS file. */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+ol, ul { list-style: none; }
+a { outline: 0; text-decoration: none; color: #555; cursor: pointer; }
+img { border: 0; }
+
+/* main top */
+.topImg {
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+    border-bottom: 1px solid #888;
+    overflow: hidden;
+    position: relative;
+}
+
+/* #content */
+#content {
+    width: 1200px;
+    min-height: 1000px;
+    float: left;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+/* section common */
+.section {
+    width: 900px;
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+.section > h1 {
+    margin-bottom: 20px;
+}
+
+.section:nth-child(5) {
+    border: 0;
+    background-color: #F3F3F3;
+}
+
+.section:last-child {
+    border: 0;
+    background-color: #F3F3F3;
+}
+
+/* section aboutUs info */
+.aboutUs {
+    padding-bottom: 0;
+}
+
+.aboutUs > div.introduce {
+    margin-bottom: 20px;
+} 
+
+.section .keywordlist {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.section .keywordlist > li {
+    float: left;
+    background-color: salmon;
+    padding: 4px 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+}
+
+.info {
+    margin-bottom: 60px;
+}
+
+.info > table {
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-collapse: collapse;
+}
+
+.info th {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.info td {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sns {
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0 -30px;
+}
+
+.snsbox {
+    width: 50%;
+}
+
+.twitter {
+    float: left;
+}
+
+.facebook {
+    float: right;
+}
+
+.snsbox a {
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.snsbox a:hover {
+    background-color: #eee;
+}
+
+.facebook a {
+    border-left: 1px solid #ccc;
+}
+
+.facebook a:hover {
+    background-color: #eee;
+}
+
+.sns span {
+    color: #888;
+    font-size: 30px;
+}
+
+.googleMap {
+    margin: 0 auto;
+    padding-top: 2%;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+.googleMap:hover {
+    background-color:#eee; 
+}
+
+
+/* section partners */
+.partners_container {
+    display: flex;
+}
+
+.rbox {
+    flex: 0 0 33.3333%;
+    padding: 0 10px;
+}
+
+.rPartner {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-bottom: 1px solid #555;
+}
+
+.rbox img {
+    width: 259px;
+    height: 200px;
+}
+
+.rbox img:hover {
+    opacity: 0.8;
+}
+
+
