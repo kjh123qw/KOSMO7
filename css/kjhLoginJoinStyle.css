@@ -126,9 +126,8 @@ hr {
     width: 100%; height: 45px;
 }
 .idFindLayer > div:nth-of-type(4) { height: 25px; }
-.idFindLayer > div:nth-of-type(4) > div { float: left; }
-.idFindLayer > div:nth-of-type(4) > div > span { cursor: pointer; }
-.idFindLayer > div:nth-of-type(4) > div > span:hover { color: mediumturquoise; text-decoration: underline; }
+.idFindLayer > div:nth-of-type(4) > div { float: left; cursor: pointer; }
+.idFindLayer > div:nth-of-type(4) > div > span:hover, .idFindLayer > div:nth-of-type(4) > div:hover  { color: mediumturquoise; text-decoration: underline; }
 .idFindLayer > div:nth-of-type(4) > div:nth-of-type(2){ float: right; } 
 
 /* -------PW Find Layer Module------- */
@@ -142,9 +141,8 @@ hr {
     width: 100%; height: 45px;
 }
 .pwFindLayer > div:nth-of-type(4) { height: 25px; }
-.pwFindLayer > div:nth-of-type(4) > div { float: left; }
-.pwFindLayer > div:nth-of-type(4) > div > span { cursor: pointer; }
-.pwFindLayer > div:nth-of-type(4) > div > span:hover { color: mediumturquoise; text-decoration: underline; }
+.pwFindLayer > div:nth-of-type(4) > div { float: left; cursor: pointer; }
+.pwFindLayer > div:nth-of-type(4) > div > span:hover, .pwFindLayer > div:nth-of-type(4) > div:hover { color: mediumturquoise; text-decoration: underline; }
 .pwFindLayer > div:nth-of-type(4) > div:nth-of-type(2){ float: right; } 
 /* -------Join Layer Module------- */
 /* 

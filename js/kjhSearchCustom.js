@@ -81,7 +81,7 @@ $(function(){
         $('#menuBtn').children('svg').attr('data-icon', 'times');
         $('.header_top').css({'background-color': '#444'});
         if ($('.arrowUpDwon').css('display') != 'none'){
-            $('.header_wrap_m').css({'height': '250px'});
+            $('.header_wrap_m').css({'height': '260px'});
         }
         $('#menuBtn').css('color','#eee');
     }
