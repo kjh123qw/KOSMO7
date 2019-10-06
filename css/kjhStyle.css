@@ -1,8 +1,8 @@
 header {
-    background-image: url('../img/MainImage2bgTest.jpg');
+    /* background-image: url('../img/MainImage2bgTest.jpg');
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 650px;
+    background-size: 650px; */
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -14,14 +14,14 @@ header {
 }
 .searchBackground {
     width: 280px; height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.75);
 }
 .mainTextBox {
     overflow: hidden;
     position: absolute;
     width: 100%; height: 140px;
     top: 70px;
-    color: #fff;
+    color: rgb(176, 255, 242);
     text-align: center;
 }
 .mainTextBox > span:nth-of-type(1) {
@@ -33,12 +33,23 @@ header {
 .mainTextBox > span:nth-of-type(2) {
     display: none;
 }
+/* -------Background Images------- */
+#backgroundImages { overflow: hidden; position: absolute; width: 100%; height: 150px; }
+#backgroundImages > div {
+    width: 100%; height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 600px;
+}
+#backgroundImages > div:nth-of-type(1) { background-image: url('../img/3LineImage1.jpg'); display: none; }
+#backgroundImages > div:nth-of-type(2) { background-image: url('../img/3LineImage2.jpg'); display: none; }
+#backgroundImages > div:nth-of-type(3) { background-image: url('../img/3LineImage3.jpg'); }
 /* -------Navigation------- */
 .header_wrap {
     position: relative;
     display: none;
     height: 500px;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,0.6);
 }
 .header_wrap > .logo {
     width: 50px;
@@ -50,7 +61,7 @@ header {
 .header_wrap_m {
     width: 100%; height: 150px;
     position: relative;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0,0,0,0.4);
 }
 .header_top {
     overflow: hidden;
@@ -109,7 +120,7 @@ header {
     width: 100%; height: 60px;
     top: 0;
     background-color: rgba(0,0,0,0.7);
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #000; */
 }
 .header_gnb {
     overflow: hidden;
@@ -152,36 +163,38 @@ header {
     top: 0;
     width: 100%;
     padding: 5px 5px;
-    background-color: rgba(80,10,10,1);
+    background-color: #eee; 
+    /* rgba(80,10,10,1); */
     border: 0;
 }
 .region_sel_m, .festival_sel_m, .date_m, .keyword_m { position: relative; width: 100%; height: 52px; }
 .search_box_m { width: 100%; margin-top: 15px; border:1px solid #fff; }
-.region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
-    width: 100%; height: 16px;
+.region_sel_m > span:nth-of-type(1), .festival_sel_m > span:nth-of-type(1), .date_m > span:nth-of-type(1), .keyword_m > span:nth-of-type(1) {
+    position: absolute;
+    width: 30%; height: 18px;
+    top: 7px; left:35%;
+    border-bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #888;
+}
+.inputLabel_m {
+    position: relative;
+    width: 100%; height: 18px;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #aaa;
+    color: #888;
     z-index: 10;
 }
-.region_label_m > span, .festival_label_m > span, .date_label_m > span, .keyword_label_m > span {
+.inputLabel_m > span {
     display: block;
-    width: 37%; height: 100%;
+    width: 30%; height: 100%;
     float: left;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #888;
 }
-.region_label_m > span:nth-of-type(2), .festival_label_m > span:nth-of-type(2), .date_label_m > span:nth-of-type(2), .keyword_label_m > span:nth-of-type(2) {
-    width: 26%;
-    border-bottom: 0;
-}
-.region_label_m > span:nth-of-type(4), .festival_label_m > span:nth-of-type(4), .date_label_m > span:nth-of-type(4), .keyword_label_m > span:nth-of-type(4) {
-    position: absolute;
-    width: 26%;
-    top: 7px; left:37%;
-    border-bottom: 0;
-    font-size: 12px;
-    color: #aaa;
+.inputLabel_m > span:nth-of-type(2) {
+    float: right;
 }
 .region_box_m, .festival_box_m, .date_box_m, .keyword_box_m{
     position: relative;
@@ -189,7 +202,7 @@ header {
     width: 100%; height: 40px;
     padding: 0 10px;
     color: #aaa;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #888;
     line-height: 38px;
     cursor: pointer;
 }
@@ -204,7 +217,7 @@ header {
     border-left: 1px dashed #555;
     padding-left: 10px;
 }
-.region_box_m > div, .festival_box_m > div, .date_box_m > div, .keyword_box_m > div {
+.region_box_m > div, .festival_box_m > div, .date_box_m > div {
     position: absolute;
     top: 10px; right: 0px;
     width: 20px; height: 20px;
@@ -299,16 +312,16 @@ header {
 #calnedar_end { height: 0; }
 #keyword_m {
     width: 100%; height: 36px;
-    color: white;
+    color: #000;
     background-color: rgba(0,0,0,0);
     line-height: 34px;
     font-size: 18px;
     border: 0;
     outline: 0;
 }
-#serch_btn_m {
+#search_btn_m {
     width: 100%; height: 44px;
-    background-color: rgba(0,0,0,0);
+    background-color: rgb(18, 46, 131);
     color: white;
     line-height: 42px;
     font-size: 18px;
@@ -344,18 +357,18 @@ header {
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { width: 4em; }
 .ui-state-hover { background-color: rgba(255,255,255,0.2) !important; }
 .ui-state-active { background-color: rgba(100, 100, 255, 0.5) !important; }
-/* -------Middle------- */
-#middleBox {
-    width: 100%; height: 200px;
-    background-color: #555;
-}
-
 /* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
   기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
   가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 
   @media screen and (min-width: 576px) {
-    header { background-size: 800px; }
+    /* -------Background Images------- */
+    #backgroundImages { height: 374px; }
+    #backgroundImages > div { height: 50%; background-size: 100%; }
+    #backgroundImages > div:nth-of-type(1) { display: block; }
+    #backgroundImages > div:nth-of-type(2) { display: none; }
+    #backgroundImages > div:nth-of-type(3) { display: block; }
+
     .header_wrap_m { height: 374px; }
     .header_gnb_m { width: 40%; float: right; margin-right: 5%; }
     .mainTextBox {
@@ -385,12 +398,12 @@ header {
     .region_sel_m, .festival_sel_m, .date_m, .keyword_m { height: 57px; }
     .search_box_m { margin-top: 20px; }
     .date_mobile_date { display: none; }
-    .region_label_m, .festival_label_m, .date_label_m, .keyword_label_m {
+    .inputLabel_m {
         height: 18px;
         font-size: 14px;
         line-height: 18px;
     }
-    .region_label_m > span:nth-of-type(4), .festival_label_m > span:nth-of-type(4), .date_label_m > span:nth-of-type(4), .keyword_label_m > span:nth-of-type(4) { font-size: 12px; }
+    .inputLabel_m > span:nth-of-type(4) { font-size: 12px; }
     .box_target {
         position: absolute;
         top: 37px; left: 259px;
@@ -425,11 +438,13 @@ header {
         line-height: 38px;
     }
     #keyword_m {
+        color: #fff;
         margin-top: 1px;
         height: 34px;
         line-height: 32px;
         font-size: 18px;
     }
+    #search_btn_m { background-color: rgba(0,0,0,0); }
     .closeBox { background-color: rgba(0,0,0,0); }
     .arrowUpDwon { display: none; color: #aaa; }
     .arrowLeftRight { display: block; color: #aaa; }
@@ -439,7 +454,13 @@ header {
 
 /* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
 @media screen and (min-width: 768px) {
-    header { background-size: 1300px; background-position: top right; }
+    /* -------Background Images------- */
+    #backgroundImages { height: 500px; }
+    #backgroundImages > div { height: 33.4%; }
+    #backgroundImages > div:nth-of-type(1) { display: block; }
+    #backgroundImages > div:nth-of-type(2) { display: block; }
+    #backgroundImages > div:nth-of-type(3) { display: block; }
+    
     .header_wrap_m { display: none; }
     .header_wrap { display: block; }
     .mainTextBox {
@@ -474,23 +495,25 @@ header {
     .date_box_m {
         width: 100%; height: 40px;
     }
-    .region_box_m > div, .festival_box_m > div, .date_box_m > div, .keyword_box_m > div {
+    .region_box_m > div, .festival_box_m > div, .date_box_m > div {
         top: 12px;
     }
-    #serch_btn_m {
+    #search_btn_m {
         height: 44px;
         line-height: 42px;
         font-size: 18px;
         cursor: pointer;
     }
     .box_target { background-color: rgba(0,0,0,0.8); }
-    .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_box_m:hover, #serch_btn_m:hover { background-color: rgba(255, 255, 255, 0.03); }
+    .region_box_m:hover, .festival_box_m:hover, .keyword_box_m:hover, .date_box_m:hover { background-color: rgba(255, 255, 255, 0.03); }
+    #search_btn_m:hover { background-color: royalblue; }
 }
 
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
 @media screen and (min-width: 992px) {
-    #search_window_m { left: 0; }
     .header_wrap { height: 560px; }
+    #backgroundImages { height: 560px; }
+    #search_window_m { left: 0; }
     .mainTextBox {
         width: 500px; height: 350px;
         top: 180px; right: 30px;
@@ -508,7 +531,6 @@ header {
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
 @media screen and (min-width: 1225px) {
     #contentBox { width: 1200px; }
-    header { background-size: 110%; }
     .header_wrap {
         margin: 0 auto;
         width: 1200px;
@@ -527,4 +549,5 @@ header {
         padding-top: 30px;
         font-size: 20px;
     }
+    #middleBox { width: 1200px; margin: 0 auto; }
 }

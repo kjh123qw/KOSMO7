@@ -63,27 +63,28 @@ $(function(){
 
     // input 선택 시 처리
     $('.focusFunc').on("focus", function(){
-        lableOn($(this).parent());
+        OptionOpen($(this).parent());
     });
     $('.focusFunc').on("blur", function(){
         if ($(this).val() == '')
-            lableOff($(this).parent());
+        OptionClose($(this).parent());
     });
     // input 선택 function
-    function lableOn($obj){
-        $obj.css('border', '1px solid #222');
-        $obj.prev().css('color', '#222');
-        $obj.prev().stop().animate({
-            'width': '100px'
-        }, 300);
+    function OptionOpen($clTrg){
+        $clTrg.prev().children('span:nth-of-type(1)').css('border-bottom','1px solid #000');
+        $clTrg.prev().children('span:nth-of-type(2)').css('border-bottom','1px solid #000');
+        $clTrg.prev().children('span:nth-of-type(3)').css('color','#000');
+        $clTrg.css('border-bottom', '1px solid #000');
+        $clTrg.children('span').css('color','#000');
+        $clTrg.prev().children('span:nth-of-type(1)').animate({'width':'34%'}, 100);
+        $clTrg.prev().children('span:nth-of-type(2)').animate({'width':'34%'}, 100);
+        $clTrg.prev().children('span:nth-of-type(3)').animate({'font-size':'16px', 'top':'5px'}, 100);
     }
-    function lableOff($obj){
-        if ($obj.val() == ''){
-            $obj.css('border', '1px solid #aaa');
-            $obj.prev().css('color', '#aaa');
-            $obj.prev().stop().animate({
-                'width': '130px'
-            }, 300);
-        }
+    function OptionClose($clTrg){
+        $clTrg.prev().children('span:nth-of-type(1)').removeAttr('style');
+        $clTrg.prev().children('span:nth-of-type(2)').removeAttr('style');
+        $clTrg.prev().children('span:nth-of-type(3)').removeAttr('style');
+        $clTrg.children('span:first-of-type').removeAttr('style');
+        $clTrg.css('border-bottom', '1px solid #aaa');
     }
 });

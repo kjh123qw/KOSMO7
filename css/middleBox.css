@@ -1,0 +1,171 @@
+/* -------Middle------- */
+/* -------CategoryBox------- */
+#middleBox {
+    width: 100%;
+    padding: 5px 0;
+    background-color: #eee;
+}
+#categoryBoxs {
+    overflow: hidden;
+}
+#categoryBoxs > div {
+    width: 100%; height: 80px;
+    margin: 5px 0;
+}
+.categoryBox {
+    width: 50%;
+    height: 80px;
+    padding: 0 5px;
+    float: left;
+    cursor: pointer;
+}
+.categoryBox > div > span { display: block; }
+.categoryBox > div  > span:nth-of-type(1) {
+    height: 50px;
+    font-size: 34px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-radius: 5px 5px 0 0;
+    background-color: #333;
+}
+.categoryBox > div  > span:nth-of-type(2) {
+    height: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    background-color: #333;
+}
+
+/* -------ImageBox------- */
+.titleBox {
+    height: 35px;
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 43px;
+}
+#imageBoxs {
+    overflow: hidden;
+}
+#imageBoxs > div {
+    overflow: hidden;
+}
+.imageBox {
+    position: relative;
+    width: 100%; height: 350px;
+    /* padding: 10px; */
+    /* border: 1px solid #222; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    cursor: pointer;
+}
+.imageBox > div { overflow: hidden; color: #fff; }
+.imageBox > div:nth-of-type(1) {
+    position: absolute;
+    width: 100%; height: 22px;
+    bottom: 125px;
+}
+.imageBox > div:nth-of-type(1) > span {
+    display: block;
+    width: 50px; height: 22px;
+    margin-left: 10px;
+    background-color: #777;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 22px;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+}
+.imageBox > div:nth-of-type(2) {
+    position: absolute;
+    width: 100%; height: 40px;
+    bottom: 80px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    line-height: 22px;
+    font-size: 16px;
+}
+.imageBox > div:nth-of-type(3) {
+    position: absolute;
+    width: 100%; height: 80px;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    line-height: 22px;
+    font-size: 14px;
+}
+#sliderBox1 { background-image: url('../img/testImage1.jpg'); }
+#sliderBox2 { background-image: url('../img/testImage2.jpg'); }
+#sliderBox3 { background-image: url('../img/testImage3.jpg'); }
+#sliderBox4 { background-image: url('../img/testImage4.jpg'); }
+.regiBox { display: none; }
+#registrationBox {
+    height: 150px;
+    padding: 15px;
+    background-image: url('../img/RegiImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+#registrationBox > span {
+    display: block;
+}
+#registrationBox > span:nth-of-type(1) {
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+#registrationBox > span:nth-of-type(2) {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #eee;
+}
+/* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
+  기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
+  가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
+@media screen and (min-width: 576px) {
+    #categoryBoxs > div { width: 50%; float: left; }
+    .categoryBox > div:hover > span { background-color: royalblue; }
+    .imageBox {
+        width: 50%; height: 300px;
+        float: left;
+    }
+}
+
+/* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
+@media screen and (min-width: 768px) {
+    #middleBox { padding-top: 10px; }
+    .categoryBox { padding: 0 15px; }
+    .regiBox { display: block; }
+}
+
+/* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
+@media screen and (min-width: 992px) {
+    #middleBox { padding-top: 15px; }
+    #categoryBoxs { width: 992px; margin: 0 auto; }
+    #categoryBoxs > div { height: 100px; }
+    .categoryBox { height: 100px; padding: 0 25px; }
+    .categoryBox > div  > span:nth-of-type(1) { height: 63px; line-height: 61px; }
+    .categoryBox > div  > span:nth-of-type(2) { height: 37px; line-height: 35px; }
+    .titleBox { padding: 0 50px; font-size: 24px; }
+    #imageBoxs > div { width: 50%; float: left; }
+    .imageBox { height: 350px; }
+    #registrationBox { width: 992px; margin: 0 auto; }
+    
+}
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
+@media screen and (min-width: 1225px) {
+    #middleBox { width: 1200px; margin: 0 auto; }
+}

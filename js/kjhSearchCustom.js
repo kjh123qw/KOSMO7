@@ -1,6 +1,9 @@
 $(function(){
     // 옵션리스트 디스플레이 구현_START
         // 클릭 이벤트
+    OptionWrite($('.region_list_box_m'));  // 최초 실행 '지역을 선택해주세요.' 입력됨
+    OptionWrite($('.festival_list_box_m'));  // 최초 실행 '주제를 선택해주세요.' 입력됨
+    OptionWrite($('.date_calendar_m'));  // 최초 실행 '날짜 선택' 입력됨
     CheckArrows();
     //resize event
     $(window).resize(function(event){
@@ -9,6 +12,7 @@ $(function(){
                 OptionClose($(item).prev(), $(item));
             }
         });
+        CheckArrows();
         CloseMenu();
     })
     $('#menuBtn').click(function(){
@@ -68,6 +72,9 @@ $(function(){
             }
         });
     });
+    $('#search_btn_m').click(function(){
+        location.href='./festival/fSearchList.html';
+    });
         //Menu Toggle
     function OpenMenu(){
         $('#navigation_m').show();
@@ -114,10 +121,13 @@ $(function(){
             CheckArrows();
         } else {
             $clTrg.prev().children('span:nth-of-type(1)').css('border-bottom','1px solid #fff');
-            $clTrg.prev().children('span:nth-of-type(3)').css('border-bottom','1px solid #fff');
-            $clTrg.prev().children('span:nth-of-type(4)').css('color','#fff');
+            $clTrg.prev().children('span:nth-of-type(2)').css('border-bottom','1px solid #fff');
+            $clTrg.prevAll('span').css('color','#fff');
             $clTrg.css('border-bottom', '1px solid #fff');
             $clTrg.children('span').css('color','#fff');
+            $clTrg.prev().children('span:nth-of-type(1)').animate({'width':'34%'}, 100);
+            $clTrg.prev().children('span:nth-of-type(2)').animate({'width':'34%'}, 100);
+            $clTrg.prevAll('span').animate({'font-size':'14px', 'top':'1px'}, 100);
             $clTrg.children('div').animate({'top': '14px'}, 100);
             $clTrg.prev().animate({'height': '14px'}, 100);
             $clTrg.stop().animate({
@@ -167,8 +177,8 @@ $(function(){
             CheckArrows();
         } else {
             $clTrg.prev().children('span:nth-of-type(1)').removeAttr('style');
-            $clTrg.prev().children('span:nth-of-type(3)').removeAttr('style');
-            $clTrg.prev().children('span:nth-of-type(4)').removeAttr('style');
+            $clTrg.prev().children('span:nth-of-type(2)').removeAttr('style');
+            $clTrg.prevAll('span').removeAttr('style');
             $clTrg.children('span:first-of-type').removeAttr('style');
             $clTrg.css('border-bottom', '1px solid #aaa');
             if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
@@ -226,13 +236,21 @@ $(function(){
             $trg.children('div').children('.arrowUpDwon').css('color','#aaa').html('<i class="fas fa-angle-down"></i>');
             $trg.children('div').children('.arrowLeftRight').css('color','#aaa').html('<i class="fas fa-angle-right"></i>');
         }
+        if ($('.arrowUpDwon').css('display') != 'none'){
+            if (BasicTextCheck($trg.children('span:first-of-type').text()))
+                $trg.children('span').css('color','#000');
+            else
+                $trg.children('span').css('color','#aaa');
+        } else {
+            if (BasicTextCheck($trg.children('span:first-of-type').text()))
+                $trg.children('span').css('color','#fff');
+            else
+                $trg.children('span').css('color','#888');
+        }
     }
     
     // 옵션리스트 디스플레이 구현_END
     // 옵션리스트 체크 구현_START
-    OptionWrite($('.region_list_box_m'));  // 최초 실행 '지역을 선택해주세요.' 입력됨
-    OptionWrite($('.festival_list_box_m'));  // 최초 실행 '주제를 선택해주세요.' 입력됨
-    OptionWrite($('.date_calendar_m'));  // 최초 실행 '날짜 선택' 입력됨
     $('.optionItem').click(function(){
         var _name = $(this).children('div').eq(1).html().split(' ')[0]
         if ($('input:checkbox[name=' + _name + ']').is(':checked'))
