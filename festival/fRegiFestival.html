@@ -42,7 +42,6 @@
 
     
     <!-- 달력, 버튼확인, 파일확인, 정규표현식, 버튼쪽 margin , 이미지 드래그, 파일쪽 div확인-->
-    <!-- 모바일 글자크기확인 -->
     <!-- 코드정리 -->
 
 
@@ -79,140 +78,144 @@
 
                           <!--  / 규모 /   -->
                           
+                          <label>축제 이미지</label> <i class="fas fa-check" title = "필수항목입니다"></i>
 
                         <div class="input-group">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="fileInput" multiple >
+                                <input type="file" class="custom-file-input" id="fileInput" multiple accept=".jpg, .png">
                             </div>
                             <div class="input-group-append">
                                 <label class="custom-file-label" for="fileInput" id = "fileLabel">File Upload</label>
                                 <!-- <button class="btn btn-outline-secondary" type="button" for="inputGroupFile04">Button</button> -->
                             </div>
                         </div>
+                        <small id="imageHelp" class="form-text text-muted">JPG, PNG 중 하나여야 하며 8개 까지 가능합니다</small>
 
                         <hr>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">TITLE</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="titleHelp" placeholder="Enter title">
-                            <small id="titleHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <label for="exampleInputTitle">제목</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp" placeholder="축제 제목을 적어주세요">
+                            <small id="titleHelp" class="form-text text-muted">축제 제목을 입력해주세요.</small>
                         </div>
 
                         <div class="form-group">
                         <div class="row">
-                            <div class="col">
-                                    <label>DATE</label>
-                                <input type="text" class="form-control" placeholder="START DATE">
-                                <SMAll>We'll never share your email with anyone else.</SMAll>
+                            <div class="col-sm-5">
+                                    <label>축제 시작날짜</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                <input type="text" class="form-control" id = "startDate" placeholder="시작날짜" readonly>
+                                <SMAll>시작날짜를 입력해주세요.</SMAll>
                             </div>
-                            <div class="col">
-                                    <label>DATE</label>
-                                <input type="text" class="form-control" placeholder="LAST DATE">
-                                <SMAll>We'll never share your email with anyone else.</SMAll>
+                            <div class = "col-sm-1"><label for="startDate"><i class="far fa-calendar-alt"></i></label></div>
+                            <div class="col-sm-5">
+                                    <label>축제 종료날짜</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                <input type="text" class="form-control" id = "endDate"  placeholder="종료날짜" readonly>
+                                <SMAll>종료날짜를 입력해주세요.</SMAll>
                             </div>
+                            <div class = "col-sm-1"><label for="endDate"><i class="far fa-calendar-alt"></i></label></div>
                         </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputInfo">INFO</label>
-                            <textarea class="form-control" rows="5" id="exampleInputInfo" placeholder="INFO"></textarea>
-                            <small id="infoHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <label for="exampleInputInfo">축제 정보</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <textarea class="form-control" rows="5" id="exampleInputInfo" placeholder="축제 정보를 입력해주세요"></textarea>
+                            <small id="infoHelp" class="form-text text-muted">축제 소개를 입력해주세요.</small>
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputaddress">ADDRESS</label>
-                            <input type="text" class="form-control" id="exampleInputaddress" aria-describedby="addressHelp" placeholder="Enter address">
-                            <small id="addressHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <label for="exampleInputaddress">주소</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputaddress" aria-describedby="addressHelp" placeholder="주소">
+                            <small id="addressHelp" class="form-text text-muted">축제가 진행되는 주소를 입력해주세요.</small>
                         </div>
 
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <label>LOCATION</label> 
-                                    <select class="form-control">
-                                        <option>Default select</option>
-                                        <option>Default select</option>
-                                        <option>Default select</option>
-                                        <option>Default select</option>
+                                    <label>LOCATION</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                    <select class="form-control" id = "locationF">
+                                        <option>혼슈 지방</option>
+                                        <option>훗카이도 지방</option>
+                                        <option>시코쿠 지방</option>
+                                        <option>큐슈 지방</option>
                                     </select>
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <SMAll>축제가 열리는 지방을 선택해주세요.</SMAll>
                                 </div>
                                 <div class="col">
-                                    <label>SIZE</label> 
-                                        <select class="form-control">
-                                            <option>Default select</option>
-                                            <option>Default select</option>
-                                            <option>Default select</option>
+                                    <label>SIZE</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                        <select class="form-control" id = "sizeF">
+                                            <option>소형</option>
+                                            <option>중형</option>
+                                            <option>대형</option>
                                         </select>
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <SMAll>축제 규모를 선택해주세요.</SMAll>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>SEASON</label>
+                            <label>계절</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <div class = "row" id = "seasonDiv">
                                 <div class="form-check form-check-inline col">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="봄">
+                                    <label class="form-check-label" for="inlineRadio1">봄</label>
                                 </div>
                                 <div class="form-check form-check-inline col">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="여름">
+                                    <label class="form-check-label" for="inlineRadio2">여름</label>
                                 </div>
                                 <div class="form-check form-check-inline col">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="가을">
+                                    <label class="form-check-label" for="inlineRadio3">가을</label>
                                 </div>
                                 <div class="form-check form-check-inline col">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="겨울">
+                                    <label class="form-check-label" for="inlineRadio4">겨울</label>
                                 </div>
                             </div>    
-                            <SMAll>We'll never share your email with anyone else.</SMAll>
+                            <SMAll>축제가 열리는 계절을 선택해주세요.</SMAll>
                         </div>
 
                         <div class="form-group">
-                            <label>KINDS</label>
+                            <label>축제 종류</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <div class = "row" id = "kindsDiv">
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="option1">
-                                <label class="form-check-label" for="inlinecheckbox1">1</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="벚꽃">
+                                <label class="form-check-label" for="inlinecheckbox1">벚꽃</label>
                             </div>
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox2" value="option2">
-                                <label class="form-check-label" for="inlinecheckbox2">2</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox2" value="불꽃">
+                                <label class="form-check-label" for="inlinecheckbox2">불꽃</label>
                             </div>
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox3" value="option3">
-                                <label class="form-check-label" for="inlinecheckbox3">3</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox3" value="신사">
+                                <label class="form-check-label" for="inlinecheckbox3">신사</label>
                             </div>
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox4" value="option4">
-                                <label class="form-check-label" for="inlinecheckbox4">4</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox4" value="맥주">
+                                <label class="form-check-label" for="inlinecheckbox4">맥주</label>
                             </div>
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox5" value="option5">
-                                <label class="form-check-label" for="inlinecheckbox5">5</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox5" value="얼음">
+                                <label class="form-check-label" for="inlinecheckbox5">얼음</label>
                             </div>
                             <div class="form-check form-check-inline col">
-                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox6" value="option6">
-                                <label class="form-check-label" for="inlinecheckbox6">6</label>
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox6" value="바다">
+                                <label class="form-check-label" for="inlinecheckbox6">바다</label>
                             </div>
                             </div>
-                            <SMAll>We'll never share your email with anyone else.</SMAll>
+                            <SMAll>축제 종류를 입력해주세요.</SMAll>
                         </div>
 
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <label>WEBSITE</label>
-                                    <input type="text" class="form-control" placeholder="WEBSITE">
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <label>웹사이트</label>
+                                    <input type="text" class="form-control" placeholder="WEBSITE" id = "websiteF">
+                                    <SMAll>축제 웹사이트를 입력해주세요.</SMAll>
                                 </div>
                                 <div class="col">
-                                    <label>PHONE</label>
-                                    <input type="text" class="form-control" placeholder="PHONE">
-                                    <SMAll>We'll never </SMAll>
+                                    <label>전화번호</label>
+                                    <input type="text" class="form-control" placeholder="PHONE" id = "phoneF">
+                                    <SMAll>축제 문의가 가능한 전화번호를 입력해주세요</SMAll>
                                 </div>
                             </div>
                         </div>
@@ -221,13 +224,13 @@
                             <div class="row">
                                 <div class="col">
                                     <label>TWITTER</label>
-                                    <input type="text" class="form-control" placeholder="TWITTER">
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <input type="text" class="form-control" placeholder="TWITTER" id = "sns1">
+                                    <SMAll>축제 SNS을 입력해주세요</SMAll>
                                 </div>
                                 <div class="col">
                                     <label>INSTAGRAM</label>
-                                    <input type="text" class="form-control" placeholder="INSTAGRAM">
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <input type="text" class="form-control" placeholder="INSTAGRAM" id = "sns2">
+                                    <SMAll>축제 SNS을 입력해주세요</SMAll>
                                 </div>
                             </div>
                         </div>
@@ -237,7 +240,7 @@
                                 <div class = "col-sm-4">
                                     <label>KEYWORD</label> 
                                     <div class="input-group mb-3" id = "keywordDiv">
-                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary" type="button">Button</button>
                                         </div>
@@ -257,8 +260,8 @@
                             
                         <div class="row">
                             <div class = "col" id = "btnDiv">
-                                <button type="button" class="btn btn-secondary">Secondary</button>
-                                <button type="button" class="btn btn-warning">Warning</button>
+                                <button type="button" class="btn btn-warning" onclick = "insertF();">신청하기</button>
+                                <button type="button" class="btn btn-secondary">돌아가기</button>
                             </div>
                         </div>
                       

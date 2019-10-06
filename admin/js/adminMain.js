@@ -322,7 +322,7 @@ $(function(){
 
     $('#ulDiv li').mouseenter(function(){
 
-        var name = $(this).attr('name');
+        var name = $(this).attr('data-li');
         if(name == 'main'){
             return false;
         }
@@ -395,6 +395,7 @@ function dateChange(text){
         }else{
             month = dateArr[1].substr(0,2);
         }
+
 
 
         if(text == 'next'){

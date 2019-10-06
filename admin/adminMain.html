@@ -48,7 +48,7 @@
   
 
 </head>
-<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<body oncontextmenu="return false" ondragstart="return false">
 
     <div id = "testNone">지원하지않음<button onclick = "test();">전체화면</button></div>
 
@@ -61,12 +61,12 @@
 
         <nav class="navbar navbar-dark bg-dark bg-light mainNav">
             <a class="navbar-brand" href="#">
-                <img src="../img/logo_noText 51x44.png" alt="logo"> <!-- src빈칸확인 -->
+                <img src="../img/logo_noText 51x44.png" alt="logo"> <!-- 이미지 이름 공백안됨 -->
             </a>
             <div>
-            <span class = "iconBorder"><a href="#"><div id = "alarm"></div><i class="far fa-envelope"></i></a></span> <!-- div확인 -->
-            <span class = "iconBorder"><a href="#"><i class="fas fa-user-friends"></i></a></span>
-            <span class = "iconBorder"><a href="#"><i class="far fa-bell"></i></a></span>
+            <a href="#"><span class = "iconBorder"><span id = "alarm"></span><i class="far fa-envelope"></i></span></a>
+            <a href="#"><span class = "iconBorder"><i class="fas fa-user-friends"></i></span></a>
+            <a href="#"><span class = "iconBorder"><i class="far fa-bell"></i></span></a>
             </div>
             <!-- <form class="form-inline">
                 <div class="input-group">
@@ -99,12 +99,12 @@
                 <div class = "row">
                     <div class = "col-sm-12" id = "ulDiv">
                         <ul>
-                            <a href = "#"><li class="animated" name = "main"><i class="fas fa-home"></i> <span>MAIN</span></li></a><!-- a확인 -->
-                            <a href = "#"><li class="animated" name = "member"><i class="fas fa-users"></i> <span>MEMBER</span></li></a><!-- a확인 -->
-                            <a href = "#"><li class="animated" name = "festival"><i class="fas fa-torii-gate"></i> <span>FESTIVAL</span></li></a><!-- a확인 -->
-                            <a href = "#"><li class="animated" name = "host"><i class="far fa-address-card"></i> <span>HOST</span></li></a> <!-- a확인 -->
-                            <a href = "#"><li class="animated" name = "notice"><i class="fas fa-chalkboard-teacher"></i> <span>NOTICE</span></li></a><!-- a확인 -->
-                            <a href = "#"><li class="animated" name = "smalltown"><i class="fas fa-vihara"></i> <span>SMALLTOWN</span></li></a> <!-- a확인 -->
+                            <li class="animated" data-li = "main"><a href = "../admin/adminMain.html"><i class="fas fa-home"></i><span>MAIN</span></a></li>
+                            <li class="animated" data-li = "member"><a href = "#"><i class="fas fa-users"></i> <span>MEMBER</span></a></li>
+                            <li class="animated" data-li = "festival"><a href = "#"><i class="fas fa-torii-gate"></i> <span>FESTIVAL</span></a></li>
+                            <li class="animated" data-li = "host"><a href = "#"><i class="far fa-address-card"></i> <span>HOST</span></a></li>
+                            <li class="animated" data-li = "notice"><a href = "#"><i class="fas fa-chalkboard-teacher"></i> <span>NOTICE</span></a></li>
+                            <li class="animated" data-li = "smalltown"><a href = "#"><i class="fas fa-vihara"></i> <span>SMALLTOWN</span></a></li>
                         </ul>
                     </div>
                 </div>

@@ -9,16 +9,17 @@
     border: 7px dashed gray;
     /* box-sizing: content-box; */
     margin: 20px 0;
+    position: relative;
 }
 
 #photoList div{
-    /* width: 300px; */
     width: 25%;
     height: 200px;
-    /* margin: 20px; */
     padding: 10px;
-    /* border: 1px dotted red; */
-    display: inline-block;
+    /* display: inline-block; */
+    /* border: 1px solid red; */
+    position: relative;
+    float: left;
     
 }
 
@@ -26,11 +27,18 @@
     display:table; 
     margin-left:auto; 
     margin-right:auto;
-
     font-size: 80px;
     margin-top: 30px;
 
 }
+
+/* .fileSpan{
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+} */
 
 #photoList div img{
     width: 100%;
@@ -74,6 +82,16 @@
 #btnDiv{
     /* margin: 0 auto; */
     text-align: center;
+}
+
+#startDate, #endDate{
+    width: 95%;
+}
+
+.fa-calendar-alt{
+    line-height: 94px;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 

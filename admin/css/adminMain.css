@@ -180,7 +180,7 @@ nav img{
     cursor: pointer;
 }
 
-#ulDiv a:nth-child(1) li{
+#ulDiv li:nth-child(1) a{
     color: red;
 }
 
