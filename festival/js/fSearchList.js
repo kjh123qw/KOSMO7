@@ -230,6 +230,18 @@ $(function(){
        
 
         startDate();
+        $("#startDate").on("change", function(){
+
+            if($(this).val() == ""){
+              $("#endDate").attr("disabled", true);
+              $("#endDate").val("");
+            }else{
+              $("#endDate").attr("disabled", false);
+              var date = $(this).val();
+              $("#endDate").val(date);
+            }
+    
+        });
         keywordDelete();
         // $('#firstBox').css('display','none')
         // $('#firstHr').css('display','none')
@@ -316,105 +328,25 @@ function keywordDelete(){
 
 function startDate(){
     $('#startDate').datepicker({
-
-
-        format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
-        calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
-        todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
-        autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
-        startDate: 'sysdate',	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
-        endDate: '',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
-        disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
-        immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
-        language : "ko",	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
-        
+        format: "yyyy-mm-dd",	
+        calendarWeeks : false, 
+        todayHighlight : true ,	
+        autoclose : true,	
+        startDate: 'sysdate',
+        endDate: '',
+        disableTouchKeyboard : false,
+        immediateUpdates: false,
+     }).on('changeDate',function(selected){
+      var sDate = new Date(selected.date.valueOf());
+      $('#endDate').datepicker({format:"yyyy-mm-dd"}).datepicker('setStartDate',sDate).on('changeDate', function(){
+        $(this).datepicker('hide');
+      })
     });
 
 
 }
 
-function startDateSelect(){
-    
-    var startDate = $('#startDate').val();
-    $('#endDate').val(startDate);
 
-    if($('#startDate').val() == ""){
-        $('#endDate').prop('disabled', true);    
-        // console.log("ddddd")
-    }else{
-        $('#endDate').prop('disabled', false);
-        // $('#endDate').focus();
-
-        endDateClick();
-
-        
-    }
-}
-
-
-// function endDateSelect(){
-//     var startDate = $('#startDate').val();
-//     var endDate = $('#endDate').val();
-
-//     var day = new Date(startDate);
-//     var sYear = day.getFullYear();
-//     var sMonth = day.getMonth()+1;
-//     var sDay = day.getDate();
-
-//     var day = new Date(endDate);
-//     var eYear = day.getFullYear();
-//     var eMonth = day.getMonth()+1;
-//     var eDay = day.getDate();
-
-//     // console.log(sYear)
-//     // console.log(sMonth)
-//     // console.log(sDay)
-//     // console.log(eYear)
-//     // console.log(eMonth)
-//     // console.log(eDay)
-
-//     if(sMonth == eMonth && sDay > eDay){ //날짜 수정 필요
-//         alert('종료날짜를 재설정해주세요')
-//         $('#endDate').val(null);
-//         $('#endDate').focus();
-//         // $('#endDate').focusout();
-//         // $('#startDate').focus();
-//         // $('#startDate').val(" ");
-//     }
-// }
-
-
-function endDateClick(){
-    
-    // $('#endDate').bind();
-
-    var endDay = $('#endDate').val();
-    var sday = $('#startDate').val();
-    // var endDay2 = $('#startDate').val();
-
-    console.log("sday"+sday)
-    console.log("endDay"+endDay)
-    
-    if(endDay == ""){
-        return;
-    }
-
-    // console.log(endDay)
-
-    $('#endDate').datepicker({
-
-        format: "yyyy-mm-dd",	//데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
-        calendarWeeks : false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
-        todayHighlight : true ,	//오늘 날짜에 하이라이팅 기능 기본값 :false 
-        autoclose : true,	//사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
-        startDate: endDay,	//달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주) sysdate
-        endDate: '',	//달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
-        disableTouchKeyboard : false,	//모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
-        immediateUpdates: false,	//사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false 
-        language : "ko"	//달력의 언어 선택, 그에 맞는 js로 교체해줘야한다. 현재 파일없음
-    });
-
-}
 
 
 

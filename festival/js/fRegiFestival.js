@@ -31,7 +31,7 @@ $(function(){
             blobURL = window.URL.createObjectURL(url);
             
             // htmlText += "<div onclick = 'deleteImg("+i+"); value = "+i+"'><img src="+blobURL+" title = image"+i+"></div>";
-            htmlText += "<div onclick = 'deleteImg(this, "+i+"); value = "+i+"'><img src="+blobURL+" title = image"+i+"></div>";
+            htmlText += "<div onclick = 'deleteImg(this, "+i+"); value = "+i+"' name = 'imageDiv'><img src="+blobURL+" title = image"+i+"></div>";
 
           if(i==0 || i==length){
             fileName += file[i].name; 
@@ -80,26 +80,37 @@ $(function(){
 function deleteImg(thisDiv, num){
 
   // var url = $('#photoList div img[title*=image'+num+']').attr('title');
-  // var file = document.getElementById("fileInput").files;
+  var file = document.getElementById("fileInput").files;
+  console.log(file)
+  document.getElementByName('imageDiv').innerHTML
+   var length = $("#photoList div").length;
+   console.log(length)
+   for(var i=0; i<length; i++){
+     console.log($("#photoList div:eq("+i+")").attr('class'));
+   }
+  
+  // document.getElementById("fileInput").file
+  // document.getElementById('fileInput').value = "";
 
 
-  var boolean = confirm("해당이미지를 삭제합니다.")
+  
+  // var boolean = confirm("해당이미지를 삭제합니다.")
 
-  if(boolean){
-    thisDiv.remove();
-    // file[2].select();
-    // document.selection.clear();
-  }else{
-    return;
-  }
+  // if(boolean){
+  //   thisDiv.remove();
+  //   
+  //   file[num].remove();
+  // }else{
+  //   return;
+  // }
 
-  var length = $('#photoList div').length;
-  if(length != 0){
-    $('#fileLabel').text(length+"개의 파일");
-  }else{
-    $('#fileLabel').text("File Upload");
-    $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
-  }
+  // var length = $('#photoList div').length;
+  // if(length != 0){
+  //   $('#fileLabel').text(length+"개의 파일");
+  // }else{
+  //   $('#fileLabel').text("File Upload");
+  //   $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
+  // }
 
 
   //이름. 갯수바꾸기
