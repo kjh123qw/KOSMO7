@@ -17,6 +17,8 @@ $(function(){
 
     //Menu Toggle
     function OpenMenu(){
+        var height = $('.header_gnb_m').children('li').length;
+        console.log(height);
         $('#navigation_m').show();
         $('#menuBtn').children('svg').attr('data-icon', 'times');
         $('.header_top').css({'background-color': '#444'});
