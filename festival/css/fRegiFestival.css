@@ -23,6 +23,10 @@
     
 }
 
+#photoList div:first-child img{
+    border: 3px solid red;
+}
+
 #photoList span{
     display:table; 
     margin-left:auto; 

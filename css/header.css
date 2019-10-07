@@ -91,6 +91,7 @@ header {
 }
 
 .header_gnb > li > a:hover {
+  text-decoration: none;
   border-bottom: 3px solid #333;
 }
 /* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)

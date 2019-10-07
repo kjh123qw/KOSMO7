@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- 부트스트랩 -->
 
-    <script src = "./js/jquery-2.1.1.min.js"></script> <!--반드시필요함 -->
-    <script src = "./js/jquery-ui.min.js"></script>
-    <script src = "./js/jquery.easing.1.3.js"></script>
-    <script src = "./js/jquery.mousewheel.min.js"></script> <!--마우스휠js -->
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <!--반드시필요함 -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
+    <!--마우스휠js -->
     <!-- jQuery -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,173 +29,362 @@
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <!-- googleFont -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
     <!-- datepicher -->
 
     <link rel="stylesheet" href="./css/swiperCss/swiper.min.css">
     <script src="./js/swiperJs/swiper.min.js"></script>
     <!-- swiper -->
 
-    <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨--> <!--공통적인 css -->
+    <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨-->
+    <!--공통적인 css -->
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/commonStyle.css">
+    <link rel="stylesheet" href="../css/kjhLoginJoinStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <!-- <script src="../js/jquery.2.1.3.min.js"></script> -->
+    <script src="js/commonCustom.js"></script>
+    <script src="../js/kjhLoginJoinCustom.js"></script>
+
+    <link rel="stylesheet" href="../css/footer.css">
+
     <!-- <script src = "../js/commonCustom.js"></script> -->
 
-    <script src = "./js/fSearchList.js"></script>
+    <script src="./js/fSearchList.js"></script>
     <link rel="stylesheet" href="./css/fSearchList.css">
 
 </head>
 
-    <!-- 달력기능수정(보류), 더보기버튼수정(완료)), 지역이미지수정(보류), 검색창셀렉바확인(keyup, 셀렉바확인)), 정규표현식(완료) -->
-    <!-- 반응형 - 이런축제 삭제(확인), 글꼴확인(확인), 체크박스라디오박스확인(보류) -->
-    <!-- 코드정리 -->
+<!-- 달력기능수정(보류), 더보기버튼수정(완료)), 지역이미지수정(보류), 검색창셀렉바확인(keyup, 셀렉바확인)), 정규표현식(완료) -->
+<!-- 반응형 - 이런축제 삭제(확인), 글꼴확인(확인), 체크박스라디오박스확인(보류) -->
+<!-- 코드정리 -->
 
 <body>
 
-        <header id="header">
-                <div class="header_wrap">
-                    <div class="logo">
-                        <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
-                    </div>
-                    <!-- <div class="search">
-                        <input type="text" placeholder="검색">
-                        <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
-                    </div> -->
-                    <div id="menuBtn">M</div>
-                    <div class="clearFix"></div>
-                    <nav id="navigation_m">
-                        <ul class="header_gnb_m">
-                            <li><a href="#">로그인</a></li>
-                            <li><a href="#">회원가입</a></li>
-                            <li><a href="#">소도시</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                        </ul>
-                    </nav>
-                    <nav id="navigation">
-                        <ul class="header_gnb">
-                            <li><a href="#">로그인</a></li>
-                            <li><a href="#">회원가입</a></li>
-                            <li><a href="#">소도시</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">ABOUT US</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            
+    <header>
 
-        <div class = "container" id = "mainKeyword">
-            <div class = "row mainKeywordRow">
-                <div class = "col coldetailDiv">
-                    <!-- <span>#메인에서</span>
-                    <span>#넘어옴</span> -->
-                    <div>#메인에서</div>
-                    <div>#넘어옴</div>
-                    <button type="button" class="btn btn-warning btn-sm" id = "detailSearchBtn">상세조회</button>
-                </div>        
+
+        <!-- 꼭 필요한 부분2 입니다. -->
+
+
+        <div class="header_wrap_m">
+            <div class="header_top">
+                <div class="logo_m">
+                    <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
+                </div>
+                <!-- <div class="search">
+<input type="text" placeholder="검색">
+<button class="search_btn"><span><i class="fas fa-search"></i></span></button>
+</div> -->
+                <div id="menuBtn"><i class="fas fa-bars"></i></div>
             </div>
-            <hr>
+            <nav id="navigation_m">
+                <ul class="header_gnb_m">
+                    <li><a class="btn-login">로그인</a></li>
+                    <li><a class="btn-join">회원가입</a></li>
+                    <!-- <li><a>소도시</a></li> -->
+                    <li><a>고객센터</a></li>
+                    <li><a href="../etc/aboutus.html">ABOUT US</a></li>
+                </ul>
+            </nav>
         </div>
-
-    
-    
-        <div class = "container" id = "mainContainer">
-            <div class = "row" id = "firstBox">
-                <div class = "col-sm-7 subBox">
-    
-                    <div class = "row mapBox">
-                        <div class = "col mapBtn"><img src="./img/yujisang/sima1.png" alt="sima1" title = "훗카이도"><div class = "col mapSub">훗카이도</div></div>
-                        <div class = "col mapBtn"><img src="./img/yujisang/sima2.png" alt="sima2" title = "혼슈"><div class = "col mapSub">혼슈</div></div>
+        <div class="header_wrap">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
+            </div>
+            <nav id="navigation">
+                <ul class="header_gnb">
+                    <li><a class="btn-login">로그인</a></li>
+                    <li><a class="btn-join">회원가입</a></li>
+                    <!-- <li><a>소도시</a></li> -->
+                    <li><a>고객센터</a></li>
+                    <li><a href="../etc/aboutus.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 로그인 폼 -->
+        <div id="loginModule">
+            <div class="closeBackground"></div>
+            <div class="loginLayer">
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>아이디</span>
                     </div>
-                    <div class = "row mapBox">
-                        <div class = "col mapBtn"><img src="./img/yujisang/sima3.png" alt="sima3" title = "시코쿠"><div class = "col mapSub">시코쿠</div></div>
-                        <div class = "col mapBtn"><img src="./img/yujisang/sima4.png" alt="sima4" title = "큐슈"><div class = "col mapSub">큐슈</div></div>
+                    <div class="loginIdBox">
+                        <input type="text" name="loginId" id="loginId" class="focusFunc">
                     </div>
-                        <input type="checkbox" id="sima1" name="local" value = "훗카이도">
-                        <input type="checkbox" id="sima2" name="local" value = "혼슈">
-                        <input type="checkbox" id="sima3" name="local" value = "시코쿠">
-                        <input type="checkbox" id="sima4" name="local" value = "큐슈"> 
                 </div>
-    
-                <div class="col-sm-5 subBox">
-    
-    
-                    <div class="row toggleBox">
-                        
-                        <div class="custom-control custom-switch subToggleBox">
-                            <input type="checkbox" class="custom-control-input" checked = "checked" id="searchOption1" name="searchOption1">
-                            <label class="custom-control-label" for="searchOption1"></label>
-                        </div>
-                        <div class = "col" id = "toggleMsg">
-                            <span id = "toggleMsgSpan">현재진행축제</span>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호</span>
+                    </div>
+                    <div class="loginPwdBox">
+                        <input type="password" name="loginPwd" id="loginPwd" class="focusFunc">
+                    </div>
+                </div>
+                <div class="rmbIdChkBox">
+                    <div class="chkRmbId"></div>
+                    <div class="chkRmbId">아이디 기억</div>
+                    <div class="btn-pwFind">비밀번호찾기</div>
+                    <div class="btn-idFind">아이디찾기</div>
+                    <input type="checkbox" name="logRmbId" id="logRmbId" class="displayNone">
+                </div>
+                <div>
+                    <button>로그인</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-join">회원가입</span></div>
+                    <div><span class="closeLayer">닫기</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- // 로그인 폼 -->
+        <!-- 비밀번호 찾기 폼 -->
+        <div id="pwFindModule">
+            <div class="closeBackground"></div>
+            <div class="pwFindLayer">
+                <div>
+                    <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="pwFindEmailBox">
+                        <input type="text" name="pwFindEmail" id="pwFindEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <button>비밀번호 찾기</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                    <div class="btn-idFind">아이디찾기</div>
+                </div>
+            </div>
+        </div>
+        <!-- // 비밀번호 찾기 폼 -->
+        <!-- 아이디 찾기 폼 -->
+        <div id="idFindModule">
+            <div class="closeBackground"></div>
+            <div class="idFindLayer">
+                <div>
+                    <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="idFindEmailBox">
+                        <input type="text" name="idFindEmail" id="idFindEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <button>아이디 찾기</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                    <div class="btn-pwFind">비밀번호찾기</div>
+                </div>
+            </div>
+        </div>
+        <!-- // 아이디 찾기 폼 -->
+        <!-- 회원가입 폼 -->
+        <div id="joinModule">
+            <div class="closeBackground"></div>
+            <div class="joinLayer">
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>아이디</span>
+                    </div>
+                    <div class="joinIdBox">
+                        <input type="text" name="joinId" id="joinId" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호</span>
+                    </div>
+                    <div class="joinPwdBox">
+                        <input type="password" name="joinPwd" id="joinPwd" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호 확인</span>
+                    </div>
+                    <div class="joinPwdChkBox">
+                        <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="joinEmailBox">
+                        <input type="email" name="joinEmail" id="joinEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div class="agrPlc">
+                    <div></div>
+                    <div><span>회원가입 약관에 동의합니다. </span><a>(약관확인)</a></div>
+                    <input type="checkbox" name="agreePolicy" id="agreePolicy" class="displayNone">
+                </div>
+                <div class="agrEml">
+                    <div></div>
+                    <div>이메일 수신에 동의합니다.</div>
+                    <input type="checkbox" name="agreeEmail" id="agreeEmail" class="displayNone">
+                </div>
+                <div>
+                    <button>회원가입</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
+                    <div><span class="closeLayer">닫기</span></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- // 회원가입 폼 -->
+
+
+ 
+
+
+    </header>
+
+
+    <div class="container" id="mainKeyword">
+        <div class="row mainKeywordRow">
+            <div class="col coldetailDiv">
+                <!-- <span>#메인에서</span>
+                    <span>#넘어옴</span> -->
+                <div>#메인에서</div>
+                <div>#넘어옴</div>
+                <button type="button" class="btn btn-warning btn-sm" id="detailSearchBtn">상세조회</button>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+
+    <div class="container" id="mainContainer">
+        <div class="row" id="firstBox">
+            <div class="col-sm-7 subBox">
+
+                <div class="row mapBox">
+                    <div class="col mapBtn"><img src="./img/yujisang/sima1.png" alt="sima1" title="훗카이도">
+                        <div class="col mapSub">훗카이도</div>
+                    </div>
+                    <div class="col mapBtn"><img src="./img/yujisang/sima2.png" alt="sima2" title="혼슈">
+                        <div class="col mapSub">혼슈</div>
+                    </div>
+                </div>
+                <div class="row mapBox">
+                    <div class="col mapBtn"><img src="./img/yujisang/sima3.png" alt="sima3" title="시코쿠">
+                        <div class="col mapSub">시코쿠</div>
+                    </div>
+                    <div class="col mapBtn"><img src="./img/yujisang/sima4.png" alt="sima4" title="큐슈">
+                        <div class="col mapSub">큐슈</div>
+                    </div>
+                </div>
+                <input type="checkbox" id="sima1" name="local" value="훗카이도">
+                <input type="checkbox" id="sima2" name="local" value="혼슈">
+                <input type="checkbox" id="sima3" name="local" value="시코쿠">
+                <input type="checkbox" id="sima4" name="local" value="큐슈">
+            </div>
+
+            <div class="col-sm-5 subBox">
+
+
+                <div class="row toggleBox">
+
+                    <div class="custom-control custom-switch subToggleBox">
+                        <input type="checkbox" class="custom-control-input" checked="checked" id="searchOption1"
+                            name="searchOption1">
+                        <label class="custom-control-label" for="searchOption1"></label>
+                    </div>
+                    <div class="col" id="toggleMsg">
+                        <span id="toggleMsgSpan">현재진행축제</span>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- 검색창Div -->
+                <div class="row searchBox">
+                    <input type="text" class="form-control selectBox" id="searchEnter" placeholder="Search">
+                    <div class="input-group-append selectBox">
+                        <button class="btn btn-warning" id="selectBtn" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <!-- //검색창Div -->
+                <hr>
+                <!-- 날짜Div -->
+                <div class="row dateBox">
+                    <div class="input-group SubDateBox col">
+                        <input type="text" class="form-control dateInput" id="startDate" readonly="readonly" placeholder="시작날짜">
+                        <div class="input-group-prepend dateImage" id="startDateImage">
+                            <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                         </div>
                     </div>
-    
-    
-    
-    
-    
-                    <!-- 검색창Div -->
-                    <div class="row searchBox">
-                        <input type="text" class="form-control selectBox" id = "searchEnter" placeholder="Search">
-                        <div class="input-group-append selectBox">
-                            <button class="btn btn-warning" id="selectBtn" type="submit"><i class="fa fa-search"></i></button>  
+
+                    <div class="input-group SubDateBox col">
+                        <input type="text" class="form-control dateInput" id="endDate" readonly="readonly" placeholder="종료날짜">
+                        <div class="input-group-prepend dateImage" id="endDateImage">
+                            <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
                         </div>
                     </div>
-                    <!-- //검색창Div -->
-                    <hr>
-                    <!-- 날짜Div -->
-                    <div class = "row dateBox">        
-                            <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "startDate" onchange = "startDateSelect()" readonly = "readonly">
-                                <div class="input-group-prepend dateImage" id = "startDateImage">
-                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
-                                </div>
-                            </div>
-                            
-                            <div class="input-group SubDateBox col">
-                                <input type="text" class="form-control dateInput" id = "endDate" onclick = "endDateClick()"  readonly = "readonly">
-                                <div class="input-group-prepend dateImage" id = "endDateImage">
-                                    <span class="input-group-text"><i class='far fa-calendar-alt'></i></span>
-                                </div>
-                            </div>
-                    </div>
-                    <!-- //날짜Div -->
-                    <hr id = "dateBoxHr">
-                    <!-- 계절Div -->
-                    <div class = "row seasonBox">
-                        <div class = "col" id = "seasons">
+                </div>
+                <!-- //날짜Div -->
+                <hr id="dateBoxHr">
+                <!-- 계절Div -->
+                <div class="row seasonBox">
+                    <div class="col" id="seasons">
                         <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season1" name="season" value="1" checked>
+                            <input type="radio" class="custom-control-input seasonVal" id="season1" name="season"
+                                value="1" checked>
                             <label class="custom-control-label" for="season1">봄</label>
                         </div>
-                        </div>
-    
-                        <div class = "col" id = "seasons">
+                    </div>
+
+                    <div class="col" id="seasons">
                         <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season2" name="season" value="2">
+                            <input type="radio" class="custom-control-input seasonVal" id="season2" name="season"
+                                value="2">
                             <label class="custom-control-label" for="season2">여름</label>
                         </div>
-                        </div>
-    
-                        <div class = "col" id = "seasons">
+                    </div>
+
+                    <div class="col" id="seasons">
                         <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season3" name="season" value="3">
+                            <input type="radio" class="custom-control-input seasonVal" id="season3" name="season"
+                                value="3">
                             <label class="custom-control-label" for="season3">가을</label>
                         </div>
-                        </div>
-    
-                        <div class = "col" id = "seasons">
+                    </div>
+
+                    <div class="col" id="seasons">
                         <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season4" name="season" value="4">
+                            <input type="radio" class="custom-control-input seasonVal" id="season4" name="season"
+                                value="4">
                             <label class="custom-control-label" for="season4">겨울</label>
                         </div>
-                        </div>
+                    </div>
 
-                        <!-- <div class = "col">
+                    <!-- <div class = "col">
                         <div class="custom-control custom-radio subSeasonBox">
                             <input type="radio" class="custom-control-input seasonVal" id="season5" name="season" value="5">
                             <label class="custom-control-label" for="season4">전체</label>
@@ -205,413 +397,430 @@
                             <label class="custom-control-label" for="season4">없음</label>
                         </div>
                         </div> -->
-                    </div>
-                    <!-- //계절Div -->
-                    <hr>
-                    <!-- 종류Div -->
-                    <div class = "row sortBox">
-                        <div class = "col">
+                </div>
+                <!-- //계절Div -->
+                <hr>
+                <!-- 종류Div -->
+                <div class="row sortBox">
+                    <div class="col">
                         <div class="custom-control custom-switch sortToggleBox">
                             <input type="checkbox" class="custom-control-input" id="sortOption" name="sortOption">
                             <label class="custom-control-label" for="sortOption"></label>
                         </div>
+                    </div>
+                </div>
+
+                <div class="row sortBox">
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck1" name="sort" value="1">
+                            <label class="custom-control-label" for="sortCheck1">벚꽃</label>
                         </div>
                     </div>
-    
-                    <div class = "row sortBox">
-                            <div class = "col" id = "sorts">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck1" name="sort" value = "1">
-                                    <label class="custom-control-label" for="sortCheck1">벚꽃</label>
-                                </div>
-                            </div>
-                            <div class = "col" id = "sorts">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck2" name="sort" value = "2">
-                                    <label class="custom-control-label" for="sortCheck2">불꽃</label>
-                                </div>
-                            </div>
-                            <div class = "col" id = "sorts">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck3" name="sort" value = "3">
-                                    <label class="custom-control-label" for="sortCheck3">신사</label>
-                                </div>
-                            </div>
-                            <!-- <div class = "col">
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck2" name="sort" value="2">
+                            <label class="custom-control-label" for="sortCheck2">불꽃</label>
+                        </div>
+                    </div>
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck3" name="sort" value="3">
+                            <label class="custom-control-label" for="sortCheck3">신사</label>
+                        </div>
+                    </div>
+                    <!-- <div class = "col">
                                 <div class="custom-control custom-checkbox subSortBox">
                                     <input type="checkbox" class="custom-control-input" id="sortCheck4" name="sort" value = "4">
                                     <label class="custom-control-label" for="sortCheck4">맥주</label>
                                 </div>
                             </div> -->
+                </div>
+                <div class="row sortBox">
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck5" name="sort" value="4">
+                            <label class="custom-control-label" for="sortCheck5">맥주</label>
+                        </div>
                     </div>
-                    <div class = "row sortBox">
-                            <div class = "col" id = "sorts">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck5" name="sort" value = "4">
-                                    <label class="custom-control-label" for="sortCheck5">맥주</label>
-                                </div>
-                            </div>
-                            <div class = "col" id = "sorts">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck6" name="sort" value = "5">
-                                    <label class="custom-control-label" for="sortCheck6">얼음</label>
-                                </div>
-                            </div>
-                            <div class = "col" id = "sorts">
-                                    <div class="custom-control custom-checkbox subSortBox">
-                                        <input type="checkbox" class="custom-control-input" id="sortCheck7" name="sort" value = "6">
-                                        <label class="custom-control-label" for="sortCheck7">바다</label>
-                                    </div>
-                                </div>
-                            <!-- <div class = "col">
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck6" name="sort" value="5">
+                            <label class="custom-control-label" for="sortCheck6">얼음</label>
+                        </div>
+                    </div>
+                    <div class="col" id="sorts">
+                        <div class="custom-control custom-checkbox subSortBox">
+                            <input type="checkbox" class="custom-control-input" id="sortCheck7" name="sort" value="6">
+                            <label class="custom-control-label" for="sortCheck7">바다</label>
+                        </div>
+                    </div>
+                    <!-- <div class = "col">
                                 <div class="custom-control custom-checkbox subSortBox">
                                     <input type="checkbox" class="custom-control-input" id="sortCheck8" name="sort" value = "8">
                                     <label class="custom-control-label" for="sortCheck8">종류8</label>
                                 </div>
                             </div> -->
-                    </div>
-                    <!-- //종류Div -->
-                    <hr>
+                </div>
+                <!-- //종류Div -->
+                <hr>
 
-                    <div class = "row rengeDiv" >
-                        <div class = col-sm-3>
-                            <p>규모</p>
-                        </div>
-                        <div class = col-sm-3>
-                            <p>중형</p>
-                        </div>
-                        <div class = col-sm-6>
-                            <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value = "2" min = "1" max = "3" onchange = "rangeVal(this);">
-                        </div>
+                <div class="row rengeDiv">
+                    <div class=col-sm-3>
+                        <p>규모</p>
                     </div>
+                    <div class=col-sm-3>
+                        <p>중형</p>
+                    </div>
+                    <div class=col-sm-6>
+                        <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value="2" min="1"
+                            max="3" onchange="rangeVal(this);">
+                    </div>
+                </div>
 
 
 
 
-                    <!-- 키워드 추가 -->
-                    <div class = "row keyWordTitleBox">
-                        <div class = "col">
-                            <p>키워드 추가</p>
-                        </div>
+                <!-- 키워드 추가 -->
+                <div class="row keyWordTitleBox">
+                    <div class="col">
+                        <p>키워드 추가</p>
                     </div>
-                    <div class = "row keywordBox">
-                        <input type="text" class="form-control keywordSelectBox" id = "keywordEnter" placeholder="keyword">
-                        <div class="input-group-append keywordSelectBox">
-                            <button class="btn btn-warning" id="keywordBtn" type="submit"><i class="fas fa-plus"></i></button>  
-                        </div>
+                </div>
+                <div class="row keywordBox">
+                    <input type="text" class="form-control keywordSelectBox" id="keywordEnter" placeholder="keyword">
+                    <div class="input-group-append keywordSelectBox">
+                        <button class="btn btn-warning" id="keywordBtn" type="submit"><i
+                                class="fas fa-plus"></i></button>
                     </div>
-                    <div class = "row keywords">
-                        
-                            <span class = "keywordList">#새로추가</span>
-                            <span class = "keywordList">#할수있는</span>
-                            <span class = "keywordList">#keyword</span>
-                            
-                    </div>
-                    <!-- //키워드추가 -->
-                    <hr>
-                </div>    
-    
+                </div>
+                <div class="row keywords">
+
+                    <span class="keywordList">#새로추가</span>
+                    <span class="keywordList">#할수있는</span>
+                    <span class="keywordList">#keyword</span>
+
+                </div>
+                <!-- //키워드추가 -->
+                <hr>
             </div>
-            <!-- //첫번쨰 Div -->
-            <hr id = "firstHr">
-            
-            <!-- 세번쨰 Div -->
-            <br>
-            <h1 style = "text-align: center; font-family: 'Black Han Sans', sans-serif;">조회 결과 입니다</h1>
-            <br>
-    
-            <div class = "container" id = "thirdDiv">
-    
-                    <div class = "row photoSearch">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-4">
-                            <!-- <div class="input-group-append">
+
+        </div>
+        <!-- //첫번쨰 Div -->
+        <hr id="firstHr">
+
+        <!-- 세번쨰 Div -->
+        <br>
+        <h1 style="text-align: center; font-family: 'Black Han Sans', sans-serif;">조회 결과 입니다</h1>
+        <br>
+
+        <div class="container" id="thirdDiv">
+
+            <div class="row photoSearch">
+                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                    <!-- <div class="input-group-append">
                                 <span class="input-group-text">검색</span>
                             </div> -->
-                            <input type="text" class="form-control" placeholder="Search" id = "detailSearch">
-                        </div>
-                        <div class="col-md-2">
-                            <select name="festivals" class="custom-select">
-                                <option value="1">최신순</option>
-                                <option value="2">별점순</option>
-                                <option value="3">댓글순</option>
-                            </select>
-                        </div>
-                    </div>
-                    <hr>
-
-
-                    <div class = 'row photoRow'>
-                        <div class="col-md-4">
-                            <div class="thumbnail">
-                                <a href="./fDetail.html" class = "goDetail">
-                                    <img src="./img/yujisang/f1.jpg" alt="festival1">
-                                    <div class="caption">
-                                        <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
-                                    </div>
-                                </a>
-                                <span><i class="fas fa-star likeStar"></i>&ensp;4.5 (193)</span>
-                                
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail">
-                                <a href="./fDetail.html" class = "goDetail">
-                                        <img src="./img/yujisang/f2.jpg" alt="festival2">
-                                    <div class="caption">
-                                            <p>도쿄 카시나와 신사에서 열리는 벚꽃축제에 놀러오세요</p>
-                                    </div>
-                                </a>
-                                <span><i class="fas fa-star likeStar"></i>&ensp;3.7 (54)</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail">
-                                <a href="./fDetail.html" class = "goDetail">
-                                        <img src="./img/yujisang/f3.jpg" alt="festival3">
-                                    <div class="caption">
-                                            <p>매년 나고야에서 열리는 가장큰 축제~! 오나키 신사에서 열리는 불꽃축제에 놀러오세요</p>
-                                    </div>
-                                </a>
-                                <span><i class="fas fa-star likeStar"></i>&ensp;3.5 (2)</span>
-                            </div>
-                        </div>                  
-                    </div>
-
-                    <div class = 'row photoRow'>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                        <img src="./img/yujisang/f4.jpg" alt="festival4">
-                                        <div class="caption">
-                                            <p>후쿠오카 캐널시티에서 쇼핑을 즐기세요!!!</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;3.9 (93)</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                            <img src="./img/yujisang/f5.jpg" alt="festival5">
-                                        <div class="caption">
-                                                <p>아키타에서 즐기는 눈의축제!! 유키나라축제에 초대합니다</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;5.0 (13)</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                            <img src="./img/yujisang/f6.jpg" alt="festival6">
-                                        <div class="caption">
-                                                <p>매년 오키나와에서 열리는 가장큰 축제~! 자야오키 신사축제!!!</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.2 (82)</span>
-                                </div>
-                            </div>                  
-                        </div>
-
-                        <div class = 'row photoRow'>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                        <img src="./img/yujisang/f7.jpg" alt="festival7">
-                                        <div class="caption">
-                                            <p>시즈오카에서 열리는 맥주&오뎅 축제!! 즐겨주세요!!</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                            <img src="./img/yujisang/f8.jpg" alt="festival8">
-                                        <div class="caption">
-                                                <p>요코하마 해변에서 열리는 바다축제!! 재밌게 놀고 가세요!!</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="thumbnail">
-                                    <a href="./fDetail.html" class = "goDetail">
-                                            <img src="./img/yujisang/f9.jpg" alt="festival9">
-                                        <div class="caption">
-                                                <p>히로시마에서 먹는 오코노미야키!! 맥주축제를 즐겨주세요!!!</p>
-                                        </div>
-                                    </a>
-                                    <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
-                                </div>
-                            </div>                  
-                        </div>
-
-                        <!-- 숨기기 -->
-                        <div id = "hideDiv">
-                            <div class = 'row photoRow'>
-                                    <div class="col-md-4">
-                                            <div class="thumbnail">
-                                                <a href="./fDetail.html" class = "goDetail">
-                                                    <img src="./img/yujisang/f10.jpg" alt="festival10">
-                                                    <div class="caption">
-                                                        <p>지금 규베는 맥주축제중@@ 규베로 놀러오세요!~!</p>
-                                                    </div>
-                                                </a>
-                                                <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="thumbnail">
-                                                <a href="./fDetail.html" class = "goDetail">
-                                                        <img src="./img/yujisang/f11.jpg" alt="festival11">
-                                                    <div class="caption">
-                                                            <p>쿠마몽과 즐기는 바다 축제 쿠마모토에 오세요</p>
-                                                    </div>
-                                                </a>
-                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="thumbnail">
-                                                <a href="./fDetail.html" class = "goDetail">
-                                                        <img src="./img/yujisang/f12.jpg" alt="festival12">
-                                                    <div class="caption">
-                                                            <p>욧카이치를 아시나요??? 벛꽃으로 이쁜데... 놀러오실레용???</p>
-                                                    </div>
-                                                </a>
-                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
-                                            </div>
-                                        </div> 
-                                    </div>
-                            <div class = 'row photoRow'>
-                                    <div class="col-md-4">
-                                            <div class="thumbnail">
-                                                <a href="./fDetail.html" class = "goDetail">
-                                                    <img src="./img/yujisang/f13.jpg" alt="festival13">
-                                                    <div class="caption">
-                                                        <p>미에켄 전체에서열리는 불꽃대회!! 지금 신청하세요!!!</p>
-                                                    </div>
-                                                </a>
-                                                <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="thumbnail">
-                                                <a href="./fDetail.html" class = "goDetail">
-                                                        <img src="./img/yujisang/f14.jpg" alt="festival14">
-                                                    <div class="caption">
-                                                            <p>도쿄에서 가장 조용한 신사입니다 구경하고 가세요!!!</p>
-                                                    </div>
-                                                </a>
-                                                <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
-                                            </div>
-                                        </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-    
-                        <div class = "moreDiv">
-                            <button type="button" class="btn btn-info btn-xs" id = "moreBtn" onclick = "moreDiv()">더보기 1 / 2</button>
-                        </div>
-                        <hr>
+                    <input type="text" class="form-control" placeholder="Search" id="detailSearch">
+                </div>
+                <div class="col-md-2">
+                    <select name="festivals" class="custom-select">
+                        <option value="1">최신순</option>
+                        <option value="2">별점순</option>
+                        <option value="3">댓글순</option>
+                    </select>
+                </div>
             </div>
-            <!-- //세번째 Div -->
-
-
-
-            <!-- 두번쨰 Div -->
-            <br>
-            <h1 style = "text-align: center;font-family: 'Black Han Sans', sans-serif;" id = "secondDivTitle">이런 축제는 어떠세요?</h1>
-            <br>
-    
-    
-            <div class = "container" id = "secondDiv">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1" title = "festivalBanner1"></a></div>
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2" title = "festivalBanner2"></a></div>
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3" title = "festivalBanner3"></a></div>
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4" title = "festivalBanner4"></a></div>
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5" title = "festivalBanner5"></a></div>  
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6" title = "festivalBanner6"></a></div>  
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7" title = "festivalBanner7"></a></div>  
-                       <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8" title = "festivalBanner8"></a></div> 
-                    </div>
-                    <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                </div>    
-            </div>
-            <!-- //두번쨰 Div -->
             <hr>
 
-            
-        </div>
 
-        <br>
-        <br>
-        <br>
+            <div class='row photoRow'>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f1.jpg" alt="festival1">
+                            <div class="caption">
+                                <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;4.5 (193)</span>
 
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f2.jpg" alt="festival2">
+                            <div class="caption">
+                                <p>도쿄 카시나와 신사에서 열리는 벚꽃축제에 놀러오세요</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;3.7 (54)</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f3.jpg" alt="festival3">
+                            <div class="caption">
+                                <p>매년 나고야에서 열리는 가장큰 축제~! 오나키 신사에서 열리는 불꽃축제에 놀러오세요</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;3.5 (2)</span>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Footer -->
-        <footer id="footer">
-                <div class="footer_wrap">
-                  <div class="footer_top">
-                    <div class="footerbox about_us">
-                      <h3>ABOUT US</h3>
-                      <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
+            <div class='row photoRow'>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f4.jpg" alt="festival4">
+                            <div class="caption">
+                                <p>후쿠오카 캐널시티에서 쇼핑을 즐기세요!!!</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;3.9 (93)</span>
+
                     </div>
-                    <div class="footerbox contact_us">
-                        <h3>CONTACT US</h3>
-                        <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
-                        <p>+82 1234-5678</p>
-                        <p><a href="#">info&#64;airmatsuri.com</a></p>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f5.jpg" alt="festival5">
+                            <div class="caption">
+                                <p>아키타에서 즐기는 눈의축제!! 유키나라축제에 초대합니다</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;5.0 (13)</span>
                     </div>
-                    <div class="footerbox follow_us">
-                        <h3>FOLLOW US</h3>
-                        <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
-                        <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
-                        <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
-                        <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f6.jpg" alt="festival6">
+                            <div class="caption">
+                                <p>매년 오키나와에서 열리는 가장큰 축제~! 자야오키 신사축제!!!</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;4.2 (82)</span>
                     </div>
-                  </div>
-                  <div class="footer_bottom">
-                    <div class="footer_container">
-                        <div class="footer_copyright">
-                          <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                </div>
+            </div>
+
+            <div class='row photoRow'>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f7.jpg" alt="festival7">
+                            <div class="caption">
+                                <p>시즈오카에서 열리는 맥주&오뎅 축제!! 즐겨주세요!!</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f8.jpg" alt="festival8">
+                            <div class="caption">
+                                <p>요코하마 해변에서 열리는 바다축제!! 재밌게 놀고 가세요!!</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="./fDetail.html" class="goDetail">
+                            <img src="./img/yujisang/f9.jpg" alt="festival9">
+                            <div class="caption">
+                                <p>히로시마에서 먹는 오코노미야키!! 맥주축제를 즐겨주세요!!!</p>
+                            </div>
+                        </a>
+                        <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 숨기기 -->
+            <div id="hideDiv">
+                <div class='row photoRow'>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="./fDetail.html" class="goDetail">
+                                <img src="./img/yujisang/f10.jpg" alt="festival10">
+                                <div class="caption">
+                                    <p>지금 규베는 맥주축제중@@ 규베로 놀러오세요!~!</p>
+                                </div>
+                            </a>
+                            <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+
                         </div>
-                        <div class="footer_gnb">
-                          <ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="./fDetail.html" class="goDetail">
+                                <img src="./img/yujisang/f11.jpg" alt="festival11">
+                                <div class="caption">
+                                    <p>쿠마몽과 즐기는 바다 축제 쿠마모토에 오세요</p>
+                                </div>
+                            </a>
+                            <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="./fDetail.html" class="goDetail">
+                                <img src="./img/yujisang/f12.jpg" alt="festival12">
+                                <div class="caption">
+                                    <p>욧카이치를 아시나요??? 벛꽃으로 이쁜데... 놀러오실레용???</p>
+                                </div>
+                            </a>
+                            <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class='row photoRow'>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="./fDetail.html" class="goDetail">
+                                <img src="./img/yujisang/f13.jpg" alt="festival13">
+                                <div class="caption">
+                                    <p>미에켄 전체에서열리는 불꽃대회!! 지금 신청하세요!!!</p>
+                                </div>
+                            </a>
+                            <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <a href="./fDetail.html" class="goDetail">
+                                <img src="./img/yujisang/f14.jpg" alt="festival14">
+                                <div class="caption">
+                                    <p>도쿄에서 가장 조용한 신사입니다 구경하고 가세요!!!</p>
+                                </div>
+                            </a>
+                            <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="moreDiv">
+                <button type="button" class="btn btn-info btn-xs" id="moreBtn" onclick="moreDiv()">더보기 1 / 2</button>
+            </div>
+            <hr>
+        </div>
+        <!-- //세번째 Div -->
+
+
+
+        <!-- 두번쨰 Div -->
+        <br>
+        <h1 style="text-align: center;font-family: 'Black Han Sans', sans-serif;" id="secondDivTitle">이런 축제는 어떠세요?</h1>
+        <br>
+
+
+        <div class="container" id="secondDiv">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1"
+                                title="festivalBanner1"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2"
+                                title="festivalBanner2"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3"
+                                title="festivalBanner3"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4"
+                                title="festivalBanner4"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5"
+                                title="festivalBanner5"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6"
+                                title="festivalBanner6"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7"
+                                title="festivalBanner7"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8"
+                                title="festivalBanner8"></a></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <!-- //두번쨰 Div -->
+        <hr>
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer_wrap">
+            <div class="footer_top">
+                <div class="footerbox about_us">
+                    <h3>ABOUT US</h3>
+                    <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of
+                        festivals Local festival information, Tourism Guide, Interpretation, translations in various
+                        languages.</p>
+                </div>
+                <div class="footerbox contact_us">
+                    <h3>CONTACT US</h3>
+                    <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+                    <p>+82 1234-5678</p>
+                    <p><a href="#">info&#64;airmatsuri.com</a></p>
+                </div>
+                <div class="footerbox follow_us">
+                    <h3>FOLLOW US</h3>
+                    <a href="http://www.facebook.com" target="_blank"><span><i
+                                class="fab fa-facebook-square"></i></span></a>
+                    <a href="http://www.twitter.com" target="_blank"><span><i
+                                class="fab fa-twitter-square"></i></span></a>
+                    <a href="http://www.youtube.com" target="_blank"><span><i
+                                class="fab fa-youtube-square"></i></span></a>
+                    <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i
+                                class="fab fa-instagram"></i></span></a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="footer_container">
+                    <div class="footer_copyright">
+                        <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
+                    </div>
+                    <div class="footer_gnb">
+                        <ul>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Terms of Service</a></li>
                             <li><a href="#">Contact Us</a></li>
-                          </ul>
-                        </div>
+                        </ul>
                     </div>
-                  </div>
                 </div>
-              </footer>
-            <!-- //Footer -->
-    
-    </body>
+            </div>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+</body>
+
 </html>
