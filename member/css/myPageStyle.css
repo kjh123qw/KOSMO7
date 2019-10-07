@@ -1,11 +1,15 @@
 
-#wrap {
+#wrap { /*wrap*/
     width: 100%;
 }
+
+/*aside*/
+
 aside {
     padding: 5px;
     width: 15%;
-    float: left;
+    float: left;  /*left side */
+    margin-top: 10%;
 }
 aside > div {
     height: 45px;
