@@ -249,7 +249,21 @@ $(function(){
         $('#startDate').val("시작날짜");
         $('#endDate').val("종료날짜");
 
-         $('#hideDiv').css('display','none');
+        $('#hideDiv').css('display','none');
+
+
+        // $('.testDiv').css('display','none')
+
+        $('.fInfoDiv').mouseover(function(){
+            $(this).find('p').css('color','white')
+        })
+
+        $('.fInfoDiv').mouseleave(function(){
+            $(this).find('p').css('color','black')
+        })
+
+
+
 
 });
 

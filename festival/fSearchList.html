@@ -254,11 +254,6 @@
             </div>
         </div>
         <!-- // 회원가입 폼 -->
-
-
- 
-
-
     </header>
 
 
@@ -323,13 +318,13 @@
 
 
                 <!-- 검색창Div -->
-                <div class="row searchBox">
+                <!-- <div class="row searchBox">
                     <input type="text" class="form-control selectBox" id="searchEnter" placeholder="Search">
                     <div class="input-group-append selectBox">
                         <button class="btn btn-warning" id="selectBtn" type="submit"><i
                                 class="fa fa-search"></i></button>
                     </div>
-                </div>
+                </div> -->
                 <!-- //검색창Div -->
                 <hr>
                 <!-- 날짜Div -->
@@ -482,7 +477,7 @@
 
 
                 <!-- 키워드 추가 -->
-                <div class="row keyWordTitleBox">
+                <!-- <div class="row keyWordTitleBox">
                     <div class="col">
                         <p>키워드 추가</p>
                     </div>
@@ -500,9 +495,18 @@
                     <span class="keywordList">#할수있는</span>
                     <span class="keywordList">#keyword</span>
 
-                </div>
+                </div> -->
                 <!-- //키워드추가 -->
                 <hr>
+                <div class="row searchBox">
+                    <input type="text" class="form-control selectBox" id="searchEnter" placeholder="Search">
+                    <div class="input-group-append selectBox">
+                        <button class="btn btn-warning" id="selectBtn" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>
@@ -536,16 +540,26 @@
 
 
             <div class='row photoRow'>
-                <div class="col-md-4">
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
+                        <!-- <div class = "testDiv"></div> -->
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f1.jpg" alt="festival1">
-                            <div class="caption">
+                            <div class = "imgDiv"><img src="./img/yujisang/f1.jpg" alt="festival1"></div>
+                            <div class = "caption">
+                                <p>[오사카] 신사 불꽃축제입니다</p>
+                            </div>
+                            <div class="subCaption">
                                 <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;4.5 (193)</span>
+                        <div class="row keywords">
 
+                                <span class="keywordList">신사</span>
+                                <span class="keywordList">불꽃</span>
+                                <span class="keywordList">7월 18일</span>
+            
+                        </div> 
+                        <!-- <div class = "keywordDiv col">신사</div><div class = "keywordDiv col">불꽃</div><div class = "keywordDiv col">7월 18일</div> -->
                     </div>
                 </div>
                 <div class="col-md-4">
