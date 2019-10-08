@@ -13,12 +13,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- 부트스트랩 -->
 
-    <script src="./js/jquery-2.1.1.min.js"></script>
-    <!--반드시필요함 -->
+    <script src="./js/jquery-2.1.1.min.js"></script><!--반드시필요함 -->
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/jquery.easing.1.3.js"></script>
-    <script src="./js/jquery.mousewheel.min.js"></script>
-    <!--마우스휠js -->
+    <script src="./js/jquery.mousewheel.min.js"></script><!--마우스휠js -->
     <!-- jQuery -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,33 +27,26 @@
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <!-- googleFont -->
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
     <!-- datepicher -->
 
     <link rel="stylesheet" href="./css/swiperCss/swiper.min.css">
     <script src="./js/swiperJs/swiper.min.js"></script>
     <!-- swiper -->
 
-    <!--<link rel="stylesheet" href="./css/common.css"> 아직적용안됨-->
-    <!--공통적인 css -->
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/commonStyle.css">
     <link rel="stylesheet" href="../css/kjhLoginJoinStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <!-- <script src="../js/jquery.2.1.3.min.js"></script> -->
     <script src="js/commonCustom.js"></script>
     <script src="../js/kjhLoginJoinCustom.js"></script>
-
     <link rel="stylesheet" href="../css/footer.css">
-
-    <!-- <script src = "../js/commonCustom.js"></script> -->
-
+    <!--공통적인 css -->
     <script src="./js/fSearchList.js"></script>
     <link rel="stylesheet" href="./css/fSearchList.css">
+
 
 </head>
 
@@ -255,13 +246,13 @@
         </div>
         <!-- // 회원가입 폼 -->
     </header>
+    <!-- //header끝 -->
 
 
+    <!-- 메인에서 넘어오는 키워드 , 상세조회 버튼 -->
     <div class="container" id="mainKeyword">
         <div class="row mainKeywordRow">
             <div class="col coldetailDiv">
-                <!-- <span>#메인에서</span>
-                    <span>#넘어옴</span> -->
                 <div>#메인에서</div>
                 <div>#넘어옴</div>
                 <button type="button" class="btn btn-warning btn-sm" id="detailSearchBtn">상세조회</button>
@@ -269,13 +260,15 @@
         </div>
         <hr>
     </div>
+    <!-- //메인에서 넘어오는 키워드 , 상세조회 버튼 -->
+
 
 
 
     <div class="container" id="mainContainer">
         <div class="row" id="firstBox">
+            <!-- 지방 , 지도 , 체크박스 -->
             <div class="col-sm-7 subBox">
-
                 <div class="row mapBox">
                     <div class="col mapBtn"><img src="./img/yujisang/sima1.png" alt="sima1" title="훗카이도">
                         <div class="col mapSub">훗카이도</div>
@@ -297,12 +290,11 @@
                 <input type="checkbox" id="sima3" name="local" value="시코쿠">
                 <input type="checkbox" id="sima4" name="local" value="큐슈">
             </div>
+            <!-- //지방 , 지도 , 체크박스 -->
 
             <div class="col-sm-5 subBox">
-
-
+                <!-- 토글 컨트롤(현재, 전체) -->
                 <div class="row toggleBox">
-
                     <div class="custom-control custom-switch subToggleBox">
                         <input type="checkbox" class="custom-control-input" checked="checked" id="searchOption1"
                             name="searchOption1">
@@ -312,20 +304,7 @@
                         <span id="toggleMsgSpan">현재진행축제</span>
                     </div>
                 </div>
-
-
-
-
-
-                <!-- 검색창Div -->
-                <!-- <div class="row searchBox">
-                    <input type="text" class="form-control selectBox" id="searchEnter" placeholder="Search">
-                    <div class="input-group-append selectBox">
-                        <button class="btn btn-warning" id="selectBtn" type="submit"><i
-                                class="fa fa-search"></i></button>
-                    </div>
-                </div> -->
-                <!-- //검색창Div -->
+                <!-- //토글 컨트롤(현재, 전체) -->
                 <hr>
                 <!-- 날짜Div -->
                 <div class="row dateBox">
@@ -378,20 +357,6 @@
                             <label class="custom-control-label" for="season4">겨울</label>
                         </div>
                     </div>
-
-                    <!-- <div class = "col">
-                        <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season5" name="season" value="5">
-                            <label class="custom-control-label" for="season4">전체</label>
-                        </div>
-                        </div>
-
-                        <div class = "col">
-                        <div class="custom-control custom-radio subSeasonBox">
-                            <input type="radio" class="custom-control-input seasonVal" id="season6" name="season" value="6">
-                            <label class="custom-control-label" for="season4">없음</label>
-                        </div>
-                        </div> -->
                 </div>
                 <!-- //계절Div -->
                 <hr>
@@ -424,12 +389,6 @@
                             <label class="custom-control-label" for="sortCheck3">신사</label>
                         </div>
                     </div>
-                    <!-- <div class = "col">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck4" name="sort" value = "4">
-                                    <label class="custom-control-label" for="sortCheck4">맥주</label>
-                                </div>
-                            </div> -->
                 </div>
                 <div class="row sortBox">
                     <div class="col" id="sorts">
@@ -450,16 +409,10 @@
                             <label class="custom-control-label" for="sortCheck7">바다</label>
                         </div>
                     </div>
-                    <!-- <div class = "col">
-                                <div class="custom-control custom-checkbox subSortBox">
-                                    <input type="checkbox" class="custom-control-input" id="sortCheck8" name="sort" value = "8">
-                                    <label class="custom-control-label" for="sortCheck8">종류8</label>
-                                </div>
-                            </div> -->
                 </div>
                 <!-- //종류Div -->
                 <hr>
-
+                <!-- 규모 -->
                 <div class="row rengeDiv">
                     <div class=col-sm-3>
                         <p>규모</p>
@@ -468,307 +421,433 @@
                         <p>중형</p>
                     </div>
                     <div class=col-sm-6>
-                        <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value="2" min="1"
-                            max="3" onchange="rangeVal(this);">
+                        <input type="range" class="custom-range" id="sizeRange" name="festevalSize" value="2" min="1" max="3" onchange="rangeVal(this);">
                     </div>
                 </div>
-
-
-
-
-                <!-- 키워드 추가 -->
-                <!-- <div class="row keyWordTitleBox">
-                    <div class="col">
-                        <p>키워드 추가</p>
-                    </div>
-                </div>
-                <div class="row keywordBox">
-                    <input type="text" class="form-control keywordSelectBox" id="keywordEnter" placeholder="keyword">
-                    <div class="input-group-append keywordSelectBox">
-                        <button class="btn btn-warning" id="keywordBtn" type="submit"><i
-                                class="fas fa-plus"></i></button>
-                    </div>
-                </div>
-                <div class="row keywords">
-
-                    <span class="keywordList">#새로추가</span>
-                    <span class="keywordList">#할수있는</span>
-                    <span class="keywordList">#keyword</span>
-
-                </div> -->
-                <!-- //키워드추가 -->
+                <!-- 규모 -->
                 <hr>
+                <!-- search검색창, 버튼 -->
                 <div class="row searchBox">
                     <input type="text" class="form-control selectBox" id="searchEnter" placeholder="Search">
                     <div class="input-group-append selectBox">
-                        <button class="btn btn-warning" id="selectBtn" type="submit"><i
-                                class="fa fa-search"></i></button>
+                        <button class="btn btn-warning" id="selectBtn" type="submit"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
-
-
+                <!-- //search검색창, 버튼 -->
             </div>
 
         </div>
         <!-- //첫번쨰 Div -->
         <hr id="firstHr">
 
-        <!-- 세번쨰 Div -->
+
         <br>
         <h1 style="text-align: center; font-family: 'Black Han Sans', sans-serif;">조회 결과 입니다</h1>
         <br>
 
         <div class="container" id="thirdDiv">
-
+            <!-- keyup검색창, selectbox -->
             <div class="row photoSearch">
                 <div class="col-md-6"></div>
                 <div class="col-md-4">
-                    <!-- <div class="input-group-append">
-                                <span class="input-group-text">검색</span>
-                            </div> -->
                     <input type="text" class="form-control" placeholder="Search" id="detailSearch">
                 </div>
                 <div class="col-md-2">
                     <select name="festivals" class="custom-select">
-                        <option value="1">최신순</option>
-                        <option value="2">별점순</option>
-                        <option value="3">댓글순</option>
+                        <option value="최신순">최신순</option>
+                        <option value="별점순">별점순</option>
+                        <option value="댓글순">댓글순</option>
                     </select>
                 </div>
             </div>
+            <!-- //keyup검색창, selectbox -->
             <hr>
 
-
+            <!-- 처음에 보여질 Div -->
             <div class='row photoRow'>
+
+                <!-- 게시물 1개 div -->
                 <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
-                        <!-- <div class = "testDiv"></div> -->
                         <a href="./fDetail.html" class="goDetail">
                             <div class = "imgDiv"><img src="./img/yujisang/f1.jpg" alt="festival1"></div>
-                            <div class = "caption">
+                            <div class = "caption"> <!-- 제목 추가 div -->
                                 <p>[오사카] 신사 불꽃축제입니다</p>
                             </div>
-                            <div class="subCaption">
+                            <div class="subCaption"> <!-- 부제목 추가 div -->
                                 <p>매년 오사카에서 열리는 가장큰 축제~! 토모요시 신사에서 열리는 불꽃축제에 놀러오세요</p>
                             </div>
                         </a>
-                        <div class="row keywords">
-
+                        <div class="row keywords"> <!-- 키워드 추가 div -->
                                 <span class="keywordList">신사</span>
                                 <span class="keywordList">불꽃</span>
-                                <span class="keywordList">7월 18일</span>
-            
+                                <span class="keywordList">1월 18일</span>
                         </div> 
-                        <!-- <div class = "keywordDiv col">신사</div><div class = "keywordDiv col">불꽃</div><div class = "keywordDiv col">7월 18일</div> -->
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f2.jpg" alt="festival2">
+                            <div class="imgDiv"><img src="./img/yujisang/f2.jpg" alt="festival2"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[도쿄] 카시나와 신사입니다</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>도쿄 카시나와 신사에서 열리는 벚꽃축제에 놀러오세요</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;3.7 (54)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">신사</span>
+                            <span class="keywordList">벛꽃</span>
+                            <span class="keywordList">1월 05일</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f3.jpg" alt="festival3">
+                            <div class="imgDiv"><img src="./img/yujisang/f3.jpg" alt="festival3"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[나고야] 오나키 불꽃축제</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>매년 나고야에서 열리는 가장큰 축제~! 오나키 신사에서 열리는 불꽃축제에 놀러오세요</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;3.5 (2)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">신사</span>
+                            <span class="keywordList">불꽃</span>
+                            <span class="keywordList">12월 29일</span>
+                        </div>
                     </div>
                 </div>
+                <!-- //게시물 1개 div -->
             </div>
 
             <div class='row photoRow'>
-                <div class="col-md-4">
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f4.jpg" alt="festival4">
+                            <div class="imgDiv"><img src="./img/yujisang/f4.jpg" alt="festival4"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[후쿠오카] 캐널시티</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>후쿠오카 캐널시티에서 쇼핑을 즐기세요!!!</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;3.9 (93)</span>
-
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">가을</span>
+                            <span class="keywordList">쇼핑</span>
+                            <span class="keywordList">11월 29일</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f5.jpg" alt="festival5">
+                            <div class="imgDiv"><img src="./img/yujisang/f5.jpg" alt="festival5"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[아키타] 유키나라축제</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>아키타에서 즐기는 눈의축제!! 유키나라축제에 초대합니다</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;5.0 (13)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">겨울</span>
+                            <span class="keywordList">눈</span>
+                            <span class="keywordList">3월 15일</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+                
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f6.jpg" alt="festival6">
+                            <div class="imgDiv"><img src="./img/yujisang/f6.jpg" alt="festival6"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[오키나와] 자야오키 신사</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>매년 오키나와에서 열리는 가장큰 축제~! 자야오키 신사축제!!!</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;4.2 (82)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">겨울</span>
+                            <span class="keywordList">신사</span>
+                            <span class="keywordList">1월 26일</span>
+                        </div>
                     </div>
                 </div>
+                <!-- //게시물 1개 div -->
             </div>
 
             <div class='row photoRow'>
-                <div class="col-md-4">
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f7.jpg" alt="festival7">
+                            <div class="imgDiv"><img src="./img/yujisang/f7.jpg" alt="festival7"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[시즈오카] 쿄우니 거리</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>시즈오카에서 열리는 맥주&오뎅 축제!! 즐겨주세요!!</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
-
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">겨울</span>
+                            <span class="keywordList">맥주</span>
+                            <span class="keywordList">1월 17일</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+            
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f8.jpg" alt="festival8">
+                            <div class="imgDiv"><img src="./img/yujisang/f8.jpg" alt="festival8"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[요코하마] 바다 & 해변 </p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>요코하마 해변에서 열리는 바다축제!! 재밌게 놀고 가세요!!</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">여름</span>
+                            <span class="keywordList">바다</span>
+                            <span class="keywordList">7월 15일</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <!-- //게시물 1개 div -->
+            
+                <!-- 게시물 1개 div -->
+                <div class="col-md-4 fInfoDiv">
                     <div class="thumbnail">
                         <a href="./fDetail.html" class="goDetail">
-                            <img src="./img/yujisang/f9.jpg" alt="festival9">
+                            <div class="imgDiv"><img src="./img/yujisang/f9.jpg" alt="festival9"></div>
                             <div class="caption">
+                                <!-- 제목 추가 div -->
+                                <p>[히로시마] 맥주와 오코노미야키</p>
+                            </div>
+                            <div class="subCaption">
+                                <!-- 부제목 추가 div -->
                                 <p>히로시마에서 먹는 오코노미야키!! 맥주축제를 즐겨주세요!!!</p>
                             </div>
                         </a>
-                        <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                        <div class="row keywords">
+                            <!-- 키워드 추가 div -->
+                            <span class="keywordList">가을</span>
+                            <span class="keywordList">맥주</span>
+                            <span class="keywordList">9월 03일</span>
+                        </div>
                     </div>
                 </div>
+                <!-- //게시물 1개 div -->
             </div>
+            <!-- //처음에 보여질 Div -->
+
 
             <!-- 숨기기 -->
             <div id="hideDiv">
-                <div class='row photoRow'>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="./fDetail.html" class="goDetail">
-                                <img src="./img/yujisang/f10.jpg" alt="festival10">
-                                <div class="caption">
-                                    <p>지금 규베는 맥주축제중@@ 규베로 놀러오세요!~!</p>
-                                </div>
-                            </a>
-                            <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="./fDetail.html" class="goDetail">
-                                <img src="./img/yujisang/f11.jpg" alt="festival11">
-                                <div class="caption">
-                                    <p>쿠마몽과 즐기는 바다 축제 쿠마모토에 오세요</p>
+                    <div class='row photoRow'>
+                        <!-- 게시물 1개 div -->
+                        <div class="col-md-4 fInfoDiv">
+                            <div class="thumbnail">
+                                <a href="./fDetail.html" class="goDetail">
+                                    <div class="imgDiv"><img src="./img/yujisang/f10.jpg" alt="festival10"></div>
+                                    <div class="caption">
+                                        <!-- 제목 추가 div -->
+                                        <p>[큐베] 토오리 맥주 축제</p>
+                                    </div>
+                                    <div class="subCaption">
+                                        <!-- 부제목 추가 div -->
+                                        <p>지금 규베는 맥주축제중!! 규베로 놀러오세요</p>
+                                    </div>
+                                </a>
+                                <div class="row keywords">
+                                    <!-- 키워드 추가 div -->
+                                    <span class="keywordList">겨울</span>
+                                    <span class="keywordList">맥주</span>
+                                    <span class="keywordList">2월 10일</span>
                                 </div>
-                            </a>
-                            <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="./fDetail.html" class="goDetail">
-                                <img src="./img/yujisang/f12.jpg" alt="festival12">
-                                <div class="caption">
-                                    <p>욧카이치를 아시나요??? 벛꽃으로 이쁜데... 놀러오실레용???</p>
+                        <!-- //게시물 1개 div -->
+                    
+                        <!-- 게시물 1개 div -->
+                        <div class="col-md-4 fInfoDiv">
+                            <div class="thumbnail">
+                                <a href="./fDetail.html" class="goDetail">
+                                    <div class="imgDiv"><img src="./img/yujisang/f11.jpg" alt="festival11"></div>
+                                    <div class="caption">
+                                        <!-- 제목 추가 div -->
+                                        <p>[쿠마모토] 나츠쿠모 해변축제 </p>
+                                    </div>
+                                    <div class="subCaption">
+                                        <!-- 부제목 추가 div -->
+                                        <p>쿠마몽과 즐기는 바다 축제 쿠마모토에 오세요</p>
+                                    </div>
+                                </a>
+                                <div class="row keywords">
+                                    <!-- 키워드 추가 div -->
+                                    <span class="keywordList">여름</span>
+                                    <span class="keywordList">해변</span>
+                                    <span class="keywordList">8월 03일</span>
                                 </div>
-                            </a>
-                            <span><i class="fas fa-star likeStar"></i>&ensp;4.3 (17)</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class='row photoRow'>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="./fDetail.html" class="goDetail">
-                                <img src="./img/yujisang/f13.jpg" alt="festival13">
-                                <div class="caption">
-                                    <p>미에켄 전체에서열리는 불꽃대회!! 지금 신청하세요!!!</p>
+                        <!-- //게시물 1개 div -->
+                    
+                        <!-- 게시물 1개 div -->
+                        <div class="col-md-4 fInfoDiv">
+                            <div class="thumbnail">
+                                <a href="./fDetail.html" class="goDetail">
+                                    <div class="imgDiv"><img src="./img/yujisang/f12.jpg" alt="festival12"></div>
+                                    <div class="caption">
+                                        <!-- 제목 추가 div -->
+                                        <p>[욧카이치] 나스이거리 벛꽃축제</p>
+                                    </div>
+                                    <div class="subCaption">
+                                        <!-- 부제목 추가 div -->
+                                        <p>욧카이치를 아시나요??? 벛꽃으로 이쁜데... 놀러오실레용???</p>
+                                    </div>
+                                </a>
+                                <div class="row keywords">
+                                    <!-- 키워드 추가 div -->
+                                    <span class="keywordList">봄</span>
+                                    <span class="keywordList">벛꽃</span>
+                                    <span class="keywordList">4월 10일</span>
                                 </div>
-                            </a>
-                            <span><i class="fas fa-star likeStar"></i>&ensp;3.2 (105)</span>
+                            </div>
+                        </div>
+                        <!-- //게시물 1개 div -->
+                    </div>
 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <a href="./fDetail.html" class="goDetail">
-                                <img src="./img/yujisang/f14.jpg" alt="festival14">
-                                <div class="caption">
-                                    <p>도쿄에서 가장 조용한 신사입니다 구경하고 가세요!!!</p>
+                    <div class='row photoRow'>
+                            <!-- 게시물 1개 div -->
+                            <div class="col-md-4 fInfoDiv">
+                                <div class="thumbnail">
+                                    <a href="./fDetail.html" class="goDetail">
+                                        <div class="imgDiv"><img src="./img/yujisang/f13.jpg" alt="festival3"></div>
+                                        <div class="caption">
+                                            <!-- 제목 추가 div -->
+                                            <p>[미에] 치만불꽃대회</p>
+                                        </div>
+                                        <div class="subCaption">
+                                            <!-- 부제목 추가 div -->
+                                            <p>미에켄 전체에서열리는 불꽃대회!! 지금 신청하세요!!!</p>
+                                        </div>
+                                    </a>
+                                    <div class="row keywords">
+                                        <!-- 키워드 추가 div -->
+                                        <span class="keywordList">가을</span>
+                                        <span class="keywordList">불꽃</span>
+                                        <span class="keywordList">9월 09일</span>
+                                    </div>
                                 </div>
-                            </a>
-                            <span><i class="fas fa-star likeStar"></i>&ensp;4.1 (25)</span>
+                            </div>
+                            <!-- //게시물 1개 div -->
+                        
+                            <!-- 게시물 1개 div -->
+                            <div class="col-md-4 fInfoDiv">
+                                <div class="thumbnail">
+                                    <a href="./fDetail.html" class="goDetail">
+                                        <div class="imgDiv"><img src="./img/yujisang/f14.jpg" alt="festival14"></div>
+                                        <div class="caption">
+                                            <!-- 제목 추가 div -->
+                                            <p>[도쿄] 오사미신사 </p>
+                                        </div>
+                                        <div class="subCaption">
+                                            <!-- 부제목 추가 div -->
+                                            <p>도쿄에서 가장 조용한 신사입니다 구경하고 가세요!!!</p>
+                                        </div>
+                                    </a>
+                                    <div class="row keywords">
+                                        <!-- 키워드 추가 div -->
+                                        <span class="keywordList">봄</span>
+                                        <span class="keywordList">신사</span>
+                                        <span class="keywordList">4월 04일</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //게시물 1개 div -->
                         </div>
-                    </div>
-                </div>
             </div>
+            <!-- //게시물끝 -->
 
 
-
-
-
-
-
-
-
-
-
-
+            <!-- 더보기버튼 -->
             <div class="moreDiv">
-                <button type="button" class="btn btn-info btn-xs" id="moreBtn" onclick="moreDiv()">더보기 1 / 2</button>
+                <button type="button" class="btn btn-warning btn-xs" id="moreBtn" onclick="moreDiv()">더보기 1 / 2</button>
             </div>
             <hr>
+            <!-- //더보기버튼 -->
+
         </div>
-        <!-- //세번째 Div -->
 
-
-
-        <!-- 두번쨰 Div -->
         <br>
         <h1 style="text-align: center;font-family: 'Black Han Sans', sans-serif;" id="secondDivTitle">이런 축제는 어떠세요?</h1>
         <br>
 
-
+        <!-- 스와이프 -->
         <div class="container" id="secondDiv">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb1.jpg" alt="festivalBanner1"
                                 title="festivalBanner1"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb2.jpg" alt="festivalBanner2"
                                 title="festivalBanner2"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb3.jpg" alt="festivalBanner3"
                                 title="festivalBanner3"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb4.jpg" alt="festivalBanner4"
                                 title="festivalBanner4"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb5.jpg" alt="festivalBanner5"
                                 title="festivalBanner5"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb6.jpg" alt="festivalBanner6"
                                 title="festivalBanner6"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb7.jpg" alt="festivalBanner7"
                                 title="festivalBanner7"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8"
+                    <div class="swiper-slide"><a href="./fDetail.html"><img src="./img/yujisang/fb8.jpg" alt="festivalBanner8"
                                 title="festivalBanner8"></a></div>
                 </div>
                 <!-- Add Pagination -->
@@ -777,17 +856,14 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </div>
-        <!-- //두번쨰 Div -->
         <hr>
-
+        <!-- //스와이프 -->
 
     </div>
 
     <br>
     <br>
     <br>
-
-
     <!-- Footer -->
     <footer id="footer">
         <div class="footer_wrap">

@@ -3,7 +3,6 @@ $(function(){
       $('#fileInput').change(function(){
         var file = document.getElementById("fileInput").files;
         var length = file.length;
-        // var length = $('#photoList div').length;
         var htmlText = "";
         var fileName = "";
 
@@ -13,60 +12,62 @@ $(function(){
         }
 
         if(length == 0){ // 취소했을때
-          // $('#fileLabel').text("File Upload");
-          // $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
-          // $("#photoList").unbind();
-
           var divHtml = $('#photoList').html();
           $('#photoList').html(divHtml);
-          
-
           return false;
         }
-
-         //기존의 파일이 있을때 추가하기
 
         for(var i=0; i<length;i++){
             var url = $('#fileInput').prop("files")[i];
             blobURL = window.URL.createObjectURL(url);
-            
-            // htmlText += "<div onclick = 'deleteImg("+i+"); value = "+i+"'><img src="+blobURL+" title = image"+i+"></div>";
+
             htmlText += "<div onclick = 'deleteImg(this, "+i+"); value = "+i+"' name = 'imageDiv'><img src="+blobURL+" title = image"+i+"></div>";
-
-          if(i==0 || i==length){
-            fileName += file[i].name; 
-          }else{
-            fileName += ", "+file[i].name; 
-          }
-
         }
 
         $('#photoList').html(htmlText);
-        // $('#fileLabel').text(fileName);
         $('#fileLabel').text(length + "개의 파일");
-        $("#photoList").sortable();
+        $("#photoList").sortable(); //드래그 설정
         
       })
 
+      $('#keywordBtn').click(function(){
 
+        var keywordText = /^[가-힣|a-z|A-Z|0-9|\*]+$/;
+        var insertKeyword = $('#keywordInput').val();
+        var $keywordLength = $('.keywordList').length; // 올라가있는 키워드 개수
 
-      
-  
-      
-     
-      startDate();
-      // $("#endDate").attr("disabled", true);
-      $("#startDate").on("change", function(){
+        if(keywordText.test(insertKeyword) && insertKeyword.length <6){
+          if(insertKeyword == ""){ //빈칸 제한
+              return;
+          }else if($keywordLength == 5){ //키워드갯수 제한
+              alert('키워드는 5개 이하입니다')
+              $('#keywordInput').val('');
+              return;
+          }else if(insertKeyword.length > 6){ //글자수제한
+              $('#keywordInput').val('');
+              return;
+          }
 
-        if($(this).val() == ""){
-          $("#endDate").attr("disabled", true);
-          $("#endDate").val("");
+          var front = '<span class = "keywordList">';
+          var back = '</span>';
+
+          $('#keywordsDiv').append(front +"#"+insertKeyword + back);
+          $('#keywordInput').focus();
+          $('#keywordInput').val("");
+
         }else{
-          $("#endDate").attr("disabled", false);
+          alert("키워드를 확인해주세요")
+            $('#keywordInput').focus();
+        }
+        keywordDelete();
+      })
+
+      startDate();
+      $("#startDate").on("change", function(){ //달력 초기설정
+        if($(this).val() != ""){
           var date = $(this).val();
           $("#endDate").val(date);
         }
-
     });
 
 
@@ -77,47 +78,25 @@ $(function(){
 })
 
 
-function deleteImg(thisDiv, num){
+function deleteImg(thisDiv, num){ //이미지 클릭시 삭제
+  var boolean = confirm("해당이미지를 삭제합니다.")
+  if(boolean){
+    thisDiv.remove();
+  }else{
+    return;
+  }
 
-  // var url = $('#photoList div img[title*=image'+num+']').attr('title');
-  var file = document.getElementById("fileInput").files;
-  console.log(file)
-  document.getElementByName('imageDiv').innerHTML
-   var length = $("#photoList div").length;
-   console.log(length)
-   for(var i=0; i<length; i++){
-     console.log($("#photoList div:eq("+i+")").attr('class'));
-   }
-  
-  // document.getElementById("fileInput").file
-  // document.getElementById('fileInput').value = "";
-
-
-  
-  // var boolean = confirm("해당이미지를 삭제합니다.")
-
-  // if(boolean){
-  //   thisDiv.remove();
-  //   
-  //   file[num].remove();
-  // }else{
-  //   return;
-  // }
-
-  // var length = $('#photoList div').length;
-  // if(length != 0){
-  //   $('#fileLabel').text(length+"개의 파일");
-  // }else{
-  //   $('#fileLabel').text("File Upload");
-  //   $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
-  // }
-
-
-  //이름. 갯수바꾸기
+  var length = $('#photoList div').length;
+  if(length != 0){
+    $('#fileLabel').text(length+"개의 파일");
+  }else{
+    $('#fileLabel').text("File Upload");
+    $('#photoList').html("<span><i class='far fa-folder-open'></i></span><span>파일을 등록해주세요</span>");
+    $("#photoList").sortable("destroy");
+  }
 };
 
-function startDate(){
-  
+function startDate(){ //달력시작
   $('#startDate').datepicker({
         format: "yyyy-mm-dd",	
         calendarWeeks : false, 
@@ -135,9 +114,10 @@ function startDate(){
     });
 }
 
-function insertF(){
+function insertF(){ //신청하기 버튼 클릭시 
   
   var title = $('#exampleInputTitle').val();
+  var subTitle = $('#exampleInputSubitle').val();
   var startDate = $('#startDate').val();
   var endDate = $('#endDate').val();
   var infoF = $('#exampleInputInfo').val();
@@ -164,7 +144,13 @@ function insertF(){
   var sns1 = $('#sns1').val();
   var sns2 = $('#sns2').val();
 
+
   
 
 }
 
+function keywordDelete(){//키워드 클릭시 삭제
+  $('span[class="keywordList"]').click(function(){
+      $(this).remove();
+  })
+} 

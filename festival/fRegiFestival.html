@@ -52,8 +52,8 @@
 
 </head>
 <body>
-
     <div class = container id = "mainContainer">
+        <!-- 사진미리보기div -->
         <div class = "row">
             <div class = "col-sm-12 photoDiv">
                 <div id = "photoList">
@@ -62,6 +62,7 @@
                 </div>
             </div>
         </div>
+        <!-- //사진미리보기div -->
 
         <div class = "row"> 
             <div class = "col-sm-12">
@@ -75,11 +76,8 @@
                             </div>
                           </form> -->
 
-
-                          <!--  / 규모 /   -->
-                          
-                          <label>축제 이미지</label> <i class="fas fa-check" title = "필수항목입니다"></i>
-
+                        <!-- 이미지 파일 업로드 input -->
+                        <label>축제 이미지</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                         <div class="input-group">
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="fileInput" multiple accept=".jpg, .png">
@@ -91,13 +89,24 @@
                         </div>
                         <small id="imageHelp" class="form-text text-muted">JPG, PNG 중 하나여야 하며 8개 까지 가능합니다</small>
 
-                        <hr>
+                        <hr><!-- //이미지 파일 업로드 input -->
+                        <!-- 제목 input -->
                         <div class="form-group">
                             <label for="exampleInputTitle">제목</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp" placeholder="축제 제목을 적어주세요">
                             <small id="titleHelp" class="form-text text-muted">축제 제목을 입력해주세요.</small>
                         </div>
+                        <!-- //제목 input -->
 
+                        <!-- 부제목 input -->
+                        <div class="form-group">
+                            <label for="exampleInputSubitle">부제목</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputSubitle" aria-describedby="subtitleHelp" placeholder="축제 부제목을 적어주세요">
+                            <small id="subtitleHelp" class="form-text text-muted">축제 부제목을 입력해주세요.</small>
+                        </div>
+                        <!-- //부제목 input -->
+
+                        <!-- 날짜 input -->
                         <div class="form-group">
                         <div class="row">
                             <div class="col-sm-5">
@@ -114,19 +123,25 @@
                             <div class = "col-sm-1"><label for="endDate"><i class="far fa-calendar-alt"></i></label></div>
                         </div>
                         </div>
+                        <!-- //날짜 input -->
 
+                        <!-- 정보 input -->
                         <div class="form-group">
                             <label for="exampleInputInfo">축제 정보</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <textarea class="form-control" rows="5" id="exampleInputInfo" placeholder="축제 정보를 입력해주세요"></textarea>
                             <small id="infoHelp" class="form-text text-muted">축제 소개를 입력해주세요.</small>
                         </div>
+                        <!-- //정보 input -->
 
+                        <!-- 주소 input -->
                         <div class="form-group">
                             <label for="exampleInputaddress">주소</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <input type="text" class="form-control" id="exampleInputaddress" aria-describedby="addressHelp" placeholder="주소">
                             <small id="addressHelp" class="form-text text-muted">축제가 진행되는 주소를 입력해주세요.</small>
                         </div>
+                        <!-- //주소 input -->
 
+                        <!-- 지역 input -->
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
@@ -150,7 +165,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- //지역 input -->
 
+                        <!-- 계절 input -->
                         <div class="form-group">
                             <label>계절</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <div class = "row" id = "seasonDiv">
@@ -173,7 +190,9 @@
                             </div>    
                             <SMAll>축제가 열리는 계절을 선택해주세요.</SMAll>
                         </div>
+                        <!-- //계절 input -->
 
+                        <!-- 종류 input -->
                         <div class="form-group">
                             <label>축제 종류</label> <i class="fas fa-check" title = "필수항목입니다"></i>
                             <div class = "row" id = "kindsDiv">
@@ -204,7 +223,9 @@
                             </div>
                             <SMAll>축제 종류를 입력해주세요.</SMAll>
                         </div>
+                        <!-- //종류 input -->
 
+                        <!-- 웹사이트 , 전화번호 input -->
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
@@ -219,7 +240,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- //웹사이트 , 전화번호 input -->
 
+                        <!-- SNS input -->
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
@@ -234,52 +257,44 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- //SNS input -->
 
+                        <!-- 키워드 input -->
                         <div class="form-group">
                             <div class = "row">
                                 <div class = "col-sm-4">
                                     <label>KEYWORD</label> 
                                     <div class="input-group mb-3" id = "keywordDiv">
-                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
+                                        <input type="text" class="form-control" placeholder="키워드를 입력해주세요" aria-label="Recipient's username" id = "keywordInput">
                                         <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                                            <button class="btn btn-secondary" type="button" id = "keywordBtn">Button</button>
                                         </div>
                                     </div>
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <SMAll>5글자 이하로 작성해주세요</SMAll>
                                 </div>
 
                                 <div class = "col">
                                     <label>KEYWORDS</label>
-                                    <div id = "keywordsDiv">추가되는 키워드 들어감</div>
-                                    <SMAll>We'll never share your email with anyone else.</SMAll>
+                                    <div id = "keywordsDiv"></div>
+                                    <SMAll>키워드는 5개 까지 추가 할수있습니다.</SMAll>
                                 </div>
                             </div>
                         </div>
-
+                        <!-- //키워드 input -->
+                        <br>
                         <hr>
-                            
+                        <br>                   
+                        <!-- 버튼 div -->
                         <div class="row">
                             <div class = "col" id = "btnDiv">
-                                <button type="button" class="btn btn-warning" onclick = "insertF();">신청하기</button>
-                                <button type="button" class="btn btn-secondary">돌아가기</button>
+                                <button type="button" class="btn btn-warning btnC" onclick = "insertF();">신청하기</button>
+                                <button type="button" class="btn btn-secondary btnC">돌아가기</button>
                             </div>
                         </div>
-                      
-
-
+                        <!-- //버튼 div -->
                 </div>
             </div>
         </div> 
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
 </body>
 </html>

@@ -3,14 +3,11 @@ $(function(){
     $( window ).resize(function() {
         //창크기 변화 감지
         var windowWidth = $( window ).width();
-        console.log(windowWidth)
 
         if(windowWidth < 576){
             $('.sortBox > #sorts').attr('class','col');
-            // $('.seasonBox > #seasons').attr('class','col');
         }else if(577 < windowWidth && windowWidth < 991){
             $('.sortBox > #sorts').attr('class','col-sm-4');
-            // $('.seasonBox > #seasons').attr('class','col-sm-3'); 
         }
 
         if(577 < windowWidth && windowWidth < 991){
@@ -22,7 +19,6 @@ $(function(){
         }else if(329 > windowWidth){
             $('.seasonBox > #seasons').attr('class','col-sm-1');
         }
-
      });
 
 
@@ -38,7 +34,7 @@ $(function(){
             }else{
                 alert("검색어를 확인해주세요")
             }
-    })
+    }) //검색내용
 
     $('#startDateImage').click(function(){
         $('#startDate').focus();
@@ -53,11 +49,11 @@ $(function(){
         
         if(checked == false){
             $('#toggleMsgSpan').text("전체축제조회");
-            $('#toggleMsgSpan').css('backgroundColor','salmon')
-            $('#toggleMsgSpan').css('color','black')
+            $('#toggleMsgSpan').css('backgroundColor','gray')
+            $('#toggleMsgSpan').css('color','#ffc107')
         }else{
             $('#toggleMsgSpan').text("현재진행축제");
-            $('#toggleMsgSpan').css('backgroundColor','salmon')
+            $('#toggleMsgSpan').css('backgroundColor','gray')
             $('#toggleMsgSpan').css('color','white')
         }
 
@@ -78,11 +74,9 @@ $(function(){
         }
     }) //축제 종류 토글
 
-    
 
     $('#searchEnter').keydown(function(key){
         if(key.keyCode == 13){
-            // console.log("엔터키 적용");
 
             var searchText = /^[가-힣|a-z|A-Z|0-9|\*]+$/
             var search = $('.selectBox:first-child').val();
@@ -95,48 +89,6 @@ $(function(){
 
         }
     }) //검색버튼 엔터키
-
-    $('#keywordBtn').click(function(){
-
-        // $('span[class="keywordList"]').bind();
-
-        var searchText = /^[가-힣|a-z|A-Z|0-9|\*]+$/
-
-        var insertKeyword = $('.keywordSelectBox').val();
-        var $keywordLength = $('.keywordList').length;
-
-        if(searchText.test(insertKeyword) && insertKeyword.length <6){
-            if(insertKeyword == ""){ //빈칸 제한
-                return;
-            }else if($keywordLength == 5){ //키워드갯수 제한
-                alert('키워드는 5개 이하입니다')
-                $('.keywordSelectBox').val('');
-                return;
-            }else if(insertKeyword.length > 6){ //글자수제한
-                $('.keywordSelectBox').val('');
-                return;
-            }
-    
-            var front = '<span class = "keywordList">';
-            var back = '</span>';
-            
-            $('.keywords').append(front +"#"+insertKeyword + back);
-            $('.keywordSelectBox').val("");
-            $('.keywordSelectBox').focus();
-        }else{
-            alert("키워드를 확인해주세요")
-            $('.keywordSelectBox').focus();
-        }
-
-        
-
-        keywordDelete();
-        
-    }) //키워드 추가 제거
-
-   
-    
-
 
     var swiper = new Swiper('.swiper-container', {
         pagination: {
@@ -161,7 +113,7 @@ $(function(){
 
       $('.custom-select').change(function(){
           var searchVal = $(this).val();
-          alert(searchVal)
+          alert(searchVal + '으로 조회합니다')
       }); //조회결과 - 셀렉트바 값 리턴
 
     
@@ -187,7 +139,6 @@ $(function(){
             $(this).attr('src',chackImage);
         }else{
             $(this).attr('src','./img/yujisang/'+alt+'.png');
-            // $(this).attr('src','./img/image1.jpg');
         }
 
           var simaCheckName = $(this).next().text();         
@@ -231,38 +182,16 @@ $(function(){
 
         startDate();
         $("#startDate").on("change", function(){
-
-            if($(this).val() == ""){
-              $("#endDate").attr("disabled", true);
-              $("#endDate").val("");
-            }else{
-              $("#endDate").attr("disabled", false);
-              var date = $(this).val();
-              $("#endDate").val(date);
+            if($(this).val() != ""){
+                var date = $(this).val();
+                $("#endDate").val(date);
             }
-    
         });
-        keywordDelete();
-        // $('#firstBox').css('display','none')
-        // $('#firstHr').css('display','none')
+
         $('input[name="local"]').css('display','none');
-        $('#startDate').val("시작날짜");
-        $('#endDate').val("종료날짜");
-
         $('#hideDiv').css('display','none');
-
-
-        // $('.testDiv').css('display','none')
-
-        $('.fInfoDiv').mouseover(function(){
-            $(this).find('p').css('color','white')
-        })
-
-        $('.fInfoDiv').mouseleave(function(){
-            $(this).find('p').css('color','black')
-        })
-
-
+        $('#firstBox').css('display','none');
+        $('#firstHr').css('display','none');
 
 
 });
@@ -315,9 +244,6 @@ function searchData(){
         alert($sima);
 }
 //검색데이터 리턴
-
-
-
 
 function rangeVal(obj){
     var size = $('#sizeRange').val();
