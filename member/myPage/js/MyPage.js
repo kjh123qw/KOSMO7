@@ -6,8 +6,10 @@ $(function(){
             document.getElementById("content").innerHTML='<object type="text/html" data="./mMyMatsuri.html"></object>';
         })
     });
-    
-
+    // var testVar = {
+    //     'a': 1, 'b': 2
+    // } 
+    // $('.testClass').html(testVar.b);
     
 });
 
