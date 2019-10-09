@@ -6,6 +6,7 @@ $(function(){
   $('.faqTab').eq(0).css('border-bottom','5px solid #aaa'); // 작은 탭 구별색
   boardChange(); //게시판 탭 메서드
   faqChange(); // 작은 게시판 탭 메서드
+  popup();
 });
 
 // 큰메뉴 탭 변경버튼
@@ -32,6 +33,25 @@ function faqChange(){
     $('.faqTab').removeAttr('style');
     $(this).css('border-bottom','5px solid #aaa');
     $('.faqCont').hide();
-    $('.tabcontent > .'+ checkClass[1]).show();    
+    $('#faq > .'+ checkClass[1]).show();    
   });
 } 
+//.col3 클릭시 팝업창 메서드 실행
+function popup(){ 
+  $('.col3').click(function(){
+    popupfunc();
+  });
+}
+
+
+//팝업창 실행 메서드
+function popupfunc() {
+  var screenW = screen.availWidth; // 스크린 가로사이즈
+  var screenH = screen.availHeight; //스크린 세로사이즈
+  var popW = 600; // 띄울창 가로
+  var popH = 600; // 띄울창 세로
+  var posL = (screenW-popW) / 2; // 띄울창 가로위치
+  var posH = (screenH-posH) / 2; // 띄울창 세로위치
+
+  window.open('popup.html', 'test', 'width='+popW+',height='+popH+',top='+posH+',left='+posL+',resizable=no,scrollbars=no')
+}
