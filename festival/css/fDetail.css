@@ -6,13 +6,22 @@
 }
 
 /* main top */
-.topImg {
-    width: 100%;
+.topImg{
+    width: 1200px;
     height: 590px;
     margin: 0 auto;
     border-bottom: 1px solid #888;
-    overflow: hidden;
-    position: relative;
+    /* overflow: hidden;
+    position: relative; */
+}
+
+.topImg div{
+    width: 1200px;
+}
+
+.topImg div img{
+    width: 100%;
+    height: 590px;
 }
 
 /* main like button */
@@ -133,9 +142,9 @@
 
 }
 
-.snsbox {
+/* .snsbox {
     width: 50%;
-}
+} */
 
 .twitter {
     float: left;
@@ -145,16 +154,7 @@
     float: right;
 }
 
-.snsbox a {
-    display: block;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-}
 
-.snsbox a:hover {
-    background-color: #eee;
-}
 
 .facebook a {
     border-left: 1px solid #ccc;
@@ -306,12 +306,7 @@
     padding: 0 10px;
 }
 
-.rfestival {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 0;
-    margin-bottom: 1px solid #555;
-}
+
 
 .rbox img {
     width: 259px;
@@ -392,4 +387,100 @@
 
 .select > select > option {
     height: 100px;
+}
+
+/* ============== */
+
+.container{
+    margin-bottom: 30px;
+    border: 1px solid gray;
+}
+
+h2{
+    margin-top: 10px;
+}
+
+.mainImg img{
+    width: 100%;
+}
+
+#subtitleDiv{
+    margin-bottom: 20px;
+}
+
+#keywordUl{
+    margin-bottom: 40px;
+}
+
+#keywordUl ul li{
+    float: left;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.table tr:last-child{
+    border-bottom: 1px solid #dee2e6;
+}
+
+#snsDiv{
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.snsbox:first-child{
+    border-right: 1px solid gray;
+}
+
+
+.snsbox a{
+    line-height: 60px;
+    color: #555;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+}
+
+.snsbox a:hover {
+    background-color: #eee;
+}
+
+
+.imgList img{
+    width: 100%;
+    height: 100%;
+}
+
+.imgList:first-child{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.imgList:last-child{
+    margin-bottom: 30px;
+}
+
+
+.imgDiv img{
+    width: 100%;
+    height: 100%;
+}
+
+.rfestival {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    margin-bottom: 1px solid #555;
+}
+
+.rfestival a{
+    color: white;
+}
+
+.rfestival, .rfestival_text{
+    background-color: gray;
+    color: white;
 }

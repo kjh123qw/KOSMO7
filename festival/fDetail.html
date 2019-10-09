@@ -6,329 +6,378 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>축제상세페이지</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 부트스트랩 -->
+
+    <script src="./js/jquery-2.1.1.min.js"></script><!--반드시필요함 -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script><!--마우스휠js -->
+    <!-- jQuery -->
+
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/kjhLoginJoinCustom.js"></script>
+    <link rel="stylesheet" href="../css/kjhLoginJoinStyle.css">
+
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/commonStyle.css">
-    <link rel="stylesheet" href="./css/fDetail.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-</head>
+
+    <link rel="stylesheet" href="./css/fDetail.css">
+  </head>
 <body>
-    <header id="header">
+    
+
+
+<header>
+
+
+        <!-- 꼭 필요한 부분2 입니다. -->
+
+
+        <div class="header_wrap_m">
+            <div class="header_top">
+                <div class="logo_m">
+                    <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
+                </div>
+                <!-- <div class="search">
+<input type="text" placeholder="검색">
+<button class="search_btn"><span><i class="fas fa-search"></i></span></button>
+</div> -->
+                <div id="menuBtn"><i class="fas fa-bars"></i></div>
+            </div>
+            <nav id="navigation_m">
+                <ul class="header_gnb_m">
+                    <li><a class="btn-login">로그인</a></li>
+                    <li><a class="btn-join">회원가입</a></li>
+                    <!-- <li><a>소도시</a></li> -->
+                    <li><a>고객센터</a></li>
+                    <li><a href="../etc/aboutus.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="header_wrap">
-          <div class="logo">
-            <a href="#"><img src="../img/logo.svg" alt="logo"></a>
-          </div>
-          <div class="search">
-            <input type="text" placeholder="검색">
-            <button class="search_btn"><span><i class="fas fa-search"></i></span></button>
-          </div>
-          <nav id="navigation">
-            <ul class="header_gnb">
-              <li><a href="#">전체축제리스트</a></li>
-              <li><a href="#">소도시</a></li>
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">마이페이지</a></li>
-              <li><a href="#">회원가입</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <main id="main">
-          <div class="topImg">
-            <img src="./img/f2.jpg" alt="tokyo" style="width: 100%; height: auto;">
-            <!-- 버튼안에 div있음 -->
-            <!-- <button class="likeBtn"> 
-              <div class="likeIcon">
-                <span><i class="far fa-heart"></i></span> 
-              </div>
-               <div class="likeName"> 
-                저장 
-              </div>
-            </button> -->
-            <!-- //버튼안에 div있음 -->
-          </div>
-          <div id="content_wrap">
-            <div id="article">
-              <section class="section festival">
-                <h2>Gion Sakura Matsuri</h2>
-                <div class="introduce">Gion Matsuri (祇園祭), the festival of Yasaka Shrine, is the most famous festival in Japan. It takes place over the entire month of July. There are many different events, but the grand procession of floats (Yamaboko Junko) on July 17 is particularly spectacular. Very enjoyable are also the festive evenings preceding the procession (Yoiyama). From 2014, a second procession of floats was reintroduced on July 24 after a hiatus of 48 years. The second procession features fewer and smaller floats than the one on July 17.</div>
-                <div class="keyword">
-                  <ul class="keywordlist">
-                    <li>혼슈 지방</li>
-                    <li>교토</li>
-                    <li>3월</li>
-                    <li>벚꽃</li>
-                  </ul>
-                </div>
-                <div class="info">
-                  <table>
-                    <tr>
-                      <th>DATE</th>
-                      <td>2019.04.01. - 2019.04.15.</td>
-                    </tr>
-                    <tr>
-                      <th>ADDRESS</th>
-                      <td>京都府京都市東山区祇園町北側625</td>
-                    </tr>
-                    <tr>
-                      <th>WEBSITE</th>
-                      <td><a href="http://google.com" target="_blank">http://www.matsuri.com</a></td>
-                    </tr>
-                    <tr>
-                      <th>TEL</th>
-                      <td>+81 080-1234-5678</td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="sns">
-                  <div class="snsbox twitter"><a href="http://twitter.com" target="_blank"><span><i class="fab fa-twitter"></i></span></a></div>
-                  <div class="snsbox facebook"><a href="http://facebook.com" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a></div>
-                </div>
-              </section>
-              <section class="section reviews">
-                <h2>Reviews</h2>
-                <div class="reviewbox">
-                  <div class="profile">
-                    <div class="profile_img">
-                      <span><i><i class="fas fa-user-circle"></i></i></span>
-                    </div>
-                    <div class="name_date">
-                      <div class="name">Kim Yumi</div>
-                      <span>2019년 9월</span>
-                    </div>
-                  </div>
-                  <div class="reviewtext">
-                    Donec interdum gravida diam tempus tristique. Duis tristique diam mauris, at condimentum ante cursus eu. Fusce maximus tristique risus condimentum efficitur. Morbi in felis posuere, fringilla orci suscipit, faucibus metus.
-                  </div>
-                </div>
-                <div class="reviewbox">
-                  <div class="profile">
-                    <div class="profile_img">
-                      <span><i><i class="fas fa-user-circle"></i></i></span>
-                    </div>
-                    <div class="name_date">
-                      <div class="name">Chris Lee</div>
-                      <span>2019년 9월</span>
-                    </div>
-                  </div>
-                  <div class="reviewtext">
-                      Vestibulum eu leo sapien. Aenean ac mauris nec tortor tempor vehicula. Suspendisse potenti. Ut rutrum hendrerit diam eget laoreet. Integer consectetur ex eu mi fringilla dignissim.
-                  </div>
-                </div>
-                <div class="reviewwrite">
-                  <h3>Leave a Review</h3>
-                  <textarea cols="30" rows="8">로그인하시면 리뷰를 남기실 수 있습니다.</textarea>
-                  <button type="submit">SUBMIT</button>
-                </div>
-              </section>
-              <section class="section photos">
-                <h2>Visitor Photos</h2>
-                <div class="share">
-                  Share your travel photos with us by hashtagging your images with #airmatsuri
-                </div>
-                <div class="instabox">
-                  <ul>
-                    <li class="photobox box1">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto1">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box2">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto2">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box3">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto3">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box4">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto4">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box5">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto5">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box6">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto6">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box7">
-                      <div>
-                        <a href="#" target="_blank">
-                          <img src="http://placehold.it/202x202" alt="kyoto7">
-                        </a>
-                      </div>
-                    </li>
-                    <li class="photobox box8">
-                        <div>
-                          <a href="#" target="_blank">
-                            <img src="http://placehold.it/202x202" alt="kyoto8">
-                          </a>
-                        </div>
-                      </li>
-                  </ul>
-                </div>
-              </section>
-              <section class="section local">
-                <h2>Local Information</h2>
-                <div class="address">
-                  Gion Sakura Matsuri is located in Kyoto, Honshu, Japan.
-                </div>
-                <div class="map">
-                  <img src="http://placehold.it/838x400" alt="map">
-                </div>
-              </section>
-              <section class="section related">
-                <h2>Related Festivals</h2>
-                <div class="related_container">
-                  <div class="rbox">
-                    <div>
-                      <a href="#"><img src="./img/r01.jpg" alt="img"></a>
-                    </div>
-                    <div class="rfestival">
-                      <a href="#">Hakata Dontaku Festival</a>
-                    </div>
-                    <div class="rfestival_text">
-                      Japan’s largest Golden Week festival is held in Hakata
-                    </div>
-                  </div>
-                  <div class="rbox">
-                    <div>
-                      <a href="#"><img src="./img/r02.jpg" alt="img"></a>
-                    </div>
-                    <div class="rfestival">
-                      <a href="#">Saitama Fire Festival</a>
-                    </div>
-                    <div class="rfestival_text">
-                      A fantastic festival at Saitama Prefecture which
-                    </div>
-                  </div>
-                  <div class="rbox">
-                    <div>
-                      <a href="#"><img src="./img/r03.jpg" alt="img"></a>
-                    </div>
-                    <div class="rfestival">
-                      <a href="#">Nihonmatsu Chochin Matsuri</a>
-                    </div>
-                    <div class="rfestival_text">
-                      This is one of Japan’s three major
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section class="section nearby">
-                <h2>Nearby Festivals</h2>
-                <div class="nearby_container">
-                  <div class="nbox">
-                    <div>
-                      <a href="#"><img src="./img/n01.jpg" alt="img"></a>
-                    </div>
-                    <div class="nfestival">
-                      <a href="#">Nagasaki Lantern Festival</a>
-                    </div>
-                    <div class="nfestival_text">
-                      Every year, Nagasaki is having a celebration
-                    </div>
-                  </div>
-                  <div class="nbox">
-                    <div>
-                      <a href="#"><img src="./img/n02.jpg" alt="img"></a>
-                    </div>
-                    <div class="nfestival">
-                      <a href="#">Wasshoi Festival</a>
-                    </div>
-                    <div class="nfestival_text">
-                        Wasshoi Hyakuman Natsumatsuri is a matsuri
-                    </div>
-                  </div>
-                  <div class="nbox">
-                    <div>
-                      <a href="#"><img src="./img/n03.jpg" alt="img"></a>
-                    </div>
-                    <div class="nfestival">
-                      <a href="#">Kishiwada Danjiri Matsuri</a>
-                    </div>
-                    <div class="nfestival_text">
-                      The Kishiwada Danjiri Matsuri held in Kishiwada
-                    </div>
-                  </div>
-                </div>
-              </section>
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.svg" alt="logo"></a>
             </div>
-            
-            <aside id="aside">
-              <div class="category">
-                <h3>CATEGORIES</h3>
-                <div class="select">
-                  <select name="region" id="region_select">
-                    <option value="1">혼슈 지방</option>
-                    <option value="2">홋카이도 지방</option>
-                    <option value="3">시코쿠 지방</option>
-                    <option value="4">큐슈 지방</option>
-                  </select>
+            <nav id="navigation">
+                <ul class="header_gnb">
+                    <li><a class="btn-login">로그인</a></li>
+                    <li><a class="btn-join">회원가입</a></li>
+                    <!-- <li><a>소도시</a></li> -->
+                    <li><a>고객센터</a></li>
+                    <li><a href="../etc/aboutus.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 로그인 폼 -->
+        <div id="loginModule">
+            <div class="closeBackground"></div>
+            <div class="loginLayer">
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>아이디</span>
+                    </div>
+                    <div class="loginIdBox">
+                        <input type="text" name="loginId" id="loginId" class="focusFunc">
+                    </div>
                 </div>
-              </div>
-            </aside>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호</span>
+                    </div>
+                    <div class="loginPwdBox">
+                        <input type="password" name="loginPwd" id="loginPwd" class="focusFunc">
+                    </div>
+                </div>
+                <div class="rmbIdChkBox">
+                    <div class="chkRmbId"></div>
+                    <div class="chkRmbId">아이디 기억</div>
+                    <div class="btn-pwFind">비밀번호찾기</div>
+                    <div class="btn-idFind">아이디찾기</div>
+                    <input type="checkbox" name="logRmbId" id="logRmbId" class="displayNone">
+                </div>
+                <div>
+                    <button>로그인</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-join">회원가입</span></div>
+                    <div><span class="closeLayer">닫기</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- // 로그인 폼 -->
+        <!-- 비밀번호 찾기 폼 -->
+        <div id="pwFindModule">
+            <div class="closeBackground"></div>
+            <div class="pwFindLayer">
+                <div>
+                    <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="pwFindEmailBox">
+                        <input type="text" name="pwFindEmail" id="pwFindEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <button>비밀번호 찾기</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                    <div class="btn-idFind">아이디찾기</div>
+                </div>
+            </div>
+        </div>
+        <!-- // 비밀번호 찾기 폼 -->
+        <!-- 아이디 찾기 폼 -->
+        <div id="idFindModule">
+            <div class="closeBackground"></div>
+            <div class="idFindLayer">
+                <div>
+                    <span>회원가입시 등록한 이메일 주소를 입력해주세요.</span>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="idFindEmailBox">
+                        <input type="text" name="idFindEmail" id="idFindEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <button>아이디 찾기</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span class="btn-login"><i class="fas fa-angle-double-left"></i> 로그인</span></div>
+                    <div class="btn-pwFind">비밀번호찾기</div>
+                </div>
+            </div>
+        </div>
+        <!-- // 아이디 찾기 폼 -->
+        <!-- 회원가입 폼 -->
+        <div id="joinModule">
+            <div class="closeBackground"></div>
+            <div class="joinLayer">
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>아이디</span>
+                    </div>
+                    <div class="joinIdBox">
+                        <input type="text" name="joinId" id="joinId" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호</span>
+                    </div>
+                    <div class="joinPwdBox">
+                        <input type="password" name="joinPwd" id="joinPwd" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호 확인</span>
+                    </div>
+                    <div class="joinPwdChkBox">
+                        <input type="password" name="joinPwdChk" id="joinPwdChk" class="focusFunc">
+                    </div>
+                </div>
+                <div>
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="joinEmailBox">
+                        <input type="email" name="joinEmail" id="joinEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div class="agrPlc">
+                    <div></div>
+                    <div><span>회원가입 약관에 동의합니다. </span><a>(약관확인)</a></div>
+                    <input type="checkbox" name="agreePolicy" id="agreePolicy" class="displayNone">
+                </div>
+                <div class="agrEml">
+                    <div></div>
+                    <div>이메일 수신에 동의합니다.</div>
+                    <input type="checkbox" name="agreeEmail" id="agreeEmail" class="displayNone">
+                </div>
+                <div>
+                    <button>회원가입</button>
+                </div>
+                <hr>
+                <div>
+                    <div><span>이미 계정이 있으세요? </span><span class="btn-login joinLoginBtn">로그인</span></div>
+                    <div><span class="closeLayer">닫기</span></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- // 회원가입 폼 -->
+    </header>
+    <!-- //header끝 -->
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col mainImg">
+            <img src="./img/f2.jpg" alt="tokyo">
+        </div>  
+      </div>
+    </div>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-sm-12">
+            <h2>Gion Sakura Matsuri</h2>
+        </div>  
+        <div class = "col-sm-12" id = "subtitleDiv">
+            Gion Matsuri (祇園祭), the festival of Yasaka Shrine, is the most famous festival in Japan. It takes place over the entire month of July. There are many different events, but the grand procession of floats (Yamaboko Junko) on July 17 is particularly spectacular. Very enjoyable are also the festive evenings preceding the procession (Yoiyama). From 2014, a second procession of floats was reintroduced on July 24 after a hiatus of 48 years. The second procession features fewer and smaller floats than the one on July 17.
+        </div>
+        <div class = col id = "keywordUl">
+          <ul>
+            <li>혼슈 지방</li>
+            <li>교토</li>
+            <li>4월</li>
+            <li>벚꽃</li>
+          </ul>
+        </div>
+
+        <div class = "col-sm-12">
+            <table class = "table">
+                <tr>
+                  <th>DATE</th>
+                  <td>2019.04.01 - 2019.04.15</td>
+                </tr>
+                <tr>
+                  <th>ADDRESS</th>
+                  <td>京都府京都市東山区祇園町北側625</td>
+                </tr>
+                <tr>
+                  <th>WEBSITE</th>
+                  <td><a href="http://google.com" target="_blank">http://www.matsuri.com</a></td>
+                </tr>
+                <tr>
+                  <th>TEL</th>
+                  <td>+81 080-1234-5678</td>
+                </tr>
+              </table>
+        </div>
+      </div>
+
+          <div class = "row" id = "snsDiv">
+            <div class = "col snsbox"><a href="http://twitter.com" target="_blank"><span><i class="fab fa-twitter"></i></span></a></div>
+            <div class = "col snsbox"><a href="http://facebook.com" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a></div>
           </div>
-        </main>
-      <footer id="footer">
-        <div class="footer_wrap">
-          <div class="footer_top">
-            <div class="footerbox about_us">
+
+    </div>
+
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-sm-12">
+          <h2>Visitor Photos</h2>
+        </div>
+        <div class = "col-sm-12">
+          Share your travel photos with us by hashtagging your images with #airmatsuri
+        </div>
+      </div>
+
+      <div>
+      <div class = "row imgList">
+        <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f19.jpg" alt="kyoto1"></a></div>
+        <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f18.jpg" alt="kyoto2"></a></div>
+        <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f17.jpg" alt="kyoto3"></a></div>
+        <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f16.jpg" alt="kyoto4"></a></div>
+      </div>
+      <div class = "row imgList">
+          <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f15.jpg" alt="kyoto5"></a></div>
+          <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f14.jpg" alt="kyoto6"></a></div>
+          <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f13.jpg" alt="kyoto7"></a></div>
+          <div class = "col-sm-3"><a href="#" target="_blank"><img src="./img/yujisang/f12.jpg" alt="kyoto8"></a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "container">
+      <div class = "col-sm-12">
+          <h2>Related Festivals</h2>
+      </div>
+      <div class = "row">
+        <div class="col-sm-4">
+          <div class="imgDiv"><a href="#"><img src="./img/yujisang/f11.jpg" alt="img1"></a></div>
+          <div class="rfestival"><a href="#">Hakata Dontaku Festival</a></div>
+          <div class="rfestival_text">Japan’s largest Golden Week festival is held in Hakata</div>
+        </div>
+        <div class="col-sm-4">
+          <div class="imgDiv"><a href="#"><img src="./img/yujisang/f10.jpg" alt="img2"></a></div>
+          <div class="rfestival"><a href="#">Hakata Dontaku Festival</a></div>
+          <div class="rfestival_text">Japan’s largest Golden Week festival is held in Hakata</div>
+        </div>
+        <div class="col-sm-4">
+          <div class="imgDiv"><a href="#"><img src="./img/yujisang/f9.jpg" alt="img3"></a></div>
+          <div class="rfestival"><a href="#">Hakata Dontaku Festival</a></div>
+          <div class="rfestival_text">Japan’s largest Golden Week festival is held in Hakata</div>
+        </div>
+      </div>
+    </div>
+
+      
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="footer_wrap">
+      <div class="footer_top">
+          <div class="footerbox about_us">
               <h3>ABOUT US</h3>
-              <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of festivals Local festival information, Tourism Guide, Interpretation, translations in various languages.</p>
-            </div>
-            <div class="footerbox contact_us">
-                <h3>CONTACT US</h3>
-                <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
-                <p>+82 1234-5678</p>
-                <p><a href="#">info&#64;airmatsuri.com</a></p>
-            </div>
-            <div class="footerbox follow_us">
-                <h3>FOLLOW US</h3>
-                <a href="http://www.facebook.com" target="_blank"><span><i class="fab fa-facebook-square"></i></span></a>
-                <a href="http://www.twitter.com" target="_blank"><span><i class="fab fa-twitter-square"></i></span></a>
-                <a href="http://www.youtube.com" target="_blank"><span><i class="fab fa-youtube-square"></i></span></a>
-                <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i class="fab fa-instagram"></i></span></a>
-            </div>
+              <p>Festival and Event Organization Consulting for know-how to call tourists on the theme of
+                  festivals Local festival information, Tourism Guide, Interpretation, translations in various
+                  languages.</p>
           </div>
-          <div class="footer_bottom">
-            <div class="footer_container">
-                <div class="footer_copyright">
+          <div class="footerbox contact_us">
+              <h3>CONTACT US</h3>
+              <p>137, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea</p>
+              <p>+82 1234-5678</p>
+              <p><a href="#">info&#64;airmatsuri.com</a></p>
+          </div>
+          <div class="footerbox follow_us">
+              <h3>FOLLOW US</h3>
+              <a href="http://www.facebook.com" target="_blank"><span><i
+                          class="fab fa-facebook-square"></i></span></a>
+              <a href="http://www.twitter.com" target="_blank"><span><i
+                          class="fab fa-twitter-square"></i></span></a>
+              <a href="http://www.youtube.com" target="_blank"><span><i
+                          class="fab fa-youtube-square"></i></span></a>
+              <a href="http://www.instagram.com/airmatsuri" target="_blank"><span><i
+                          class="fab fa-instagram"></i></span></a>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="footer_container">
+              <div class="footer_copyright">
                   <span>&copy; 2019 AirMatsuri, Corp. All rights reserved.</span>
-                </div>
-                <div class="footer_gnb">
+              </div>
+              <div class="footer_gnb">
                   <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Contact Us</a></li>
                   </ul>
-                </div>
-            </div>
+              </div>
           </div>
-        </div>
-      </footer>
+      </div>
+  </div>
+</footer>
+<!-- //Footer -->
+
+
 </body>
 </html>
