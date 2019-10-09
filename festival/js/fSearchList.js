@@ -5,19 +5,19 @@ $(function(){
         var windowWidth = $( window ).width();
 
         if(windowWidth < 576){
-            $('.sortBox > #sorts').attr('class','col');
+            $('.sortBox > div').attr('class','col');
         }else if(577 < windowWidth && windowWidth < 991){
-            $('.sortBox > #sorts').attr('class','col-sm-4');
+            $('.sortBox > div').attr('class','col-sm-4');
         }
 
         if(577 < windowWidth && windowWidth < 991){
-            $('.seasonBox > #seasons').attr('class','col-sm-6');
+            $('.seasonBox > .seasons').attr('class','col-sm-6');
         }else if(330 < windowWidth && windowWidth < 576){
-            $('.seasonBox > #seasons').attr('class','col');
+            $('.seasonBox > .seasons').attr('class','col');
         }else if(windowWidth > 992){
-            $('.seasonBox > #seasons').attr('class','col');
+            $('.seasonBox > .seasons').attr('class','col');
         }else if(329 > windowWidth){
-            $('.seasonBox > #seasons').attr('class','col-sm-1');
+            $('.seasonBox > .seasons').attr('class','col-sm-1');
         }
      });
 
