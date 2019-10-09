@@ -10,7 +10,7 @@ var txtObj = {
     'contactus': '고객센터',
     'fDetail': '축제 상세정보',
     'fRegiFestival': '축제 등록',
-    'fSearchiList': '검색 결과'
+    'fSearchList': '검색 결과'
 }
 var locationStr = $(location).attr('href');
 var locationArr = locationStr.split('/');
