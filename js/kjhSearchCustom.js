@@ -13,16 +13,13 @@ $(function(){
             }
         });
         CheckArrows();
-        CloseMenu();
+        closeMenu();
     })
     $('#menuBtn').click(function(){
-        if ($('#menuBtn').children('svg').attr('data-icon') == 'bars') {
-            OpenMenu();
-            $('.mainTextBox').hide();
-        }
-        else if ($('#menuBtn').children('svg').attr('data-icon') == 'times') {
-            CloseMenu();
-        }
+        openMenu();
+    });
+    $('.currentBox > div').click(function(){
+        closeMenu();
     });
     $('.region_box_m').click(function(){
         OptionView($(this), $('.region_list_box_m'), '246px', ($('.header_wrap').css('display') != 'none')?'13px':'13px');  // mobile : pc
@@ -76,23 +73,19 @@ $(function(){
         location.href='./festival/fSearchList.html';
     });
         //Menu Toggle
-    function OpenMenu(){
-        $('#navigation_m').show();
-        $('#menuBtn').children('svg').attr('data-icon', 'times');
-        $('.header_top').css({'background-color': '#444'});
-        if ($('.arrowUpDwon').css('display') != 'none'){
-            $('.header_wrap_m').css({'height': '260px'});
-        }
-        $('#menuBtn').css('color','#eee');
+    function openMenu(){
+        $('#navigation_m').stop().show().animate({'width':'100%'}, 300, function(){
+            $('.currentBox').stop().css({'color':'rgba(255,255,255,1)'});
+            $('.header_gnb_m').stop().fadeIn(100);
+        });
     }
 
-    function CloseMenu(){
-        $('#navigation_m').hide();
-        $('#menuBtn').children('svg').attr('data-icon', 'bars');
-        $('#menuBtn').css('color','#fff');
-        $('.header_top').removeAttr('style');
-        $('.header_wrap_m').removeAttr('style');
-        $('.mainTextBox').show();
+    function closeMenu(){
+        $('.currentBox').stop().removeAttr('style');
+        $('.header_gnb_m').stop().removeAttr('style');
+        $('#navigation_m').stop().animate({'width':'0%'}, 100, function(){
+            $('#navigation_m').removeAttr('style');
+        });
     }
         // 옵션 리스트 토글, 선택된 항목 제외 다른 항목 전부 가림
     function OptionView($clTrg, $trg, heightPx, topPx){
@@ -109,7 +102,7 @@ $(function(){
             OptionOpen($clTrg, $trg, heightPx, topPx);
     }
     function OptionOpen($clTrg, $trg, heightPx, topPx){
-        CloseMenu();
+        closeMenu();
         var childrenDiv = 'div';
         if ($clTrg.attr('class') == 'date_box_m')
             childrenDiv = '#calendar_start';

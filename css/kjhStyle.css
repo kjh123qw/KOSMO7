@@ -58,6 +58,24 @@ header {
     color: white;
     float: left;
 }
+.currentBox {
+  width: 100%; height: 60px;
+  margin-bottom: 5px;
+  background-color: #222;
+  color: rgba(255, 255, 255, 0);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+}
+.currentBox > div {
+  position: absolute;
+  width: 50px; height: 50px;
+  top: 5px; right: 5px;
+  font-size: 24px;
+  line-height: 50px;
+  cursor: pointer;
+}
 .header_wrap_m {
     width: 100%; height: 150px;
     position: relative;
@@ -94,24 +112,36 @@ header {
 #navigation_m {
     overflow: hidden;
     display: none;
-    height: 100%;
-    background-color: #444;
+    position: fixed;
+    width: 0; height: 100%;
+    top: 0; bottom: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 20;
 }
-.header_gnb_m { width: 100%; }
+.header_gnb_m { width: 100%; display: none; }
 .header_gnb_m > li {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 .header_gnb_m > li > a {
-    width: 94%; height: 50px;
-    margin: 0 3%;
-    display: block;
-    font-size: 16px;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    line-height: 50px;
+  width: 94%; height: 50px;
+  margin: 0 3%;
+  display: block;
+  font-size: 16px;
+  border-bottom: 1px solid #222;
+  color: #222;
+  line-height: 50px;
 }
-.header_gnb_m > li:first-of-type > a { border-top: 1px solid #fff; }
+.header_gnb_m > li:first-of-type > a { border-top: 1px solid #222; }
+/* PC navigation */
+#navigation {
+  position: absolute;
+  overflow: hidden;
+  width: 85%; height: 60px;
+  top: 0; right: 0;
+  /* background-color: rgba(0,0,0,0.7); */
+}
 /* PC navigation */
 #navigation {
     position: absolute;
@@ -369,7 +399,6 @@ header {
     #backgroundImages > div:nth-of-type(3) { display: block; }
 
     .header_wrap_m { height: 374px; }
-    .header_gnb_m { width: 40%; float: right; margin-right: 5%; }
     .mainTextBox {
         width: 250px; height: 240px;
         top: 70px; right: 10px;
