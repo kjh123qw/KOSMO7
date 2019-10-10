@@ -4,9 +4,12 @@
   margin: 0;
   font-family: Arial;
 } */
-
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
 .btn, .cont {
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -151,4 +154,93 @@
   height:100%;
   padding-top: 2%;
   border-bottom:1px solid #bbb;
+}
+.popUpLayer {
+  display: none;
+  position: fixed;
+  top: 10%; left: 20%;
+  width: 60%; height: 600px;
+  background-color: #eee;
+  z-index: 15;
+}
+
+.layer {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.layer > div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.subject {
+  height: 15%;
+}
+
+
+.subject > div {
+  width: 80%;
+  border: 1px solid #ccc;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-top: 5%;
+}
+
+.writer {
+  height: 10%;
+  font-weight: bold;
+}
+
+.writer > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.text {
+  height: 50%;
+}
+
+.text > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.popupBtn{
+  width: 250px;
+  height: 150px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.popupBtn > span {
+  float: right;
+  padding:5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top:1%;
+  margin-right: 10%;
+  border: 1px solid #ccc;
+}
+
+.popupBtn > span:hover {
+  background-color:#aaa;
+  cursor: pointer;
+}
+.layerBack {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 10;
 }

@@ -4,9 +4,15 @@ $(function(){
   $('.faqCont').hide(); // tabcontent > faqCont 숨기기
   $('.refund').show();  // 그중 refund div만 보이기
   $('.faqTab').eq(0).css('border-bottom','5px solid #aaa'); // 작은 탭 구별색
-  boardChange(); //게시판 탭 메서드
-  faqChange(); // 작은 게시판 탭 메서드
-  popup();
+  
+  tableMake();        //테이블 생성 메서드
+  boardChange();      //게시판 탭 메서드
+  faqChange();        // 작은 게시판 탭 메서드
+  popup();            //팝업메서드
+  backclose();        // 배경누를시 팝업 종료 메서드
+  $('.popupBtn > span').click(function(){
+    popupClose();
+  });
 });
 
 // 큰메뉴 탭 변경버튼
@@ -42,16 +48,52 @@ function popup(){
     popupfunc();
   });
 }
+// 배경(.layerBack) 클릭시 팝업 종료 메소드 실행
+function backclose(){
+  $('.layerBack').click(function(){
+    popupClose();
+  });
+}
 
 
 //팝업창 실행 메서드
 function popupfunc() {
-  var screenW = screen.availWidth; // 스크린 가로사이즈
-  var screenH = screen.availHeight; //스크린 세로사이즈
-  var popW = 600; // 띄울창 가로
-  var popH = 600; // 띄울창 세로
-  var posL = (screenW-popW) / 2; // 띄울창 가로위치
-  var posH = (screenH-posH) / 2; // 띄울창 세로위치
+  $('.popUpLayer').show();
+  $('.layerBack').show();
+}
 
-  window.open('popup.html', 'test', 'width='+popW+',height='+popH+',top='+posH+',left='+posL+',resizable=no,scrollbars=no')
+//팝업창 종료 메서드
+function popupClose() {
+  $('.popUpLayer').hide();
+  $('.layerBack').hide();
+}
+
+//테이블 생성 메서드
+function tableMake(){
+  var content='';
+  for(let i=1; i<11; i++){
+    content += '<div class="row">';
+    for(let j=1; j<5; j++){
+      content += '<span class="cell col'+j+'">열 '+i+'-'+j+'</span>';
+    }
+    content += '</div>'
+  }
+  $('.table').append(content);
+  pagingAppendAll(); //테이블 아래 페이징 생성 메소드
+}
+
+//페이징 메소드
+function pagingAppendAll() {
+  var paging = '';
+  paging +='<div class="paging">'
+  paging +='<span class="leftend">&lt;&lt;&nbsp;</span>'
+  paging +='<span class="left">&nbsp;◀&nbsp;</span>'
+  paging +='<span class="condi">&nbsp;1&nbsp;</span>'
+  paging +='<span class="condi">2&nbsp;</span>'
+  paging +='<span class="condi">3&nbsp;</span>'
+  paging +='<span class="right">&nbsp;▶&nbsp;</span>'
+  paging +='<span class="rightend">&gt;&gt;</span>'
+  paging +='</div>'
+  $('.faqCont').append(paging);
+  $('.notCont').append(paging);
 }
