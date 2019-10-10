@@ -1,403 +1,36 @@
-/* main */
-#main {
-    margin: 0 auto;
-    width: 100%;
-    min-height: 1500px;
-}
-
-/* main top */
-.topImg{
-    width: 1200px;
-    height: 590px;
-    margin: 0 auto;
-    border-bottom: 1px solid #888;
-    /* overflow: hidden;
-    position: relative; */
-}
-
-.topImg div{
-    width: 1200px;
-}
-
-.topImg div img{
-    width: 100%;
-    height: 590px;
-}
-
-/* main like button */
-.likeBtn {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 90px;
-    height: 40px;
-    background-color: white;
-    border: 1px solid #888;
-    cursor: pointer;
-    margin: 0 auto;
-    border-radius: 5px;
-}
-
-.likeBtn:active {
-    background-color: #eee;
-}
-
-.likeIcon {
-    float: left;
-    margin-left: 20px;
-}
-
-.likeName {
-    float: right;
-    margin-right: 20px;
-}
-
-/* content-wrap */
-#content_wrap {
-    width: 1200px;
-    min-height: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-/* article */
-#article {
-    width: 900px;
-    min-height: 1000px;
-    float: left;
-    margin-top: 20px;
-}
-
-/* section common */
-.section {
-    background-color: #fff;
-    border: 1px solid #999;
-    padding: 30px;
-    margin-bottom: 30px;
-}
-
-.section > h2 {
-    margin-bottom: 20px;
-}
-
-.section:nth-child(5) {
-    border: 0;
-    background-color: #F3F3F3;
-}
-
-.section:last-child {
-    border: 0;
-    background-color: #F3F3F3;
-}
-
-/* section festival info */
-.festival {
-    padding-bottom: 0;
-}
-
-.festival > div.introduce {
-    margin-bottom: 20px;
-} 
-
-.section .keywordlist {
-    overflow: hidden;
-    margin-bottom: 40px;
-}
-
-.section .keywordlist > li {
-    float: left;
-    background-color: salmon;
-    padding: 4px 15px;
-    margin-right: 10px;
-    font-size: 14px;
-    color: white;
-    border-radius: 5px;
-}
-
-.info {
-    margin-bottom: 60px;
-}
-
-.info > table {
-    width: 100%;
-    border-bottom: 2px solid #ccc;
-    border-top: 2px solid #ccc;
-    border-collapse: collapse;
-}
-
-.info th {
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-}
-
-.info td {
-    height: 60px;
-    border-bottom: 1px solid #ccc;
-}
-
-.sns {
-    overflow: hidden;
-    border-top: 1px solid #ccc;
-    margin: 0 -30px;
-
-}
-
-/* .snsbox {
-    width: 50%;
-} */
-
-.twitter {
-    float: left;
-}
-
-.facebook {
-    float: right;
-}
-
-
-
-.facebook a {
-    border-left: 1px solid #ccc;
-}
-
-.facebook a:hover {
-    background-color: #eee;
-}
-
-.sns span {
-    color: #888;
-    font-size: 30px;
-}
-
-/* section reviews */
-.reviewbox {
-    width: 100%;
-}
-
-.profile {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-}
-
-.profile_img {
-    width: 50px;
-    height: 50px;
-    float: left;
-}
-
-.profile_img > span {
-    font-size: 40px;
-    color: #888;
-    line-height: 50px;
-}
+@media screen and (min-width: 576px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 992px) {}
+@media screen and (min-width: 1225px) {}
 
-.name_date {
-    height: 50px;
-    float: left;
-    margin-left: 10px;
-}
-
-.reviewtext {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
-}
-
-.reviewwrite > h3 {
-    margin-bottom: 30px;
-}
-
-.reviewwrite > textarea {
-    width: 50%;
-    padding: 15px;
-    font-size: 16px;
-    color: #888;
-    border-radius: 5px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.reviewwrite > button {
-    width: 198px;
-    height: 40px;
-    background-color: #555;
-    color: white;
-    text-align: center;
-    border: 0;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* section visitor photos */
-
-.photos > .share {
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-.instabox {
-    width: 100%;
-    height: 414px;
-}
-
-.instabox li {
-    width: 202px;
-    height: 202px;
-    background-color: sandybrown;
-    float: left;
-}
-
-.instabox li:nth-child(-n+3) {
-    margin-right: 10px;
-    background-color: salmon;
-}
-
-.instabox li:nth-child(5) {
-    margin: 10px 10px 0 0;
-}
-.instabox li:nth-child(6) {
-    margin: 10px 10px 0 0;
-}
-.instabox li:nth-child(7) {
-    margin: 10px 10px 0 0;
-}
-.instabox li:nth-child(8) {
-    margin-top: 10px;
-}
-
-.instabox li > div {
-    width: 202px;
-    height: 202px;
-    overflow: hidden;
-}
-
-.instabox li > div > a {
-    display: block;
-}
-
-.instabox li > div > a:hover {
-    transform: scale(1.1);
-    transition: all 0.4s ease-in-out;
-    
-}
-
-.instabox li > div > a > img {
-    width: 202px;
-    height: 202px;
-    
-}
-
-/* section local map */
-
-.local > .address {
-    margin-bottom: 30px;
-}
-
-/* section related */
-
-.related_container {
-    display: flex;
-}
-
-.rbox {
-    flex: 0 0 33.3333%;
-    padding: 0 10px;
-}
-
-
-
-.rbox img {
-    width: 259px;
-    height: 200px;
-}
-
-.rbox img:hover {
-    opacity: 0.8;
-}
-
-/* section nearby */
-
-.nearby_container {
-    display: flex;
-}
-
-.nbox {
-    flex: 0 0 33.3333%;
-    padding: 0 10px;
-}
-
-.nfestival {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 15px 0;
-    margin-bottom: 1px solid #555;
-}
-
-.nbox img {
-    width: 259px;
-    height: 200px;
-}
-
-.nbox img:hover {
-    opacity: 0.8;
-}
-
-/* aside */
-#aside {
-    width: 250px;
-    min-height: 1000px;
-    background-color: #fff;
-    float: right;
-    margin-top: 20px;
-}
-
-/* category */
-.category {
-    width: 250px;
-    height: 140px;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 5px;
-    border: 1px solid #999;
-}
-
-.category > h3 {
-    width: 250px;
-    margin: -25px;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-.category > .select {
-    padding-top: 40px;
-}
-
-.select > select {
-    width: 198px;
-    height: 40px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding-left: 20px;
-    color: #555;
-    font-size: 16px;
-}
+@media screen and (max-width: 576px) {
+    .imgList .col-sm-3{
+        margin-bottom: 20px;
+    }
 
-.select > select > option {
-    height: 100px;
+    .imgList2{
+        margin-bottom: 20px;
+    }
 }
 
-/* ============== */
 
 .container{
     margin-bottom: 30px;
+    /* border: 1px solid gray; */
+}
+
+.RelatedF, .photoDiv, .infoDiv{
     border: 1px solid gray;
 }
 
 h2{
     margin-top: 10px;
+}
+
+.mainImg{
+    padding-left:0 ;
+    padding-right:0 ;
+
 }
 
 .mainImg img{
@@ -420,6 +53,11 @@ h2{
     padding: 0 10px;
     margin-right: 5px;
     cursor: pointer;
+}
+
+#keywordUl ul li a{
+    text-decoration: none;
+    color: white;
 }
 
 .table tr:last-child{
@@ -449,9 +87,35 @@ h2{
 }
 
 
-.imgList img{
+.imgList .col-sm-3 img{
     width: 100%;
     height: 100%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+
+.modal-content{
+    height: 100%;
+}
+
+.modal > div{
+    height: 90%;
+}
+
+.modal-content  img{
+    width: 100%!important;
+    height: 100%!important; 
+    vertical-align: middle;
+}
+
+.imgList .col-sm-3 img:hover{
+    transform:scale(1.1);
+    transition: transform .5s; 
+}
+
+.imgList .col-sm-3{
+    overflow: hidden;
 }
 
 .imgList:first-child{
@@ -467,7 +131,19 @@ h2{
 .imgDiv img{
     width: 100%;
     height: 100%;
+    transition: transform .5s;
 }
+
+.imgDiv img:hover{
+    transform:scale(1.1);
+    transition: transform .5s; 
+}
+
+.imgList2 div:first-child{
+    overflow: hidden;
+}
+
+
 
 .rfestival {
     font-size: 20px;
@@ -483,4 +159,11 @@ h2{
 .rfestival, .rfestival_text{
     background-color: gray;
     color: white;
+    padding: 5px;
 }
+
+.RelatedDiv{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
