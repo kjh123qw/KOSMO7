@@ -207,7 +207,7 @@ $(function(){
             
         };
 
-        var chartSpeed = Highcharts.chart('chart2', Highcharts.merge(gaugeOptions, {
+        var chartSpeed = Highcharts.chart('chart3', Highcharts.merge(gaugeOptions, {
             yAxis: {
                 min: 0,
                 max: 200, //전달 가입 회원수
@@ -219,6 +219,8 @@ $(function(){
             credits: {
                 enabled: false
             },
+
+
         
             series: [{
                 name: ' ',
@@ -237,6 +239,53 @@ $(function(){
         
         }));
         // 2번 그래프
+
+
+        Highcharts.chart('chart2', {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: ''
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    },
+                    size:"120%"
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+                    ['Firefox', 45.0],
+                    ['IE', 26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari', 8.5],
+                    ['Opera', 6.2],
+                    ['Others', 0.7]
+                ]
+            }]
+        });
 
         Highcharts.chart('chart4', {
             data: {
@@ -261,7 +310,7 @@ $(function(){
                 }
             }
         });
-
+        // 4번 그래프
 
 
 
