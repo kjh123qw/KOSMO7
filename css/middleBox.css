@@ -42,6 +42,7 @@
 
 /* -------ImageBox------- */
 .titleBox {
+    position: relative;
     height: 35px;
     padding: 0 15px;
     font-size: 20px;
@@ -62,6 +63,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 700px;
+    margin-bottom: 10px;
 }
 .imageBox > a {
     position: absolute;
@@ -87,6 +89,7 @@
 }
 .imageBox > div:nth-of-type(1) > span:nth-of-type(1) { border-radius: 10px; }
 .imageBox > div:nth-of-type(1) > span:nth-of-type(2) { width: 0; }
+.imageBox > .finishedFest > span:nth-of-type(1) { background-color: #444; }
 .imageBox > .startedFest > span:nth-of-type(1) { background-color: green; }
 .imageBox > .preFest > span:nth-of-type(1)  { background-color: blue; }
 .imageBox > div:nth-of-type(2) {
@@ -129,10 +132,16 @@
     line-height: 18px;
     font-size: 14px;
 }
+#sliderBoxEnd1 { background-image: url('../img/testImageEnd1.jpg'); }
+#sliderBoxEnd2 { background-image: url('../img/testImageEnd2.jpg'); }
 #sliderBox1 { background-image: url('../img/testImage1.jpg'); }
 #sliderBox2 { background-image: url('../img/testImage2.jpg'); }
 #sliderBox3 { background-image: url('../img/testImage3.jpg'); }
 #sliderBox4 { background-image: url('../img/testImage4.jpg'); }
+#sliderBox5 { background-image: url('../img/testImage5.jpg'); }
+#sliderBox6 { background-image: url('../img/testImage6.jpg'); }
+#sliderBox7 { background-image: url('../img/testImage7.jpg'); }
+#sliderBox8 { background-image: url('../img/testImage8.jpg'); }
 .regiBox { display: none; }
 #registrationBox {
     height: 150px;
@@ -159,6 +168,43 @@
     font-size: 18px;
     color: #eee;
 }
+
+/* custom toggle */
+.customToggle {
+    display: none;
+    position: absolute;
+    top: 13px; right: 40px;
+    width: 55px; height: 20px;
+    background-color: #aaa;
+    border-radius: 17px;
+    cursor: pointer;
+}
+.customToggle > div {
+    position: absolute;
+    top: -8px; left: -1px;
+    width: 36px; height: 36px;
+    background-color: #444;
+    border-radius: 21px;
+}
+.customToggle > div > div {
+    position: absolute;
+    top: 10px; left: 10px;
+    width: 16px; height: 16px;
+    background-color: #bbb;
+    border-radius: 10px;
+}
+.customToggle > input { display: none; }
+.customToggle:hover > div { background-color: #333; }
+.customToggle > span {
+    display: block;
+    position: absolute;
+    top: 0; left: -95px;
+    width: 100px; height: 20px;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
 .checkWidth992 { display: block; }
 /* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
   기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
@@ -188,10 +234,11 @@
     .categoryBox > div  > span:nth-of-type(1) { height: 63px; line-height: 61px; }
     .categoryBox > div  > span:nth-of-type(2) { height: 37px; line-height: 35px; }
     .titleBox { padding: 0 50px; font-size: 24px; }
-    #imageBoxs > div { width: 50%; float: left; }
-    .imageBox { height: 350px; }
+    #imageBoxs > div { width: 50%; float: left; margin-bottom: 10px; }
+    .imageBox { height: 350px; margin-bottom: 0; }
     #registrationBox { width: 992px; margin: 0 auto; }
     .lowWidth992 { display: none; } /* 992 width check */
+    .customToggle { display: block; }
     /* image box setting */
     
 }

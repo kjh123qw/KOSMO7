@@ -220,22 +220,104 @@
             </div>
             <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
             <div id="myPageMenu">
-                    <div class="selectedMenu curLoc"><span></span></div>
-                    <div><div></div></div>
-                    <div>
-                        <ul>
-                            <li><a href="./mMain.html">마이페이지 메인</a></li>
-                            <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
-                            <li><a href="./mMyInfo.html">개인정보수정</a></li>
-                            <li><a href="./mHosting.html">등록한 축제</a></li>
-                            <li><a href="./mLeave.html">회원탈퇴</a></li>
-                        </ul>
+                <div class="selectedMenu curLoc"><span></span></div>
+                <div><div></div></div>
+                <div>
+                    <ul>
+                        <li><a href="./mMain.html">마이페이지 메인</a></li>
+                        <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
+                        <li><a href="./mMyInfo.html">개인정보수정</a></li>
+                        <li><a href="./mHosting.html">등록한 축제</a></li>
+                        <li><a href="./mLeave.html">회원탈퇴</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // MYPAGE MENU -->
+            <!-- 비밀번호 확인 폼 -->
+            <div id="pwdConfirmForm">
+                <hr>
+                <div class="titleBox">
+                    <span><i class="fas fa-envelope"></i>&nbsp;비밀번호 확인</span>
+                </div>
+                <hr>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>비밀번호 확인</span>
+                    </div>
+                    <div class="joinPwdBox">
+                        <input type="password" name="confirmPwd" id="confirmPwd" class="focusFunc">
                     </div>
                 </div>
-            <!-- // MYPAGE MENU -->
-            <div class="howToUse">
-                <div>준비중 입니다.</div>
+                <div class="moduleBox">
+                    <button id="confirmBtn">확인</button>
+                </div>
             </div>
+            <!-- // 비밀번호 확인 폼 -->
+            <!-- 정보 수정 폼 -->
+            <div id="infoModifyForm">
+                <hr>
+                <div class="titleBox">
+                    <span><i class="fas fa-envelope"></i>&nbsp;이메일 변경</span>
+                </div>
+                <hr>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>아이디</span>
+                    </div>
+                    <div id="infModIdBox">
+                        <span>kimjeo****</span>
+                    </div>
+                </div>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이메일</span>
+                    </div>
+                    <div class="joinEmailBox">
+                        <input type="email" name="modifyEmail" id="modifyEmail" class="focusFunc">
+                    </div>
+                </div>
+                <div class="moduleBox agrEml">
+                    <div></div>
+                    <div>이메일 수신에 동의합니다.</div>
+                    <input type="checkbox" name="agreeEmail" id="agreeEmail" class="displayNone">
+                </div>
+                <div class="moduleBox">
+                    <button id="emailModifyBtn">이메일 정보 변경</button>
+                </div>
+                <hr>
+                <div class="titleBox">
+                    <span><i class="fas fa-key"></i>&nbsp;비밀번호 변경</span>
+                </div>
+                <hr>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>이전 비밀번호</span>
+                    </div>
+                    <div class="joinPwdBox">
+                        <input type="password" name="beforePwd" id="beforePwd" class="focusFunc">
+                    </div>
+                </div>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>새 비밀번호</span>
+                    </div>
+                    <div class="joinPwdBox">
+                        <input type="password" name="afterPwd" id="afterPwd" class="focusFunc">
+                    </div>
+                </div>
+                <div class="moduleBox">
+                    <div class="logInputLabel">
+                        <span></span><span></span><span>새 비밀번호 확인</span>
+                    </div>
+                    <div class="joinPwdChkBox">
+                        <input type="password" name="afterPwdChk" id="afterPwdChk" class="focusFunc">
+                    </div>
+                </div>
+                <div class="moduleBox">
+                    <button id="pwdModifyBtn">비밀번호 변경</button>
+                </div>
+            </div>
+            <!-- // 정보 수정 폼 -->
         </div>
     </content>
     <footer id="footer">

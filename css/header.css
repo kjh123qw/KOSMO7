@@ -8,29 +8,36 @@ header {
   position: relative;
   display: none;
   height: 60px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgb(197, 37, 37);
 }
 .header_wrap > .logo {
-  width: 50px;
-  height: 50px;
+  width: 50px; height: 50px;
   margin: 10px;
   float: left;
   cursor: pointer;
 }
+.header_wrap > .logo > a {
+  display: block;
+  width: 50px; height: 50px;
+}
 .header_wrap_m {
   position: relative;
   width: 100%; height: 50px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgb(197, 37, 37);
 }
 .header_top {
   overflow: hidden;
   width: 100%; height: 50px;
 }
 .header_wrap_m > .header_top > .logo_m {
-  width: 40px;
-  height: 40px;
+  width: 40px; height: 40px;
   margin: 5px;
   float: left;
+}
+.header_wrap_m > .header_top > .logo_m > a {
+  display: block;
+  width: 40px; height: 40px;
+  padding-top: 3px;
 }
 .header_wrap_m > .header_top > #menuBtn {
   width: 48px; height: 48px;

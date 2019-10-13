@@ -74,17 +74,17 @@ $(function(){
         $clTrg.prev().children('span:nth-of-type(1)').css('border-bottom','1px solid #000');
         $clTrg.prev().children('span:nth-of-type(2)').css('border-bottom','1px solid #000');
         $clTrg.prev().children('span:nth-of-type(3)').css('color','#000');
-        $clTrg.css('border-bottom', '1px solid #000');
+        $clTrg.css({'border-bottom':'1px solid #000', 'border-left':'1px solid #000', 'border-right':'1px solid #000'});
         $clTrg.children('span').css('color','#000');
         $clTrg.prev().children('span:nth-of-type(1)').animate({'width':'34%'}, 100);
         $clTrg.prev().children('span:nth-of-type(2)').animate({'width':'34%'}, 100);
-        $clTrg.prev().children('span:nth-of-type(3)').animate({'font-size':'16px', 'top':'5px'}, 100);
+        $clTrg.prev().children('span:nth-of-type(3)').animate({'top':'9px'}, 100);
     }
     function OptionClose($clTrg){
         $clTrg.prev().children('span:nth-of-type(1)').removeAttr('style');
         $clTrg.prev().children('span:nth-of-type(2)').removeAttr('style');
         $clTrg.prev().children('span:nth-of-type(3)').removeAttr('style');
         $clTrg.children('span:first-of-type').removeAttr('style');
-        $clTrg.css('border-bottom', '1px solid #aaa');
+        $clTrg.removeAttr('style');
     }
 });
