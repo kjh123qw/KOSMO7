@@ -4,152 +4,21 @@ $(function(){
     $('#wrap').width(width);
     //초기 가로 설정
 
+    $('#ulDiv li').mouseenter(function(){
 
-        var chartBoxWidth = $('#chart1').width(); //그래프 1 가로길이
+        var name = $(this).attr('data-li');
+        if(name == 'member'){
+            return false;
+        }
 
-        Highcharts.chart('chart1', {
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: 0,
-                plotShadow: false,
-                width:chartBoxWidth,
-            },
-            title: {
-                text: '',
-                align: 'center',
-                verticalAlign: 'middle',
-            },
-            tooltip: {
-                enabled:true,
-            },
-            plotOptions: {
-                pie: {
-                    dataLabels: {
-                        enabled: false,
-                        distance: -50,
-                        style: {
-                            fontWeight: 'bold',
-                            color: 'white'
-                        }
-                    },
-                    startAngle: -90,
-                    endAngle: 90,
-                    center: ['50%', '100%'],
-                    size: '200%'
-                }
-            },
-            series: [{
-                type: 'pie',
-                name: 'Browser share',
-                innerSize: '70%',
-                data: [
-                    ['회원', 71],
-                    ['호스트', 29]
+        $(this).addClass('pulse');
+    })
 
-                ]
-            }]
-        });
-        //1번 그래프
+    $('#ulDiv li').mouseleave(function(){
+        $(this).removeClass('pulse');
+    })
+    //메뉴 css
 
-        Highcharts.chart('chart3', {
-            chart: {
-                type: 'pie',
-                options3d: {
-                    enabled: true,
-                    alpha: 45,
-                    beta: 0
-                }
-            },
-            title: {
-                text: ''
-            },
-            tooltip: {
-                pointFormat: ''
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    depth: 35,
-                    dataLabels: {
-                        enabled: true,
-                        format: '{point.name}'
-                    },
-                    size:"120%"
-                }
-            },
-            series: [{
-                type: 'pie',
-                name: 'Browser share',
-                data: [
-                    ['벛꽃',6],['불꽃',8],['신사',9],['맥주',6],['얼음',7],['바다',6]
-                ]
-            }]
-        });
-        //3번 그래프
-       
-
-
-        Highcharts.chart('chart2', {
-            chart: {
-                type: 'pie',
-                options3d: {
-                    enabled: true,
-                    alpha: 45,
-                    beta: 0
-                }
-            },
-            title: {
-                text: ''
-            },
-            tooltip: {
-                pointFormat: ''
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    depth: 35,
-                    dataLabels: {
-                        enabled: true,
-                        format: '{point.name}'
-                    },
-                    size:"120%"
-                }
-            },
-            series: [{
-                type: 'pie',
-                name: 'Browser share',
-                data: [
-                    ['훗카이도',8],['혼슈',19],['시코쿠',6],['큐슈',9]
-                ]
-            }]
-        });
-        //2번 그래프
-
-        Highcharts.chart('chart4', {
-            data: {
-                table: 'datatable'
-            },
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: ''
-            },
-            yAxis: {
-                allowDecimals: false,
-                title: {
-                    text: ''
-                }
-            },
-            tooltip: {
-            }
-        });
-        // 4번 그래프
-
-
-   
     setDateTime(); //처음 날짜 시간세팅
     var jpTime = setInterval(function(){
 
@@ -175,22 +44,6 @@ $(function(){
     },1000)
     //시간 Interval 업데이트
 
-
-    $('#ulDiv li').mouseenter(function(){
-
-        var name = $(this).attr('data-li');
-        if(name == 'main'){
-            return false;
-        }
-
-        $(this).addClass('pulse');
-    })
-
-    $('#ulDiv li').mouseleave(function(){
-        $(this).removeClass('pulse');
-    })
-    //메뉴 css
-
     $(function(){
         $('.weatherBox').bxSlider({
         auto:true,
@@ -203,47 +56,7 @@ $(function(){
         });
       })
       //bxSlider 설정
-    
 })
-
-function dateChange(text){
-        var yearMonth = $('#yearMonthSpan').text();
-        var year;
-        var month;
-
-        var dateArr = yearMonth.split(' ');
-
-
-        year = dateArr[0].substr(0,4);
-
-        if(dateArr[1].length == 2){
-            month = dateArr[1].substr(0,1);
-        }else{
-            month = dateArr[1].substr(0,2);
-        }
-
-
-
-        if(text == 'next'){
-            ++month;
-            if(month == 13){
-                ++year;
-                month =1;
-            }
-        }else{
-            --month;
-            if(month == 0){
-                --year;
-                month=12;
-            }
-        }
-
-        
-        
-        $('#yearMonthSpan').text(year+"년 "+month+"월");
-        dateUpdate(year, month)
-
-}
 
 function dateUpdate(year, month){
 
@@ -407,4 +220,38 @@ function setDateTime(){
         basicText += "</table>";
 
         $('.calendarDiv > div').eq(1).html(basicText);
+}
+
+function dateChange(text){
+    var yearMonth = $('#yearMonthSpan').text();
+    var year;
+    var month;
+
+    var dateArr = yearMonth.split(' ');
+
+    year = dateArr[0].substr(0,4);
+
+    if(dateArr[1].length == 2){
+        month = dateArr[1].substr(0,1);
+    }else{
+        month = dateArr[1].substr(0,2);
+    }
+
+    if(text == 'next'){
+        ++month;
+        if(month == 13){
+            ++year;
+            month =1;
+        }
+    }else{
+        --month;
+        if(month == 0){
+            --year;
+            month=12;
+        }
+    }
+
+    $('#yearMonthSpan').text(year+"년 "+month+"월");
+    dateUpdate(year, month)
+
 }

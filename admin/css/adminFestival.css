@@ -1,15 +1,13 @@
-@media (min-width: 481px) and (max-width: 767px) {
-
-
-    
-    }
-
-
 html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default; font-family: 'Do Hyeon', sans-serif;}
-#mainContainer{
+#wrap{
+    overflow: hidden;
     height: 100%;
 }
 
+#mainContainer{
+    height: 100%;
+}
+/* nav */
 nav img{
     width: 40px;
     height: 40px;
@@ -26,8 +24,6 @@ nav img{
     height: 46px;
 }
 
-
-
 .mainNav i{
     color: red;
     font-size: 25px;
@@ -35,23 +31,37 @@ nav img{
     padding: 5px; 
 }
 
-
- #titleSpan{
+#titleSpan{
     color: red;
     margin-right: 10px;
 }
-
-
 
 .mainNav form{
     margin-right: 10px;
 }
 
-#wrap{
-    overflow: hidden;
-    height: 100%;
+.iconBorder{
+    position: relative;
 }
 
+#alarm{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: yellow;
+    top: -10px;
+    right: 5px;
+}
+/* //nav */
+
+.contentsBox{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 95%;
+}
+
+/* aside */
 .aside > div:first-child{
     background-color: #555;
     box-sizing: border-box;
@@ -59,12 +69,6 @@ nav img{
 .aside > div:last-child{
     height: 100%;
     background-color: #555;
-}
-
-.contentsBox{
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 95%;
 }
 
 .photoDiv > div{
@@ -84,16 +88,6 @@ nav img{
 
 .iconBorder{
     position: relative;
-}
-
-#alarm{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: yellow;
-    top: -10px;
-    right: 5px;
 }
 
 .photoDiv > div > img{
@@ -133,7 +127,7 @@ nav img{
     cursor: pointer;
 }
 
-#ulDiv li:nth-child(1) a{
+#ulDiv li:nth-child(3) a{
     color: red;
 }
 
@@ -141,8 +135,11 @@ nav img{
     text-decoration: none;
     color: black;
 }
+/* //aside */
 
- .section > div{   /* row */
+
+/* section - article2 */
+.section > div{   /* row */
     height: 100%;
     padding: 5px;
 } 
@@ -152,9 +149,9 @@ nav img{
 }
 
 .article1 > div{/* row */
-    height: 30%;
-    border-right:1px solid black;
-    margin-top: 22px;
+    height: 100%;
+    border:1px solid black;
+    /* margin-top: 22px; */
 }
 
 .article2{
@@ -164,57 +161,7 @@ nav img{
 .article2 > div{/* row */
     height: 30%;
     margin-top: 22px;
-}
-
-.graphDiv{
-    margin: 5px;
-}
-
-.graphDiv div{
-    margin-top: 10px;
-}
-
-.graphDiv div:last-child{
-    height: 70%;
-}
-
-.countBox{
-    margin: 5px;
-}
-
-.countBox div{
-    margin-top: 5px;
-    width: 100%;
-    text-align: center;
-    font-size: 70px;
-}
-
-#datatable{
-    display: none;
-}
-
-.graphBox{
-    height: 100%;
-}
-
-.graphDiv div:first-child{
-    text-align: center;
-}
-
-.highcharts-button, .highcharts-credits{
-    display: none;
-}
-
-.highcharts-data-labels {
-    display: none;
-}
-
-#chart1, #chart2, #chart3{
-    padding-left: 4px;
-}
-
-#chart4{
-    padding-left: 25px;
+    border-left: 1px solid black;
 }
 
 .infoDiv{
@@ -288,4 +235,4 @@ nav img{
     margin-top: 10px;
     font-size: 50px;
 }
-
+/* //section - article2 */
