@@ -1,0 +1,28 @@
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content > h2{
+    margin-top: 5%;
+    float: left;
+    margin-left: 500px;
+    margin-bottom:5%;
+}
+
+.content > p {
+    width: 80%;
+    margin-left: 10%;
+    height: 600px;
+    overflow: scroll;
+}
+
+.check {
+    margin: 0 auto;
+    margin-left: 550px;
+}
+
+.check > input {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

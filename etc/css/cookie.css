@@ -1,0 +1,55 @@
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap > h2{
+    margin-top: 5%;
+    float: left;
+    margin-left: 550px;
+    margin-bottom:5%;
+}
+
+.wrap > div > p {
+    width: 80%;
+    margin-left: 10%;
+    height: 150px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+
+.cookie1, .cookie2 {
+    width: 80%;
+    border: 1px solid #888;
+    background-color: #777;
+    margin-left: 10%;
+}
+
+.cookie1:hover {
+    cursor: pointer;
+}
+
+.cookie2:hover {
+    cursor: pointer;
+}
+
+.content1 {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #777;
+    background-color: #ccc;
+    display: none;
+}
+
+.content2 {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #777;
+    background-color: #ccc;
+    display: none;
+}
+
+
+
+

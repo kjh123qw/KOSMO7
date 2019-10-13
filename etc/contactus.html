@@ -355,8 +355,21 @@
                     </div>
                 </div>
                 <div id="contact" class="tabcontent">
-                    <h3>Contact</h3>
-                    <p>Get in touch, or swing by for a cup of coffee.</p>
+                    <form action="#" method="post">
+                        <div class="textCont">
+                            <input type="text" name="postTitle" placeholder="제목을 입력해주세요" /><br />
+                            <input type="text" class="mail" name="email" placeholder="E-mail"/>
+                            <select name="kind" id="kindof">
+                                <option value="">--------------------분   류↓-----------------</option>
+                                <option value="booking">--------------------예   약--------------------</option>
+                                <option value="refunding">--------------------환   불--------------------</option>
+                                <option value="matsuri">--------------------축   제--------------------</option>
+                                <option value="acconts">--------------------계   정--------------------</option>
+                            </select><br />
+                            <textarea name="memo" placeholder="내용을 입력해주세요."></textarea><br />
+                            <input type="submit" value="write" />
+                        </div>
+                    </form>  
                 </div>
             </div>
         </div>

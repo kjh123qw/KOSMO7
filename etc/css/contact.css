@@ -159,7 +159,7 @@
   display: none;
   position: fixed;
   top: 10%; left: 20%;
-  width: 60%; height: 600px;
+  width: 60%; height: 650px;
   background-color: #eee;
   z-index: 15;
 }
@@ -215,7 +215,7 @@
 
 .popupBtn{
   width: 250px;
-  height: 150px;
+  height: 200px;
   margin-bottom: 0;
   padding-bottom: 0;
   overflow: hidden;
@@ -243,4 +243,52 @@
   left: 0; right: 0;
   background-color:rgba(0,0,0,0.5);
   z-index: 10;
+}
+
+
+/* ContactUs */
+
+.textCont {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.textCont > input:nth-child(1) {
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-left: 10%;
+}
+
+.textCont > .mail {
+  width: 50%;
+  height: 30px;
+  margin: 0 auto;
+  float: left;
+  margin-left: 10%;
+  margin-top: 5px;
+}
+
+.textCont > select {
+  width:29%;
+  height: 30px;
+  margin: 0 auto;
+  float: right;
+  margin-right: 10%;
+  margin-top: 5px;
+}
+
+.textCont > textarea {
+  width: 80%;
+  height: 400px;
+  margin-top: 5px;
+  margin-left: 10%;
+}
+
+.textCont > input:last-child {
+  margin-left: 20%;
+  width: 60%;
 }
