@@ -42,7 +42,9 @@
     <div id = "container">
         <!-- nav -->
         <div class = "nav">
-            <a id = "logo" href="#"><img src="../img/logo_noText 51x44.png" alt="logo"></a>
+            <!-- <a id = "logo" href="#"><img src="../img/logo_noText 51x44.png" alt="logo"></a> -->
+            <span id = "logo"><img src="../img/logo_noText 51x44.png" alt="logo"></span>
+
             <div id = "iconBox">
                 <a href="./adminNoticeList.html"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
                 <a href="./adminMember.html"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
@@ -76,7 +78,43 @@
                         </div>    
                     </div>
                 </div>
-                <div id = "section"></div>
+                <!-- <div id = "backG"></div> -->
+                <div id = "section">
+                    <div class="article1"></div>
+                    <div class="article2">
+                        <div id = "infoDiv">
+                            <div>
+                                <P id="textJapan">JAPAN</P>
+                            </div>
+                            <div class="weatherBox">
+                                <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
+                                <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
+                                <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>
+                            </div>
+                            <div id="timeText">
+                                <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
+                            </div>
+                        </div>
+                        <div id = "snsDiv">
+                            <div>
+                                <div><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                                <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+                            </div>
+                            <div>
+                                <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+                                <div><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></div>
+                            </div>
+                        </div>
+                        <div id= "calendarDiv">
+                                <div>
+                                    <span onclick="dateChange('prev');">&lt;&lt;&lt;&lt;</span>
+                                    <span id="yearMonthSpan"></span>
+                                    <span onclick="dateChange('next');">&gt;&gt;&gt;&gt;</span>
+                                </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
