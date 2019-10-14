@@ -1,12 +1,16 @@
-@media (min-width: 481px) and (max-width: 767px) {
+/* @media (min-width: 481px) and (max-width: 767px) {
 
 
     
-    }
+    } */
 
 
 html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default; font-family: 'Do Hyeon', sans-serif;}
-#mainContainer{
+
+.container-fuild{
+    max-width: none!important;
+    /* width: 100%; */
+    overflow: hidden;
     height: 100%;
 }
 
@@ -47,10 +51,6 @@ nav img{
     margin-right: 10px;
 }
 
-#wrap{
-    overflow: hidden;
-    height: 100%;
-}
 
 .aside > div:first-child{
     background-color: #555;
@@ -133,8 +133,12 @@ nav img{
     cursor: pointer;
 }
 
+#ulDiv li a{
+    color: black;
+}
+
 #ulDiv li:nth-child(1) a{
-    color: red;
+    color: white;
 }
 
 #ulDiv a{
@@ -170,9 +174,6 @@ nav img{
     margin: 5px;
 }
 
-.graphDiv div{
-    margin-top: 10px;
-}
 
 .graphDiv div:last-child{
     height: 70%;

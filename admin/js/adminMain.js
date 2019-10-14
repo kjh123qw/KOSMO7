@@ -1,9 +1,13 @@
 $(function(){
 
     var width = screen.width;
-    $('#wrap').width(width);
-    //초기 가로 설정
+    var height = screen.height;
+    // $('#wrap').width(width);
+    $('.container-fuild').width(width);
+    // $('.container-fuild').height(height);
+    // $('#wrap').height(height);
 
+    //초기 가로 설정
 
         var chartBoxWidth = $('#chart1').width(); //그래프 1 가로길이
 
