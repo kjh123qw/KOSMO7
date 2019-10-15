@@ -1,5 +1,6 @@
 $(function(){
     //resize event
+    $('.pastFestival').show();
     $(window).resize(function(event){
         closeMyMenu();
     })
@@ -20,6 +21,35 @@ $(function(){
     });
 
 
+    // 검색 시스템에서 div 정렬후 새로 집어넣는 기능 작성!
+    $('.pastFestival').click(function(){
+        if ($('.pastFestival').children('input').is(':checked')){
+            $(this).children('div').stop().animate({'left':'-1px'}, 50, function(){
+                $('.pastFestival').children('input').prop('checked', false);
+                $('.imageBox').each(function(){displayOnPF($(this));});
+                $('.pastFestival').stop().removeAttr('style');
+                $('.pastFestival').children('div').children('div').stop().removeAttr('style');
+                $('.pastFestival').show();
+            });
+        } else {
+            $(this).stop().css({'background-color':'#4169e1'}, 50);
+            $(this).children('div').children('div').stop().css({'background-color':'#eee'}, 50);
+            $(this).children('div').stop().animate({'left':'21px'}, 50, function(){
+                $('.pastFestival').children('input').prop('checked', true);
+                $('.imageBox').each(function(){displayOffPF($(this));});
+            });
+        }
+    });
+    function displayOnPF($var){
+        childClass = $var.children('div:first-of-type').attr('class');
+        if (childClass == 'finishedFest')
+            $var.show();
+    }
+    function displayOffPF($var){
+        childClass = $var.children('div:first-of-type').attr('class');
+        if (childClass == 'finishedFest')
+            $var.hide();
+    }
     function openMyMenu(){
         var heightUl = $('#myPageMenu_m > ul > li').length * 40;
         $('#myPageMenu_m').show();

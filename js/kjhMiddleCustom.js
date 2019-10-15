@@ -27,7 +27,7 @@ $(function(){
             }, 100);
         }
     });
-    $('.customToggle').click(function(){
+    $('.festivalInfo').click(function(){
         if ($('.festivalInfo').children('input').is(':checked')){
             $(this).children('div').stop().animate({'left':'-1px'}, 50, function(){
                 $('.festivalInfo').children('input').prop('checked', false);
