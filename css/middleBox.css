@@ -47,7 +47,7 @@
     padding: 0 15px;
     font-size: 20px;
     font-weight: bold;
-    line-height: 43px;
+    line-height: 33px;
 }
 #imageBoxs {
     overflow: hidden;
@@ -173,7 +173,7 @@
 .customToggle {
     display: none;
     position: absolute;
-    top: 13px; right: 10px;
+    top: 7px; right: 10px;
     width: 55px; height: 20px;
     background-color: #aaa;
     border-radius: 17px;
@@ -198,11 +198,12 @@
 .customToggle > span {
     display: block;
     position: absolute;
-    top: 0; left: -95px;
-    width: 100px; height: 20px;
+    top: 0; left: -100px;
+    width: 95px; height: 20px;
     line-height: 18px;
     font-size: 14px;
     font-weight: normal;
+    text-align: right;
 }
 
 .checkWidth992 { display: block; }

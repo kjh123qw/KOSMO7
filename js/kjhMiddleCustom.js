@@ -2,9 +2,12 @@ $(function(){
     checkInfoOption();
     $(window).resize(function(event){
         checkInfoOption();
-        $('.festivalInfo').children('input').prop('checked', false);
-        $('.festivalInfo').stop().removeAttr('style');
-        $('.festivalInfo').children('div').stop().removeAttr('style');
+        // if ($('.lowWidth992').css('display') != 'none'){
+        //     $('.festivalInfo').children('input').prop('checked', false);
+        //     $('.festivalInfo').stop().removeAttr('style');
+        //     $('.festivalInfo').children('div').stop().removeAttr('style');
+        //     $('.festivalInfo').children('div').children('div').stop().removeAttr('style');
+        // }
     })
     $('.imageBox').on('mouseover', function(){
         if ($('.lowWidth992').css('display') == 'none' && !$('.festivalInfo').children('input').is(':checked')){
@@ -29,19 +32,9 @@ $(function(){
     });
     $('.festivalInfo').click(function(){
         if ($('.festivalInfo').children('input').is(':checked')){
-            $(this).children('div').stop().animate({'left':'-1px'}, 50, function(){
-                $('.festivalInfo').children('input').prop('checked', false);
-                $('.imageBox').each(function(){displayOffOPtion($(this));});
-                $('.festivalInfo').stop().removeAttr('style');
-                $('.festivalInfo').children('div').children('div').stop().removeAttr('style');
-            });
+            toggleBtnOff();
         } else {
-            $(this).stop().css({'background-color':'#4169e1'}, 50);
-            $(this).children('div').children('div').stop().css({'background-color':'#eee'}, 50);
-            $(this).children('div').stop().animate({'left':'21px'}, 50, function(){
-                $('.festivalInfo').children('input').prop('checked', true);
-                $('.imageBox').each(function(){displayOnOption($(this));});
-            });
+            toggleBtnOn();
         }
     });
 
@@ -62,12 +55,25 @@ $(function(){
             'height':'20px'
         });
     }
-
+    function toggleBtnOn(){
+        $('.festivalInfo').stop().css({'background-color':'#4169e1'}, 50);
+        $('.festivalInfo').children('div').children('div').stop().css({'background-color':'#eee'}, 50);
+        $('.festivalInfo').children('div').stop().animate({'left':'21px'}, 50, function(){
+            $('.festivalInfo').children('input').prop('checked', true);
+            $('.imageBox').each(function(){displayOnOption($(this));});
+        });
+    }
+    function toggleBtnOff(){
+        $('.festivalInfo').children('div').stop().animate({'left':'-1px'}, 50, function(){
+            $('.festivalInfo').children('input').prop('checked', false);
+            $('.imageBox').each(function(){displayOffOPtion($(this));});
+            $('.festivalInfo').stop().removeAttr('style');
+            $('.festivalInfo').children('div').children('div').stop().removeAttr('style');
+        });
+    }
     function checkInfoOption(){
         if ($('.lowWidth992').css('display') != 'none'){
-            $('.imageBox').each(function(){displayOnOption($(this));});
-        } else {
-            $('.imageBox').each(function(){displayOffOPtion($(this));});
+            toggleBtnOn();
         }
     }
 
