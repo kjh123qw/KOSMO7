@@ -166,7 +166,7 @@
     color: black;
 }
 
-#ulDiv li:nth-child(1) a{
+#ulDiv li:nth-child(4) a{
     color: white;
 }
 
@@ -176,7 +176,7 @@
 }
 
 .article1, .article2{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100%;
     
 }
@@ -196,7 +196,7 @@
 .article2 > div{
     margin-top: 20px;
     width: 100%;
-    border: 1px solid black;
+    border-left: 1px solid black;
     height: 30%;
 }
 
@@ -238,33 +238,21 @@
     height: 50%;
 }
 
-/* #snsDiv > div:first-child{
-    border-bottom: 3px dotted black;
-}
-
-#snsDiv > div >  div:first-child{
-    border-right: 3px dotted black;
-} */
-
 #snsDiv div a{
     color: black;
 }
 
 #snsDiv div div{
-    /* margin-left: 14px; */
     text-align: center;
     box-sizing: border-box;
     display: inline-block;
     width: 49%;
     height: 100%;
     font-size: 90PX;
-    border: 1px solid black;
+    /* border-bottom: 1px dotted black; */
+    /* border: 1px solid black; */
 
 
-}
-
-#calendarDiv{
-    /* margin: 5px; */
 }
 
 #calendarDiv > div:first-child > span{
@@ -277,7 +265,7 @@
 
 #calendarDiv > div:first-child{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -291,3 +279,128 @@
     margin: auto;
 }
 
+/* =============================================== */
+
+#tableDiv{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#tableDiv td, th{
+    border: 1px solid black;
+    height: 30px;
+}
+
+#tableDiv td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+#tableDiv th:nth-child(1){
+    width: 100px;
+}
+#tableDiv th:nth-child(2){
+    width: 400px;
+}
+#tableDiv td:nth-child(2){
+    text-align: left;
+}
+#tableDiv th:nth-child(3){
+    width: 150px;
+}
+#tableDiv th:nth-child(4){
+    width: 200px;
+}
+#tableDiv th:nth-child(5){
+    width: 150px;
+}
+#tableDiv th:nth-child(6){
+    width: 50px;
+}
+
+.fa-times{
+    color: red;
+}
+
+.fa-check{
+    color: green;
+}
+
+#tableDiv table {
+    margin: 30px auto;
+    width: 90%;
+    table-layout: fixed;
+}
+
+#tableDiv tr:hover{
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    transition-duration:1s;
+}
+
+#pagingBox{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #555;
+    display: inline-block;
+    padding-bottom: 10px;
+
+}
+
+#pagingBox span{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#pagingBox span:nth-child(4){
+    font-weight: bold;
+    border-bottom:1px solid #555;
+}
+
+#contactInfo{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+}
+
+#contactInfo div:nth-child(1){
+    margin: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+
+#contactInfo div:nth-child(2){
+    text-align: center;
+
+}
+
+#contactInfo div:nth-child(3){
+    margin-top: 30px;
+    position: absolute;
+    right: 50px;
+}
+
+#contactInfo div:nth-child(3) button{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+}
+
+textarea{
+    margin-top: 30px;
+    resize: none;
+    width: 80%;
+
+}
+
+#conatactTitle{
+    display: inline-block;
+}

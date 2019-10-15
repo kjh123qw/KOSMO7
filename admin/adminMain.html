@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Air Matsuri</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- 부트스트랩 -->
-
+    <title>admin main</title>
+    
     <script src="./js/jquery-2.1.1.min.js"></script><!--반드시필요함 -->
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/jquery.easing.1.3.js"></script>
@@ -39,216 +32,194 @@
     <script src="./js/charts/data.js"></script>
     <!-- chart -->
 
-    <link rel="stylesheet" href="./css/adminMain.css">
     <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/adminMain.css">
     <script src="./js/adminMain.js"></script>
+
 </head>
+<body>
 
-<body oncontextmenu="return false" ondragstart="return false">
+    <div id = "container">
+        <!-- nav -->
+        <div class = "nav">
+            <!-- <a id = "logo" href="#"><img src="../img/logo_noText 51x44.png" alt="logo"></a> -->
+            <span id = "logo"><img src="../img/logo_noText 51x44.png" alt="logo"></span>
 
-    <!-- <div id="wrap"> -->
-
-        <div class="container-fuild" id="mainContainer">
-
-            <nav class="navbar navbar-dark bg-dark bg-light mainNav">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/logo_noText 51x44.png" alt="logo">  
-                </a>
-                <div>
-                    <a href="./adminNoticeList.html"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
-                    <a href="./adminMember.html"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
-                    <a href="./adminFestival.html"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
-                </div>
-                <span id="titleSpan">AIRMATSURI ADMIN</span>
-            </nav>
-
-            <div class="row contentsBox">
-
-                <!-- aside -->
-                <div class="col-sm-2 aside">
-                    <div class="row">
-                        <div class="col-sm-12 photoDiv">
-                            <div><img src="../festival/img/image2.png" alt="adminImage" class="img-thumbnail"></div>
+            <div id = "iconBox">
+                <a href="./adminNoticeList.html"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
+                <a href="./adminMember.html"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
+                <a href="./adminFestival.html"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
+            </div>
+            <span id="titleSpan">AIRMATSURI ADMIN</span>
+        </div>
+        <!-- //nav -->
+            <div id = "contentBox">
+                <div id = "aside">
+                    <div>
+                        <div class="photoDiv">
+                            <div><img src="../festival/img/image2.png" alt="adminImage"></div>
                         </div>
-                        <div class="col-sm-12 photoSubDiv">
+                        <div class="photoSubDiv">
                             <p>유지상</p>
                         </div>
-                        <div class="col-sm-12 btnDiv">
-                            <button type="button" class="btn btn-secondary btn-sm"
-                                onclick="location.href = './../index.html'">메인으로</button>
-                            <button type="button" class="btn btn-secondary btn-sm"
-                                onclick="location.href = './../index.html'">로그아웃</button>
+                        <div class="btnDiv">
+                            <button type="button"  onclick="location.href = './../index.html'">메인으로</button>
+                            <button type="button"  onclick="location.href = './../index.html'">로그아웃</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12" id="ulDiv">
+                    <div>
+                        <div id="ulDiv">
                             <ul>
-                                <li class="animated" data-li="main"><a href="./adminMain.html"><i
-                                            class="fas fa-home"></i><span>MAIN</span></a></li>
-                                <li class="animated" data-li="member"><a href="./adminMember.html"><i
-                                            class="fas fa-users"></i> <span>MEMBER</span></a></li>
-                                <li class="animated" data-li="festival"><a href="./adminFestival.html"><i
-                                            class="fas fa-torii-gate"></i> <span>FESTIVAL</span></a></li>
-                                <li class="animated" data-li="notice"><a href="./adminNoticeList.html"><i
-                                            class="fas fa-chalkboard-teacher"></i> <span>CONTACT US</span></a></li>
-                                <!-- <li class="animated" data-li = "smalltown"><a href = "#"><i class="fas fa-vihara"></i> <span>SMALLTOWN</span></a></li>  -->
-                                <!-- <li class="animated" data-li = "host"><a href = "#"><i class="far fa-address-card"></i> <span>HOST</span></a></li>-->
+                                <li class="animated" data-li="main"><a href="./adminMain.html"><i class="fas fa-home"></i><span>MAIN</span></a></li>
+                                <li class="animated" data-li="member"><a href="./adminMember.html"><i class="fas fa-users"></i> <span>MEMBER</span></a></li>
+                                <li class="animated" data-li="festival"><a href="./adminFestival.html"><i class="fas fa-torii-gate"></i> <span>FESTIVAL</span></a></li>
+                                <li class="animated" data-li="ContactUs"><a href="./adminContactUs.html"><i class="fas fa-chalkboard-teacher"></i> <span>CONTACT US</span></a></li>                
                             </ul>
-                        </div>
+                        </div>    
                     </div>
                 </div>
-                <!-- //aside -->
-                <!-- section -->
-                <div class="col-sm-10 section">
-                    <!-- id확인 -->
-                    <div class="row">
-                        <div class="col-sm-9 article1">
-                            <div class="row">
-                                <div class="col countBox">
+                <!-- <div id = "backG"></div> -->
+                <div id = "section">
+                    <div class="article1">
+                        <!-- 본문 확인 -->
+                            <div id = "countBoxs">
+                                <div class="countBox">
                                     <div><i class="fas fa-users"></i></div> <!-- 회원수 -->
                                     <hr>
                                     <div>98</div>
                                 </div>
-                                <div class="col countBox">
+                                <div class="countBox">
                                     <div><i class="fas fa-torii-gate"></i></div> <!-- 축제수 -->
                                     <hr>
                                     <div>42</div>
                                 </div>
-                                <div class="col countBox">
+                                <div class="countBox">
                                     <div><i class="far fa-address-card"></i></div> <!-- 호스트수 -->
                                     <hr>
                                     <div>27</div>
                                 </div>
-                                <div class="col countBox">
+                                <div class="countBox">
                                     <div><i class="fas fa-chalkboard-teacher"></i></div> <!-- 공지사항게시글수 -->
                                     <hr>
                                     <div>7</div>
-                                </div>
-                                <!-- <div class = "col countBox">
-                                <div><i class="fas fa-vihara"></i></div> 소도시게시글수 
-                                <hr>
-                                <div>13</div>
-                            </div> -->
+                                </div> 
                             </div>
-                            <div class="row">
-                                <div class="col graphDiv">
+                            <div id = "charts">
+                                <div class="graphDiv">
                                     <div>회원 / 호스트</div>
                                     <hr>
                                     <div id="chart1"></div>
                                 </div> <!-- 회원/호스트비율 -->
-                                <div class="col graphDiv">
+                                <div class="graphDiv">
                                     <div>등록 지역</div>
                                     <hr>
                                     <div id="chart2"></div>
                                 </div> <!-- 전달대비 회원증가율 -->
-                                <div class="col graphDiv">
+                                <div class="graphDiv">
                                     <div>축제 종류</div>
                                     <hr>
                                     <div id="chart3"></div>
-                                </div> <!-- 전달대비 축제증가율 -->
+                                </div> <!-- 전달대비 축제증가율-->
                             </div>
-                            <div class="row">
-                                <div class="col graphBox" id="chart4"></div>
+
+                            <div id = "secondChart">
+                                <div class="graphBox" id="chart4"></div>
+                            </div>
+
+                            <table id="datatable">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>회원</th>
+                                        <th>호스트</th>
+                                        <th>축제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>7월</th>
+                                        <td>19</td>
+                                        <td>3</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <th>8월</th>
+                                        <td>28</td>
+                                        <td>7</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <th>9월</th>
+                                        <td>15</td>
+                                        <td>3</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <th>10월</th>
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <th>11월</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- //본문 확인 -->
+                    </div>
+                    <div class="article2">
+                        <div id = "infoDiv">
+                            <div>
+                                <P id="textJapan">JAPAN</P>
+                            </div>
+                            <div class="weatherBox">
+                                <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
+                                <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
+                                <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>
+                            </div>
+                            <div id="timeText">
+                                <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
                             </div>
                         </div>
-
-                        <table id="datatable">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>회원</th>
-                                    <th>호스트</th>
-                                    <th>축제</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>7월</th>
-                                    <td>19</td>
-                                    <td>3</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr>
-                                    <th>8월</th>
-                                    <td>28</td>
-                                    <td>7</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <th>9월</th>
-                                    <td>15</td>
-                                    <td>3</td>
-                                    <td>10</td>
-                                </tr>
-                                <tr>
-                                    <th>10월</th>
-                                    <td>10</td>
-                                    <td>5</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <th>11월</th>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-                        <div class="col-sm-3 article2">
-
-                            <div class="row">
-                                <div class="col infoDiv">
-                                    <div>
-                                        <P id="textJapan">JAPAN</P>
-                                    </div>
-                                    <div class="weatherBox">
-                                        <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
-                                        <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
-                                        <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>
-                                    </div>
-                                    <div id="timeText">
-                                        <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
-                                    </div>
-                                </div>
+                        <div id = "snsDiv">
+                            <div>
+                                <div><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                                <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
                             </div>
-
-                            <div class="row">
-
-                                <div class="col snsDiv">
-                                    <div class='row'>
-                                        <div><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
-                                        <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                                    </div>
-                                    <div class='row'>
-                                        <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
-                                        <div><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></div>
-                                    </div>
-                                </div>
-
+                            <div>
+                                <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+                                <div><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></div>
                             </div>
-
-                            <div class="row">
-                                <div class="col calendarDiv">
-                                    <div class="row">
-                                        <span onclick="dateChange('prev');">&lt;&lt;&lt;&lt;</span>
-                                        <span id="yearMonthSpan"></span>
-                                        <span onclick="dateChange('next');">&gt;&gt;&gt;&gt;</span>
-                                    </div>
-                                    <div class="row"></div>
+                        </div>
+                        <div id= "calendarDiv">
+                                <div>
+                                    <span onclick="dateChange('prev');">&lt;&lt;&lt;&lt;</span>
+                                    <span id="yearMonthSpan"></span>
+                                    <span onclick="dateChange('next');">&gt;&gt;&gt;&gt;</span>
                                 </div>
-                            </div>
-
+                            <div></div>
                         </div>
                     </div>
                 </div>
-                <!-- //section -->
             </div>
 
-        </div>
 
-    <!-- </div> -->
+    </div>
+    
 </body>
-
 </html>

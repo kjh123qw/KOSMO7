@@ -1,79 +1,125 @@
-/* @media (min-width: 481px) and (max-width: 767px) {
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
-
-    
-    } */
-
-
-html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default; font-family: 'Do Hyeon', sans-serif;}
-
-.container-fuild{
-    max-width: none!important;
-    /* width: 100%; */
+#container{
     overflow: hidden;
-    height: 100%;
+    border: 1px solid black;
+    margin: 10px auto;
+    height: 900px;
+    width: 1600px;
 }
 
-nav img{
-    width: 40px;
-    height: 40px;
-}
-
-.navbar-brand{
-    padding: 0;
-    margin-left: 10px;
-}
-
-.mainNav{
-    padding: 0;
+.nav{
     box-sizing: border-box;
-    height: 46px;
+    height: 5%;
+    width: 100%;
+    background-color: #555;
+    position: relative;
 }
 
+#titleSpan{
+    color: red;
+    /* margin-right: 0; */
+    line-height: 48px;
+    right: 10px;
+    position: absolute;
+    font-weight: bold;
+}
 
+#iconBox{
+    display: inline-block;
+    position: absolute;
+    line-height: 50px;
+    left: 47%;
+}
 
-.mainNav i{
+#iconBox i{
     color: red;
     font-size: 25px;
-    margin: 5px;
-    padding: 5px; 
+    margin-right: 3px;
 }
 
-
- #titleSpan{
-    color: red;
-    margin-right: 10px;
+#logo{
+    margin-left:10px;
+    cursor: pointer;
+    /* position: absolute; */
 }
 
-
-
-.mainNav form{
-    margin-right: 10px;
+#alarm{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: yellow;
+    top: 10px;
+    right: 68px;
 }
 
+#contentBox{
+   width: 100%;
+    height: 95%;
+    position: relative;
+}
 
-.aside > div:first-child{
-    background-color: #555;
+#aside{
+    /* margin-right:20px; */
+    width: 15%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+}
+
+#backG{
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#section{
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
     box-sizing: border-box;
 }
-.aside > div:last-child{
-    height: 100%;
+
+#aside  div{
+    width: 100%;
+    height: 30%;
     background-color: #555;
 }
 
-.contentsBox{
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 95%;
+#aside >  div:last-child{
+    width: 100%;
+    height: 70%;
+    background-color: #555;
+}
+
+.photoDiv{
+    padding-top:40px;
 }
 
 .photoDiv > div{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+}
+
+.photoDiv > div > img{
+    
+    width: 80px;
+    height: 80px;
 }
 
 .photoSubDiv{
+    padding-top:10px;
     text-align: center;
 }
 
@@ -83,26 +129,8 @@ nav img{
     font-weight: bold;
 }
 
-.iconBorder{
-    position: relative;
-}
-
-#alarm{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: yellow;
-    top: -10px;
-    right: 5px;
-}
-
-.photoDiv > div > img{
-    width: 80px;
-    height: 80px;
-}
-
 .btnDiv{
+    margin-top: -20px;
     text-align: center;
 }
 
@@ -111,7 +139,7 @@ nav img{
 }
 
 #ulDiv ul{
-    margin-top: 20px;
+
     list-style: none;
     margin-bottom: 0;
     padding: 0;
@@ -147,138 +175,53 @@ nav img{
     color: black;
 }
 
- .section > div{   /* row */
+.article1, .article2{
+    /* border: 1px solid black; */
     height: 100%;
-    padding: 5px;
-} 
-
-.article1{
-    height: 100%;
+    
 }
 
-.article1 > div{/* row */
-    height: 30%;
-    border-right:1px solid black;
-    margin-top: 22px;
+.article1{
+    width: 70%;
+    display: inline-block;
 }
 
 .article2{
-    height: 100%;
-}
-
-.article2 > div{/* row */
-    height: 30%;
-    margin-top: 22px;
-}
-
-.graphDiv{
-    margin: 5px;
-}
-
-
-.graphDiv div:last-child{
-    height: 70%;
-}
-
-.countBox{
-    margin: 5px;
-}
-
-.countBox div{
-    margin-top: 5px;
-    width: 100%;
-    text-align: center;
-    font-size: 70px;
-}
-
-#datatable{
-    display: none;
-}
-
-.graphBox{
-    height: 100%;
-}
-
-.graphDiv div:first-child{
-    text-align: center;
-}
-
-.highcharts-button, .highcharts-credits{
-    display: none;
-}
-
-.highcharts-data-labels {
-    display: none;
-}
-
-#chart1, #chart2, #chart3{
-    padding-left: 4px;
-}
-
-#chart4{
-    padding-left: 25px;
-}
-
-.infoDiv{
-    margin: 5px;
-}
-
-.infoDiv div{
-    text-align: center;
-}
-
-.snsDiv div{
-    height: 50%;
-}
-
-.snsDiv div a{
-    color: white;
-}
-
-.snsDiv div div{
-    border: 1px solid #555;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
     width: 30%;
-    height: 85%;
+    position: absolute;
+    display: inline-block;
+
+}
+
+.article2 > div{
+    margin-top: 20px;
+    width: 100%;
+    border-left: 1px solid black;
+    height: 30%;
+}
+
+#infoDiv  div{
     text-align: center;
-    line-height: 120px;
-    margin: auto;
-    font-size: 90PX;
 }
 
-.calendarDiv{
-    margin: 5px;
-}
-
-.calendarDiv > div:first-child > span{
-    margin: 0 auto;
-    height: 2.4em;
-    line-height: 2.4em;
-    cursor: pointer;
-}
-
-.calendarDiv > div:first-child{
-    margin-top: 10px;
-}
-
-.calendarDiv > div:last-child{
-    height: 80%;
-}
-
-.calendarDiv table{
-    width: 90%;
-    text-align: center;
-    margin: auto;
+#infoDiv > div:first-child{
+    margin-bottom: 20px;
 }
 
 .bx-wrapper{
-    margin-bottom: 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.weatherBox{
+    width: 80%;
 }
 
 .weatherBox div{
     height: 50px;
     line-height: 50px;
+    margin: 0 auto;
 }
 
 #textJapan{
@@ -291,3 +234,123 @@ nav img{
     font-size: 50px;
 }
 
+#snsDiv div{
+    height: 50%;
+}
+
+#snsDiv div a{
+    color: black;
+}
+
+#snsDiv div div{
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    font-size: 90PX;
+    /* border-bottom: 1px dotted black; */
+    /* border: 1px solid black; */
+
+
+}
+
+#calendarDiv > div:first-child > span{
+    margin: 0 40px;
+    height: 2.4em;
+    line-height: 2.4em;
+    cursor: pointer;
+
+}
+
+#calendarDiv > div:first-child{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#calendarDiv > div:last-child{
+    height: 80%;
+}
+
+#calendarDiv table{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+/* =============================================== */
+
+#countBoxs{
+    margin-top: 20px;
+    height: 30%;
+}
+
+#charts{
+    margin-top: 20px;
+    height: 30%;
+}
+
+#secondChart{
+    margin-top: 20px;
+    height: 30%;
+}
+
+#chart4{
+    width: 100%;
+    height: 100%;
+}
+
+#datatable{
+    display: none;
+}
+
+.graphDiv{
+    display: inline-block;
+    height: 100%;
+    width: 32%;
+    margin-left: 7px;
+    position: relative;
+}
+
+#chart1, #chart2,#chart3{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+}
+
+.highcharts-button, .highcharts-credits{
+    display: none;
+}
+
+.highcharts-data-labels {
+    display: none;
+}
+
+.graphDiv div:first-child{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.graphDiv div:last-child{
+    width: 100%;
+    height: 100%;
+}
+
+.countBox{
+    margin-left: 4px;
+    display: inline-block;
+    height: 100%;
+    width: 24%;
+}
+
+.countBox div{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+}
+
+.countBox div:first-child{
+    margin-bottom: 15px;
+}

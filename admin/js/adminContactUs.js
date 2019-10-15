@@ -7,7 +7,7 @@ $(function(){
 
     $('#ulDiv li').mouseenter(function(){
         var name = $(this).attr('data-li');
-        if(name == 'main'){
+        if(name == 'ContactUs'){
             return false;
         }
         $(this).addClass('pulse');
@@ -58,26 +58,54 @@ $(function(){
     var state = true;
     $("#logo").click(function(){
         // $('#aside').animate({width:'toggle'},500)
-        if ( state ) {
+        if ( !state ) {
             $( "#aside" ).stop().animate({
-                left : "-300px"
+                left : "-330px"
             }, 1000 );
             // $("#backG").hide(1000);
             // $("#backG").fadeOut(1000);
-            $("#section").fadeTo(1000,1);
+            $("#section").stop().fadeTo(1000,1);
           } else {
             $( "#aside" ).stop().animate({
                 left : "0"
             }, 1000 );
             // $("#backG").show(1000);
             // $("#backG").fadeIn(1000);
-            $("#section").fadeTo(1000,0.4);
+            $("#section").stop().fadeTo(1000,0.4);
             
           }
           state = !state;
     });
+
+    $('#tableDiv tr').click(function(){
+
+        var checkOk = "<i class=\"fas fa-check\" aria-hidden=\"true\"></i>";
+
+        var tr = $(this);
+        var td = tr.children();
+        
+        var number = td.eq(0).text();
+        var title = td.eq(1).text();
+        var check = td.eq(5).html();
+
+        $('#conatactTitle').text(title);
+        $('textarea').text("문의번호"+number+"의 내용이 들어옵니다");
+
+         if(check ==checkOk){
+             $('#checkBtnDiv').html("<button disabled>확인</button>")
+         }else{
+            $('#checkBtnDiv').html("<button>확인</button>")
+         }
+
+    })
    
-    $( "#aside" ).css('display','none');
+    $( "#aside" ).css('display','none'); 
+
+    // $('#section').animate({opacity: "0.4"})
+    // $('#aside').delay(2000).animate({left:'-330px'},2000)
+    // $('#section').delay(2000).animate({opacity: "1"},2000)
+
+
 
 })
 
@@ -283,3 +311,5 @@ if(i%7 == 6){
     $('#calendarDiv > div').eq(1).text("");
     $('#calendarDiv > div').eq(1).html(basicText);
 }
+
+
