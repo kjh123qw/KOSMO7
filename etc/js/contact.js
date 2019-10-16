@@ -2,15 +2,16 @@ $(function(){
   $('.cont > .tabcontent').eq(0).show(); //선택티폴트 탭 0번째
   $('.tablink').eq(0).css('background-color','#eee'); // 디폴트 탭의 구별색
   $('.faqCont').hide(); // tabcontent > faqCont 숨기기
-  $('.refund').show();  // 그중 refund div만 보이기
-  $('.faqTab').eq(0).css('border-bottom','5px solid #aaa'); // 작은 탭 구별색
-  
+  $('div.refund').show();  // 그중 refund div만 보이기
+
+  setInit(); //768px기준 작동
+  selectFunc(); // 선택창 변환 메서드
   tableMake();        //테이블 생성 메서드
   boardChange();      //게시판 탭 메서드
   faqChange();        // 작은 게시판 탭 메서드
   popup();            //팝업메서드
   backclose();        // 배경누를시 팝업 종료 메서드
-  $('.popupBtn > span').click(function(){
+  $('.popupBtn > div').click(function(){
     popupClose();
   });
 });
@@ -21,14 +22,8 @@ function boardChange(){
     var txt = $(this).text().toLowerCase();
     $('.cont > .tabcontent').hide();
     $('.tablink').removeAttr('style');
-    for(var i=0; i<3; i++){
-      var id =$('.cont > .tabcontent').eq(i).attr('id');
-      if(id==txt){
-        $('.cont > .tabcontent').eq(i).show();
-        $('.tablink').eq(i).css('background-color','#eee');
-        break;
-      }
-    }
+    $('#' + txt).show();
+    $('.tab' + txt).css('background-color','#eee');
   });
 }
 
@@ -54,7 +49,21 @@ function backclose(){
     popupClose();
   });
 }
+function setInit(){  // 반응형 메서드
+  let width = $(window).width();
 
+  if(768 <= width){ // 768이상일 시.
+    $('.faqTab').eq(0).css('border-bottom','5px solid #aaa'); // 작은 탭 구별색
+  }
+}
+
+function selectFunc(){
+  $("#respond").change(function(event){
+    var checkClass = $(event.target).val();
+    $('.faqCont').hide();
+    $('#faq > .'+ checkClass).show();
+}).change();
+}
 
 //팝업창 실행 메서드
 function popupfunc() {

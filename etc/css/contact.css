@@ -4,8 +4,17 @@
   margin: 0;
   font-family: Arial;
 } */
+
+.topImg {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #888;
+  overflow: hidden;
+  position: relative;
+}
+
 .wrap {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .btn, .cont {
@@ -32,13 +41,480 @@
   text-align: center;
 }
 
+
+/* FAQ 탭 관련 */
+
+.tabcontent > select#respond {
+  width: 100%;
+}
+
+ #faq > ul {
+   display: none;
+}
+
+
+.faqCont {
+  color:black;
+  padding: 0 auto;
+  height:100%;
+  padding-top: 2%;
+  border-bottom:1px solid #bbb;
+}
+ 
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #222;
+  padding: 100px 20px;
+  height: 100%;
+  display: none;
+  padding-top: 0;
+  background-color: #eee;
+}
+/* table */
+.table {
+  display: table; 
+  width: 100%;
+  padding: 0 auto;
+  padding-top: 25px;
+  margin: 0 auto;
+  /* border-bottom: 1px solid #DDD; */
+}
+
+.rowhead {
+  display: table-row;
+}
+.row {display: table-row;}
+
+.cell {
+  display: table-cell; 
+  padding: 0; 
+  border-bottom: 1px solid #DDD;
+  text-align: center;
+  line-height: 0 auto;
+}
+.col1, .col1h{ 
+  width: 20%;
+  border-right: 1px solid #DDD;
+}
+.col2, .col2h {
+  width: 20%;
+  border-right: 1px solid #DDD;
+}
+.col3, .col3h {
+  width: 40%;
+  border-right: 1px solid #DDD;
+}
+.col3:hover{
+  cursor: pointer;
+  color: #aaa;
+}
+.col4, .col4h {width: 20%;}
+
+
+.paging {
+  padding-top: 15px;
+  width: 100%;
+  padding: 0 auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.leftend:hover, .left:hover, .condi:hover, .right:hover, .rightend:hover {
+  cursor: pointer;
+  color: #aaa;
+}
+
+
+/* NOTICE 관련 */
+
+
+.tabcontent > select#notRespond {
+  width: 100%;
+}
+
+#notice > ul {
+  display: none; height: 30px;
+}
+
+.notCont {
+  color:black;
+  padding: 0 auto;
+  height:100%;
+  padding-top: 2%;
+  border-bottom:1px solid #bbb;
+}
+.popUpLayer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; bottom: 0;
+  left: 0; right: 0; 
+  background-color: #eee;
+  z-index: 15;
+}
+
+
+/* 팝업레이어 */
+.layer {
+  margin: 0 auto;
+  padding: 0 auto;
+  height: 100%;
+}
+.layer > div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.subject {
+  height: auto;
+  padding: 0;
+}
+
+.subject > div {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 5%;
+}
+
+.writer {
+  height: auto%;
+  font-weight: bold;
+}
+
+.writer > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.text {
+  height: 50%;
+}
+
+.text > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+  overflow-y: scroll;
+}
+
+.popupBtn{
+  width: 100%;
+  margin-top: 2px;
+  padding-bottom: 0;
+}
+.popupBtn > div.closeLayer {
+  width: 80%;
+  height: 40px;
+  padding:5px;
+  text-align: center;
+  margin-top:1%;
+  margin: 0 auto;
+  background-color: black;
+  color: #ddd;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.popupBtn > div.closeLayer:hover {
+  background-color:#aaa;
+  cursor: pointer;
+}
+.layerBack {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+
+/* ContactUs */
+
+.textCont {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.textCont > input:nth-child(1) {
+  width: 100%;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.textCont > .mail {
+  width: 100%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.textCont > select {
+  width:100%;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.textCont > textarea {
+  width: 100%;
+  height: 400px;
+  margin-top: 5px;
+}
+
+.textCont > input:last-child {
+  width: 100%;
+}
+
+
+/* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
+  기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
+  가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
+@media screen and (min-width: 576px) {
+    
+}
+
+/* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
+@media screen and (min-width: 768px) {
+    .content > p {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .tabcontent > select#respond {
+      display: none;
+    }
+    .tabcontent > select#notRespond {
+      display: none;
+    }
+
+    #faq > ul { display: block; }
+    #faq > ul > li.faqTab {
+      color: #333;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 0 auto;
+      margin: 0 auto;
+      text-align: center;
+      width: 20%;
+      height: 30px;
+      line-height: 28px;
+    }
+    #notice > ul { display: block; }
+    #notice > ul > li.notTab  {
+    color: #333;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    line-height: 28px;
+  }
+
+
+
+  /* ContactUs */
+  .textCont {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    padding: 5%;
+  }
+
+  .textCont > input:nth-child(1) {
+    width: 80%;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-left: 10%;
+  }
+
+  .textCont > .mail {
+    width: 50%;
+    height: 30px;
+    margin: 0 auto;
+    float: left;
+    margin-left: 10%;
+    margin-top: 5px;
+  }
+  .textCont > select {
+    width:29%;
+    height: 30px;
+    margin: 0 auto;
+    float: right;
+    margin-right: 10%;
+    margin-top: 5px;
+  }
+  .textCont > textarea {
+    width: 80%;
+    height: 400px;
+    margin-top: 5px;
+    margin-left: 10%;
+  }
+  .textCont > input:last-child {
+    margin-left: 20%;
+    width: 60%;
+  }
+
+
+
+}
+
+/* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
+@media screen and (min-width: 992px) {
+    .content > p {
+        width: 900px;
+        height: 600px;
+    }
+    .titleBox { padding: 0 50px; font-size: 24px; }
+
+    /*팝업레이어*/
+.popUpLayer {
+  display: none;
+  position: fixed;
+  top: 10%; left: 20%;
+  width: 60%; height: 650px;
+  background-color: #eee;
+  z-index: 15;
+}
+
+.layer {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.layer > div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.subject {
+  height: 15%;
+}
+
+
+.subject > div {
+  width: 80%;
+  border: 1px solid #ccc;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+  margin-top: 5%;
+}
+
+.writer {
+  height: 10%;
+  font-weight: bold;
+}
+
+.writer > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.text {
+  height: 50%;
+}
+
+.text > div {
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.popupBtn{
+  width: 250px;
+  height: 200px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.popupBtn > div.closeLayer {
+  float: right;
+  padding:5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin-top:1%;
+  margin-right: 10%;
+  border: 1px solid #ccc;
+}
+
+.popupBtn > div.closeLayer:hover {
+  background-color:#aaa;
+  cursor: pointer;
+}
+.layerBack {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 10;
+}
+}
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
+@media screen and (min-width: 1225px) {
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.btn, .cont {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cont {
+    height: 600px;
+}
+ 
+/* .tablink {
+  background-color: #ccc;
+  color: #222;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+  text-align: center;
+}
+
 .tablink:hover {
   background-color: #aaa;
 }
 
 
 /* FAQ 탭 관련 */
-.faqTab {
+/* .faqTab {
   color: #333;
   float: left;
   border: none;
@@ -50,7 +526,7 @@
   width: 20%;
   height: 30px;
   line-height: 28px;
-}
+/* } */
 
 .faqTab:hover {
   background-color: #ddd;
@@ -62,7 +538,7 @@
   height:100%;
   padding-top: 2%;
   border-bottom:1px solid #bbb;
-}
+}  */
 
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -129,7 +605,7 @@
   color: #aaa;
 }
 
-/* NOTICE 관련 */
+/* NOTICE 관련*/
 .notTab {
   color: #333;
   float: left;
@@ -155,140 +631,6 @@
   padding-top: 2%;
   border-bottom:1px solid #bbb;
 }
-.popUpLayer {
-  display: none;
-  position: fixed;
-  top: 10%; left: 20%;
-  width: 60%; height: 650px;
-  background-color: #eee;
-  z-index: 15;
-}
-
-.layer {
-  margin: 0 auto;
-  padding: 0 auto;
-}
-.layer > div {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-.subject {
-  height: 15%;
-}
 
 
-.subject > div {
-  width: 80%;
-  border: 1px solid #ccc;
-  height: 100%;
-  margin: 0 auto;
-  padding: 3%;
-  margin-top: 5%;
-}
 
-.writer {
-  height: 10%;
-  font-weight: bold;
-}
-
-.writer > div {
-  border: 1px solid #ccc;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 3%;
-}
-
-.text {
-  height: 50%;
-}
-
-.text > div {
-  border: 1px solid #ccc;
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 3%;
-}
-
-.popupBtn{
-  width: 250px;
-  height: 200px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  overflow: hidden;
-}
-.popupBtn > span {
-  float: right;
-  padding:5px;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-top:1%;
-  margin-right: 10%;
-  border: 1px solid #ccc;
-}
-
-.popupBtn > span:hover {
-  background-color:#aaa;
-  cursor: pointer;
-}
-.layerBack {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
-  background-color:rgba(0,0,0,0.5);
-  z-index: 10;
-}
-
-
-/* ContactUs */
-
-.textCont {
-  width: 80%;
-  height: 500px;
-  margin: 0 auto;
-  padding: 5%;
-}
-
-.textCont > input:nth-child(1) {
-  width: 80%;
-  height: 30px;
-  margin: 0 auto;
-  padding: 0 auto;
-  margin-left: 10%;
-}
-
-.textCont > .mail {
-  width: 50%;
-  height: 30px;
-  margin: 0 auto;
-  float: left;
-  margin-left: 10%;
-  margin-top: 5px;
-}
-
-.textCont > select {
-  width:29%;
-  height: 30px;
-  margin: 0 auto;
-  float: right;
-  margin-right: 10%;
-  margin-top: 5px;
-}
-
-.textCont > textarea {
-  width: 80%;
-  height: 400px;
-  margin-top: 5px;
-  margin-left: 10%;
-}
-
-.textCont > input:last-child {
-  margin-left: 20%;
-  width: 60%;
-}

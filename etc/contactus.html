@@ -221,7 +221,7 @@
                 </div>
             </div>
             <div class="popupBtn">
-                <span class="closeLayer">닫기</span>
+                <div class="closeLayer">닫기</div>
             </div>
         </div>
     </div>
@@ -231,12 +231,19 @@
                 <img src="../img/MainImage.jpg" alt="img"  style="width: 100%; height: auto;">
             </div>
             <ul class="btn">
-                <li class="tablink">FAQ</li>
-                <li class="tablink">Notice</li>
-                <li class="tablink">Contact</li>
+                <li class="tablink tabfaq">FAQ</li>
+                <li class="tablink tabnotice">Notice</li>
+                <li class="tablink tabcontact">Contact</li>
             </ul>
             <div class="cont">
                 <div id="faq" class="tabcontent">
+                    <select id="respond">
+                        <option value="refund">환불/취소</option>
+                        <option value="book">예약/등록</option>
+                        <option value="find">아이디/비밀번호 찾기</option>
+                        <option value="festi">축제등록</option>
+                        <option value="any">기타</option>
+                    </select>
                     <ul>
                         <li class="faqTab refund">환불/취소</li>
                         <li class="faqTab book">예약/등록</li>
@@ -296,6 +303,13 @@
                     </div>
                 </div>
                 <div id="notice" class="tabcontent" >
+                    <select id="notRespond">
+                        <option value="finance">지급정책관련</option>
+                        <option value="reserved">예약구매관련</option>
+                        <option value="account">계정관리관련</option>
+                        <option value="regist">축제등록관련</option>
+                        <option value="manage">운영정책관련</option>
+                    </select>
                     <ul>
                         <li class="notTab finance">지급정책관련</li>
                         <li class="notTab reserved">예약구매관련</li>
