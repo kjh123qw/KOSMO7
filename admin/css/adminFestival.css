@@ -1,47 +1,56 @@
-html,body{ margin:0; padding:0; height:100%; width:100%; cursor: default; font-family: 'Do Hyeon', sans-serif;}
-#wrap{
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
     overflow: hidden;
-    height: 100%;
+    border: 1px solid black;
+    margin: 10px auto;
+    height: 900px;
+    width: 1600px;
 }
 
-#mainContainer{
-    height: 100%;
-}
-/* nav */
-nav img{
-    width: 40px;
-    height: 40px;
-}
-
-.navbar-brand{
-    padding: 0;
-    margin-left: 10px;
-}
-
-.mainNav{
-    padding: 0;
+.nav{
     box-sizing: border-box;
-    height: 46px;
-}
-
-.mainNav i{
-    color: red;
-    font-size: 25px;
-    margin: 5px;
-    padding: 5px; 
+    height: 5%;
+    width: 100%;
+    background-color: #555;
+    position: relative;
 }
 
 #titleSpan{
     color: red;
-    margin-right: 10px;
+    /* margin-right: 0; */
+    line-height: 48px;
+    right: 10px;
+    position: absolute;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.mainNav form{
-    margin-right: 10px;
+#iconBox{
+    display: inline-block;
+    position: absolute;
+    line-height: 50px;
+    left: 47%;
 }
 
-.iconBorder{
-    position: relative;
+#iconBox i{
+    color: red;
+    font-size: 25px;
+    margin-right: 3px;
+}
+
+#logo{
+    margin-left:10px;
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+#logo i{
+    font-size: 45px;
+    color: white;
 }
 
 #alarm{
@@ -50,52 +59,84 @@ nav img{
     height: 10px;
     border-radius: 50%;
     background-color: yellow;
-    top: -10px;
-    right: 5px;
+    top: 10px;
+    right: 68px;
 }
-/* //nav */
 
-.contentsBox{
-    padding-left: 15px;
-    padding-right: 15px;
+#contentBox{
+   width: 100%;
     height: 95%;
+    position: relative;
 }
 
-/* aside */
-.aside > div:first-child{
-    background-color: #555;
+#aside{
+    /* margin-right:20px; */
+    width: 15%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1000;
+}
+
+#backG{
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#section{
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
     box-sizing: border-box;
 }
-.aside > div:last-child{
-    height: 100%;
+
+#aside  div{
+    width: 100%;
+    height: 30%;
     background-color: #555;
+}
+
+#aside >  div:last-child{
+    width: 100%;
+    height: 70%;
+    background-color: #555;
+}
+
+.photoDiv{
+    padding-top:40px;
 }
 
 .photoDiv > div{
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+}
+
+.photoDiv > div > img{
+    
+    width: 80px;
+    height: 80px;
 }
 
 .photoSubDiv{
+    padding-top:10px;
     text-align: center;
 }
 
 .photoSubDiv > p{
     margin: 0;
     color: white;
-}
-
-.iconBorder{
-    position: relative;
-}
-
-.photoDiv > div > img{
-    width: 80px;
-    height: 80px;
+    font-weight: bold;
 }
 
 .btnDiv{
+    margin-top: -20px;
     text-align: center;
 }
 
@@ -104,7 +145,7 @@ nav img{
 }
 
 #ulDiv ul{
-    margin-top: 20px;
+
     list-style: none;
     margin-bottom: 0;
     padding: 0;
@@ -127,103 +168,66 @@ nav img{
     cursor: pointer;
 }
 
+#ulDiv li a{
+    color: black;
+}
+
 #ulDiv li:nth-child(3) a{
-    color: red;
+    color: white;
 }
 
 #ulDiv a{
     text-decoration: none;
     color: black;
 }
-/* //aside */
 
-
-/* section - article2 */
-.section > div{   /* row */
+.article1, .article2{
+    /* border: 1px solid black; */
     height: 100%;
-    padding: 5px;
-} 
-
-.article1{
-    height: 100%;
+    
 }
 
-.article1 > div{/* row */
-    height: 100%;
-    border:1px solid black;
-    /* margin-top: 22px; */
+.article1{
+    width: 70%;
+    display: inline-block;
 }
 
 .article2{
-    height: 100%;
-}
-
-.article2 > div{/* row */
-    height: 30%;
-    margin-top: 22px;
-    border-left: 1px solid black;
-}
-
-.infoDiv{
-    margin: 5px;
-}
-
-.infoDiv div{
-    text-align: center;
-}
-
-.snsDiv div{
-    height: 50%;
-}
-
-.snsDiv div a{
-    color: white;
-}
-
-.snsDiv div div{
-    border: 1px solid #555;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
     width: 30%;
-    height: 85%;
+    position: absolute;
+    display: inline-block;
+
+}
+
+.article2 > div{
+    margin-top: 20px;
+    width: 100%;
+    border-left: 1px solid black;
+    height: 30%;
+}
+
+#infoDiv  div{
     text-align: center;
-    line-height: 120px;
-    margin: auto;
-    font-size: 90PX;
 }
 
-.calendarDiv{
-    margin: 5px;
-}
-
-.calendarDiv > div:first-child > span{
-    margin: 0 auto;
-    height: 2.4em;
-    line-height: 2.4em;
-    cursor: pointer;
-}
-
-.calendarDiv > div:first-child{
-    margin-top: 10px;
-}
-
-.calendarDiv > div:last-child{
-    height: 80%;
-}
-
-.calendarDiv table{
-    width: 90%;
-    text-align: center;
-    margin: auto;
+#infoDiv > div:first-child{
+    margin-bottom: 20px;
 }
 
 .bx-wrapper{
-    margin-bottom: 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.weatherBox{
+    width: 80%;
 }
 
 .weatherBox div{
     height: 50px;
     line-height: 50px;
+    margin: 0 auto;
 }
 
 #textJapan{
@@ -235,4 +239,194 @@ nav img{
     margin-top: 10px;
     font-size: 50px;
 }
-/* //section - article2 */
+
+#snsDiv div{
+    height: 50%;
+}
+
+#snsDiv div a{
+    color: black;
+}
+
+#snsDiv div div{
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    font-size: 90PX;
+    /* border-bottom: 1px dotted black; */
+    /* border: 1px solid black; */
+
+
+}
+
+#calendarDiv > div:first-child > span{
+    margin: 0 40px;
+    height: 2.4em;
+    line-height: 2.4em;
+    cursor: pointer;
+
+}
+
+#calendarDiv > div:first-child{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#calendarDiv > div:last-child{
+    height: 80%;
+}
+
+#calendarDiv table{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+/* =============================================== */
+
+.tableDiv{
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.tableDiv th{
+    background-color: #555;
+    color: white;
+}
+
+.tableDiv td, th{
+    border: 1px solid black;
+    height: 30px;
+}
+
+.tableDiv td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.tableDiv th:nth-child(1){
+    width: 100px;
+}
+.tableDiv th:nth-child(2){
+    width: 400px;
+}
+#tableDiv td:nth-child(2){
+    text-align: left;
+}
+.tableDiv th:nth-child(3){
+    width: 100px;
+}
+.tableDiv th:nth-child(4){
+    width: 200px;
+}
+.tableDiv th:nth-child(5){
+    width: 200px;
+}
+
+.fa-times{
+    color: red;
+}
+
+.fa-check{
+    color: green;
+}
+
+.tableDiv table {
+    margin: 5px auto;
+    width: 90%;
+    table-layout: fixed;
+}
+
+.tableDiv tr:hover{
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    transition-duration:1s;
+}
+
+.pagingBox{
+    /* margin-bottom: 30px; */
+    /* border-bottom: 1px solid #555; */
+    display: inline-block;
+    padding-bottom: 10px;
+
+}
+
+.pagingBox span{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.pagingBox span:nth-child(4){
+    font-weight: bold;
+    border-bottom:1px solid #555;
+}
+
+/* #contactInfo{
+    width: 100%;
+    height: 100%;
+     border: 1px solid black; 
+    position: relative;
+}
+
+#contactInfo > div:nth-child(1){
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+
+#contactInfo > div:nth-child(3){
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+
+
+#contactInfo > div:nth-child(4){
+    text-align: center;
+
+}
+
+#contactInfo > div:nth-child(5){
+    margin-top: 30px;
+    position: absolute;
+    right: 50px;
+}
+
+#contactInfo > div:nth-child(5) button{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+}
+
+textarea{
+    margin-top: 30px;
+    resize: none;
+    width: 90%;
+
+}
+
+#contactTitle{
+    display: inline-block;
+}
+
+#userName, #userDate, #userKind,#contactTitle{
+    font-weight: bold;
+    display: inline-block;
+} */
+
+
+

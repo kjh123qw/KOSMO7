@@ -43,12 +43,12 @@
         <!-- nav -->
         <div class = "nav">
             <!-- <a id = "logo" href="#"><img src="../img/logo_noText 51x44.png" alt="logo"></a> -->
-            <span id = "logo"><img src="../img/logo_noText 51x44.png" alt="logo"></span>
+            <span id = "logo"><i class="fas fa-bars"></i></span>
 
             <div id = "iconBox">
-                <a href="./adminNoticeList.html"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
-                <a href="./adminMember.html"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
-                <a href="./adminFestival.html"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
+                    <a href="./adminContactUs.html" target="_blank"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
+                    <a href="./adminMember.html" target="_blank"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
+                    <a href="./adminFestival.html" target="_blank"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
             </div>
             <span id="titleSpan">AIRMATSURI ADMIN</span>
         </div>
@@ -90,7 +90,7 @@
                                     <tr><td>30</td><td>다른 아이디로 가입하고싶은데 혹시 정보를 이동할수있나요?</td><td>최성근</td><td>회원가입</td><td>2019/11/24</td><td><i class="fas fa-times"></i></td></tr>
                                     <tr><td>29</td><td>중복신청은 어떻게 되는거에요?</td><td>김보람</td><td>축제신청확인</td><td>2019/11/20</td><td><i class="fas fa-times"></i></td></tr>
                                     <tr><td>28</td><td>아니 이거 확인좀해주세요</td><td>안희영</td><td>축제신청확인</td><td>2019/11/19</td><td><i class="fas fa-check"></i></td></tr>
-                                    <tr><td>27</td><td>축제를 중복해서 등록이 가능한가요??</td><td>야스오</td><td>호스트</td><td>2019/11/18</td><td><i class="fas fa-check"></i></i></td></tr>
+                                    <tr><td>27</td><td>축제를 중복해서 등록이 가능한가요??</td><td>야스오</td><td>호스트</td><td>2019/11/18</td><td><i class="fas fa-check"></i></td></tr>
                                     <tr><td>26</td><td>탈퇴언제되는거에요진짜 ㅠㅠ</td><td>토토로</td><td>회원탈퇴</td><td>2019/11/17</td><td><i class="fas fa-check"></i></td></tr>
                                     <tr><td>25</td><td>화면에 축제가 보이지 않아요. 확인좀해주세요</td><td>야마다</td><td>축제신청확인</td><td>2019/11/10</td><td><i class="fas fa-check"></i></td></tr>
                                     <tr><td>24</td><td>축제를 2개이상 등록이가능한가요???</td><td>모모카</td><td>호스트</td><td>2019/11/9</td><td><i class="fas fa-check"></i></td></tr>
@@ -101,7 +101,8 @@
                         </div>
 
                         <div id = "contactInfo">
-                            <div><label for="conatactTitle">TITLE : </label><div id = "conatactTitle"></div></div>
+                            <div><label id = "titleLabel"></label><div id = "contactTitle"></div></div><br>
+                            <div id = "infos"><label id = "nameLabel"></label><div id = "userName"></div><label id = "dateLabel"></label><div id = "userDate"></div><label id = "kindLabel"></label><div id = "userKind"></div></div>
                             <div><textarea rows="9" cols="50" readonly ></textarea></div>
                             <div id = "checkBtnDiv"></div>
                         </div>
@@ -123,7 +124,7 @@
                             <div>
                                 <P id="textJapan">JAPAN</P>
                             </div>
-                            <div class="weatherBox">
+                            <div class="weatherBox" >
                                 <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
                                 <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
                                 <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>

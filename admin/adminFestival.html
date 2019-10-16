@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Air Matsuri</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- 부트스트랩 -->
-
+    <title>adminFestival</title>
+    
     <script src="./js/jquery-2.1.1.min.js"></script><!--반드시필요함 -->
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/jquery.easing.1.3.js"></script>
@@ -30,117 +24,158 @@
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
     <!-- googleFont -->
 
+    <script src="./js/charts/highcharts.js"></script>
+    <script src="./js/charts/export-data.js"></script>
+    <script src="./js/charts/exporting.js"></script>
+    <script src="./js/charts/highcharts-more.js"></script>
+    <script src="./js/charts/solid-gauge.js"></script>
+    <script src="./js/charts/data.js"></script>
+    <!-- chart -->
+
     <link rel="stylesheet" href="./css/animate.css">
-    <script src='./js/adminFestival.js'></script>
-    <link href="./css/adminFestival.css" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="./css/adminFestival.css">
+    <script src="./js/adminFestival.js"></script>
 
 </head>
 <body>
 
-        <div id="wrap">
-            <div class="container-fuild" id="mainContainer">
-                <nav class="navbar navbar-dark bg-dark bg-light mainNav">
-                    <a class="navbar-brand" href="#">
-                        <img src="../img/logo_noText 51x44.png" alt="logo"> <!-- 이미지 이름 공백안됨 -->
-                    </a>
-                    <div>
-                        <a href="./adminNoticeList.html"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
-                        <a href="./adminMember.html"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
-                        <a href="./adminFestival.html"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
-                    </div>
-                    <span id="titleSpan">AIRMATSURI ADMIN</span>
-                </nav>
+    <div id = "container">
+        <!-- nav -->
+        <div class = "nav">
+            <!-- <a id = "logo" href="#"><img src="../img/logo_noText 51x44.png" alt="logo"></a> -->
+            <span id = "logo"><i class="fas fa-bars"></i></span>
 
-                <div class="row contentsBox">
-                <!-- aside -->
-                <div class="col-sm-2 aside">
-                        <div class="row">
-                            <div class="col-sm-12 photoDiv">
-                                <div><img src="../festival/img/image2.png" alt="adminImage" class="img-thumbnail"></div>
-                            </div>
-                            <div class="col-sm-12 photoSubDiv">
-                                <p>유지상</p>
-                            </div>
-                            <div class="col-sm-12 btnDiv">
-                                <button type="button" class="btn btn-secondary btn-sm"
-                                    onclick="location.href = './../index.html'">메인으로</button>
-                                <button type="button" class="btn btn-secondary btn-sm"
-                                    onclick="location.href = './../index.html'">로그아웃</button>
-                            </div>
+            <div id = "iconBox">
+                <a href="./adminContactUs.html" target="_blank"><span class="iconBorder"><span id="alarm"></span><i class="far fa-envelope"></i></span></a>
+                <a href="./adminMember.html" target="_blank"><span class="iconBorder"><i class="fas fa-user-friends"></i></span></a>
+                <a href="./adminFestival.html" target="_blank"><span class="iconBorder"><i class="far fa-bell"></i></span></a>
+            </div>
+            <span id="titleSpan">AIRMATSURI ADMIN</span>
+        </div>
+        <!-- //nav -->
+            <div id = "contentBox">
+                <div id = "aside">
+                    <div>
+                        <div class="photoDiv">
+                            <div><img src="../festival/img/image2.png" alt="adminImage"></div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12" id="ulDiv">
-                                <ul>
-                                    <li class="animated" data-li="main"><a href="./adminMain.html"><i
-                                                class="fas fa-home"></i><span>MAIN</span></a></li>
-                                    <li class="animated" data-li="member"><a href="./adminMember.html"><i
-                                                class="fas fa-users"></i> <span>MEMBER</span></a></li>
-                                    <li class="animated" data-li="festival"><a href="./adminFestival.html"><i
-                                                class="fas fa-torii-gate"></i> <span>FESTIVAL</span></a></li>
-                                    <li class="animated" data-li="notice"><a href="./adminNoticeList.html"><i
-                                                class="fas fa-chalkboard-teacher"></i> <span>CONTACT US</span></a></li>
-                                </ul>
-                            </div>
+                        <div class="photoSubDiv">
+                            <p>유지상</p>
                         </div>
-                </div>
-                <!-- //aside -->
-                <!-- section -->
-                <div class="col-sm-10 section">
-                    <div class="row">
-                        <div class="col-sm-9 article1">
-                            <div class = "row"></div>
-                        </div>
-                        <div class="col-sm-3 article2">
-                                <div class="row">
-                                        <div class="col infoDiv">
-                                            <div>
-                                                <P id="textJapan">JAPAN</P>
-                                            </div>
-                                            <div class="weatherBox">
-                                                <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
-                                                <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
-                                                <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>
-                                            </div>
-                                            <div id="timeText">
-                                                <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="row">
-        
-                                        <div class="col snsDiv">
-                                            <div class='row'>
-                                                <div><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
-                                                <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-                                            </div>
-                                            <div class='row'>
-                                                <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
-                                                <div><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></div>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-        
-                                    <div class="row">
-                                        <div class="col calendarDiv">
-                                            <div class="row">
-                                                <span onclick="dateChange('prev');">&lt;&lt;&lt;&lt;</span>
-                                                <span id="yearMonthSpan"></span>
-                                                <span onclick="dateChange('next');">&gt;&gt;&gt;&gt;</span>
-                                            </div>
-                                            <div class="row"></div>
-                                        </div>
-                                    </div>
+                        <div class="btnDiv">
+                            <button type="button"  onclick="location.href = './../index.html'">메인으로</button>
+                            <button type="button"  onclick="location.href = './../index.html'">로그아웃</button>
                         </div>
                     </div>
+                    <div>
+                        <div id="ulDiv">
+                            <ul>
+                                <li class="animated" data-li="main"><a href="./adminMain.html"><i class="fas fa-home"></i><span>MAIN</span></a></li>
+                                <li class="animated" data-li="member"><a href="./adminMember.html"><i class="fas fa-users"></i> <span>MEMBER</span></a></li>
+                                <li class="animated" data-li="festival"><a href="./adminFestival.html"><i class="fas fa-torii-gate"></i> <span>FESTIVAL</span></a></li>
+                                <li class="animated" data-li="ContactUs"><a href="./adminContactUs.html"><i class="fas fa-chalkboard-teacher"></i> <span>CONTACT US</span></a></li>                
+                            </ul>
+                        </div>    
+                    </div>
                 </div>
-                <!-- //section -->
+                <!-- <div id = "backG"></div> -->
+                <div id = "section">
+                    <div class="article1">
+                        <!-- 본문 확인 -->
+                           
+                        <div class = "tableDiv">
+                            <table>
+                                    <tr><th>축제번호</th><th>제목</th><th>신청자</th><th>시작날짜</th><th>종료날짜</th></tr>
+                                    <tr><td>30</td><td>[오사카] 우파구루신사에 놀러오세요</td><td>김성문</td><td>2019/10/30</td><td>2019/11/30</td></tr>
+                                    <tr><td>29</td><td>[도쿄] 불꽃축제를 보면서 맥주를?? 나오키공원!</td><td>최민환</td><td>2019/9/24</td><td>2019/9/27</td></tr>
+                                    <tr><td>28</td><td>[삿포로] 얼음과 함께하는 토미쿠지축제</td><td>김소라</td><td>2019/7/20</td><td>2019/10/20</td></tr>
+                                    <tr><td>27</td><td>[교토] 제31회 코쿠마이불꽃축제</td><td>오성민</td><td>2019/9/20</td><td>2019/9/30</td></tr>
+                                    <tr><td>26</td><td>[후쿠오카] 바다에서 즐기는 스포츠축제</td><td>안주희</td><td>2019/3/1</td><td>2019/3/20</td></tr>
+                                    <tr><td>25</td><td>[시즈오카] 나카스에서먹는 치킨은 천국이죠!</td><td>유소민</td><td>2019/8/27</td><td>2019/9/20</td></tr>
+                                    <tr><td>24</td><td>[나고야] 모지하라 신사에서 평온을!</td><td>김정혜</td><td>2019/2/11</td><td>2019/4/20</td></tr>
+                                    <tr><td>23</td><td>[아키타] 파파지우축제</td><td>손명우</td><td>2019/6/16</td><td>2019/8/17</td></tr>
+                                    <tr><td>22</td><td>[요코하마] 벚꽃좋아하세요?? 토리미키공원</td><td>송태수</td><td>2019/3/9</td><td>2019/4/1</td></tr>
+                                    <tr><td>21</td><td>[오사카] 벚꽃과 맥주의 콜라보!!!! 렛키공원!!</td><td>다타키</td><td>2019/2/17</td><td>2019/3/9</td></tr>
+
+                            </table>
+                            <div class = "pagingBox"><span>이전</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>다음</span></div>
+                        </div>
+
+                        <div class = "tableDiv">
+                                <table>
+                                        <tr><th>대기번호</th><th>제목</th><th>신청자</th><th>시작날짜</th><th>종료날짜</th></tr>
+                                        <tr><td>20</td><td>[센다이] 바다에서 즐기는 얼음축제! 센로해변으로~</td><td>도민혜</td><td>2020/2/1</td><td>2020/3/1</td></tr>
+                                        <tr><td>19</td><td>[카와사키] 꽃놀이는 역시 카와사키 대공원! 3일한정입니다</td><td>아유미</td><td>2019/4/24</td><td>2019/5/27</td></tr>
+                                        <tr><td>18</td><td>[쿠마모토] 봄의따뜻함과 함께 즐기는 불꽃놀이!</td><td>신석희</td><td>2020/4/1</td><td>2020/4/4</td></tr>
+                                        <tr><td>17</td><td>[나리타] 300KM의 맥주야타이 즐겨주세요!</td><td>오지민</td><td>2019/11/3</td><td>2019/11/9</td></tr>
+                                        <tr><td>16</td><td>[하마마쓰] 여름에는 역시해변! 쇼우해변으로!</td><td>심석희</td><td>2019/8/10</td><td>2019/8/20</td></tr>
+                                        <tr><td>15</td><td>[니가타] 유카타 무료대여! 포수우불꽃놀이</td><td>스미레</td><td>2019/5/27</td><td>2019/6/4</td></tr>
+                                        <tr><td>14</td><td>[나하] 나하에 눈이 온다고?? 자주오지않습니다!</td><td>유우카</td><td>2020/1/11</td><td>2020/2/1</td></tr>
+                                        <tr><td>13</td><td>[사이타마] 연말은 연인과 사이타마로 놀러오세요</td><td>쿠루미</td><td>2019/12/23</td><td>2019/12/31</td></tr>
+                                        <tr><td>12</td><td>[마쓰에] 무료보트를 즐겨주세요 다푸닛해변!</td><td>아스카</td><td>2019/7/19</td><td>2019/7/27</td></tr>
+                                        <tr><td>11</td><td>[헤슈] 2잔 마시면 1잔이 무료??? 카니구맥주축제!!!</td><td>세츠나</td><td>2019/4/7</td><td>2019/6/1</td></tr>
+    
+                                </table>
+                                <div class = "pagingBox"><span>이전</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>다음</span></div>
+                            </div>
+
+                        <!-- <div id = "contactInfo">
+                            <div><label id = "titleLabel" for="contactTitle"></label><div id = "contactTitle"></div></div><br>
+                            <div id = "infos"><label id = "nameLabel" for="userName"></label><div id = "userName"></div><label id = "dateLabel" for="userDate"></label><div id = "userDate"></div><label id = "kindLabel" for="userKind"></label><div id = "userKind"></div></div>
+                            <div><textarea rows="9" cols="50" readonly ></textarea></div>
+                            <div id = "checkBtnDiv"></div>
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- //본문 확인 -->
+                    </div>
+                    <div class="article2">
+                        <div id = "infoDiv">
+                            <div>
+                                <P id="textJapan">JAPAN</P>
+                            </div>
+                            <div class="weatherBox" >
+                                <div>TOKYO 12℃ <i class="fas fa-cloud-sun-rain"></i></div>
+                                <div>OSAKA 15℃ <i class="fas fa-sun"></i></div>
+                                <div>AKITA 4℃ <i class="fas fa-snowman"></i></div>
+                            </div>
+                            <div id="timeText">
+                                <span></span>&nbsp;:&nbsp;<span></span>&nbsp;:&nbsp;<span></span>
+                            </div>
+                        </div>
+                        <div id = "snsDiv">
+                            <div>
+                                <div><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></div>
+                                <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+                            </div>
+                            <div>
+                                <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a></div>
+                                <div><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></div>
+                            </div>
+                        </div>
+                        <div id= "calendarDiv">
+                                <div>
+                                    <span onclick="dateChange('prev');">&lt;&lt;&lt;&lt;</span>
+                                    <span id="yearMonthSpan"></span>
+                                    <span onclick="dateChange('next');">&gt;&gt;&gt;&gt;</span>
+                                </div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+
+
+    </div>
     
 </body>
 </html>

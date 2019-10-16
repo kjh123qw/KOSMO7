@@ -17,6 +17,10 @@ $(function(){
     })
     //메뉴 css
 
+    $("#titleSpan").click(function(){
+        location.href = './adminMain.html';
+    })
+
     $(function(){
         $('.weatherBox').bxSlider({
         auto:true,
@@ -55,37 +59,55 @@ $(function(){
       },1000)
       //시간 Interval 업데이트
 
-    var state = true;
-    $("#logo").click(function(){
-        // $('#aside').animate({width:'toggle'},500)
+      var state = true;
+      $("#logo").click(function(){
+          // $('#aside').animate({width:'toggle'},500)
         if ( !state ) {
             $( "#aside" ).stop().animate({
                 left : "-330px"
             }, 1000 );
+
+            $('#rgbaDiv').stop().animate({'opacity': 0}, 1000).css({'display': 'none'});
+            // $('#rgbaDiv').css({'display': 'none'})
+            $("#logo").html("<i class=\"fas fa-arrow-right\"></i>")
+
+            // $('#rgbaDiv').css({'display': 'none'})
             // $("#backG").hide(1000);
             // $("#backG").fadeOut(1000);
-            $("#section").stop().fadeTo(1000,1);
+            // $("#section").stop().fadeTo(1000,1);
           } else {
             $( "#aside" ).stop().animate({
                 left : "0"
             }, 1000 );
+
+                $('#rgbaDiv').stop().animate({'opacity': 0.5}, 1000);
+                $('#rgbaDiv').css({'display': 'block'})
+                $("#logo").html("<i class=\"fas fa-bars\"></i>")
+            // $('#rgbaDiv').css({'display': 'block'})
             // $("#backG").show(1000);
             // $("#backG").fadeIn(1000);
-            $("#section").stop().fadeTo(1000,0.4);
+            // $("#section").stop().fadeTo(1000,0.4);
             
           }
+
+
           state = !state;
     });
    
     // $( "#aside" ).css('display','none'); opacity: "0"
 
+    
+
     chart1();
     chart2();
     chart3();
     chart4();
-    $('#section').animate({opacity: "0.4"})
-    $('#aside').delay(2000).animate({left:'-330px'},2000)
-    $('#section').delay(2000).animate({opacity: "1"},2000)
+
+    $('#aside').delay(1000).animate({left:'-330px'},2000)
+    $('#rgbaDiv').delay(1000).animate({'opacity': 0}, 1000, function() {
+        $('#rgbaDiv').css({'display': 'none'})
+    });
+
 
 })
 

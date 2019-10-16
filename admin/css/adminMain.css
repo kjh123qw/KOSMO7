@@ -26,6 +26,7 @@
     right: 10px;
     position: absolute;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #iconBox{
@@ -45,6 +46,11 @@
     margin-left:10px;
     cursor: pointer;
     /* position: absolute; */
+}
+
+#logo i{
+    font-size: 45px;
+    color: white;
 }
 
 #alarm{
@@ -186,6 +192,19 @@
     display: inline-block;
 }
 
+#rgbaDiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: white;
+    opacity: 0.5;
+    z-index: 100;
+
+    /* transition-duration:1s; */
+    /* transition-delay: 2s; */
+}
+
 .article2{
     width: 30%;
     position: absolute;
@@ -278,6 +297,8 @@
     text-align: center;
     margin: auto;
 }
+
+
 
 /* =============================================== */
 

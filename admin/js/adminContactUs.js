@@ -17,15 +17,20 @@ $(function(){
     })
     //메뉴 css
 
+    $("#titleSpan").click(function(){
+        location.href = './adminMain.html';
+    })
+
     $(function(){
         $('.weatherBox').bxSlider({
         auto:true,
         pause:2000,
         autoHover:true,
         autoControls: false,
-        stopAutoOnClick: true,
+        stopAutoOnClick: false,
         pager:false,
-        controls:false
+        controls:false,
+        touchEnabled:false
         });
       })
       //bxSlider 설정
@@ -86,24 +91,51 @@ $(function(){
         
         var number = td.eq(0).text();
         var title = td.eq(1).text();
+        var name = td.eq(2).text();
+        var kind = td.eq(3).text();
+        var date = td.eq(4).text();
         var check = td.eq(5).html();
 
-        $('#conatactTitle').text(title);
+        
+
+        if(number == "문의번호"){
+        $("#titleLabel").text("")
+        $("#nameLabel").text("")
+        $("#dateLabel").text("")
+        $("#kindLabel").text("")
+        $('#contactTitle').text("");
+        $('#userName').text("");
+        $('#userDate').text("");
+        $('#userKind').text("");
+        $('textarea').text("");
+        $('#checkBtnDiv').html("")
+            return;
+        }
+
+        $("#titleLabel").text("TITLE : ")
+        $("#nameLabel").text("NAME : ")
+        $("#dateLabel").text("DATE : ")
+        $("#kindLabel").text("KINDS : ")
+
+        $('#contactTitle').html(title);
+        $('#userName').html(name+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        $('#userDate').html(date+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        $('#userKind').html(kind);
         $('textarea').text("문의번호"+number+"의 내용이 들어옵니다");
 
          if(check ==checkOk){
              $('#checkBtnDiv').html("<button disabled>확인</button>")
          }else{
-            $('#checkBtnDiv').html("<button>확인</button>")
+            $('#checkBtnDiv').html("<button onclick = 'contactCheck();'>확인</button>")
          }
 
     })
    
-    $( "#aside" ).css('display','none'); 
+    // $( "#aside" ).css('display','none'); 
 
-    // $('#section').animate({opacity: "0.4"})
-    // $('#aside').delay(2000).animate({left:'-330px'},2000)
-    // $('#section').delay(2000).animate({opacity: "1"},2000)
+    $('#section').animate({opacity: "0.4"})
+    $('#aside').delay(2000).animate({left:'-330px'},2000)
+    $('#section').delay(2000).animate({opacity: "1"},2000)
 
 
 
@@ -312,4 +344,6 @@ if(i%7 == 6){
     $('#calendarDiv > div').eq(1).html(basicText);
 }
 
-
+function contactCheck(){
+    alert("확인했습니다")
+}
