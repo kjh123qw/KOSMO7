@@ -59,7 +59,16 @@ $(function(){
       },1000)
       //시간 Interval 업데이트
 
-      var state = true;
+      var state;
+
+      $("#section").click(function(){
+        $( "#aside" ).stop().animate({left : "-330px"}, 1000 );
+        $('#rgbaDiv').stop().animate({'opacity': 0}, 1000).css({'display': 'none'});
+        $("#logo").html("<i class=\"fas fa-arrow-right\"></i>")
+        state = true;
+      })
+
+        state = true;
       $("#logo").click(function(){
           // $('#aside').animate({width:'toggle'},500)
         if ( !state ) {
