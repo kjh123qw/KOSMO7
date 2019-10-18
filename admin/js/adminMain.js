@@ -29,7 +29,8 @@ $(function(){
         autoControls: false,
         stopAutoOnClick: true,
         pager:false,
-        controls:false
+        controls:false,
+        touchEnabled:false
         });
       })
       //bxSlider 설정

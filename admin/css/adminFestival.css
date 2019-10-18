@@ -246,6 +246,7 @@
 
 #snsDiv div a{
     color: black;
+    border-bottom: 1px solid black;
 }
 
 #snsDiv div div{
@@ -351,6 +352,18 @@
     color: white;
     cursor: pointer;
     transition-duration:1s;
+}
+#rgbaDiv{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: white;
+    opacity: 0.5;
+    z-index: 100;
+
+    /* transition-duration:1s; */
+    /* transition-delay: 2s; */
 }
 
 .pagingBox{

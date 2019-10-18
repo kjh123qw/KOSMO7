@@ -1,5 +1,17 @@
 $(function(){
 
+  $( window ).resize(function() {
+
+    var width = $(window).width();
+
+    if(width <577){
+      $("#kindsDiv > div").attr("class","form-check form-check-inline col-sm-4")
+    }else{
+      $("#kindsDiv > div").attr("class","form-check form-check-inline col")
+    }
+
+  });
+
       $('#fileInput').change(function(){
         var file = document.getElementById("fileInput").files;
         var length = file.length;

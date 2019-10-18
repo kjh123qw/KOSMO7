@@ -259,6 +259,7 @@
 
 #snsDiv div a{
     color: black;
+    border-bottom: 1px solid black;
 }
 
 #snsDiv div div{
