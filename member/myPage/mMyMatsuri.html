@@ -191,11 +191,23 @@
         </div>
         <!-- // 회원가입 폼 -->
     </header>
-    <content>
-        <div id="wrap">
-            <!-- MYPAGE MENU -->
-            <div id="myPageMenu_m">
-                <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+    <div id="wrap">
+        <!-- MYPAGE MENU -->
+        <div id="myPageMenu_m">
+            <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+            <ul>
+                <li><a href="./mMain.html">마이페이지 메인</a></li>
+                <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
+                <li><a href="./mMyInfo.html">개인정보수정</a></li>
+                <li><a href="./mHosting.html">등록한 축제</a></li>
+                <li><a href="./mLeave.html">회원탈퇴</a></li>
+            </ul>
+        </div>
+        <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
+        <div id="myPageMenu">
+            <div class="selectedMenu curLoc"><span></span></div>
+            <div><div></div></div>
+            <div>
                 <ul>
                     <li><a href="./mMain.html">마이페이지 메인</a></li>
                     <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
@@ -204,197 +216,171 @@
                     <li><a href="./mLeave.html">회원탈퇴</a></li>
                 </ul>
             </div>
-            <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
-            <div id="myPageMenu">
-                <div class="selectedMenu curLoc"><span></span></div>
-                <div><div></div></div>
-                <div>
-                    <ul>
-                        <li><a href="./mMain.html">마이페이지 메인</a></li>
-                        <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
-                        <li><a href="./mMyInfo.html">개인정보수정</a></li>
-                        <li><a href="./mHosting.html">등록한 축제</a></li>
-                        <li><a href="./mLeave.html">회원탈퇴</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- // MYPAGE MENU -->
-            <!-- 기대중인 축제 박스 -->
-            <div class="myFestivalBox">
-                <div class="likeFestivals">
-                    <hr>
-                    <div class="titleBox">
-                        <span><i class="fas fa-bookmark"></i>&nbsp;기대중인 축제 목록</span>
-                        <div class="customToggle festivalInfo"><span>축제 정보 고정</span><div><div></div></div><input type="checkbox"></div>
-                    </div>
-                    <hr>
-                    <div class="mySortBox">
-                        <div class="customToggle pastFestival"><span>지난 축제</span><div><div></div></div><input type="checkbox"></div>
-                        <div class="customToggle ingFestival"><span>진행 축제</span><div><div></div></div><input type="checkbox"></div>
-                        <div class="customToggle preFestival"><span>예정 축제</span><div><div></div></div><input type="checkbox"></div>
-                        <!-- <div class="customChkBoxArea">
-                            <div class="customChkBox"></div><div class="customChkBoxLabel">항목1</div>
-                        </div>
-                        <div class="customChkBoxArea">
-                            <div class="customChkBox"></div><div class="customChkBoxLabel">항목2</div>
-                        </div>
-                        <div class="customChkBoxArea">
-                            <div class="customChkBox"></div><div class="customChkBoxLabel">항목3</div>
-                        </div>
-                        <div class="customChkBoxArea">
-                            <div class="customChkBox"></div><div class="customChkBoxLabel">항목4</div>
-                        </div>
-                        <div class="customChkBoxArea">
-                            <div class="customChkBox"></div><div class="customChkBoxLabel">항목5</div>
-                        </div> -->
-                    </div>
-                    <hr>
-                    <div id="imageBoxs">
-                        <div class="lowWidth992"></div>  <!-- 보다 작으면 block -->
-                        <div>
-                            <div class="imageBox" id="sliderBoxEnd1">
-                                <div class="finishedFest"><span></span><span class="10월15일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>자연</span>
-                                        <span>가을</span>
-                                    </div>
-                                    <div>[교토] 녹차 축제</div>
-                                    <div>녹차의 모든것을 맛보고 싶다면 참가하세요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                            <div class="imageBox" id="sliderBoxEnd2">
-                                <div class="finishedFest"><span></span><span class="10월22일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>신사</span>
-                                        <span>전통</span>
-                                    </div>
-                                    <div>[고치시] 골목 축제</div>
-                                    <div>조용한 골목의 매력에 빠져보세요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imageBox" id="sliderBox1">
-                                <div class="startedFest"><span></span><span class="10월28일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>야경</span>
-                                        <span>전통</span>
-                                        <span>겨울</span>
-                                    </div>
-                                    <div>[카쓰야마] 밤거리 축제</div>
-                                    <div>어디서도 보기 흠든 지역 전통의 건물들과 야경을 감상해보세요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                            <div class="imageBox" id="sliderBox2">
-                                <div class="startedFest"><span></span><span class="10월30일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>신사</span>
-                                        <span>전통</span>
-                                    </div>
-                                    <div>[돗토리] 신사 축제</div>
-                                    <div>지방 소도시에 있는 지역 신사의 매력에 빠져보세요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imageBox" id="sliderBox3">
-                                <div class="startedFest"><span></span><span class="11월18일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>신사</span>
-                                        <span>전통</span>
-                                        <span>눈</span>
-                                        <span>겨울</span>
-                                    </div>
-                                    <div>[디키카와시] 눈내린 신사 축제</div>
-                                    <div>새하얀 눈같이 하얀 추억을 만들어 드릴게요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                            <div class="imageBox" id="sliderBox4">
-                                <div class="preFest"><span></span><span class="12월20일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>신사</span>
-                                        <span>야경</span>
-                                        <span>전통</span>
-                                        <span>가을</span>
-                                    </div>
-                                    <div>[고베] 연등 축제</div>
-                                    <div>연등이 큰 추억을 만들어 드립니다.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imageBox" id="sliderBox5">
-                                <div class="preFest"><span></span><span class="12월25일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>동물</span>
-                                        <span>자연</span>
-                                    </div>
-                                    <div>[오즈시] 다람쥐 축제</div>
-                                    <div>다람쥐가 친구가 되어드릴게요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                            <div class="imageBox" id="sliderBox6">
-                                <div class="preFest"><span></span><span class="12월30일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>도시</span>
-                                        <span>야경</span>
-                                        <span>가을</span>
-                                    </div>
-                                    <div>[도쿄] 야경 축제</div>
-                                    <div>인간이 만들어낸 도시의 아름다움을 공유합니다.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="imageBox" id="sliderBox7">
-                                <div class="preFest"><span></span><span class="1월2일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>전통</span>
-                                        <span>겨울</span>
-                                    </div>
-                                    <div>[나라] 신년 축제</div>
-                                    <div>새해에는 좋은일만 이루어질거에요.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                            <div class="imageBox" id="sliderBox8">
-                                <div class="preFest"><span></span><span class="4월5일"></span></div>
-                                <div>
-                                    <div>
-                                        <span>신사</span>
-                                        <span>야경</span>
-                                        <span>전통</span>
-                                        <span>가을</span>
-                                    </div>
-                                    <div>[오사카] 벚꽃 축제</div>
-                                    <div>벚꽃 축제에 당신을 초대합니다.</div>
-                                </div>
-                                <a href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- // 기대중인 축제 박스 -->
         </div>
-    </content>
+        <!-- // MYPAGE MENU -->
+        <!-- 기대중인 축제 박스 -->
+        <div class="myFestivalBox">
+            <div class="likeFestivals">
+                <hr>
+                <div class="titleBox">
+                    <span><i class="fas fa-bookmark"></i>&nbsp;기대중인 축제 목록</span>
+                    <div class="customToggle festivalInfo"><span>축제 정보 고정</span><div><div></div></div><input type="checkbox"></div>
+                </div>
+                <hr>
+                <div class="mySortBox">
+                    <div>
+                        <div class="customToggleM pastFestival"><span>지난 축제</span><div><div></div></div><input type="checkbox"></div>
+                        <div class="customToggleM ingFestival"><span>진행중 축제</span><div><div></div></div><input type="checkbox"></div>
+                        <div class="customToggleM preFestival"><span>예정 축제</span><div><div></div></div><input type="checkbox"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="imageBoxs">
+                    <div class="lowWidth992"></div>  <!-- 보다 작으면 block -->
+                    <div>
+                        <div class="imageBox sliderBoxEnd1">
+                            <div class="finishedFest"><span></span><span class="10월15일"></span></div>
+                            <div>
+                                <div>
+                                    <span>자연</span>
+                                    <span>가을</span>
+                                </div>
+                                <div>[교토] 녹차 축제</div>
+                                <div>녹차의 모든것을 맛보고 싶다면 참가하세요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <div class="imageBox sliderBoxEnd2">
+                            <div class="finishedFest"><span></span><span class="10월22일"></span></div>
+                            <div>
+                                <div>
+                                    <span>신사</span>
+                                    <span>전통</span>
+                                </div>
+                                <div>[고치시] 골목 축제</div>
+                                <div>조용한 골목의 매력에 빠져보세요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="imageBox sliderBox1">
+                            <div class="startedFest"><span></span><span class="10월28일"></span></div>
+                            <div>
+                                <div>
+                                    <span>야경</span>
+                                    <span>전통</span>
+                                    <span>겨울</span>
+                                </div>
+                                <div>[카쓰야마] 밤거리 축제</div>
+                                <div>어디서도 보기 흠든 지역 전통의 건물들과 야경을 감상해보세요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <div class="imageBox sliderBox2">
+                            <div class="startedFest"><span></span><span class="10월30일"></span></div>
+                            <div>
+                                <div>
+                                    <span>신사</span>
+                                    <span>전통</span>
+                                </div>
+                                <div>[돗토리] 신사 축제</div>
+                                <div>지방 소도시에 있는 지역 신사의 매력에 빠져보세요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="imageBox sliderBox3">
+                            <div class="startedFest"><span></span><span class="11월18일"></span></div>
+                            <div>
+                                <div>
+                                    <span>신사</span>
+                                    <span>전통</span>
+                                    <span>눈</span>
+                                    <span>겨울</span>
+                                </div>
+                                <div>[디키카와시] 눈내린 신사 축제</div>
+                                <div>새하얀 눈같이 하얀 추억을 만들어 드릴게요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <div class="imageBox sliderBox4">
+                            <div class="preFest"><span></span><span class="12월20일"></span></div>
+                            <div>
+                                <div>
+                                    <span>신사</span>
+                                    <span>야경</span>
+                                    <span>전통</span>
+                                    <span>가을</span>
+                                </div>
+                                <div>[고베] 연등 축제</div>
+                                <div>연등이 큰 추억을 만들어 드립니다.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="imageBox sliderBox5">
+                            <div class="preFest"><span></span><span class="12월25일"></span></div>
+                            <div>
+                                <div>
+                                    <span>동물</span>
+                                    <span>자연</span>
+                                </div>
+                                <div>[오즈시] 다람쥐 축제</div>
+                                <div>다람쥐가 친구가 되어드릴게요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <div class="imageBox sliderBox6">
+                            <div class="preFest"><span></span><span class="12월30일"></span></div>
+                            <div>
+                                <div>
+                                    <span>도시</span>
+                                    <span>야경</span>
+                                    <span>가을</span>
+                                </div>
+                                <div>[도쿄] 야경 축제</div>
+                                <div>인간이 만들어낸 도시의 아름다움을 공유합니다.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="imageBox sliderBox7">
+                            <div class="preFest"><span></span><span class="1월2일"></span></div>
+                            <div>
+                                <div>
+                                    <span>전통</span>
+                                    <span>겨울</span>
+                                </div>
+                                <div>[나라] 신년 축제</div>
+                                <div>새해에는 좋은일만 이루어질거에요.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                        <div class="imageBox sliderBox8">
+                            <div class="preFest"><span></span><span class="4월5일"></span></div>
+                            <div>
+                                <div>
+                                    <span>신사</span>
+                                    <span>야경</span>
+                                    <span>전통</span>
+                                    <span>가을</span>
+                                </div>
+                                <div>[오사카] 벚꽃 축제</div>
+                                <div>벚꽃 축제에 당신을 초대합니다.</div>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="howToUse noResult"><div>축제가 존재하지 않습니다.</div></div>
+        </div>
+        <!-- // 기대중인 축제 박스 -->
+    </div>
     <footer id="footer">
         <div class="footer_wrap">
             <div class="footer_top">

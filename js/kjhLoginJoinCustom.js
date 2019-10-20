@@ -7,7 +7,8 @@ $(function(){
     $('.closeBackground').click(function(){
         HideAll();
     });
-
+    $('.agrPlc').attr('class', 'agrPlc cstChkBox');
+    $('.agrEml').attr('class', 'agrEml cstChkBox');
     // 회원가입 화면
     $('.btn-join').click(function(){
         HideAll();
@@ -27,14 +28,14 @@ $(function(){
     $('.chkRmbId').click(function(){
         CheckingBox($('.rmbIdChkBox > div:first-of-type'), $('#logRmbId'));
     });
-    $('.agrPlc > div:first-of-type').click(function(){
-        CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
-    });
-    $('.agrPlc > div > span').click(function(){
-        CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
-    });
-    $('.agrEml > div').click(function(){
-        CheckingBox($('.agrEml > div:first-of-type'), $('#agreeEmail'));
+    // $('.agrPlc > div:first-of-type').click(function(){
+    //     CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
+    // });
+    // $('.agrPlc > div > span').click(function(){
+    //     CheckingBox($('.agrPlc > div:first-of-type'), $('#agreePolicy'));
+    // });
+    $('.cstChkBox').click(function(){
+        CheckingBox($(this).children('div:first-of-type'), $(this).children('input'));
     });
 
     function HideAll(){

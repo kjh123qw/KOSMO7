@@ -17,6 +17,37 @@
     <script src="../../js/kjhMiddleCustom.js"></script>  <!-- imageBoxs js file -->
     <script src="../../js/kjhLoginJoinCustom.js"></script>
     <script src="../myPage/js/MyPage.js"></script>
+
+    <link rel="stylesheet" href="../../festival/css/fRegiFestival.css">
+    <script src = "../../festival/js/fRegiFestival.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 부트스트랩 -->
+
+    <script src = "../../festival/js/jquery-ui.min.js"></script>
+    <script src = "../../festival/js/jquery.easing.1.3.js"></script>
+    <script src = "../../festival/js/jquery.mousewheel.min.js"></script> <!--마우스휠js -->
+    <!-- jQuery -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- datepicher -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- font-awesome -->
+
+    <link rel="stylesheet" href="../../festival/css/jquery.bxslider.css">
+    <script src="../../festival/js/jquery.bxslider.min.js"></script>
+    <!-- bxslider -->
+
+    <link href="../../festival/css/lightbox.css" rel="stylesheet" />
+    <script src="../../festival/js/lightbox.js"></script>
+    <!-- lightbox -->
+
     <title>Air Matsuri</title>
 </head>
 <body>
@@ -205,11 +236,23 @@
         </div>
         <!-- // 회원가입 폼 -->
     </header>
-    <content>
-        <div id="wrap">
-            <!-- MYPAGE MENU -->
-            <div id="myPageMenu_m">
-                <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+    <div id="wrap">
+        <!-- MYPAGE MENU -->
+        <div id="myPageMenu_m">
+            <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+            <ul>
+                <li><a href="./mMain.html">마이페이지 메인</a></li>
+                <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
+                <li><a href="./mMyInfo.html">개인정보수정</a></li>
+                <li><a href="./mHosting.html">등록한 축제</a></li>
+                <li><a href="./mLeave.html">회원탈퇴</a></li>
+            </ul>
+        </div>
+        <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
+        <div id="myPageMenu">
+            <div class="selectedMenu curLoc"><span></span></div>
+            <div><div></div></div>
+            <div>
                 <ul>
                     <li><a href="./mMain.html">마이페이지 메인</a></li>
                     <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
@@ -218,64 +261,369 @@
                     <li><a href="./mLeave.html">회원탈퇴</a></li>
                 </ul>
             </div>
-            <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
-            <div id="myPageMenu">
-                <div class="selectedMenu curLoc"><span></span></div>
-                <div><div></div></div>
+        </div>
+        <!-- // MYPAGE MENU -->
+        <!-- 등록한 축제 박스 -->
+        <div id="hostedFestival">
+            <hr>
+            <div class="titleBox">
+                <span><i class="fas fa-edit"></i>&nbsp;등록한 축제 목록</span>
+                <div class="customToggle festivalInfo"><span>축제 정보 고정</span><div><div></div></div><input type="checkbox"></div>
+            </div>
+            <hr>
+            <div class="mySortBox">
                 <div>
-                    <ul>
-                        <li><a href="./mMain.html">마이페이지 메인</a></li>
-                        <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
-                        <li><a href="./mMyInfo.html">개인정보수정</a></li>
-                        <li><a href="./mHosting.html">등록한 축제</a></li>
-                        <li><a href="./mLeave.html">회원탈퇴</a></li>
-                    </ul>
+                    <div class="customToggleM pastFestival"><span>지난 축제</span><div><div></div></div><input type="checkbox"></div>
+                    <div class="customToggleM ingFestival"><span>진행중 축제</span><div><div></div></div><input type="checkbox"></div>
+                    <div class="customToggleM preFestival"><span>예정 축제</span><div><div></div></div><input type="checkbox"></div>
+                </div>
+                <hr>
+                <div>
+                    <div class="customToggleM permittedFestival"><span>등록 완료 축제</span><div><div></div></div><input type="checkbox"></div>
+                    <div class="customToggleM standbyFestival"><span>등록 대기 축제</span><div><div></div></div><input type="checkbox"></div>
+                    <div class="customToggleM returnedFestival"><span>등록 반려 축제</span><div><div></div></div><input type="checkbox"></div>
                 </div>
             </div>
-            <!-- // MYPAGE MENU -->
-                <!-- 기대중인 축제 박스 -->
-            <div id="hostedFestival">
-                <hr>
-                <div class="titleBox">
-                    <span><i class="fas fa-edit"></i>&nbsp;등록한 축제</span>
-                    <div class="customToggle festivalInfo"><span>축제 정보 고정</span><div><div></div></div><input type="checkbox"></div>
+            <hr>
+            <div class="imageBoxs">
+                <div class="lowWidth992"></div>
+                <div>
+                    <div class="imageBox permitted sliderBoxEnd1">
+                        <div class="finishedFest"><span></span><span class="10월15일"></span></div>
+                        <div>
+                            <div>
+                                <span>자연</span>
+                                <span>가을</span>
+                            </div>
+                            <div>[교토] 녹차 축제</div>
+                            <div>녹차의 모든것을 맛보고 싶다면 참가하세요.</div>
+                        </div>
+                        <div></div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="imageBox permitted sliderBoxEnd2">
+                        <div class="finishedFest"><span></span><span class="10월22일"></span></div>
+                        <div>
+                            <div>
+                                <span>신사</span>
+                                <span>전통</span>
+                            </div>
+                            <div>[고치시] 골목 축제</div>
+                            <div>조용한 골목의 매력에 빠져보세요.</div>
+                        </div>
+                        <div></div>
+                        <a href="#"></a>
+                    </div>
                 </div>
-                <hr>
-                <div id="imageBoxs">
-                    <div class="lowWidth992"></div>
-                    <div>
-                        <div class="imageBox" id="sliderBoxEnd1">
-                            <div class="finishedFest"><span></span><span class="10월15일"></span></div>
+                <div>
+                    <div class="imageBox permitted sliderBox1">
+                        <div class="startedFest"><span></span><span class="10월28일"></span></div>
+                        <div>
                             <div>
-                                <div>
-                                    <span>자연</span>
-                                    <span>가을</span>
-                                </div>
-                                <div>[교토] 녹차 축제</div>
-                                <div>녹차의 모든것을 맛보고 싶다면 참가하세요.</div>
+                                <span>야경</span>
+                                <span>전통</span>
+                                <span>겨울</span>
                             </div>
-                            <a href="#"></a>
+                            <div>[카쓰야마] 밤거리 축제</div>
+                            <div>어디서도 보기 흠든 지역 전통의 건물들과 야경을 감상해보세요.</div>
                         </div>
-                        <div class="imageBox" id="sliderBox8">
-                            <div class="preFest"><span></span><span class="4월5일"></span></div>
+                        <div></div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="imageBox standby sliderBox5">
+                        <div class="preFest"><span></span><span class="12월25일"></span></div>
+                        <div>
                             <div>
-                                <div>
-                                    <span>신사</span>
-                                    <span>야경</span>
-                                    <span>전통</span>
-                                    <span>가을</span>
-                                </div>
-                                <div>[오사카] 벚꽃 축제</div>
-                                <div>벚꽃 축제에 당신을 초대합니다.</div>
+                                <span>동물</span>
+                                <span>자연</span>
                             </div>
-                            <a href="#"></a>
+                            <div>[오즈시] 다람쥐 축제</div>
+                            <div>다람쥐가 친구가 되어드릴게요.</div>
                         </div>
+                        <div></div>
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="imageBox returned sliderBox8">
+                        <div class="preFest"><span></span><span class="4월5일"></span></div>
+                        <div>
+                            <div>
+                                <span>신사</span>
+                                <span>야경</span>
+                                <span>전통</span>
+                                <span>가을</span>
+                            </div>
+                            <div>[오사카] 벚꽃 축제</div>
+                            <div>벚꽃 축제에 당신을 초대합니다.</div>
+                        </div>
+                        <div></div>
+                        <a href="#"></a>
                     </div>
                 </div>
             </div>
-            <!-- // 기대중인 축제 박스 -->
+            <div class="howToUse noResult"><div>축제가 존재하지 않습니다.</div></div>
+            <hr class="regiBox">
+            <div class="titleBox regiBox">
+                <span><i class="fas fa-handshake"></i>&nbsp;축제를 등록해보세요.</span>
+            </div>
+            <hr class="regiBox">
+            <div id="registrationBox" class="regiBox">
+                <span>축제를 등록하고 홍보해보세요.</span>
+                <span>매년 방문객 숫자를 늘리고 관광객에게 홍보하여 지역 대표축제로 발전시켜보세요.</span>
+            </div>
         </div>
-    </content>
+        <!-- // 등록한 축제 박스 -->
+    </div>
+    <!-- 축제 등록 폼 -->
+    <div id="regiFromBox">
+        <div class = container id = "mainContainer">
+            <!-- 사진미리보기div -->
+            <div class = "row">
+                <div class = "col-sm-12 photoDiv">
+                    <div id = "photoList">
+                        <span><i class="far fa-folder-open"></i></span>
+                        <span>파일을 등록해주세요</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //사진미리보기div -->
+    
+            <div class = "row"> 
+                <div class = "col-sm-12">
+                    <div id = "uploadDiv">
+                        <!-- <form enctype="multipart/form-data"> 나중에 사용할것
+                            <div class="form-group">
+                            <input id="file-upload" type="file" class="file" data-upload-url="ajax.php" multiple="multiple" name="files">
+                            </div>
+                            <div class="form-group">
+                            <button class="btn btn-default" type="reset">Reset</button>
+                            </div>
+                        </form> -->
+
+                        <!-- 이미지 파일 업로드 input -->
+                        <label>축제 이미지</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="fileInput" multiple accept=".jpg, .png">
+                            </div>
+                            <div class="input-group-append">
+                                <label class="custom-file-label" for="fileInput" id = "fileLabel">File Upload</label>
+                                <!-- <button class="btn btn-outline-secondary" type="button" for="inputGroupFile04">Button</button> -->
+                            </div>
+                        </div>
+                        <small id="imageHelp" class="form-text text-muted">JPG, PNG 중 하나여야 하며 8개 까지 가능합니다</small>
+
+                        <hr><!-- //이미지 파일 업로드 input -->
+                        <!-- 제목 input -->
+                        <div class="form-group">
+                            <label for="exampleInputTitle">제목</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp" placeholder="축제 제목을 적어주세요">
+                            <small id="titleHelp" class="form-text text-muted">축제 제목을 입력해주세요.</small>
+                        </div>
+                        <!-- //제목 input -->
+
+                        <!-- 부제목 input -->
+                        <div class="form-group">
+                            <label for="exampleInputSubitle">부제목</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputSubitle" aria-describedby="subtitleHelp" placeholder="축제 부제목을 적어주세요">
+                            <small id="subtitleHelp" class="form-text text-muted">축제 부제목을 입력해주세요.</small>
+                        </div>
+                        <!-- //부제목 input -->
+
+                        <!-- 날짜 input -->
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                    <label>축제 시작날짜</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                <input type="text" class="form-control" id = "startDate" placeholder="시작날짜" readonly>
+                                <SMAll>시작날짜를 입력해주세요.</SMAll>
+                            </div>
+                            <div class = "col-sm-1 calendarImg"><label for="startDate"><i class="far fa-calendar-alt"></i></label></div>
+                            <div class="col-sm-5">
+                                    <label>축제 종료날짜</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                <input type="text" class="form-control" id = "endDate"  placeholder="종료날짜" readonly>
+                                <SMAll>종료날짜를 입력해주세요.</SMAll>
+                            </div>
+                            <div class = "col-sm-1 calendarImg" ><label for="endDate"><i class="far fa-calendar-alt"></i></label></div>
+                        </div>
+                        </div>
+                        <!-- //날짜 input -->
+
+                        <!-- 정보 input -->
+                        <div class="form-group">
+                            <label for="exampleInputInfo">축제 정보</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <textarea class="form-control" rows="5" id="exampleInputInfo" placeholder="축제 정보를 입력해주세요"></textarea>
+                            <small id="infoHelp" class="form-text text-muted">축제 소개를 입력해주세요.</small>
+                        </div>
+                        <!-- //정보 input -->
+
+                        <!-- 주소 input -->
+                        <div class="form-group">
+                            <label for="exampleInputaddress">주소</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <input type="text" class="form-control" id="exampleInputaddress" aria-describedby="addressHelp" placeholder="주소">
+                            <small id="addressHelp" class="form-text text-muted">축제가 진행되는 주소를 입력해주세요.</small>
+                        </div>
+                        <!-- //주소 input -->
+
+                        <!-- 지역 input -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>LOCATION</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                    <select class="form-control" id = "locationF">
+                                        <option>혼슈 지방</option>
+                                        <option>훗카이도 지방</option>
+                                        <option>시코쿠 지방</option>
+                                        <option>큐슈 지방</option>
+                                    </select>
+                                    <SMAll>축제가 열리는 지방을 선택해주세요.</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>SIZE</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                                        <select class="form-control" id = "sizeF">
+                                            <option>소형</option>
+                                            <option>중형</option>
+                                            <option>대형</option>
+                                        </select>
+                                    <SMAll>축제 규모를 선택해주세요.</SMAll>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //지역 input -->
+
+                        <!-- 계절 input -->
+                        <div class="form-group">
+                            <label>계절</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <div class = "row" id = "seasonDiv">
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="봄">
+                                    <label class="form-check-label" for="inlineRadio1">봄</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="여름">
+                                    <label class="form-check-label" for="inlineRadio2">여름</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="가을">
+                                    <label class="form-check-label" for="inlineRadio3">가을</label>
+                                </div>
+                                <div class="form-check form-check-inline col">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="겨울">
+                                    <label class="form-check-label" for="inlineRadio4">겨울</label>
+                                </div>
+                            </div>    
+                            <SMAll>축제가 열리는 계절을 선택해주세요.</SMAll>
+                        </div>
+                        <!-- //계절 input -->
+
+                        <!-- 종류 input -->
+                        <div class="form-group">
+                            <label>축제 종류</label> <i class="fas fa-check" title = "필수항목입니다"></i>
+                            <div class = "row" id = "kindsDiv">
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox1" value="벚꽃">
+                                <label class="form-check-label" for="inlinecheckbox1">벚꽃</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox2" value="불꽃">
+                                <label class="form-check-label" for="inlinecheckbox2">불꽃</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox3" value="신사">
+                                <label class="form-check-label" for="inlinecheckbox3">신사</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox4" value="맥주">
+                                <label class="form-check-label" for="inlinecheckbox4">맥주</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox5" value="얼음">
+                                <label class="form-check-label" for="inlinecheckbox5">얼음</label>
+                            </div>
+                            <div class="form-check form-check-inline col">
+                                <input class="form-check-input" type="checkbox" name="inlinecheckboxOptions" id="inlinecheckbox6" value="바다">
+                                <label class="form-check-label" for="inlinecheckbox6">바다</label>
+                            </div>
+                            </div>
+                            <SMAll>축제 종류를 입력해주세요.</SMAll>
+                        </div>
+                        <!-- //종류 input -->
+
+                        <!-- 웹사이트 , 전화번호 input -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>웹사이트</label>
+                                    <input type="text" class="form-control" placeholder="WEBSITE" id = "websiteF">
+                                    <SMAll>축제 웹사이트를 입력해주세요.</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>전화번호</label>
+                                    <input type="text" class="form-control" placeholder="PHONE" id = "phoneF">
+                                    <SMAll>축제 문의가 가능한 전화번호를 입력해주세요</SMAll>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //웹사이트 , 전화번호 input -->
+
+                        <!-- SNS input -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label>TWITTER</label>
+                                    <input type="text" class="form-control" placeholder="TWITTER" id = "sns1">
+                                    <SMAll>축제 SNS을 입력해주세요</SMAll>
+                                </div>
+                                <div class="col">
+                                    <label>INSTAGRAM</label>
+                                    <input type="text" class="form-control" placeholder="INSTAGRAM" id = "sns2">
+                                    <SMAll>축제 SNS을 입력해주세요</SMAll>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //SNS input -->
+
+                        <!-- 키워드 input -->
+                        <div class="form-group">
+                            <div class = "row">
+                                <div class = "col-sm-4">
+                                    <label>KEYWORD</label> 
+                                    <div class="input-group mb-3" id = "keywordDiv">
+                                        <input type="text" class="form-control" placeholder="키워드를 입력해주세요" aria-label="Recipient's username" id = "keywordInput">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-secondary" type="button" id = "keywordBtn">Button</button>
+                                        </div>
+                                    </div>
+                                    <SMAll>5글자 이하로 작성해주세요</SMAll>
+                                </div>
+
+                                <div class = "col">
+                                    <label>KEYWORDS</label>
+                                    <div id = "keywordsDiv"></div>
+                                    <SMAll>키워드는 5개 까지 추가 할수있습니다.</SMAll>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //키워드 input -->
+                        <br>
+                        <hr>
+                        <br>                   
+                        <!-- 버튼 div -->
+                        <div class="row">
+                            <div class = "col" id = "btnDiv">
+                                <button type="button" class="btn btn-warning btnC" onclick = "insertF();">신청하기</button>
+                                <button type="button" class="btn btn-secondary btnC">돌아가기</button>
+                            </div>
+
+                        </div>
+                        <!-- //버튼 div -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- // 축제 등록 폼 -->
     <footer id="footer">
         <div class="footer_wrap">
             <div class="footer_top">

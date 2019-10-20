@@ -27,7 +27,7 @@ header {
 .mainTextBox > span:nth-of-type(1) {
     display: block;
     width: 100%; height: 25px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 .mainTextBox > span:nth-of-type(2) {
@@ -406,13 +406,13 @@ header {
     }
     .mainTextBox > span:nth-of-type(1) {
         width: 100%; height: 40px;
-        font-size: 20px;
+        font-size: 16px;
     }
     .mainTextBox > span:nth-of-type(2) {
         display: block;
         width: 100%; height: 200px;
         padding-top: 10px;
-        font-size: 12px;
+        font-size: 10px;
     }
     #search_window_m {
         position: absolute;
@@ -497,7 +497,7 @@ header {
     }
     .mainTextBox > span:nth-of-type(1) {
         width: 100%; height: 40px;
-        font-size: 28px;
+        font-size: 22px;
     }
     .mainTextBox > span:nth-of-type(2) {
         width: 100%; height: 300px;
@@ -548,12 +548,12 @@ header {
     }
     .mainTextBox > span:nth-of-type(1) {
         width: 100%; height: 50px;
-        font-size: 36px;
+        font-size: 30px;
     }
     .mainTextBox > span:nth-of-type(2) {
         width: 100%; height: 335px;
         padding-top: 15px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 /* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
@@ -570,12 +570,12 @@ header {
     }
     .mainTextBox > span:nth-of-type(1) {
         width: 100%; height: 50px;
-        font-size: 40px;
+        font-size: 36px;
     }
     .mainTextBox > span:nth-of-type(2) {
         width: 100%; height: 320px;
         padding-top: 30px;
-        font-size: 20px;
+        font-size: 18px;
     }
     #middleBox { width: 1200px; margin: 0 auto; }
 }

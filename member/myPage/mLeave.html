@@ -205,11 +205,23 @@
         </div>
         <!-- // 회원가입 폼 -->
     </header>
-    <content>
-        <div id="wrap">
-            <!-- MYPAGE MENU -->
-            <div id="myPageMenu_m">
-                <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+    <div id="wrap">
+        <!-- MYPAGE MENU -->
+        <div id="myPageMenu_m">
+            <div class="selectedMenu_m myMenuClose curLoc"><span></span><div><i class="far fa-caret-square-up"></i></div></div>
+            <ul>
+                <li><a href="./mMain.html">마이페이지 메인</a></li>
+                <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
+                <li><a href="./mMyInfo.html">개인정보수정</a></li>
+                <li><a href="./mHosting.html">등록한 축제</a></li>
+                <li><a href="./mLeave.html">회원탈퇴</a></li>
+            </ul>
+        </div>
+        <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
+        <div id="myPageMenu">
+            <div class="selectedMenu curLoc"><span></span></div>
+            <div><div></div></div>
+            <div>
                 <ul>
                     <li><a href="./mMain.html">마이페이지 메인</a></li>
                     <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
@@ -218,55 +230,66 @@
                     <li><a href="./mLeave.html">회원탈퇴</a></li>
                 </ul>
             </div>
-            <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
-            <div id="myPageMenu">
-                <div class="selectedMenu curLoc"><span></span></div>
-                <div><div></div></div>
-                <div>
-                    <ul>
-                        <li><a href="./mMain.html">마이페이지 메인</a></li>
-                        <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
-                        <li><a href="./mMyInfo.html">개인정보수정</a></li>
-                        <li><a href="./mHosting.html">등록한 축제</a></li>
-                        <li><a href="./mLeave.html">회원탈퇴</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- // MYPAGE MENU -->
-            <!-- 비밀번호 확인 폼 -->
-            <div id="pwdConfirmForm">
-                <hr>
-                <div class="titleBox">
-                    <span><i class="fas fa-envelope"></i>&nbsp;비밀번호 확인</span>
-                </div>
-                <hr>
-                <div class="moduleBox">
-                    <div class="logInputLabel">
-                        <span></span><span></span><span>비밀번호 확인</span>
-                    </div>
-                    <div class="joinPwdBox">
-                        <input type="password" name="confirmPwd" id="confirmPwd" class="focusFunc">
-                    </div>
-                </div>
-                <div class="moduleBox">
-                    <button id="leaveConfirmBtn">확인</button>
-                </div>
-            </div>
-            <!-- // 비밀번호 확인 폼 -->
-            <!-- 회원 탈퇴 폼 -->
-            <div id="leaveForm">
-                <hr>
-                <div class="titleBox">
-                    <span><i class="fas fa-envelope"></i>&nbsp;회원 탈퇴</span>
-                </div>
-                <hr>
-                <div class="howToUse">
-                    <div>회원 탈퇴를 준비중입니다.</div>
-                </div>
-            </div>
-            <!-- // 회원 탈퇴 폼 -->
         </div>
-    </content>
+        <!-- // MYPAGE MENU -->
+        <!-- 비밀번호 확인 폼 -->
+        <div id="pwdConfirmForm">
+            <hr>
+            <div class="titleBox">
+                <span><i class="fas fa-envelope"></i>&nbsp;비밀번호 확인</span>
+            </div>
+            <hr>
+            <div class="moduleBox">
+                <div class="logInputLabel">
+                    <span></span><span></span><span>비밀번호 확인</span>
+                </div>
+                <div class="joinPwdBox">
+                    <input type="password" name="confirmPwd" id="confirmPwd" class="inputBox focusFunc">
+                </div>
+            </div>
+            <div class="moduleBox">
+                <button class="mConfirm" id="leavePwdBtn">확인</button>
+            </div>
+        </div>
+        <!-- // 비밀번호 확인 폼 -->
+        <!-- 회원 탈퇴 폼 -->
+        <div id="leaveForm">
+            <hr>
+            <div class="titleBox">
+                <span><i class="fas fa-envelope"></i>&nbsp;회원 탈퇴</span>
+            </div>
+            <hr>
+            <div class="moduleBox">
+                <div class="leaveText"> - 탈퇴 사유 - </div>
+            </div>
+            <div class="moduleBox">
+                <div class="cstChkBox">
+                    <div></div>
+                    <div>정보가 너무 없습니다.</div>
+                    <input type="checkbox" name="firstReason" id="firstReason" class="displayNone">
+                </div>
+                <div class="cstChkBox">
+                    <div></div>
+                    <div>필요없는 사이트 입니다.</div>
+                    <input type="checkbox" name="secondReason" id="secondReason" class="displayNone">
+                </div>
+                <div class="cstChkBox">
+                    <div></div>
+                    <div>다른 사이트를 찾았습니다.</div>
+                    <input type="checkbox" name="thirdReason" id="thirdReason" class="displayNone">
+                </div>
+                <div class="cstChkBox">
+                    <div></div>
+                    <div>아무 이유 없습니다.</div>
+                    <input type="checkbox" name="fourthReason" id="fourthReason" class="displayNone">
+                </div>
+            </div>
+            <div class="moduleBox">
+                <button class="mConfirm" id="leaveConfirmBtn">회원 탈퇴</button>
+            </div>
+        </div>
+        <!-- // 회원 탈퇴 폼 -->
+    </div>
     <footer id="footer">
         <div class="footer_wrap">
             <div class="footer_top">

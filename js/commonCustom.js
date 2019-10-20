@@ -8,6 +8,7 @@ var txtObj = {
     'aboutus': 'ABOUT US',
     'support': '고객센터',
     'contactus': '고객센터',
+    'introduce': '서비스 소개',
     'fDetail': '축제 상세정보',
     'fRegiFestival': '축제 등록',
     'fSearchList': '검색 결과'
@@ -35,6 +36,10 @@ $(function(){
         closeMenu();
     });
 
+    //Fotter href setting
+    function footerSet(){
+    }
+
     //Current Menu Box Insert
     function currentMenu(){
         $('.header_gnb_m').before('<div class="currentBox">' + locationTxt + '<div><i class="fas fa-times"></i></div></div>');
@@ -51,14 +56,18 @@ $(function(){
         if(depth == 0)
             locationRut = './';
         var menuHtml = '';
-        console.log(locationRut);
-        menuHtml = "<li><a class='btn-login'>로그인</a></li><li><a class='btn-join'>회원가입</a></li><li><a href='" + locationRut + "member/myPage/mMain.html'>마이페이지</a></li><li><a href='" + locationRut + "etc/contactus.html'>고객센터</a></li><li><a href='" + locationRut + "etc/aboutus.html'>ABOUT US</a></li>";
+        menuHtml = "<li><a class='btn-login'>로그인</a></li><li><a class='btn-join'>회원가입</a></li><li><a href='" + locationRut + "member/myPage/mMain.html'>마이페이지</a></li><li><a href='" + locationRut + "etc/contactus.html'>고객센터</a></li><li><a href='" + locationRut + "etc/introduce.html'>서비스 소개</a></li><li><a href='" + locationRut + "admin/adminMain.html'>관리자</a></li>";
         // 메뉴 입력
         $('.header_gnb').html(menuHtml);
         $('.logo > a').attr('href', locationRut +'index.html');
         // 메뉴 입력 모바일
         $('.header_gnb_m').html(menuHtml);
         $('.logo_m > a').attr('href', locationRut +'index.html');
+        // 하단 메뉴 링크 세팅
+        $('.footer_gnb > ul > li').eq(0).children('a').attr('href',locationRut + 'etc/aboutus.html');
+        $('.footer_gnb > ul > li').eq(1).children('a').attr('href', locationRut + 'etc/PIM.html');
+        $('.footer_gnb > ul > li').eq(2).children('a').attr('href',locationRut + 'etc/termsAndConditions.html');
+        $('.footer_gnb > ul > li').eq(3).children('a').attr('href',locationRut + 'etc/contactus.html');
     }
     //Menu Toggle
     function openMenu(){

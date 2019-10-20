@@ -98,9 +98,9 @@
 }
 .rmbIdChkBox > div:nth-of-type(3):hover, .rmbIdChkBox > div:nth-of-type(4):hover { color: mediumturquoise; text-decoration: underline; }
 hr {
-    border: 0;
-    border-top: 1px solid #444;
-    margin: 5px 0;
+    border: 0 !important;
+    border-top: 1px solid #444 !important;
+    margin: 5px 0 !important;
 }
 /* 닫기 회원가입 */
 .loginLayer > div:nth-of-type(5) > div { 
@@ -190,7 +190,7 @@ hr {
     cursor: pointer;
 }
 /* 약관 이메일 체크박스 */
-.agrPlc, .agrEml {
+.cstChkBox {
     margin-top: 10px;
     width: 100%; height: 25px;
     overflow: hidden;
@@ -200,20 +200,20 @@ hr {
     background-color: #111;
     width: 23px; height: 23px;
 }
-.agrPlc > div, .agrEml > div {
+.cstChkBox > div {
     height: 25px;
     line-height: 23px;
     font-size: 12px;
     color: black;
     float: left;
 }
-.agrPlc > div:nth-of-type(1), .agrEml > div:nth-of-type(1) {
+.cstChkBox > div:nth-of-type(1) {
     width: 25px;
     border: 1px solid #444;
     background-color: white;
     cursor: pointer;
 }
-.agrPlc > div:nth-of-type(2), .agrEml > div:nth-of-type(2) {
+.cstChkBox > div:nth-of-type(2) {
     width: 220px;
     margin-left: 10px;
     cursor: pointer;
@@ -267,11 +267,11 @@ hr {
         margin: 0 50%;
         transform: translate(-50%, 0);
     }
-    hr { margin: 10px 0; }
+    hr { margin: 10px 0 !important; }
 }
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
 @media screen and (min-width: 992px) {
-    hr { margin: 15px 0; }
+    hr { margin: 15px 0 !important; }
 
 }
 
