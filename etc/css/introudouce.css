@@ -1,4 +1,237 @@
 
+/* main top */
+body > .topImg {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    border-bottom: 1px solid #888;
+    background-image: url('../../img/testImage1.jpg');
+}
+
+body > .topImg > div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+body > .topImg > div > h1 {
+    font-size: auto;
+    color: aliceblue;
+}
+
+.main {
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.content {
+    width: 100%;
+    height: 250px;
+    padding: 0 auto;
+    padding-top: 40px;
+    margin:0 auto;
+    z-index: 1;
+}
+.cont {display: none;}
+span > h1 {
+    font-size: 1em;
+}
+
+span > h3 {
+    font-size: 0.8em;
+}
+
+
+.con-1, .con-3 {
+    text-align: center;
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    z-index: 10;    
+}
+.content:nth-child(1), .content:nth-child(3)  {
+    background-color: #eee;
+}
+
+.content:nth-child(2), .content:last-child{
+    background-color: #333;
+    color: aliceblue;
+    background-color: #444;  
+
+}
+
+.con-2, .con-4 {
+    text-align: center;
+    color:#eee;
+    padding-top:40px;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    z-index: 10;   
+}
+
+
+/* 기본 CSS를 작성합니다. (세로모드 모바일 디바이스)
+  기본으로 작성되는 CSS는 576px보다 작은 화면에서 작동 됩니다.
+  가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
+  @media screen and (min-width: 576px) {
+      
+}
+
+/* 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용) */
+@media screen and (min-width: 768px) {
+    body > .topImg {
+        height: 250px;
+    }
+
+    body > .topImg > div{
+        margin-top:40px ;
+        margin-left: 20%;
+    }
+    body > .topImg > div > h1 {
+        font-size: 2em;
+        color: aliceblue;
+    }
+    
+    .main {
+        width: 100%;
+        height: 1600px;
+    }
+    
+    .content {
+        height: 300px;
+        padding-top: 0;
+    }
+    .cont {display: block;}
+ 
+    span > h1 {
+        font-size: 1.2em;
+    }
+    
+    span > h3 {
+        font-size: 1em;
+    }
+  
+    .con-1, .con-3 {
+        float: right;
+        text-align: right;
+        padding-right: 10px;
+        width: 45%;
+        background-color: #eee;
+    }
+
+    .content:nth-child(1), .content:nth-child(3)  {
+        background-color: none;
+    }
+    
+    .content:nth-child(2), .content:last-child{
+        background-color:none;  
+    
+    }
+    
+    .con-2, .con-4 {
+        float: left;
+        text-align: left;
+        color:#eee;
+        padding-left: 10px;
+        width: 45%;
+        background-color: #444;   
+    }
+
+        
+    .content:nth-child(1) > .cont {
+        float: left;
+        height: 100%;
+        width: 55%;
+        background-image: url('../../img/fireworks-74689_1280.jpg');
+    }
+
+    .content:nth-child(2) > .cont {
+        float: right;
+        height: 100%;
+        width: 55%;
+        background-image: url('../../img/hand-1917895_1280.png');
+    }
+
+    .content:nth-child(3) > .cont {
+        float: left;
+        height: 100%;
+        width: 55%;
+        background-image: url('../../img/computer-1591018_1280.jpg');
+    }
+
+    .content:nth-child(4) > .cont {
+        float: right;
+        height: 100%;
+        width: 55%;
+        background-image: url('../../img/mina.png');
+    }
+}
+
+/* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 1225px) {
+/* 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용) */
+    body > .topImg {
+        width: 1200px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+ 
+
+    body > .topImg > div{
+        float: left;
+
+    }
+    body > .topImg > div > h1 {
+        font-size: 3em;
+        color: aliceblue;
+    }
+
+    .main {
+        width: 1200px;
+        height: 2000px;
+    }
+
+    .content {
+        height: 1000px;
+        height: 400px;
+    }
+
+    span > h1 {
+        font-size: 2em;
+    }
+
+    span > h3 {
+        font-size: 1.5em;
+    }
+
+/* main top*/
+/* 
+ body > .topImg {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    border-bottom: 1px solid #888;
+    background-image: url('../../img/testImage1.jpg');
+    margin-bottom: 15px;
+}
+
+body > .topImg > div{
+    float: left;
+    margin-top:40px ;
+    margin-left: 20%;
+}
+body > .topImg > div > h1 {
+    font-size: 3em;
+    color: aliceblue;
+}
 
 .main {
     width: 1200px;
@@ -11,34 +244,69 @@
 .content {
     width: 1000px;
     height: 400px;
+    padding: 0 auto;
     margin:0 auto;
-    margin-bottom:30px;
+    z-index: 1;
 }
 
-span > h2 {margin-top: 40px;}
+.content:nth-child(1) > .cont {
+    float: left;
+    height: 100%;
+    width: 55%;
+    background-image: url('../../img/fireworks-74689_1280.jpg');
+}
+
+.content:nth-child(2) > .cont {
+    float: right;
+    height: 100%;
+    width: 55%;
+    background-image: url('../../img/hand-1917895_1280.png');
+}
+
+.content:nth-child(3) > .cont {
+    float: left;
+    height: 100%;
+    width: 55%;
+    background-image: url('../../img/computer-1591018_1280.jpg');
+}
+
+.content:nth-child(4) > .cont {
+    float: right;
+    height: 100%;
+    width: 55%;
+    background-image: url('../../img/mina.png');
+}
+span > h1 {margin-top: 40px;}
 
 .content:nth-child(2), .content:last-child{
     background-color: #333;
     color: aliceblue;
-}
+} 
 
 .con-1, .con-3 {
-    float: right;    
+    float: right;
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 10px;
+    margin: 0 auto;
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    z-index: 10;    
+    background-color: #eee;
 }
 
 .con-2, .con-4 {
     float: left;
-}
-
-.cont {
-    display: inline-block;
-    padding: 0 auto;
-    margin: 0 auto;;
-    width: 450px;
-    height: 400px;
-}
-
-span.cont:nth-child(2), span.cont:last-child {
-    float: right;
-    background-image: url('../../img/mina.png');
+    text-align: left;
+    color:#eee;
+    padding-top:40px;
+    padding-left: 10px;
+    margin: 0 auto;
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    z-index: 10;   
+    background-color: #444; 
+}  */
 }
