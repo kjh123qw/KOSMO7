@@ -166,3 +166,7 @@ function keywordDelete(){//키워드 클릭시 삭제
       $(this).remove();
   })
 } 
+
+function backHost(){
+  location.href = "../member/myPage/mHosting.html";
+}
