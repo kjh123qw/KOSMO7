@@ -1,0 +1,53 @@
+.imgDiv img{
+    width: 100%;
+    height: auto;
+}
+
+.rbox a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.googleMap a{
+    text-decoration: none!important;
+    color: black!important;
+}
+
+.imgDiv{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.infoDiv{
+    margin-top: 30px;
+    border: 1px solid black;
+    overflow: hidden;
+    padding-top: 20px;
+
+}
+
+.partnerDiv{
+    margin-top: 40px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-align: center;
+}
+
+.rbox{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.rbox img{
+    width: 100%;
+    height: 200px;
+}
+
+.partnerTitle{
+    margin-top: 30px;
+}
+
+.introduce{
+    margin-bottom: 20px;
+}

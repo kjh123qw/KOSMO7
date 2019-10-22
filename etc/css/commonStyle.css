@@ -150,10 +150,10 @@ img { border: 0; }
     display: flex;
 }
 
-.rbox {
+/* .rbox {
     flex: 0 0 33.3333%;
     padding: 0 10px;
-}
+} */
 
 .rPartner {
     font-size: 20px;
@@ -162,10 +162,10 @@ img { border: 0; }
     margin-bottom: 1px solid #555;
 }
 
-.rbox img {
+/* .rbox img {
     width: 259px;
     height: 200px;
-}
+} */
 
 .rbox img:hover {
     opacity: 0.8;
