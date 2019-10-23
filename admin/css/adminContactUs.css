@@ -147,6 +147,12 @@
 
 .btnDiv button{
     margin: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #555;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
 }
 
 #ulDiv ul{
@@ -264,6 +270,9 @@
     height: 2.4em;
     line-height: 2.4em;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #calendarDiv > div:first-child{
@@ -277,6 +286,7 @@
 }
 
 #calendarDiv table{
+    border: none;
     width: 90%;
     text-align: center;
     margin: auto;
@@ -296,7 +306,7 @@
     color: white;
 }
 
-#tableDiv td, th{
+#tableDiv td,#tableDiv th{
     border: 1px solid black;
     height: 30px;
 }
