@@ -19,9 +19,13 @@ $(function(){
         var fullWidth = $(window).width();
 
         if(fullWidth < 992){
-            $("#fCheck").css("display","none");
+            $("#fCheck").css("bottom","0");
+            $("#fCheck").css("right","0");
+            $("#fCheck").css("width","100%");
         }else{
-            $("#fCheck").css("display","block");
+            $("#fCheck").css("right",30);
+            $("#fCheck").css("bottom",30);
+            $("#fCheck").css("width",300);
         }
 
      });

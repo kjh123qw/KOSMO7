@@ -1,8 +1,6 @@
 $(function(){
     var width =  screen.availWidth;
     var height = screen.availHeight
-    // $('#container').width(width - 20);
-    // $('#container').height(height - 70);
     //화면 크기 고정
 
     $('#ulDiv li').mouseenter(function(){
@@ -71,22 +69,18 @@ $(function(){
 
      state = true;
     $("#logo").click(function(){
-        // $('#aside').animate({width:'toggle'},500)
         if ( !state ) {
             $( "#aside" ).stop().animate({
                 left : "-330px"
             }, 1000 );
-            // $("#backG").hide(1000);
-            // $("#backG").fadeOut(1000);
+
             $('#rgbaDiv').stop().animate({'opacity': 0}, 1000).css({'display': 'none'});
-            // $('#rgbaDiv').css({'display': 'none'})
             $("#logo").html("<i class=\"fas fa-arrow-right\"></i>")
           } else {
             $( "#aside" ).stop().animate({
                 left : "0"
             }, 1000 );
-            // $("#backG").show(1000);
-            // $("#backG").fadeIn(1000);
+
             $('#rgbaDiv').stop().animate({'opacity': 0.5}, 1000);
                 $('#rgbaDiv').css({'display': 'block'})
                 $("#logo").html("<i class=\"fas fa-bars\"></i>")
@@ -143,8 +137,6 @@ $(function(){
          }
 
     })
-   
-    // $( "#aside" ).css('display','none'); 
 
     $('#aside').delay(1000).animate({left:'-330px'},2000)
     $('#rgbaDiv').delay(1000).animate({'opacity': 0}, 1000, function() {

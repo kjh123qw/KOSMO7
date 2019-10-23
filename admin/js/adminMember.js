@@ -1,8 +1,6 @@
 $(function(){
     var width =  screen.availWidth;
     var height = screen.availHeight
-    // $('#container').width(width - 20);
-    // $('#container').height(height - 70);
     //화면 크기 고정
 
     $('#ulDiv li').mouseenter(function(){
@@ -71,22 +69,18 @@ $(function(){
 
      state = true;
     $("#logo").click(function(){
-        // $('#aside').animate({width:'toggle'},500)
         if ( !state ) {
             $( "#aside" ).stop().animate({
                 left : "-330px"
             }, 1000 );
-            // $("#backG").hide(1000);
-            // $("#backG").fadeOut(1000);
+
             $('#rgbaDiv').stop().animate({'opacity': 0}, 1000).css({'display': 'none'});
-            // $('#rgbaDiv').css({'display': 'none'})
             $("#logo").html("<i class=\"fas fa-arrow-right\"></i>")
           } else {
             $( "#aside" ).stop().animate({
                 left : "0"
             }, 1000 );
-            // $("#backG").show(1000);
-            // $("#backG").fadeIn(1000);
+
             $('#rgbaDiv').stop().animate({'opacity': 0.5}, 1000);
             $('#rgbaDiv').css({'display': 'block'})
             $("#logo").html("<i class=\"fas fa-bars\"></i>")
@@ -95,65 +89,11 @@ $(function(){
           state = !state;
     });
 
-    // $('#tableDiv tr').click(function(){
-
-    //     var checkOk = "<i class=\"fas fa-check\" aria-hidden=\"true\"></i>";
-
-    //     var tr = $(this);
-    //     var td = tr.children();
-
-    //     var dd = "    "
-        
-    //     var number = td.eq(0).text();
-    //     var title = td.eq(1).text();
-    //     var name = td.eq(2).text();
-    //     var kind = td.eq(3).text();
-    //     var date = td.eq(4).text();
-    //     var check = td.eq(5).html();
-
-        
-
-    //     if(number == "문의번호"){
-    //     $("#titleLabel").text("")
-    //     $("#nameLabel").text("")
-    //     $("#dateLabel").text("")
-    //     $("#kindLabel").text("")
-    //     $('#contactTitle').text("");
-    //     $('#userName').text("");
-    //     $('#userDate').text("");
-    //     $('#userKind').text("");
-    //     $('textarea').text("");
-    //     $('#checkBtnDiv').html("")
-    //         return;
-    //     }
-
-    //     $("#titleLabel").text("TITLE : ")
-    //     $("#nameLabel").text("NAME : ")
-    //     $("#dateLabel").text("DATE : ")
-    //     $("#kindLabel").text("KINDS : ")
-
-    //     $('#contactTitle').html(title);
-    //     $('#userName').html(name+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-    //     $('#userDate').html(date+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-    //     $('#userKind').html(kind);
-    //     $('textarea').text("문의번호"+number+"의 내용이 들어옵니다");
-
-    //      if(check ==checkOk){
-    //          $('#checkBtnDiv').html("<button disabled>확인</button>")
-    //      }else{
-    //         $('#checkBtnDiv').html("<button onclick = 'contactCheck();'>확인</button>")
-    //      }
-
-    // })
-   
-    // $( "#aside" ).css('display','none'); 
 
     $('#aside').delay(1000).animate({left:'-330px'},2000)
     $('#rgbaDiv').delay(1000).animate({'opacity': 0}, 1000, function() {
         $('#rgbaDiv').css({'display': 'none'})
     });
-
-
 
 })
 
