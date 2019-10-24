@@ -131,7 +131,7 @@ $(function(){
         $('textarea').text("문의번호"+number+"의 내용이 들어옵니다");
 
          if(check ==checkOk){
-             $('#checkBtnDiv').html("<button disabled>확인</button>")
+             $('#checkBtnDiv').html("")
          }else{
             $('#checkBtnDiv').html("<button onclick = 'contactCheck();'>확인</button>")
          }

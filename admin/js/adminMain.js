@@ -342,7 +342,7 @@ function chart1(){
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: '전체회원중',
             innerSize: '70%',
             data: [
                 ['회원', 71],

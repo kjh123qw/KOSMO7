@@ -415,6 +415,13 @@
     width: 200px;
     height: 40px;
     font-size: 30px;
+
+    background-color: #555;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-style: bold;
+    cursor: pointer;
 }
 
 textarea{
