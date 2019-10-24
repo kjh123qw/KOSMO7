@@ -156,8 +156,12 @@ function insertF(){ //신청하기 버튼 클릭시
   var sns1 = $('#sns1').val();
   var sns2 = $('#sns2').val();
 
-
+  alert("신청 완료되었습니다")
   
+  if(typeof(opener) != "undefined") {
+    opener.location.href = "../member/myPage/mHosting.html";
+  }
+  self.close();
 
 }
 
@@ -168,5 +172,11 @@ function keywordDelete(){//키워드 클릭시 삭제
 } 
 
 function backHost(){
-  location.href = "../member/myPage/mHosting.html";
+  alert("신청이 취소되었습니다")
+
+  if(typeof(opener) != "undefined") {
+    opener.location.href = "../member/myPage/mHosting.html";
+  }
+  self.close();
+
 }
