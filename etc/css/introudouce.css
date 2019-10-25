@@ -34,12 +34,12 @@ body > .topImg > div > h1 {
     z-index: 1;
 }
 .cont {display: none;}
-span > h1 {
-    font-size: 1em;
+.h1 {
+    font-size: 24px;
 }
 
-span > h3 {
-    font-size: 0.8em;
+.h3 {
+    font-size: 18px;
 }
 
 
