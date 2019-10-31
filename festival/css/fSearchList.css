@@ -26,6 +26,16 @@
     }
 }
 
+@media screen and (max-width: 320px) {
+    .container{
+        padding-right: 0!important;
+        padding-left: 0!important;
+        overflow: hidden!important;
+    }
+}
+
+
+
 
 /* mainKeyword 메인에서 넘어오는 데이터보여주기 and 상세조회 */
 
