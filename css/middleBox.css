@@ -213,7 +213,7 @@
   가로모드 모바일 디바이스 (가로 해상도가 576px 보다 큰 화면에 적용) */
 @media screen and (min-width: 576px) {
     #categoryBoxs > div { width: 50%; float: left; }
-    .categoryBox > div:hover > span { background-color: royalblue; }
+    .categoryBox > div:hover > span { background-color: rgb(15, 154, 209); }
     .imageBox {
         width: 50%; height: 300px;
         float: left;
@@ -229,7 +229,7 @@
 /* 테스크탑 (가로 해상도가 992px 보다 큰 화면에 적용) */
 @media screen and (min-width: 992px) {
     #middleBox { padding-top: 15px; }
-    #categoryBoxs { width: 992px; margin: 0 auto; }
+    #categoryBoxs { width: 972px; margin: 0 auto; }
     #categoryBoxs > div { height: 100px; }
     .categoryBox { height: 100px; padding: 0 25px; }
     .categoryBox > div  > span:nth-of-type(1) { height: 63px; line-height: 61px; }
@@ -237,7 +237,7 @@
     .titleBox { padding: 0 50px; font-size: 24px; }
     .imageBoxs > div { width: 50%; float: left; margin-bottom: 10px; }
     .imageBox { height: 350px; margin-bottom: 0; }
-    .registrationBox { width: 992px; margin: 0 auto; }
+    .registrationBox { width: 972px; margin: 0 auto; }
     .regiBox { display: block; }
     .lowWidth992 { display: none; } /* 992 width check */
     .customToggle { display: block; right: 40px; }

@@ -4,6 +4,7 @@ $(function(){
     OptionWrite($('.region_list_box_m'));  // 최초 실행 '지역을 선택해주세요.' 입력됨
     OptionWrite($('.festival_list_box_m'));  // 최초 실행 '주제를 선택해주세요.' 입력됨
     OptionWrite($('.date_calendar_m'));  // 최초 실행 '날짜 선택' 입력됨
+    BasicTextWrite($('.keyword_box_m'));  // 최초 실행 '검색어를 입력해주세요.' 입력됨
     CheckArrows();
     //resize event
     $(window).resize(function(event){
@@ -42,7 +43,7 @@ $(function(){
         $('#date_end_m').val('');
         $('#calendar_start').hide();
         OptionClose($('.date_box_m'), $('.date_calendar_m'));
-        CheckArrows();
+        // CheckArrows();
     });
     $('#keyword_m').focus(function(){
         $('.box_target').each(function(index, item){
@@ -50,10 +51,19 @@ $(function(){
                 OptionClose($(item).prev(), $(item));
             }
         });
+        if($('#keyword_m').val() == '검색어를 입력해주세요.')
+            $('#keyword_m').val('');
+        $('#keyword_m').css('color', '#fff');
         OptionOpen($(this).parent(), $(this).parent(), 0, 0);
     });
     $('#keyword_m').blur(function(){
         OptionClose($(this).parent(), $(this).parent());
+        if($('#keyword_m').val() == '검색어를 입력해주세요.'){
+            $('#keyword_m').css('color', '#ddd');
+        } else if($('#keyword_m').val() == '') {
+            $('#keyword_m').val('검색어를 입력해주세요.');
+            $('#keyword_m').css('color', '#ddd');
+        }
     });
     $('.closeOptionBox').click(function(){
         $('.box_target').each(function(index, item){
@@ -69,6 +79,16 @@ $(function(){
             }
         });
     });
+    // $('#search_window_m').click(function(){
+    //     if($(this).attr('id') == 'search_window_m'){
+    //         console.log($(this).attr('id'));
+    //         $('.box_target').each(function(index, item){
+    //             if ($(item).css('display') != 'none') {
+    //                 OptionClose($(item).prev(), $(item));
+    //             }
+    //         });
+    //     }
+    // });
     $('#search_btn_m').click(function(){
         location.href='./festival/fSearchList.html';
     });
@@ -117,7 +137,7 @@ $(function(){
             $clTrg.prev().children('span:nth-of-type(2)').css('border-bottom','1px solid #fff');
             $clTrg.prevAll('span').css('color','#fff');
             $clTrg.css('border-bottom', '1px solid #fff');
-            $clTrg.children('span').css('color','#fff');
+            // $clTrg.children('span').css('color','#fff');
             $clTrg.prev().children('span:nth-of-type(1)').animate({'width':'34%'}, 100);
             $clTrg.prev().children('span:nth-of-type(2)').animate({'width':'34%'}, 100);
             $clTrg.prevAll('span').animate({'font-size':'14px', 'top':'1px'}, 100);
@@ -157,10 +177,10 @@ $(function(){
         if ($clTrg.attr('class') == 'date_box_m')
             childrenDiv = '#calendar_end';
         if ($('.arrowUpDwon').css('display') != 'none'){
-            if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
-                $clTrg.children('span').css('color','#fff');
-            else
-                $clTrg.children('span').css('color','#aaa');
+            // if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
+            //     $clTrg.children('span').css('color','#fff');
+            // else
+            //     $clTrg.children('span').css('color','#aaa');
             if ($trg.attr('class') != 'keyword_box_m'){
                 $trg.children(childrenDiv).hide();
                 if ($clTrg.attr('class') == 'date_box_m')
@@ -172,12 +192,15 @@ $(function(){
             $clTrg.prev().children('span:nth-of-type(1)').removeAttr('style');
             $clTrg.prev().children('span:nth-of-type(2)').removeAttr('style');
             $clTrg.prevAll('span').removeAttr('style');
-            $clTrg.children('span:first-of-type').removeAttr('style');
-            $clTrg.css('border-bottom', '1px solid #aaa');
-            if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
-                $clTrg.children('span').css('color','#fff');
-            else
-                $clTrg.children('span').css('color','#aaa');
+            // if(BasicTextCheck($clTrg.children('span:first-of-type').text())){
+            //     $clTrg.children('span:first-of-type').removeAttr('style');
+            //     console.log('tt');
+            // }
+            $clTrg.removeAttr('style');
+            // if (BasicTextCheck($clTrg.children('span:first-of-type').text()))
+            //     $clTrg.children('span').css('color','#fff');
+            // else
+            //     $clTrg.children('span').css('color','#aaa');
             $clTrg.children('div').css({'top': '10px'}, 100);
             $clTrg.prev().css('height', '18px');
             $clTrg.css({
@@ -226,20 +249,21 @@ $(function(){
             $trg.children('div').children('.arrowUpDwon').css('color','#fff').html('<i class="fas fa-angle-double-down"></i>');
             $trg.children('div').children('.arrowLeftRight').css('color','#fff').html('<i class="fas fa-angle-double-right"></i>');
         } else {
-            $trg.children('div').children('.arrowUpDwon').css('color','#aaa').html('<i class="fas fa-angle-down"></i>');
-            $trg.children('div').children('.arrowLeftRight').css('color','#aaa').html('<i class="fas fa-angle-right"></i>');
+            $trg.children('div').children('.arrowUpDwon').css('color','#ddd').html('<i class="fas fa-angle-down"></i>');
+            $trg.children('div').children('.arrowLeftRight').css('color','#ddd').html('<i class="fas fa-angle-right"></i>');
         }
-        if ($('.arrowUpDwon').css('display') != 'none'){
-            if (BasicTextCheck($trg.children('span:first-of-type').text()))
-                $trg.children('span').css('color','#000');
-            else
-                $trg.children('span').css('color','#aaa');
-        } else {
+        // if ($('.arrowUpDwon').css('display') != 'none'){
+        //     if (BasicTextCheck($trg.children('span:first-of-type').text()))
+        //         $trg.children('span').css('color','#000');
+        //     else
+        //         $trg.children('span').css('color','#aaa');
+        // } else {
             if (BasicTextCheck($trg.children('span:first-of-type').text()))
                 $trg.children('span').css('color','#fff');
             else
-                $trg.children('span').css('color','#888');
-        }
+                $trg.children('span').css('color','#ddd');
+        // }
+        KeywordInputCss();
     }
     
     // 옵션리스트 디스플레이 구현_END
@@ -315,19 +339,24 @@ $(function(){
                     regText = _name
                 else
                     regText += ', ' + _name;
-                // $(item).css('background-color','#dee');
             } else {
                 $(item).prev().css('background-color', '#ccc').html('');
                 $(item).css({
                     'background-color': 'rgba(10, 60, 70, 0)'
                 });
-                // $(item).css('background-color','white');
             }
         })
         if (regText == '')
             BasicTextWrite($trg);
         else
             $trg.prev('div').children('span').text(regText).css('color','#fff');
+    }
+    function KeywordInputCss(){
+        if(BasicTextCheck($('#keyword_m').val())){
+            $('#keyword_m').css('color','#fff');
+        } else {
+            $('#keyword_m').removeAttr('style');
+        }
     }
     function BasicTextWrite($obj){
         if ($obj.attr('class') == 'region_list_box_m box_target')
@@ -336,10 +365,12 @@ $(function(){
             $('.festival_box_m').children('span').text('주제를 선택해 주세요.')
         else if ($obj.attr('class') == 'date_calendar_m box_target')
             $('.date_box_m').children('span').text('날짜 선택')
+        else if ($obj.attr('class') == 'keyword_box_m')
+            $('.keyword_box_m').children('input').val('검색어를 입력해주세요.')
     }
     function BasicTextCheck(txt){
         var _returnValu = true;
-        if (txt == '지역을 선택해 주세요.' || txt == '주제를 선택해 주세요.' || txt == '날짜 선택' || txt == '-')
+        if (txt == '지역을 선택해 주세요.' || txt == '주제를 선택해 주세요.' || txt == '날짜 선택' || txt == '-' || txt == '검색어를 입력해주세요.')
             _returnValu = false;
         return _returnValu;
     }

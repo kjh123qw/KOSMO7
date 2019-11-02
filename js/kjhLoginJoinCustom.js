@@ -7,8 +7,11 @@ $(function(){
     $('.closeBackground').click(function(){
         HideAll();
     });
+    // JSP 들어가면 IMPORT 사용으로 인해 삭제될 부분
     $('.agrPlc').attr('class', 'agrPlc cstChkBox');
     $('.agrEml').attr('class', 'agrEml cstChkBox');
+    // END - JSP 들어가면 IMPORT 사용으로 인해 삭제될 부분
+
     // 회원가입 화면
     $('.btn-join').click(function(){
         HideAll();
