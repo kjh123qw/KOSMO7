@@ -33,12 +33,9 @@
 }
 
 #fCheck button{
-    width: 20%;
+    width: 100px;
     margin: 0 auto;
 }
-
-
-
 
 .container{
     margin-bottom: 30px;
@@ -175,7 +172,6 @@ h2{
     font-size: 20px;
     font-weight: bold;
     padding: 15px 0;
-    margin-bottom: 1px solid #555;
 }
 
 .rfestival a{

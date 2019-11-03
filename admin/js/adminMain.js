@@ -1,8 +1,6 @@
 $(function(){
     var width =  screen.availWidth;
     var height = screen.availHeight
-    // $('#container').width(width - 20);
-    // $('#container').height(height - 70);
     //화면 크기 고정
 
     $('#ulDiv li').mouseenter(function(){
@@ -71,20 +69,13 @@ $(function(){
 
         state = true;
       $("#logo").click(function(){
-          // $('#aside').animate({width:'toggle'},500)
         if ( !state ) {
             $( "#aside" ).stop().animate({
                 left : "-330px"
             }, 1000 );
 
             $('#rgbaDiv').stop().animate({'opacity': 0}, 1000).css({'display': 'none'});
-            // $('#rgbaDiv').css({'display': 'none'})
             $("#logo").html("<i class=\"fas fa-arrow-right\"></i>")
-
-            // $('#rgbaDiv').css({'display': 'none'})
-            // $("#backG").hide(1000);
-            // $("#backG").fadeOut(1000);
-            // $("#section").stop().fadeTo(1000,1);
           } else {
             $( "#aside" ).stop().animate({
                 left : "0"
@@ -92,21 +83,12 @@ $(function(){
 
                 $('#rgbaDiv').stop().animate({'opacity': 0.5}, 1000);
                 $('#rgbaDiv').css({'display': 'block'})
-                $("#logo").html("<i class=\"fas fa-bars\"></i>")
-            // $('#rgbaDiv').css({'display': 'block'})
-            // $("#backG").show(1000);
-            // $("#backG").fadeIn(1000);
-            // $("#section").stop().fadeTo(1000,0.4);
-            
+                $("#logo").html("<i class=\"fas fa-bars\"></i>")          
           }
 
 
           state = !state;
     });
-   
-    // $( "#aside" ).css('display','none'); opacity: "0"
-
-    
 
     chart1();
     chart2();
@@ -360,7 +342,7 @@ function chart1(){
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: '전체회원중',
             innerSize: '70%',
             data: [
                 ['회원', 71],

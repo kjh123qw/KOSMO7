@@ -24,8 +24,7 @@ $(function(){
     });
 
     $('#registrationBox').click(function(){
-        $('#regiFromBox').show();
-        $('html, body').stop().animate({scrollTop: 0}, 200);
+        window.open("../../festival/fRegiFestival.html");
     });
 
     $('.btnC').click(function(){
