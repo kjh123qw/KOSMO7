@@ -6,9 +6,14 @@ $(function(){
 
     if(width <577){
       $("#kindsDiv > div").attr("class","form-check form-check-inline col-sm-4")
+      $("#seasonDiv > div").attr("class","form-check form-check-inline col-sm-6")
+
     }else{
       $("#kindsDiv > div").attr("class","form-check form-check-inline col")
+      $("#seasonDiv > div").attr("class","form-check form-check-inline col")
     }
+
+   
 
   });
 
@@ -128,33 +133,32 @@ function startDate(){ //달력시작
 
 function insertF(){ //신청하기 버튼 클릭시 
   
-  var title = $('#exampleInputTitle').val();
-  var subTitle = $('#exampleInputSubitle').val();
-  var startDate = $('#startDate').val();
-  var endDate = $('#endDate').val();
-  var infoF = $('#exampleInputInfo').val();
-  var address = $('#exampleInputaddress').val();
-  var season = $('input[name="inlineRadioOptions"]:checked').val();
-  var location = $('#locationF option:selected').val();
-  var size = $('#sizeF option:selected').val();
-  var seaeon = $('input[name="inlineRadioOptions"]:checked').val();
+  var title = $('#exampleInputTitle').val(); //제목
+  var subTitle = $('#exampleInputSubitle').val(); //부제목
+  var startDate = $('#startDate').val(); //시작날짜
+  var endDate = $('#endDate').val(); //종료날짜
+  var infoF = $('#exampleInputInfo').val(); //축제 정보
+  var address = $('#exampleInputaddress').val(); //주소
+  var season = $('input[name="inlineRadioOptions"]:checked').val(); //계절
+  var location = $('#locationF option:selected').val(); //지역
+  var size = $('#sizeF option:selected').val(); //규모
 
-  var sort = $('input[name="inlinecheckboxOptions"]:checked');
+  var sort = $('input[name="inlinecheckboxOptions"]:checked'); 
   var sortLength = $('input[name="inlinecheckboxOptions"]:checked').length;
   var $sort = "";
 
   for(i=0;i<sortLength;i++){
     if(i + 1 == sortLength){
-      $sort +=sort[i].value;
+      $sort +=sort[i].value;//종류
     }else{
-      $sort +=sort[i].value +", ";
+      $sort +=sort[i].value +", ";//종류
     }  
   }
 
-  var web = $('#websiteF').val();
-  var phone = $('#phoneF').val();
-  var sns1 = $('#sns1').val();
-  var sns2 = $('#sns2').val();
+  var web = $('#websiteF').val(); //웹사이트
+  var phone = $('#phoneF').val(); //전화번호
+  var sns1 = $('#sns1').val(); //트위터
+  var sns2 = $('#sns2').val(); //인스타그램
 
   alert("신청 완료되었습니다")
   

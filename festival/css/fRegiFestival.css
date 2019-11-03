@@ -28,6 +28,21 @@
         width: 30%!important;
     }
 
+    #seasonDiv > div{
+        width: 40%!important;
+    }
+    #photoList span{
+        font-size: 25px!important;
+        margin-top: 100px!important;
+    }
+
+
+}
+
+@media screen and (max-width: 440px) {
+    #btnDiv > button{
+        margin-bottom: 10px!important;
+    }
 }
 
 #mainContainer{

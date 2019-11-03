@@ -11,13 +11,14 @@ $(function(){
         }
 
         if(577 < windowWidth && windowWidth < 991){
+            console.log("ddddd")
             $('.seasonBox > .seasons').attr('class','col-sm-6');
         }else if(330 < windowWidth && windowWidth < 576){
             $('.seasonBox > .seasons').attr('class','col');
         }else if(windowWidth > 992){
             $('.seasonBox > .seasons').attr('class','col');
         }else if(329 > windowWidth){
-            $('.seasonBox > .seasons').attr('class','col-sm-1');
+            $('.seasonBox > .seasons').attr('class','col-sm-3');
         }
      });
 
@@ -78,7 +79,7 @@ $(function(){
     $('#searchEnter').keydown(function(key){
         if(key.keyCode == 13){
 
-            var searchText = /^[가-힣|a-z|A-Z|0-9|\*]+$/
+            var searchText = /[가-힣|a-z|A-Z|0-9]/
             var search = $('.selectBox:first-child').val();
 
             if(searchText.test(search) && search.length <10){
@@ -204,21 +205,24 @@ function moreDiv(){
 } //더보기 버튼클릭시 div추가
 
 function searchData(){
-    var search = $('.selectBox:first-child').val();
-        var startDate = $('#startDate').val();
-        var endDate = $('#endDate').val();
-        var checked = $('#searchOption1').prop('checked');
-        var seasonChecked = $('input[name="season"]:checked').val();
+        var search = $('.selectBox:first-child').val(); //검색어
+        var startDate = $('#startDate').val(); //시작날짜
+        var endDate = $('#endDate').val(); //종료날짜
+        var checked = $('#searchOption1').prop('checked');// 축제토글
+        var seasonChecked = $('input[name="season"]:checked').val(); //계절
 
-        var sortChecked = $('input[name="sort"]:checked');
+        var sortChecked = $('input[name="sort"]:checked'); //종류선택
         var sortLength = $('input[name="sort"]:checked').length;
         var $sort = "";
 
+        var range = $('#sizeRange').val();
+
         var keyword = $('.keywordList').text(); //파싱필요함
 
-        var simaChecked = $('input[name="local"]:checked');
+        var simaChecked = $('input[name="local"]:checked'); //섬선택
         var simaLength = $('input[name="local"]:checked').length;
         var $sima = "";
+
         
 
         for(i=0;i<sortLength;i++){
@@ -239,9 +243,25 @@ function searchData(){
               }
         }
 
+        if(range == 1){
+            range = "소형"
+        }else if(range == 2){
+            range = "중형"
+        }else{
+            range = "대형"
+        }
+
+        if(checked == true){
+            checked = "현재진행축제"
+            alert($sima +"에서의"+startDate + "부터" + endDate + "까지의\n" + seasonChecked +"의" + $sort + "을 포함한" + range +"축제입니다\n" + "검색어는 " + search +"을 포함합니다")
+
+        }else{
+            checked = "전체축제조회"
+        }
+
         // alert(checked+","+search+","+startDate+","+endDate+","+seasonChecked+",{"+$sort+"}");
         // alert(keyword);
-        alert($sima);
+
 }
 //검색데이터 리턴
 
