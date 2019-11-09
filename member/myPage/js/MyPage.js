@@ -18,10 +18,6 @@ $(function(){
         $('#pwdConfirmForm').hide();
         $('#infoModifyForm').show();
     });
-    $('#leavePwdBtn').click(function(){
-        $('#pwdConfirmForm').hide();
-        $('#leaveForm').show();
-    });
 
     $('#registrationBox').click(function(){
         window.open("../../festival/fRegiFestival.html");

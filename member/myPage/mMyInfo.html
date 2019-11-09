@@ -214,7 +214,6 @@
                 <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
                 <li><a href="./mMyInfo.html">개인정보수정</a></li>
                 <li><a href="./mHosting.html">등록한 축제</a></li>
-                <li><a href="./mLeave.html">회원탈퇴</a></li>
             </ul>
         </div>
         <div class="selectedMenu_m myMenuOpen curLoc"><span></span><div><i class="far fa-caret-square-down"></i></div></div>
@@ -227,7 +226,6 @@
                     <li><a href="./mMyMatsuri.html">기대중인 축제</a></li>
                     <li><a href="./mMyInfo.html">개인정보수정</a></li>
                     <li><a href="./mHosting.html">등록한 축제</a></li>
-                    <li><a href="./mLeave.html">회원탈퇴</a></li>
                 </ul>
             </div>
         </div>
@@ -317,6 +315,43 @@
             <div class="moduleBox">
                 <button class="mConfirm" id="pwdModifyBtn">비밀번호 변경</button>
             </div>
+            <!-- 회원 탈퇴 폼 -->
+            <div id="leaveForm">
+                <hr>
+                <div class="titleBox">
+                    <span><i class="fas fa-envelope"></i>&nbsp;회원 탈퇴</span>
+                </div>
+                <hr>
+                <div class="moduleBox">
+                    <div class="leaveText"> - 탈퇴 사유 - </div>
+                </div>
+                <div class="moduleBox">
+                    <div class="cstChkBox">
+                        <div></div>
+                        <div>정보가 너무 없습니다.</div>
+                        <input type="checkbox" name="firstReason" id="firstReason" class="displayNone">
+                    </div>
+                    <div class="cstChkBox">
+                        <div></div>
+                        <div>필요없는 사이트 입니다.</div>
+                        <input type="checkbox" name="secondReason" id="secondReason" class="displayNone">
+                    </div>
+                    <div class="cstChkBox">
+                        <div></div>
+                        <div>다른 사이트를 찾았습니다.</div>
+                        <input type="checkbox" name="thirdReason" id="thirdReason" class="displayNone">
+                    </div>
+                    <div class="cstChkBox">
+                        <div></div>
+                        <div>아무 이유 없습니다.</div>
+                        <input type="checkbox" name="fourthReason" id="fourthReason" class="displayNone">
+                    </div>
+                </div>
+                <div class="moduleBox">
+                    <button class="mConfirm" id="leaveConfirmBtn">회원 탈퇴</button>
+                </div>
+            </div>
+            <!-- // 회원 탈퇴 폼 -->
         </div>
         <!-- // 정보 수정 폼 -->
     </div>
