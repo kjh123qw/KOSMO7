@@ -238,68 +238,411 @@
             <div class="cont">
                 <div id="faq" class="tabcontent">
                     <select id="respond">
-                        <option value="refund">환불/취소</option>
+                        <option value="refund">결제/환불</option>
                         <option value="book">예약/등록</option>
                         <option value="find">아이디/비밀번호 찾기</option>
                         <option value="festi">축제등록</option>
                         <option value="any">기타</option>
                     </select>
                     <ul>
-                        <li class="faqTab refund">환불/취소</li>
+                        <li class="faqTab refund">결제/환불</li>
                         <li class="faqTab book">예약/등록</li>
                         <li class="faqTab find">아이디/비밀번호 찾기</li>
                         <li class="faqTab festi">축제등록</li>
                         <li class="faqTab any">기타</li>
                     </ul>
                     <div class="faqCont refund">
-                        <div class="table">
-                            <div class="rowhead">
-                                <span class="cell col1h">1번호</span>
-                                <span class="cell col2h">1작성자</span>
-                                <span class="cell col3h">1제목</span>
-                                <span class="cell col4h">1날짜</span>
-                            </div>
-                        </div>
+                        <dl class="accordian">
+                            <dt><span></span>카드결제를 하는데 포맷에러(지불|신용카드|금액)라고 뜨면서 실패해요.</dt>
+                            <dd>
+                                <p>
+                                    카드 결제시 나타나는 '포맷에러(지불|신용카드|금액)' 오류는 실제 결제액이 일정 금액 미만일 시 발생합니다<br>※ 카드사에 따라서 다소 차이가 있을 수 있음
+                                </p>
+                            </dd>
+                            <dt><span></span>상품권으로 결제했는데 현금영수증을 발급받고 싶습니다.</dt>
+                            <dd>
+                                <p> 
+                                    1.문화상품권
+                                    본사가 아닌 컬쳐랜드(http://www.cultureland.co.kr/)에서 요청하셔야 합니다.
+                                    조아라에서는 요청하시더라도 처리하여 드릴 수 없습니다.
+                                    <br>
+                                    <br>
+                                    2.해피머니, 도서문화 상품권
+                                    [고객센터→1:1 문의]에서 영수증을 발급받으실 결제내역과 발급용 식별번호(휴대폰번호 또는 주민등록번호)를 기재하여 요청하여 주시면 확인 후 처리하여 드립니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>[MCFQ] 소액결제 미동의라면서 휴대폰 결제가 진행되지 않아요.</dt>
+                            <dd>
+                                <p>
+                                    결제 시도한 번호가 소액결제 서비스 이용에 동의하지 않은 상태일 시 표시되는 메시지입니다. 이동통신사 홈페이지 혹은 앱에서 소액결제 이용 동의과정을 완료한 후 정상적으로 결제하실 수 있습니다.
+                                    <br>
+                                    <br>
+                                    이전에는 소액결제를 이용하셨더라도 도중에 동의 해지하신 경우에는 해당 메시지가 표시될 수 있으므로, 우선 이동통신사에 문의하여 소액결제 이용동의 여부를 확인하여 보시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    또한, 개정 정보통신망법 시행에 따른 조치로 인해 자동 해지된 경우에도 표시될 수 있습니다.
+                                    <br>
+                                    <br>
+                                    해당 법령 시행에 따라 각 통신사에서는 2015년 1월부터 휴대폰 결제 이용동의를 하지 않은 고객 또는 장기 미사용 고객을 대상으로 관련 안내 후 휴대폰 결제 이용동의를 자동 해지 진행하였습니다. 따라서 관련 통지 후 유예기간동안 해당 이용동의를 진행하지 않으신 경우 소액결제 서비스가 해지되었을 수 있습니다.
+                                    <br>
+                                    <br>
+                                    이러한 경우에도 이동통신사 홈페이지 혹은 앱을 통해 관련 동의과정을 완료하시면 정상 결제하실 수 있으니 참고하여 주시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>환불하고 싶습니다.</dt>
+                            <dd>
+                                <p>
+                                    환불 요청시에는 환불금을 받으실 계좌정보(은행명, 예금주명, 계좌번호)와 딱지 수를 기재하여 [고객센터 > 1:1 문의]에서 환불 문의를 주시기 바랍니다. (환불금 입금일 : 문의 확인일로부터 영업일 기준 7일 이내)
+                                </p>
+                            </dd>
+                            <dt><span></span>결제 시 [MC10] 에러코드가 떠요</dt>
+                            <dd>
+                                <p>
+                                [MC10] 메시지는 통신사에서 보내주는 메시지이며, 통상적으로 소액 결제가 막혔을 경우 나타나는 메시지입니다.
+                                <br>
+                                통신사(114번)으로 전화하셔서 소액 결제 부분에 대한 확인 부탁드립니다.
+                                <br>
+                                또한 초과되지 않거나 미납 및 체납된 적이 없으신 데도 해당 오류가 발생하실 경우, 소액결제 담당사인 다날(031-697-1004)에 문의하여 주시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>[MC05] 체납 휴대폰 또는 사용 불가 휴대폰이라면서 결제가 안 돼요</dt>
+                            <dd>
+                                <p>
+                                    먼저 이동통신사에 연락하여 요금 미/체납 및 이달의 소액결제 한도 초과 여부를 확인하여 주시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    소액결제 한도를 초과하지 않았고 요금이 완납되었는데도 해당 오류가 발생하실 경우, 소액결제 담당사인 다날(031-697-1004)에 문의하여 주시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>해외 카드 사용자인데 [9930] Authentication Failed [impermissible ECI] 메시지가 떠요</dt>
+                            <dd>
+                                <p>
+                                    결제시 확인되는 해당 오류 메시지 '[9930] Authentication Failed [impermissible ECI]' 는 아래와 같은 경우에 표시될 수 있습니다.
+                                    <br>
+                                    <br>
+                                    1.카드사 인증 실패
+                                    <br>
+                                    이러한 경우 사용 시도하신 카드가 3D 인증을 거치지 않았을 수 있으므로 카드사에 연락하여 3D 인증 여부를 확인하여 주시기 바랍니다.
+                                    <br>
+                                    아래에 관련 문의 페이지를 첨부하여 드립니다.
+                                    <br>
+                                    http://usa.visa.com/personal/security/visa_security_program/vbv/how_it_works.html#anchor_1
+                                    <br>
+                                    <br>
+                                    <br>
+                                    2.카드 등급에 따른 제한
+                                    <br>
+                                    혹 3D 인증을 받으신 후에도 해당 오류가 발생하는 경우, 카드 등급에 따른 제한일 수 있습니다.
+                                    <br>
+                                    카드에는 등급이 있으며, 사이트에도 등급이 설정됩니다. 카드 등급이 해당 사이트의 지정 등급보다 낮은 경우 결제가 이루어지지 않습니다. 이는 3D 인증 여부와는 별개로 판정되는 부분이기 때문에 3D 인증상 문제가 없더라도 결제에 실패할 수 있습니다.
+                                    <br>
+                                    이러한 경우에는 카드사측에 연락하여 카드 등급을 조정하셔야 정상 결제하실 수 있으므로 참고하여 주시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    혹 3D 인증을 마치셨고 카드 등급이 최고 등급인데도 지속적으로 정상이용이 불가능하신 경우 KCP(www.kcp.co.kr) 고객센터(02-2108-1000) 혹은 기술센터(1544-8661)로 문의 주시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>결제했는데 적용이 안 되고 있어요.</dt>
+                            <dd>
+                                <p>
+                                    사용하고 계신 기기의 정보가 정상적으로 갱신되지 않을 시 해당 문제가 발생할 수 있습니다.
+                                    <br>
+                                    <br>
+                                    이러한 경우 우선 로그아웃 뒤 재로그인해 보시고, 문제 지속시 다음과 같이 쿠키 혹은 캐시를 삭제한 후 이용하여 주시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    ▶PC의 경우
+                                    <br>
+                                    <br>                                    
+                                    1. 인터넷 익스플로러 옵션에서 검색 기록(쿠키)을 모두 삭제
+                                    (인터넷 메뉴 → 도구 → 인터넷 옵션 → 검색 기록 → 삭제(D))
+                                    <br>
+                                    2. 인터넷 익스플로러 옵션에서 쿠키 설정 변경
+                                    (인터넷 메뉴 → 도구 → 인터넷옵션 → 개인 정보 → 고급(V))
+                                    자동으로 쿠키 처리 안 함 체크, 항상 세션에 쿠키 허용 체크
+                                    <br>
+                                    3. 검색 기록 탭 설정(S)에서 '페이지를 열 때마다'로 설정
+                                    (인터넷 메뉴 → 도구 → 인터넷 옵션 → 검색 기록 → 설정(S))
+                                    <br>
+                                    4.PC 재부팅
+                                    <br>
+                                    <br>
+                                    ▶모바일의 경우
+                                    <br>                                    
+                                    <br>
+                                    [환경설정 > 어플리케이션 관리 > 조아라 앱 선택 > 어플리케이션 완전종료 > 캐시 삭제 > 모바일기기 리부팅]
+                                    <br>
+                                    이후로도 문제가 지속될 시에는 앱을 삭제 뒤 재설치하여 이용하여 주시기 바랍니다.
+                                    <br>                                    
+                                    ※iOS의 경우 별도의 캐시 삭제가 지원되지 않으므로 앱을 삭제 뒤 재설치하셔야 합니다.
+                                    <br>
+                                    <br>
+                                    위 과정 진행 후로도 문제가 지속될 시에는 [고객센터→1:1 문의] 또는 고객 콜센터(1544-1234, 평일 09:00-18:00)로 문의하여 주시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>승인 요청 인증번호가 오지 않아요</dt>
+                            <dd>
+                                <p>
+                                    휴대폰 결제시 승인요청 인증문자가 도착하지 않는 경우는 주로 세 가지 경우입니다.
+                                    <br>
+                                    1. 휴대폰 문자 스팸 설정
+                                    2. 회원님께서 설정하신 통신사의 문자 스팸 차단
+                                    3. 결제 회사의 트래픽으로 인한 문자 지연
+                                    <br>
+                                    <br>
+                                    다소 불편하시더라도 1, 2의 경우는 휴대폰의 스팸란을 확인하여 주시고, 이동통신사 고객센터로 문의하셔서 스팸 차단 서비스에 가입되어 있는지 확인하신 후 문자 스팸을 해지해 주시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    위 사항들을 확인한 후 다시 시도해 주시기 바라며, 트래픽의 경우 잠시 기다렸다 다시 한 번 시도하여 주시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    혹 위 사항 확인시 문제가 없는데도 문자가 오지 않을 시에는 우선 소액결제 담당회사 다날(051-697-1004)측으로 문의하여 보시고, 그래도 문제가 없는 것으로 확인될 시에는 이용하고 계신 이동통신사에 통화품질상담을 하여 보시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>해외에서 조아라 결제가 가능한가요</dt>
+                            <dd>
+                                <p>
+                                    해외 신용카드 사용은 3D 인증을 받으신 경우 신용카드-기타-해외카드를 선택하여 이용하실 수 있습니다.
+                                    <br>
+                                    ※ 3D 인증이란?
+                                    해외 발행 Visa, Master, Jcb 카드를 이용하시는 경우 발급사의 인증 등록 절차를 마치신 후 이용하실 있습니다<br>
+                                    미등록 고객은 소유 카드 발급사의 인증 등록 메뉴에서 카드 정보 및 인증 정보를 등록하신 후 이용하시기 바랍니다.
+                                    <br>
+                                    <br>
+                                    <br>
+                                    1) VISA 이용 안내 : http://usa.visa.com/personal/security/visa_security_program/vbv/verified_by_visa_faq.html#anchor_1
+                                    <br>
+                                    <br>
+                                    <br>
+                                    2) MASTER 이용 안내 : http://www.mastercard.us/support/securecode.html
+                                    <br>    
+                                    <br>
+                                    <br>
+                                    3) JCB 이용 안내 : http://partner.jcbcard.com/security/jsecure/index.html
+                                    <br>    
+                                    <br>
+                                    <br>
+                                    ☆단, 모바일 결제시에는 해외 카드를 사용하실 수 없습니다.
+                                </p>
+                            </dd>
+                        </dl>                                        
                     </div>
                     <div class="faqCont book">
-                        <div class="table">
-                            <div class="rowhead">
-                                <span class="cell col1h">2번호</span>
-                                <span class="cell col2h">2작성자</span>
-                                <span class="cell col3h">2제목</span>
-                                <span class="cell col4h">2날짜</span>
-                            </div>
-                        </div>
+                        <dl class="accordian">
+                            <dt><span></span>축제 예약 확인하고 싶어요.</dt>
+                            <dd>
+                                <p>
+                                    로그인 후 마이페이지에서 확인하세요.
+                                </p>
+                            </dd>
+                            <dt><span></span>예약시 여권이 꼭 필요한가요.</dt>
+                            <dd>
+                                <p> 
+                                    아니요.
+                                </p>
+                            </dd>
+                            <dt><span></span>모바일 예약은 어떻게 하죠.</dt>
+                            <dd>
+                                <p>
+                                    PC와 동일하게 가능합니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>예약 취소하고 싶습니다.</dt>
+                            <dd>
+                                <p>
+                                    로그인 후, 기대중인 축제에서 취소하면 됩니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>축제 등록은 어떻게 하나요?</dt>
+                            <dd>
+                                <p>
+                                    가입 후, 마이페이지에서 축제등록 페이지에서 실시해주세요. <br>
+                                    관리자들의 검토 후 승인되면 정식 등록된 축제가 됩니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>예약한 축제는 가서 어떻게 쓰나요</dt>
+                            <dd>
+                                <p>
+                                    에어마츠리를 통해 등록했던 예약명을 대고 확인정보를 확인하시면 됩니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>예약한 축제는 못가면 자동환불 되나요</dt>
+                            <dd>
+                                <p>
+                                    안됩니다. 미리 취소해주셔야 합니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>축제만 예약가능한가요</dt>
+                            <dd>
+                                <p>
+                                    저희 사이트는 축제에 대해서만 예약가능하며 숙박 및 교통등은 다른 사이트를 사용해주세요
+                                </p>
+                            </dd>
+                            <dt><span></span>예약하고 갔는데 축제가 안열려요.</dt>
+                            <dd>
+                                <p>
+                                    해당 축제의 사진을 찍어주시고, 여행티켓과 함께 고객문의센터에 첨부하여 보내주세요. 확인 후 조치하겠습니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>좌석상태 확인 가능한가요?</dt>
+                            <dd>
+                                <p>
+                                    항공사를 통해 해주시기 바랍니다.
+                                </p>
+                            </dd>
+                        </dl>                 
                     </div>
-                    <div class="faqCont find">           
-                        <div class="table">
-                            <div class="rowhead">
-                                <span class="cell col1h">3번호</span>
-                                <span class="cell col2h">3작성자</span>
-                                <span class="cell col3h">3제목</span>
-                                <span class="cell col4h">3날짜</span>
-                            </div>
-                        </div>       
+                    <div class="faqCont find">
+                        <dl class="accordian">
+                            <dt><span></span>로그인/로그아웃이 안 되는데 어떻게 하죠.</dt>
+                            <dd>
+                                <p>
+                                    사용자의 컴퓨터 설정 또는 쿠키값 갱신상 오류 등에 의해 나타나는 현상일 수 있으니 다음 사항을 진행하신 후 다시 이용해보시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>로그인하면 자꾸 초기화면으로 돌아가요</dt>
+                            <dd>
+                                <p>
+                                    쿠키값 갱신상 문제가 발생하여 나타는 현상일 수 있으므로 정상적인 쿠키값 갱신을 위하여 다음과 같이 진행하여 주시기 바랍니다. 
+                                </p>
+                            </dd>
+                            <dt><span></span>아이디를 잊어버렸어요.</dt>
+                            <dd>
+                                <p>
+                                    아이디/비밀번호 찾기 메뉴를 이용해주세요.
+                                </p>
+                            </dd>
+                            <dt><span></span>비밀번호를 잊어버렸어요.</dt>
+                            <dd>
+                                <p>
+                                    아이디/비밀번호 찾기 메뉴를 이용해 초기화해주세요.
+                                </p>
+                            </dd>
+                            <dt><span></span>로그인을 했는데 회원용 기능을 쓰려고 하면 ‘회원 전용 메뉴입니다’ 라고 떠요.</dt>
+                            <dd>
+                                <p>
+                                    사용자의 컴퓨터 설정 또는 쿠키값 갱신상 오류 등에 의해 나타나는 현상일 수 있으니 다음 사항을 진행하신 후 다시 이용해보시기 바랍니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>모바일에선 어떻게 로그인 하나요.</dt>
+                            <dd>
+                                <p>
+                                    PC버전과 동일하게 이용하시면 됩니다.
+                                </p>
+                            </dd>
+                            <dt><span></span>모바일에서도 가입되나요.</dt>
+                            <dd>
+                                <p>
+                                    본 사이트는 PC버전과 동일하게 기능들을 제공하고 있습니다.
+                                </p>
+                            </dd>
+                        </dl>              
                     </div>
-                    <div class="faqCont festi">                    
-                        <div class="table">
-                            <div class="rowhead">
-                                <span class="cell col1h">4번호</span>
-                                <span class="cell col2h">4작성자</span>
-                                <span class="cell col3h">4제목</span>
-                                <span class="cell col4h">4날짜</span>
-                            </div>
-                        </div>
+                    <div class="faqCont festi">
+                        <dl class="accordian">
+                            <dt><span></span>카드결제를 하는데 포맷에러(지불|신용카드|금액)라고 뜨면서 실패해요.</dt>
+                            <dd>
+                            </dd>
+                            <dt><span></span>상품권으로 결제했는데 현금영수증을 발급받고 싶습니다.</dt>
+                            <dd>
+                                <p> 
+                                </p>
+                            </dd>
+                            <dt><span></span>[MCFQ] 소액결제 미동의라면서 휴대폰 결제가 진행되지 않아요.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>환불하고 싶습니다.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>결제 시 [MC10] 에러코드가 떠요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>[MC05] 체납 휴대폰 또는 사용 불가 휴대폰이라면서 결제가 안 돼요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>해외 카드 사용자인데 [9930] Authentication Failed [impermissible ECI] 메시지가 떠요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>결제했는데 적용이 안 되고 있어요.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>승인 요청 인증번호가 오지 않아요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>해외에서 조아라 결제가 가능한가요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                        </dl>                       
                     </div>
                     <div class="faqCont any">
-                        <div class="table">
-                            <div class="rowhead">
-                                <span class="cell col1h">5번호</span>
-                                <span class="cell col2h">5작성자</span>
-                                <span class="cell col3h">5제목</span>
-                                <span class="cell col4h">5날짜</span>
-                            </div>
-                        </div>
+                        <dl class="accordian">
+                            <dt><span></span>카드결제를 하는데 포맷에러(지불|신용카드|금액)라고 뜨면서 실패해요.</dt>
+                            <dd>
+                            </dd>
+                            <dt><span></span>상품권으로 결제했는데 현금영수증을 발급받고 싶습니다.</dt>
+                            <dd>
+                                <p> 
+                                </p>
+                            </dd>
+                            <dt><span></span>[MCFQ] 소액결제 미동의라면서 휴대폰 결제가 진행되지 않아요.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>환불하고 싶습니다.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>결제 시 [MC10] 에러코드가 떠요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>[MC05] 체납 휴대폰 또는 사용 불가 휴대폰이라면서 결제가 안 돼요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>해외 카드 사용자인데 [9930] Authentication Failed [impermissible ECI] 메시지가 떠요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>결제했는데 적용이 안 되고 있어요.</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>승인 요청 인증번호가 오지 않아요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                            <dt><span></span>해외에서 조아라 결제가 가능한가요</dt>
+                            <dd>
+                                <p>
+                                </p>
+                            </dd>
+                        </dl>   
                     </div>
                 </div>
                 <div id="notice" class="tabcontent" >

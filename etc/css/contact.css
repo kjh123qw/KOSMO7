@@ -24,7 +24,7 @@
 }
 
 .cont {
-    height: 600px;
+    height: auto;
 }
 
 /* Style tab links */
@@ -47,7 +47,6 @@
 
 
 /* FAQ 탭 관련 */
-
 .tabcontent > select#respond {
   width: 100%;
 }
@@ -64,7 +63,19 @@
   padding-top: 2%;
   border-bottom:1px solid #bbb;
 }
- 
+/*아코디언 관련*/
+* { margin: 0; padding: 0; }
+dl {
+  margin-top: 10px;
+ }
+dt, dd { padding: 10px; }
+dt { background-color: tan; margin-bottom: 5px; }
+dt span { display: inline-block; width: 5px; height: 5px; background-color: black;
+    vertical-align: middle; margin-right: 10px; }
+dt.on span { background-color: red; }
+dd { background-color: rgb(245, 234, 219); margin-bottom: 5px; display: none; }
+
+
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {

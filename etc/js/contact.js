@@ -9,6 +9,7 @@ $(function(){
   tableMake();        //테이블 생성 메서드
   boardChange();      //게시판 탭 메서드
   faqChange();        // 작은 게시판 탭 메서드
+  accordian(); //아코디언
   popup();            //팝업메서드
   backclose();        // 배경누를시 팝업 종료 메서드
   $('.popupBtn > div').click(function(){
@@ -27,6 +28,24 @@ function boardChange(){
   });
 }
 
+// 아코디언 메뉴
+function accordian(){
+  $('dt').click(function(){
+    if($(this).hasClass('on')){
+      slideUp();
+    } else {
+      slideUp();
+      $(this).addClass('on').next().slideDown();
+    }
+    function slideUp() {
+      $('dt').removeClass('on').next().slideUp();
+    }
+  })
+};
+
+
+
+acodian.click('dt');
 // FAQ 탭버튼 작동 쿼리
 function faqChange(){
   $('.faqTab').click(function(){
