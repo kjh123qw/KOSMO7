@@ -3,10 +3,10 @@ $(function(){
   $('.tablink').eq(0).css('background-color','#eee'); // 디폴트 탭의 구별색
   $('.faqCont').hide(); // tabcontent > faqCont 숨기기
   $('div.refund').show();  // 그중 refund div만 보이기
-
+  $('.table').append(pagingAppendAll());
   setInit(); //768px기준 작동
   selectFunc(); // 선택창 변환 메서드
-  tableMake();        //테이블 생성 메서드
+  // tableMake();        //테이블 생성 메서드
   boardChange();      //게시판 탭 메서드
   faqChange();        // 작은 게시판 탭 메서드
   accordian(); //아코디언
@@ -35,17 +35,15 @@ function accordian(){
       slideUp();
     } else {
       slideUp();
-      $(this).addClass('on').next().slideDown();
+      $(this).addClass('on').next().stop().slideDown();
     }
     function slideUp() {
-      $('dt').removeClass('on').next().slideUp();
+      $('dt').removeClass('on').next().stop().slideUp();
     }
   })
 };
 
 
-
-acodian.click('dt');
 // FAQ 탭버튼 작동 쿼리
 function faqChange(){
   $('.faqTab').click(function(){
@@ -97,18 +95,18 @@ function popupClose() {
 }
 
 //테이블 생성 메서드
-function tableMake(){
-  var content='';
-  for(let i=1; i<11; i++){
-    content += '<div class="row">';
-    for(let j=1; j<5; j++){
-      content += '<span class="cell col'+j+'">열 '+i+'-'+j+'</span>';
-    }
-    content += '</div>'
-  }
-  $('.table').append(content);
-  pagingAppendAll(); //테이블 아래 페이징 생성 메소드
-}
+// function tableMake(){
+//   var content='';
+//   for(let i=1; i<11; i++){
+//     content += '<div class="row">';
+//     for(let j=1; j<5; j++){
+//       content += '<span class="cell col'+j+'">'+i+'</span>';
+//     }
+//     content += '</div>'
+//   }
+//   $('.table').append(content);
+//   pagingAppendAll(); //테이블 아래 페이징 생성 메소드
+// }
 
 //페이징 메소드
 function pagingAppendAll() {

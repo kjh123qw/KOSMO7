@@ -1,6 +1,6 @@
 $(function(){
     $('.notCont').hide(); // tabcontent > notCont 숨기기
-    $('.finance').show();  // 그중 refund div만 보이기
+    $('.all').show();  // 그중 all div만 보이기
     notSetInit();//768px기준 작동
     notSelectFunc();// 선택창 변환 메서드
     notChange();// 작은 게시판 탭 메서드
