@@ -160,12 +160,18 @@ function insertF(){ //신청하기 버튼 클릭시
   var sns1 = $('#sns1').val(); //트위터
   var sns2 = $('#sns2').val(); //인스타그램
 
-  alert("신청 완료되었습니다")
-  
-  if(typeof(opener) != "undefined") {
-    opener.location.href = "../member/myPage/mHosting.html";
+  var check = confirm("축제를 등록할까요??")
+
+  if(check){
+    if(typeof(opener) != "undefined") {
+      opener.location.href = "../member/myPage/mHosting.html";
+    }
+    self.close();
+  }else{
+    
   }
-  self.close();
+  
+  
 
 }
 
@@ -176,11 +182,16 @@ function keywordDelete(){//키워드 클릭시 삭제
 } 
 
 function backHost(){
-  alert("신청이 취소되었습니다")
 
+var check = confirm("입력사항이 저장되지 않습니다 돌아갈까요??")
+
+if(check){
   if(typeof(opener) != "undefined") {
     opener.location.href = "../member/myPage/mHosting.html";
   }
   self.close();
+}
+
+  
 
 }

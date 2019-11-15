@@ -30,10 +30,27 @@ $(function(){
 
      });
 
+     $('#likeBox').click(function(){
+
+        var flag = $('#likeBox svg').attr('data-prefix');
+        
+
+        if(flag == 'far'){
+            alert("추가")
+            $('#likeBox').html('<i class="fas fa-heart likeI"></i>');
+        }else{
+            alert("삭제")
+            $('#likeBox').html('<i class="far fa-heart"></i>');
+        }
+    })
+
+
         var divWidth1 = $('.imgList div img').width();
         $('.imgList div img').height(divWidth1);
         var divWidth2 = $('.imgDiv img').width();
         $('.imgDiv img').height(divWidth2);
+
+
         
 
 })
@@ -48,3 +65,8 @@ function check(num){
     self.close();
 
 }
+
+// function changeColor(){
+//     $(this).attr('class','dd');
+
+// }
