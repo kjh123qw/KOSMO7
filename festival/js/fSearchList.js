@@ -253,14 +253,14 @@ function searchData(){
 
         if(checked == true){
             checked = "현재진행축제"
-            alert($sima +"에서의"+startDate + "부터" + endDate + "까지의\n" + seasonChecked +"의" + $sort + "을 포함한" + range +"축제입니다\n" + "검색어는 " + search +"을 포함합니다")
+            // alert($sima +"에서의"+startDate + "부터" + endDate + "까지의\n" + seasonChecked +"의" + $sort + "을 포함한" + range +"축제입니다\n" + "검색어는 " + search +"을 포함합니다")
 
         }else{
             checked = "전체축제조회"
         }
 
         // alert(checked+","+search+","+startDate+","+endDate+","+seasonChecked+",{"+$sort+"}");
-        // alert(keyword);
+        alert(search + "를 검색합니다");
 
 }
 //검색데이터 리턴
